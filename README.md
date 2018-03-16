@@ -10,6 +10,6 @@ A e-commerce Web Application follows some primary functional requirements, such 
 
 * User Authroization:
 
-* Add into/Remove items from the shopping cart:
+* Add/Remove items into/from the shopping cart:
 
 * Payment:
