@@ -15,19 +15,19 @@ export default class Images extends Component{
         return(
         <Carousel className='centered'>
             <Carousel.Item>
-              <img className='centered' width={900} height={500} alt="900x500" src={Zucchini}/>
+              <img style={{paddingLeft:'37vw'}} className='centered' width={900} height={500} alt="900x500" src={Zucchini}/>
               <Carousel.Caption>
                 <h3>Zucchini</h3>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <img width={900} height={500} alt="900x500" src={Pie}/>
+              <img style={{paddingLeft:'37vw'}}  width={900} height={500} alt="900x500" src={Pie}/>
               <Carousel.Caption>
                 <h3>Slow Baked Pie</h3>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <img width={900} height={500} alt="900x500" src={Sandwich} />
+              <img style={{paddingLeft:'37vw'}}  width={900} height={500} alt="900x500" src={Sandwich} />
               <Carousel.Caption>
                 <h3>Sandwich</h3>
               </Carousel.Caption>

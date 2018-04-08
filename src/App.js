@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './picture/logo.jpg';
+import Images from './components/Images';
 
 import './App.css';
 import '../node_modules/react-image-slider/lib/image-slider.css';
@@ -8,11 +9,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">“Deals so great - It’s a steal”</h1>
-        </header>
+        </div>
+        <div style={{marginTop:'200px'}}>
         <Images/>
+        </div>
       </div>
     );
   }
