@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import logo from '../../picture/logo.jpg';
 
 export default class Navbar extends Component {
   render() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light"> 
+            {/* Logo still needs to be at center, not sure how to do this (Nhat)
+                <img src={logo} className="App-logo" alt="logo" />
+                <h1 className="App-title">“Deals so great - It’s a steal”</h1>
+             */}
+               
             <a className="navbar-brand" href="#">Shoplift</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -33,10 +39,6 @@ export default class Navbar extends Component {
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">About Us</a>
-                    </li>
-
-                    <li className="nav-item">
-                        <a className="nav-link disabled" href="#">Disabled</a>
                     </li>
                 </ul>
                 <form className="form-inline my-2 my-lg-0">

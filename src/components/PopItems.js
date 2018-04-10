@@ -9,7 +9,6 @@ import Gallery from 'react-grid-gallery';
 
 export default class PopItems extends Component {
 
-
     render() {
         return (
             <div class="container">
