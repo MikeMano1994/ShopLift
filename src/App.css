@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  //animation: App-logo-spin infinite 20s linear;
+  /*animation: App-logo-spin infinite 20s linear;*/
   width: 250px;
   height: 250px;
 }
@@ -19,6 +19,17 @@
   font-weight: bold;
   font-size: 1.5em;
 }
+
+.App-footer{
+  
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 100px;
+  text-align: center;
+
+   
+}
+
 
 
 
