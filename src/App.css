@@ -22,6 +22,10 @@
   font-size: 2em;
 }
 
+.App-landing {
+  padding-top: 20%;
+}
+
 .App-footer {
   background-color: #7b9178;
   padding: 32px;

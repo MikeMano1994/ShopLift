@@ -18,7 +18,8 @@ class App extends Component {
           <Header />
           <h1 className="App-title">“Deals so great - It’s a steal.”</h1>
         </div>
-        <div>
+
+        <div className='App-landing'>
           <BrowserRouter>
             <div>
               <div id='routes'>
@@ -27,6 +28,7 @@ class App extends Component {
             </div>
           </BrowserRouter>
         </div>
+
         <div className='App-footer'>
           <Footer />
         </div>
