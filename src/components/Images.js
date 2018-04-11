@@ -1,22 +1,19 @@
 import React, {Component} from 'react';
 import {Carousel} from 'react-bootstrap';
-//import PopItems from './PopItems';
-import Content from './Content';
 
 import Zucchini from '../images/zucchini.jpg';
 import Pie from '../images/slow-cooker-pie.jpg';
 import Sandwich from '../images/sandwich.jpg';
 
-export default class Home extends Component{
+export default class Images extends Component{
     constructor(props){
         super(props);
         this.state={};
     }
-
-    render(){
+    
+    render() {
         return(
-          <div>
-            <Carousel className='centered'>
+        <Carousel className='centered'>
             <Carousel.Item>
               <img style={{paddingLeft:'37vw'}} className='centered' width={900} height={500} alt="900x500" src={Zucchini}/>
               <Carousel.Caption>
@@ -36,9 +33,6 @@ export default class Home extends Component{
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
-          <br/>
-          <Content/>
-          </div>
         );
     }
 }

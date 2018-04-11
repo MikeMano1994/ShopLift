@@ -12,7 +12,7 @@ export default class Footer extends Component{
         return(
             <footer class='footer'>
 
-                <p>© Copyright 2018 by ShopLift.</p>
+                <span>&reg; 2018 Shoplift Team</span>
 
             </footer>
         );
