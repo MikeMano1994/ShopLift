@@ -23,13 +23,10 @@ class App extends Component {
         <Navbar/>
         <div>
           <BrowserRouter>
-            {/*
-              BrowserRouter and linking will be here in this div
-              Home.js, Login.js, Register.js, Cart.js, Profile.js, etc ... will be dynamically routed here
-            */}
-            <Home/>
-            <div id='routes'>
-
+            <div>
+              <div id='routes'>
+                <Route exact path='/' component={Home}/>
+              </div>
             </div>
           </BrowserRouter>
         </div>
