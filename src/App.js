@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
 import Footer from './components/layout/Footer';
+import Header from './components/layout/Header';
 import Home from './components/Home';
-import logo from './picture/logo.jpg';
-import Navbar from './components/layout/Navbar';
 
 import {BrowserRouter, Route} from 'react-router-dom';
 import {LinkContainer} from 'react-router-bootstrap';
@@ -15,12 +14,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+        <div className='App-header'>
+          <Header />
           <h1 className="App-title">“Deals so great - It’s a steal.”</h1>
-        </div>
-        <div className='App-nav'>
-          <Navbar />
         </div>
         <div>
           <BrowserRouter>
