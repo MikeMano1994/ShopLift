@@ -32,8 +32,8 @@ export default class Content extends Component{
             </Row>
 
             <br></br>
-            <br></br>
-
+            <br></br> 
+ 
             <Row>
               <Col xs="6" sm="4">
               <img src={likeandfollow} width = {110} height= {100} alt="likeandfollow" />
@@ -69,6 +69,7 @@ export default class Content extends Component{
             <br></br>
             <p className = "font-style">ORDER</p>
             <p className = "font-style">ONLINE</p>
+            <p> <a href="#" target="_blank">Click Here</a> </p>
 
             </Col>
             <Col sm="4">
@@ -76,6 +77,7 @@ export default class Content extends Component{
             <br></br>
             <p className = "font-style">COME</p>
             <p className = "font-style">VISIT US</p>
+            <p> <a href="#" target="_blank">View Map</a> </p>
 
             </Col> 
           </Row>

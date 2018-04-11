@@ -12,7 +12,7 @@
 	font-size: 30px;
 	font-variant: small-caps;
 	line-height: 0.7;
-	
+
 
 }
 
@@ -31,3 +31,8 @@
 
 .Demo__some-network__share-button:hover:not(:active) {
   opacity: 0.75;}
+
+a {
+    color: #945D60;
+
+}
