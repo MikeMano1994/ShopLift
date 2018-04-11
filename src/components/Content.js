@@ -1,10 +1,10 @@
 // https://github.com/nygardk/react-share
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import {FacebookIcon,FacebookShareButton, 
+import { FacebookIcon,FacebookShareButton,
         GooglePlusIcon, GooglePlusShareButton,
-        TwitterIcon, TwitterShareButton} from 'react-share';
+        TwitterIcon, TwitterShareButton } from 'react-share';
 import order from '../picture/orderonline.png';
 import visitus from '../picture/comevisitus.png';
 import likeandfollow from '../picture/likeandfollow.png';
@@ -29,8 +29,8 @@ export default class Content extends Component{
               <Col><img src={img2} width = {250} height= {250} alt="img2" /></Col>
               <Col><img src={img3} width = {250} height= {250} alt="img3" /></Col>
               <Col><img src={img4} width = {250} height= {250} alt="img4" /></Col>
-            </Row>           
-           
+            </Row>
+
             <Row>
               <Col xs="6" sm="4">
               <img src={likeandfollow} width = {110} height= {100} alt="likeandfollow" />
@@ -38,25 +38,24 @@ export default class Content extends Component{
               <p style={{color:'orange', fontWeight:'bold'}}>LIKE & FOLLOW</p>
 
                 <div style={{textAlign: 'center'}} >
-                    <FacebookShareButton url={shareUrl} quote={title}>
-                    <FacebookIcon size={40} round />
-                    </FacebookShareButton>
-                  
-                    <GooglePlusShareButton url={shareUrl}>
-                    <GooglePlusIcon size={40} round = {true}/>
-                    </GooglePlusShareButton>
+                  <FacebookShareButton url={shareUrl} quote={title}>
+                  <FacebookIcon size={40} round />
+                  </FacebookShareButton>
 
-                    <TwitterShareButton url={shareUrl} title={title}>
-                    <TwitterIcon size={40} round/>
-                    </TwitterShareButton>
+                  <GooglePlusShareButton url={shareUrl}>
+                  <GooglePlusIcon size={40} round = {true}/>
+                  </GooglePlusShareButton>
+
+                  <TwitterShareButton url={shareUrl} title={title}>
+                  <TwitterIcon size={40} round/>
+                  </TwitterShareButton>
                 </div>
 
                </Col>
-          
+
             <Col xs="6" sm="4">
             <img src={order} width = {110} height= {100} alt="order" />
             <p style={{color:'orange', fontWeight:'bold'}}>ORDER ONLINE</p>
-
 
             </Col>
             <Col sm="4">

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -17,23 +18,13 @@
 
 .App-title {
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 
-.App-footer{
-  
-  vertical-align: top;
-  display: inline-block;
-  margin-top: 100px;
+.App-footer {
+  background-color: #7b9178;
+  padding: 32px;
+  font-size: 1em;
+  color: white;
   text-align: center;
-
-   
-}
-
-
-
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

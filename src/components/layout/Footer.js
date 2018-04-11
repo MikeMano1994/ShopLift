@@ -1,19 +1,11 @@
 import React, {Component} from 'react';
 
-
 export default class Footer extends Component{
-    constructor(props){
-        super(props);
-        this.state={};
-    }
     render(){
-        const shareUrl = 'https://tuanandtruc.wixsite.com/shopl';
-        const title = 'ShopLift';
+        // const shareUrl = 'https://tuanandtruc.wixsite.com/shopl';
         return(
-            <footer class='footer'>
-
-                <span>&reg; 2018 Shoplift Team</span>
-
+            <footer>
+                <p><strong>&reg; 2018 Team ShopLift</strong></p>
             </footer>
         );
     }
