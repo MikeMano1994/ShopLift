@@ -39,8 +39,8 @@ const FacebookShareButton = createShareButton('facebook', facebookLink, (props) 
   quote: PropTypes.string,
   hashtag: PropTypes.string,
 }, {
-  windowWidth: 550,
-  windowHeight: 400,
+  windowWidth: 1000,
+  windowHeight: 4000,
 });
 
 export default FacebookShareButton;

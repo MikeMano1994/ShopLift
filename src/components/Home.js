@@ -41,6 +41,8 @@ export default class Home extends Component{
               </Carousel>
           </div>
           <br/>
+          <br></br>
+          
           <Content/>
           </div>
         );
