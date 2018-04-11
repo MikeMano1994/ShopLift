@@ -22,7 +22,7 @@ export class Navbar extends Component {
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Shop
+                            Category
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a className="dropdown-item" href="#">Action</a>
@@ -32,10 +32,10 @@ export class Navbar extends Component {
                         </div>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Contact Us</a>
+                        <a className="nav-link" href="#">Contact</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">About Us</a>
+                        <a className="nav-link" href="#">About</a>
                     </li>
                 </ul>
                 <form className="form-inline my-2 my-lg-0">
