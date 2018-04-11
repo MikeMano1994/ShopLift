@@ -13,12 +13,12 @@
     "react-grid-gallery": "^0.4.8",
     "react-image-slider": "^0.1.0",
     "react-responsive-carousel": "^3.1.35",
+    "react-router-bootstrap": "*",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
     "react-share": "^2.1.0",
     "react-slick": "^0.23.1",
-    "reactstrap": "^5.0.0-beta.3",
-    "react-router-bootstrap": "*",
-    "react-router-dom": "^4.2.2"
+    "reactstrap": "^5.0.0-beta.3"
   },
   "scripts": {
     "start": "react-scripts start",
