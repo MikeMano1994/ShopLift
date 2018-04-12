@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
 import Home from './components/Home';
+import Contact from './components/Contact';
+import AboutUs from  './components/AboutUs.js';
+
 
 import {BrowserRouter, Route} from 'react-router-dom';
 import {LinkContainer} from 'react-router-bootstrap';
@@ -24,6 +27,8 @@ class App extends Component {
             <div>
               <div id='routes'>
                 <Route exact path='/' component={Home} />
+                <Route exact path='/contact' component={Contact}/>
+                <Route exact path='/about-us' component={AboutUs}/>
               </div>
             </div>
           </BrowserRouter>
