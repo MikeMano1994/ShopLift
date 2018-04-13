@@ -6,7 +6,7 @@ import Home from './components/Home';
 import Contact from './components/Contact';
 import AboutUs from  './components/AboutUs.js';
 import Shop from './components/Shop';
-import LogIn from './components/Login';
+import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 
 import {BrowserRouter, Route} from 'react-router-dom';
