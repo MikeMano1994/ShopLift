@@ -1,0 +1,30 @@
+
+.nav-link{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 25px;
+	margin-left: 50px;
+	margin-right: 100px;
+	text-align: center;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.searchBar{
+  display: inline-block;
+  float: none;
+  vertical-align: center;
+  text-align: justify-all; ;
+  margin-left: 1000px;
+
+}
+
+
+
+
