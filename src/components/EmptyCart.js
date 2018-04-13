@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import shoppingcart from '../picture/shopping-cart.png';
+
 export class EmptyCart extends Component {
   constructor(props) {
     super(props);
@@ -8,7 +10,7 @@ export class EmptyCart extends Component {
   render() {
     return(
       <div className='empty-cart'>
-        <p>empty cart</p>
+        <img width={45} height={45} src={shoppingcart} />
       </div>
     );
   }
