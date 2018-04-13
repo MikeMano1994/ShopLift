@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class EmptyCart extends Component {
+export class EmptyCart extends Component {
   constructor(props) {
     super(props);
   }

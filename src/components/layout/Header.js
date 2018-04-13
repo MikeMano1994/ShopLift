@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { Navbar } from './Navbar';
-// import { EmptyCart } from '../EmptyCart';
+import { EmptyCart } from '../EmptyCart';
 
 export default class Header extends Component {
   constructor(props) {
@@ -23,6 +23,7 @@ export default class Header extends Component {
     return (
       <header>
         <Navbar />
+        <EmptyCart />
       </header>
     )}
 }

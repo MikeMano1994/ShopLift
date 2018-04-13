@@ -13,10 +13,10 @@ export default class Home extends Component{
     render(){
         return(
           <div>
-          <Images/>
-            <br></br>
-            <br></br>
-          <Content/>
+            <Images/>
+              <br></br>
+              <br></br>
+            <Content/>
           </div>
         );
     }
