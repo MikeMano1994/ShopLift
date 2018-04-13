@@ -6,8 +6,6 @@ import Home from './components/Home';
 import Contact from './components/Contact';
 import AboutUs from  './components/AboutUs.js';
 
-
-
 import {BrowserRouter, Route} from 'react-router-dom';
 import {LinkContainer} from 'react-router-bootstrap';
 

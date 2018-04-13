@@ -14,20 +14,21 @@
 .App-header {
   width: 100%;
   background-color: white;
-  /*box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.033);*/
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.033);
   z-index: 20;
   position: fixed;
 }
 
 .App-title {
-  font-weight: bold;
-  font-size: 2em;
+  font-weight: 400;
+  font-size: 3em;
+  font-family: 'Gamja Flower', cursive;
   background-color: white;
   color: #666666;
 }
 
 .App-landing {
-  padding-top: 20%;
+  padding-top: 30%;
 }
 
 .App-footer {
