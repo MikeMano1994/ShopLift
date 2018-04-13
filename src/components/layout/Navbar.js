@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../../picture/logo.jpg';
+import {Glyphicon, Button} from 'react-bootstrap';
+
 
 import '../../App.css';
 import './Navbar.css';
@@ -10,12 +12,23 @@ export class Navbar extends Component {
 
         <div>
             <img className="App-logo" src={logo} alt="logo" />
-            <div className =" searchBar">
-            <form className="form-inline my-9 my-lg-0">
-                <input className="form-control mr-sm-2" type="search" placeholder="Search for items!" aria-label="Search" />
-                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            
+             <div className="bg-white clearfix" style={{ padding: '.5rem' }}>
+
+                <div className=" float-left ">
+                    <form className="form-inline my-9 my-lg-4">
+                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <input className="form-control mr-sm-2" type="search" placeholder="Search for items!" aria-label="Search" />
+                    </form>
+                </div>
+
+                <div className = " float-right " >
+                <Glyphicon className="icon" glyph="user" /> 
+                <a href="/login">Log In</a>
+                <a href= "#"><Glyphicon className="icon" glyph="shopping-cart" /></a>
+                </div>
             </div>
+
             <nav className="navbar navbar-expand-lg navbar-white bg-white">
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
