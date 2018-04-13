@@ -11,7 +11,8 @@ import img2 from '../picture/img2.jpg';
 import img3 from '../picture/img3.jpg';
 import img4 from '../picture/img4.jpg';
 
-import './Content.css';
+
+import '../App.css';
 
 export default class Content extends Component{
     constructor(props){

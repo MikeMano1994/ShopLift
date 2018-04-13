@@ -4,7 +4,7 @@ import {Glyphicon, Button} from 'react-bootstrap';
 
 
 import '../../App.css';
-import './Navbar.css';
+
 
 export class Navbar extends Component {
   render() {
@@ -15,8 +15,8 @@ export class Navbar extends Component {
             
              <div className="bg-white clearfix" style={{ padding: '.5rem' }}>
 
-                <div className=" float-left ">
-                    <form className="form-inline my-9 my-lg-4">
+                <div className="float-left ">
+                    <form className="form-inline my-0 my-sm-0">
                         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                         <input className="form-control mr-sm-2" type="search" placeholder="Search for items!" aria-label="Search" />
                     </form>
