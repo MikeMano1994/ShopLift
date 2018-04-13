@@ -6,6 +6,7 @@ import Bread from '../picture/slide/bread.jpg';
 import Pizza from '../picture/slide/pizza.jpg';
 import Steak from '../picture/slide/steak.jpg';
 import Pasta from '../picture/slide/pasta.jpg';
+
 export default class Home extends Component{
     constructor(props){
         super(props);
@@ -16,7 +17,7 @@ export default class Home extends Component{
         return(
           <div>
             <div className='carouselWrapper container' style={{width:'1000',height:'500'}}>
-              
+
               <Carousel>
                 <Carousel.Item>
                   <img className='centered' width={3000} height={1500} alt="1500x1500" src={Bread}/>
@@ -45,13 +46,13 @@ export default class Home extends Component{
                     <h3>Italian Pasta</h3>
                   </Carousel.Caption>
                 </Carousel.Item>
-              
+
               </Carousel>
 
            </div>
-      
+
         </div>
-        
+
         );
     }
 }

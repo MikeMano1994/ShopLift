@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { Navbar } from './Navbar';
+import { EmptyCart } from '../EmptyCart';
 
 export default class Header extends Component {
   constructor(props) {
@@ -18,14 +19,11 @@ export default class Header extends Component {
     })
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-  }
-
   render() {
     return (
       <header>
         <Navbar />
+        <EmptyCart />
       </header>
     )}
 }
