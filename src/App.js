@@ -6,6 +6,8 @@ import Home from './components/Home';
 import Contact from './components/Contact';
 import AboutUs from  './components/AboutUs.js';
 import Shop from './components/Shop';
+import LogIn from './components/Login';
+import SignUp from './components/SignUp';
 
 import {BrowserRouter, Route} from 'react-router-dom';
 import {LinkContainer} from 'react-router-bootstrap';
@@ -30,6 +32,8 @@ class App extends Component {
                 <Route exact path='/contact' component={Contact}/>
                 <Route exact path='/about-us' component={AboutUs}/>
                 <Route exact path='/shop' component={Shop}/>
+                <Route exact path='/login' component={LogIn}/>
+                <Route exact path='/signup' component={SignUp}/>
               </div>
             </div>
           </BrowserRouter>
