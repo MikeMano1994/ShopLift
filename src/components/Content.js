@@ -69,7 +69,7 @@ export default class Content extends Component{
             <br></br>
             <p className = "font-style">ORDER</p>
             <p className = "font-style">ONLINE</p>
-            <p> <a href="#" target="_blank">Click Here</a> </p>
+            <p> <a href="/shop" >Click Here</a> </p>
 
             </Col>
             <Col sm="4">
@@ -77,7 +77,7 @@ export default class Content extends Component{
             <br></br>
             <p className = "font-style">COME</p>
             <p className = "font-style">VISIT US</p>
-            <p> <a href="#" target="_blank">View Map</a> </p>
+            <p> <a href="/contact">View Map</a> </p>
 
             </Col> 
           </Row>
