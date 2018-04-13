@@ -11,13 +11,15 @@ import img2 from '../picture/img2.jpg';
 import img3 from '../picture/img3.jpg';
 import img4 from '../picture/img4.jpg';
 
-import './Content.css';
+
+import '../App.css';
 
 export default class Content extends Component{
     constructor(props){
         super(props);
         this.state={};
     }
+
     render(){
         const shareUrl = 'https://tuanandtruc.wixsite.com/shopl';
         const title = 'ShopLift';
@@ -54,21 +56,15 @@ export default class Content extends Component{
                       <GooglePlusIcon size={32} rect/>
                       </GooglePlusShareButton>
                     </div>
-
-                    <div className="Demo__some-network">
-                      <TwitterShareButton url={shareUrl} title={title} className="Demo__some-network__share-button">
-                      <TwitterIcon size={32} rect/>
-                      </TwitterShareButton>
-                    </div>
                   </div>
-                </Col>
+                 </Col>
 
                 <Col xs="6" sm="4">
                   <img src={order} width = {110} height= {100} alt="order" />
                   <br></br>
                   <p className = "font-style">ORDER</p>
                   <p className = "font-style">ONLINE</p>
-                  <p> <a href="#" target="_blank">Click Here</a> </p>
+                  <p> <a href="/shop" >Click Here</a> </p>
                 </Col>
 
                 <Col sm="4">
@@ -76,12 +72,13 @@ export default class Content extends Component{
                   <br></br>
                   <p className = "font-style">COME</p>
                   <p className = "font-style">VISIT US</p>
-                  <p> <a href="#" target="_blank">View Map</a> </p>
+                  <p> <a href="/contact">View Map</a> </p>
                 </Col>
               </Row>
+
             </Container>
 
          </content>
-        );
+       );
     }
 }

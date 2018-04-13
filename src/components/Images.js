@@ -20,7 +20,7 @@ export default class Home extends Component{
 
               <Carousel>
                 <Carousel.Item>
-                  <img className='centered' width={3000} height={1500} alt="1500x1500" src={Bread}/>
+                  <img className='centered' width={3000} height={1500} alt="900x500" src={Bread}/>
                   <Carousel.Caption>
                     <h3>Stuffed Bread Roll</h3>
                   </Carousel.Caption>
