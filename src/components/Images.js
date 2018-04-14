@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Carousel} from 'react-bootstrap';
-//import PopItems from './PopItems';
 
 import Bread from '../picture/slide/bread.jpg';
 import Pizza from '../picture/slide/pizza.jpg';
