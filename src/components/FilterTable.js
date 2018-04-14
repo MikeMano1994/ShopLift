@@ -8,7 +8,6 @@ import Dropdown, {
 } from '@trendmicro/react-dropdown';
 import '@trendmicro/react-buttons/dist/react-buttons.css';
 import '@trendmicro/react-dropdown/dist/react-dropdown.css';
-import styles from '@trendmicro/react-dropdown';
 import Section from '@trendmicro/react-dropdown';
 import ReactDOM from 'react-dom';
 
@@ -31,8 +30,8 @@ export default class FilterTable extends PureComponent{
     render() {
         return (
             <Section className="row-md-5 row-xl-5">
-                <div className={styles.sectionGroup}>
-                    <h3>Shop by aisle</h3>
+                <div className="categoryButton">
+                    <h2>Shop by</h2>
                     <Dropdown>
                         <Dropdown.Toggle title={`Category (${this.state.selectedCount})`} />
                         <Dropdown.Menu
@@ -63,7 +62,7 @@ export default class FilterTable extends PureComponent{
                             <MenuItem eventKey={3}>
                                 <input
                                     type="checkbox"
-                                    name="menuitem-2"
+                                    name="menuitem-3"
                                     style={{ marginRight: 5 }}
                                     onChange={this.actions.handleChange}
                                     onClick={event => event.stopPropagation()}
@@ -73,7 +72,7 @@ export default class FilterTable extends PureComponent{
                             <MenuItem eventKey={4}>
                                 <input
                                     type="checkbox"
-                                    name="menuitem-2"
+                                    name="menuitem-4"
                                     style={{ marginRight: 5 }}
                                     onChange={this.actions.handleChange}
                                     onClick={event => event.stopPropagation()}
@@ -83,7 +82,7 @@ export default class FilterTable extends PureComponent{
                             <MenuItem eventKey={5}>
                                 <input
                                     type="checkbox"
-                                    name="menuitem-2"
+                                    name="menuitem-5"
                                     style={{ marginRight: 5 }}
                                     onChange={this.actions.handleChange}
                                     onClick={event => event.stopPropagation()}
@@ -93,7 +92,7 @@ export default class FilterTable extends PureComponent{
                             <MenuItem eventKey={6}>
                                 <input
                                     type="checkbox"
-                                    name="menuitem-2"
+                                    name="menuitem-6"
                                     style={{ marginRight: 5 }}
                                     onChange={this.actions.handleChange}
                                     onClick={event => event.stopPropagation()}
