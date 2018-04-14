@@ -1,10 +1,16 @@
 import React, {Component} from 'react';
+import FilterTable from './FilterTable';
 
 export default class Shop extends Component{
+	constructor(props){
+        super(props);
+        this.state={};
+    }
+
     render(){
         return(
           <div>
-            <h1 className="shopTitle">Shop</h1>
+            <FilterTable/>
           </div>
         );
     }
