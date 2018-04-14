@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
 import { Navbar } from './Navbar';
-import { EmptyCart } from '../EmptyCart';
 
 export default class Header extends Component {
   constructor(props) {
@@ -64,18 +63,18 @@ export default class Header extends Component {
 
   //{ <a className="back-button" href="#" onClick={this.handleSearchNav.bind(this)}><img src="" alt="back"/></a>}
   //  <a className="mobile-search" href="#" onClick={this.handleMobileSearch.bind(this)}><img src="https://res.cloudinary.com/sivadass/image/upload/v1494756966/icons/search-green.png" alt="search"/></a>
-
+  // <div className="search">
+  //   <form action="#" method="get" className={this.state.mobileSearch ? "search-form active" : "search-form"}>
+  //     <input type="search" ref="searchBox" placeholder="Search for fresh goods!" className="search-keyword" onChange={this.props.handleSearch}/>
+  //     <button className="search-button" type="submit" onClick={this.handleSubmit.bind(this)}></button>
+  //   </form>
+  // </div>
+  
   render() {
     return (
       <header>
         <Navbar />
-        <div className="search">
-          <form action="#" method="get" className={this.state.mobileSearch ? "search-form active" : "search-form"}>
-            <input type="search" ref="searchBox" placeholder="Search for fresh goods!" className="search-keyword" onChange={this.props.handleSearch}/>
-            <button className="search-button" type="submit" onClick={this.handleSubmit.bind(this)}></button>
-          </form>
-        </div>
-        <EmptyCart />
+
       </header>
   )}
 }

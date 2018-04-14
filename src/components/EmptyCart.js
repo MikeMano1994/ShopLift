@@ -10,7 +10,7 @@ export class EmptyCart extends Component {
   render() {
     return(
       <div className='empty-cart'>
-        <img width={45} height={45} src={shoppingcart} />
+        <img width={35} height={35} src={shoppingcart} />
       </div>
     );
   }

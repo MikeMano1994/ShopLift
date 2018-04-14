@@ -41,7 +41,7 @@
 }
 
 /*About Us */
-.aboutUsTitle{
+.aboutUsTitle {
   color: #945D60;
   text-align: left;
   margin-left: 25%;
@@ -50,7 +50,7 @@
   padding-bottom: 10px;
 }
 
-.aboutusdescription{
+.aboutusdescription {
   color: #945D60;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
@@ -72,16 +72,16 @@
 
 /*Navbar */
 .nav-link{
-  /* font-family: "Times New Roman", Times, serif; */
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
   margin-left: 50px;
-  margin-right: 100px;
+  margin-right: 50px;
   text-align: center;
 }
+
 .navbar .navbar-nav {
   display: inline-block;
-  float: none;
+  
   vertical-align: top;
 }
 
@@ -90,11 +90,15 @@
 }
 
 .icon{
-  color: #AF473C;
-  margin-left: 20px;
-  margin-right: 10px;
+  color: #7b9178;
+  margin-right: 20px;
   font-size: 30px;
   vertical-align: center;
+}
+
+.empty-cart {
+  margin-right: 65px;
+  float: right;
 }
 
 /* Content */
@@ -131,7 +135,7 @@
   opacity: 0.75;}
 
 a {
-    color: #945D60;
+  color: #945D60;
 }
 
 .loginpage {
@@ -140,7 +144,6 @@ a {
   text-align: center;
   margin-bottom: 30px;
   display: inline-block;
-
 }
 
 .signuppage{
