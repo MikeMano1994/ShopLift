@@ -17,7 +17,6 @@ export default class Home extends Component{
         return(
           <div>
             <div className='carouselWrapper container' style={{width:'1000',height:'500'}}>
-
               <Carousel>
                 <Carousel.Item>
                   <img className='centered' width={3000} height={1500} alt="900x500" src={Bread}/>
@@ -46,13 +45,9 @@ export default class Home extends Component{
                     <h3>Italian Pasta</h3>
                   </Carousel.Caption>
                 </Carousel.Item>
-
               </Carousel>
-
            </div>
-
         </div>
-
-        );
+      );
     }
 }

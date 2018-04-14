@@ -28,7 +28,8 @@
 }
 
 .Demo__some-network__share-button:hover:not(:active) {
-  opacity: 0.75;}
+  opacity: 0.75;
+}
 
 a {
     color: #945D60;

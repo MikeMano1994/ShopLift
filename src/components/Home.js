@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {Carousel} from 'react-bootstrap';
-//import PopItems from './PopItems';
+import React, { Component } from 'react';
+import { Carousel } from 'react-bootstrap';
+
 import Content from './Content';
 import Images from './Images';
 
