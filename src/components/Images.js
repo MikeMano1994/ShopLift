@@ -3,8 +3,8 @@ import {Carousel} from 'react-bootstrap';
 
 import Bread from '../picture/slide/bread.png';
 import Pizza from '../picture/slide/pizza.png';
-import Steak from '../picture/slide/steak.jpg';
-import Pasta from '../picture/slide/pasta.jpg';
+import Steak from '../picture/slide/steak.png';
+import Pasta from '../picture/slide/pasta.png';
 
 export default class Home extends Component{
     constructor(props){
@@ -18,7 +18,7 @@ export default class Home extends Component{
             <div className='carouselWrapper container' style={{width:'800',height:'400'}}>
               <Carousel>
                 <Carousel.Item>
-                  <img className='centered' width={1200} height={500} src={Bread}/>
+                  <img className='centered' width={1200} height={500} alt="900x500" src={Bread}/>
                 </Carousel.Item>
 
                 <Carousel.Item>
@@ -27,16 +27,10 @@ export default class Home extends Component{
 
                 <Carousel.Item>
                   <img width={1200} height={500}  alt="900x500" src={Steak} />
-                  <Carousel.Caption>
-                    <h3>Wagyu Steak</h3>
-                  </Carousel.Caption>
                 </Carousel.Item>
 
                 <Carousel.Item>
-                  <img width={1200} height={500}  alt="900x500" src={Pasta} />
-                  <Carousel.Caption>
-                    <h3>Italian Pasta</h3>
-                  </Carousel.Caption>
+                  <img width={1200} height={300}  alt="900x500" src={Pasta} />
                 </Carousel.Item>
               </Carousel>
            </div>
