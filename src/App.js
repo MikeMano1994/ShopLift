@@ -10,7 +10,6 @@ import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 
 import {BrowserRouter, Route} from 'react-router-dom';
-import {LinkContainer} from 'react-router-bootstrap';
 
 import './App.css';
 import '../node_modules/react-image-slider/lib/image-slider.css';

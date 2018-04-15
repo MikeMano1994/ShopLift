@@ -1,10 +1,19 @@
 import React, {Component} from 'react';
 import Map from './Map';
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+
 
 import '../App.css';
 import raccoon from '../picture/cuteraccoon.jpg';
 export default class Contact extends Component{
+constructor(props) {
+    super(props);
+
+    this.state = {
+      name: "",
+      email: "",
+      message:""
+    };
+  }
 
     render(){
         return(
@@ -20,9 +29,15 @@ export default class Contact extends Component{
                 <h4> Fax: (408) 111-1111 </h4>
                 <h4> Email: info@shop_liftteam.com </h4>
               </div>
-             
-         
-               <h1 className = "App-title"> "We always here for you. Let me know what you want"</h1>
+               
+               <h1 className = "App-title"> "We're always here for you. Let me know what you want"</h1>
+               
+               <form>
+                <input type = 'text' placeholder = 'Your Name'/>
+                <input type = 'text' placeholder = 'Your Email'/>
+                <input type = 'text' placeholder = 'Your Message'/>
+              </form>
+               
                <img style={{width:'250px', height:'250px'}} src={raccoon} alt="raccoon" />
             
            

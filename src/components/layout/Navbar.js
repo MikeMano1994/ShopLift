@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Glyphicon, Button } from 'react-bootstrap';
+
 import { EmptyCart} from '../EmptyCart';
 
 import logo from '../../picture/logo.jpg';
@@ -42,8 +42,8 @@ export class Navbar extends Component {
               </div>
 
               <div className="float-right">
-                {/* <Glyphicon className="icon" glyph="user" />*/}
-                <img width={35} height={35} src={user} />
+                
+                <img width={35} height={35} src={user} alt={user}/>
                 <a href="/login">Log In</a>
                 <EmptyCart />
               </div>
