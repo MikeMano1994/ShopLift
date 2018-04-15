@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Carousel} from 'react-bootstrap';
 
-import Bread from '../picture/slide/bread.jpg';
+import Bread from '../picture/slide/bread.png';
 import Pizza from '../picture/slide/pizza.jpg';
 import Steak from '../picture/slide/steak.jpg';
 import Pasta from '../picture/slide/pasta.jpg';
@@ -15,31 +15,28 @@ export default class Home extends Component{
     render(){
         return(
           <div>
-            <div className='carouselWrapper container' style={{width:'1000',height:'500'}}>
+            <div className='carouselWrapper container' style={{width:'800',height:'400'}}>
               <Carousel>
                 <Carousel.Item>
-                  <img className='centered' width={3000} height={1500} alt="900x500" src={Bread}/>
-                  <Carousel.Caption>
-                    <h3>Stuffed Bread Roll</h3>
-                  </Carousel.Caption>
+                  <img className='centered' width={1200} height={500} src={Bread}/>
                 </Carousel.Item>
 
                 <Carousel.Item>
-                  <img width={3000} height={1500} alt="900x500" src={Pizza}/>
+                  <img width={1200} height={500} alt="900x500" src={Pizza}/>
                   <Carousel.Caption>
                     <h3>Pizza with Black Olive and Pepperoni</h3>
                   </Carousel.Caption>
                 </Carousel.Item>
 
                 <Carousel.Item>
-                  <img width={3000} height={1500} alt="900x500" src={Steak} />
+                  <img width={1200} height={500}  alt="900x500" src={Steak} />
                   <Carousel.Caption>
                     <h3>Wagyu Steak</h3>
                   </Carousel.Caption>
                 </Carousel.Item>
 
                 <Carousel.Item>
-                  <img width={3000} height={1500} alt="900x500" src={Pasta} />
+                  <img width={1200} height={500}  alt="900x500" src={Pasta} />
                   <Carousel.Caption>
                     <h3>Italian Pasta</h3>
                   </Carousel.Caption>

@@ -30,7 +30,6 @@ export default class Content extends Component{
                 <Col><img src={img1} width = {350} height= {250} alt="img1" /></Col>
                 <Col><img src={img2} width = {350} height= {250} alt="img2" /></Col>
                 <Col><img src={img3} width = {350} height= {250} alt="img3" /></Col>
-                {/*<Col><img src={img4} width = {250} height= {250} alt="img4" /></Col>*/}
               </Row>
 
               <br></br>
