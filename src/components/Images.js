@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Carousel} from 'react-bootstrap';
 
 import Bread from '../picture/slide/bread.png';
-import Pizza from '../picture/slide/pizza.jpg';
+import Pizza from '../picture/slide/pizza.png';
 import Steak from '../picture/slide/steak.jpg';
 import Pasta from '../picture/slide/pasta.jpg';
 
@@ -23,9 +23,6 @@ export default class Home extends Component{
 
                 <Carousel.Item>
                   <img width={1200} height={500} alt="900x500" src={Pizza}/>
-                  <Carousel.Caption>
-                    <h3>Pizza with Black Olive and Pepperoni</h3>
-                  </Carousel.Caption>
                 </Carousel.Item>
 
                 <Carousel.Item>
