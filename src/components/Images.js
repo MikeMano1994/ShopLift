@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Carousel} from 'react-bootstrap';
 
-import Bread from '../picture/slide/bread.png';
-import Pizza from '../picture/slide/pizza.png';
-import Steak from '../picture/slide/steak.png';
-import Pasta from '../picture/slide/pasta.png';
+import Bread from '../picture/slide/bread.jpg';
+import Pizza from '../picture/slide/pizza.jpg';
+import Steak from '../picture/slide/steak.jpg';
+import Pasta from '../picture/slide/pasta.jpg';
 
 export default class Home extends Component{
     constructor(props){
