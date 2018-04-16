@@ -5,15 +5,7 @@ import Map from './Map';
 import '../App.css';
 import raccoon from '../picture/cuteraccoon.jpg';
 export default class Contact extends Component{
-constructor(props) {
-    super(props);
 
-    this.state = {
-      name: "",
-      email: "",
-      message:""
-    };
-  }
 
     render(){
         return(
@@ -25,18 +17,12 @@ constructor(props) {
                 <h3> ShopLift Inc.</h3>
                 <h4> 1 Washington Sq</h4>
                 <h4> San Jose, CA 95192 </h4>
-                <h4> Phone: (408) 123-4546</h4>
-                <h4> Fax: (408) 111-1111 </h4>
+                <h4> Phone: (408) 123-4567</h4>
+                <h4> Fax: (800) 987-LIFT </h4>
                 <h4> Email: info@shop_liftteam.com </h4>
               </div>
                
                <h1 className = "App-title"> "We're always here for you. Let me know what you want"</h1>
-               
-               <form>
-                <input type = 'text' placeholder = 'Your Name'/>
-                <input type = 'text' placeholder = 'Your Email'/>
-                <input type = 'text' placeholder = 'Your Message'/>
-              </form>
                
                <img style={{width:'250px', height:'250px'}} src={raccoon} alt="raccoon" />
             
