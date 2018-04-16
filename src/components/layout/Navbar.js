@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-
 import { EmptyCart} from '../EmptyCart';
 
 import logo from '../../picture/logo.jpg';
@@ -11,13 +9,15 @@ export class Navbar extends Component {
   render() {
     return (
         <div>
+
           <a href="/">
             <img className="App-logo" src={logo} alt="logo" />
           </a>
-          <div className="bg-white clearfix" style={{ padding: '.5rem' }}>
 
+          <div className="bg-white clearfix" style={{ padding: '.5rem' }}>
             <nav className="navbar navbar-expand-lg navbar-white bg-white">
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
                 <div className="float-left">
                   <form className="form-inline my-0 my-sm-0">
                     <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -39,16 +39,15 @@ export class Navbar extends Component {
                     <a className="nav-link" href="/about-us">About Us</a>
                   </li>
                 </ul>
-              </div>
 
-              <div className="float-right">
-                
-                <img width={35} height={35} src={user} alt={user}/>
-                <a href="/login">Log In</a>
-                <EmptyCart />
+                <div className="float-right">
+                  <img width={35} height={35} src={user} alt={user}/>
+                  <a href="/login">Log In</a>
+                  <EmptyCart />
+                </div>
+
               </div>
             </nav>
-
           </div>
         </div>
     );

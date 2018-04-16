@@ -10,7 +10,6 @@ import likeandfollow from '../picture/likeandfollow.png';
 import img1 from '../picture/img1.png';
 import img2 from '../picture/img2.png';
 import img3 from '../picture/img3.png';
-// import img4 from '../picture/img4.jpg';
 
 import '../App.css';
 
