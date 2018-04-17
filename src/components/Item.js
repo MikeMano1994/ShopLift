@@ -13,6 +13,7 @@ export default class Item extends Component {
             <img className="card-img-top" src={this.props.a.image} alt="Card image cap"/>
                 <div className="card-body">
                     <h5 className="card-title">{this.props.a.name}</h5>
+                    <p className="card-price">${this.props.a.price}/ea.</p>
                     <p className="card-text">{this.props.a.description}</p>
                     <div className="input-group">
                         <span className="input-group-btn">
