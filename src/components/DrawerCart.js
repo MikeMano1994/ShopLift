@@ -7,7 +7,7 @@ import shoppingcart from '../picture/shopping-cart.png';
 /* if you using webpack, should not apply identity to this css */
 import 'react-drawer/lib/react-drawer.css';
  
-export default class Drawer extends Component{
+export default class DrawerCart extends Component{
   constructor() {
     super();
     this.state = {
@@ -43,7 +43,7 @@ export default class Drawer extends Component{
 	            disabled={this.state.open }/>
         </div>
 
-        <ReactDrawer
+        <ReactDrawer className="drawer"
           open={this.state.open}
           position={this.state.position}
           onClose={this.onDrawerClose}
@@ -52,6 +52,12 @@ export default class Drawer extends Component{
           <i onClick={this.closeDrawer} className="icono-cross"></i>
           
           <h2 className = "shoppingcartstyle">Shopping Cart</h2>
+          <h3> Your Cart Is Empty </h3>
+           <h3> Your Cart Is Empty </h3>
+           <h3> Your Cart Is Empty </h3>
+           <h3> Your Cart Is Empty </h3>
+           <h3> Your Cart Is Empty </h3>
+          
           <a href="/cart"><h2 className = "shoppingcartstyle">View Cart</h2></a>
         </ReactDrawer>
       </div>

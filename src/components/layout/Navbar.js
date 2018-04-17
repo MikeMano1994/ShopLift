@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import EmptyCart from '../EmptyCart';
+import DrawerCart from '../DrawerCart';
 
 import logo from '../../picture/logo.jpg';
 import user from '../../picture/user.png';
@@ -52,7 +52,7 @@ export class Navbar extends Component {
                   </li>
                   <li className = "emptycart">
                    <a>
-                      <EmptyCart/>
+                      <DrawerCart/>
                    </a>
                   </li>
                 </ul>
