@@ -10,6 +10,7 @@ import Shop from './components/Shop';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 import Cart from './components/Cart';
+import CheckOut from './components/CheckOut';
 
 import './App.css';
 import '../node_modules/react-image-slider/lib/image-slider.css';
