@@ -9,23 +9,22 @@ export class Navbar extends Component {
   render() {
     return (
         <div>
-
+          <div>
           <a href="/">
             <img className="App-logo" src={logo} alt="logo" />
           </a>
-
-          <div className="bg-white clearfix" style={{ padding: '.5rem' }}>
-            <nav className="navbar navbar-expand-lg navbar-white bg-white">
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <div className="float-left">
+          </div>
+            <div className= "trucnavbar">
+            <nav className="navbar navbar-expand-lg navbar-white bg-white">    
+                <ul className="navbar-nav mr-auto">
+                   <li className="nav-item">
                   <form className="form-inline my-0 my-sm-0">
                     <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     <input className="form-control mr-sm-2" type="search" placeholder="Search for the fresh!" aria-label="Search" />
                   </form>
-                </div>
+                  </li>
 
-                <ul className="navbar-nav mr-auto">
+               
                   <li className="nav-item active">
                     <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                   </li>
@@ -38,17 +37,18 @@ export class Navbar extends Component {
                   <li className="nav-item">
                     <a className="nav-link" href="/about-us">About Us</a>
                   </li>
-                </ul>
+             
 
-                <div className="float-right">
+                  <li className="nav-item">
                   <img width={35} height={35} src={user} alt={user}/>
                   <a href="/login">Log In</a>
                   <EmptyCart />
-                </div>
-
-              </div>
+                  </li>
+ 
+                </ul>
+         
             </nav>
-          </div>
+        </div>
         </div>
     );
   }

@@ -108,9 +108,14 @@
   text-align: center;
 }
 
+.trucnavbar{
+  display: inline-block;
+  text-align: center;
+
+}
 .navbar .navbar-nav {
   display: inline-block;
-
+  text-align: center;
   vertical-align: top;
 }
 
