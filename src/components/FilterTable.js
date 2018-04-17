@@ -12,9 +12,10 @@ import Section from '@trendmicro/react-dropdown';
 import ReactDOM from 'react-dom';
 
 export default class FilterTable extends PureComponent{
-      state = {
-        selectedCount: 0
+    state = {
+      selectedCount: 0
     };
+
     actions = {
         handleClick: (event) => {
             event.stopPropagation();
@@ -25,6 +26,7 @@ export default class FilterTable extends PureComponent{
             this.setState({ selectedCount: selectedCount });
         }
     };
+
     dropdownMenu = null;
 
     render() {

@@ -6,6 +6,7 @@ import {
   ControlLabel
 } from "react-bootstrap";
 import LoaderButton from "../components/LoaderButton";
+
 import "../App.css";
 
 export default class Signup extends Component {
@@ -42,17 +43,13 @@ export default class Signup extends Component {
 
   handleSubmit = async event => {
     event.preventDefault();
-
     this.setState({ isLoading: true });
-
     this.setState({ newUser: "test" });
-
     this.setState({ isLoading: false });
   }
 
   handleConfirmationSubmit = async event => {
     event.preventDefault();
-
     this.setState({ isLoading: true });
   }
 
@@ -69,6 +66,7 @@ export default class Signup extends Component {
           />
           <HelpBlock>Please check your email for the code.</HelpBlock>
         </FormGroup>
+        
         <LoaderButton
           block
           bsSize="large"
@@ -94,6 +92,7 @@ export default class Signup extends Component {
             onChange={this.handleChange}
           />
         </FormGroup>
+
         <FormGroup controlId="password" bsSize="large">
           <ControlLabel>Password</ControlLabel>
           <FormControl
@@ -102,6 +101,7 @@ export default class Signup extends Component {
             type="password"
           />
         </FormGroup>
+
         <FormGroup controlId="confirmPassword" bsSize="large">
           <ControlLabel>Confirm Password</ControlLabel>
           <FormControl
@@ -110,6 +110,7 @@ export default class Signup extends Component {
             type="password"
           />
         </FormGroup>
+
         <LoaderButton
           block
           bsSize="large"
@@ -126,13 +127,9 @@ export default class Signup extends Component {
   render() {
     return (
       <div className="signuppage">
-      <h1>Sign Up </h1>
-        {this.state.newUser === null
-          ? this.renderForm()
-          : this.renderConfirmationForm()}
+        <h1>Sign Up </h1>
+        {this.state.newUser === null ? this.renderForm(): this.renderConfirmationForm()}
       </div>
     );
   }
 }
-
-      
