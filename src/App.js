@@ -5,11 +5,7 @@ import Header from './components/layout/Header';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import AboutUs from  './components/AboutUs.js';
-<<<<<<< HEAD
-import Shop from './components/Shop1';
-=======
 import Shop from './components/shopSideBar';
->>>>>>> 968ee6503656a71a65ddb8496faa98e103c5c4fa
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 
@@ -46,7 +42,7 @@ class App extends Component {
         <div className='App-footer'>
           <Footer />
         </div>
-        
+
       </div>
     );
   }

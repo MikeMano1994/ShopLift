@@ -8,95 +8,51 @@ import '../../App.css';
 export class Navbar extends Component {
   render() {
     return (
+      <div>
         <div>
-<<<<<<< HEAD
-
           <a href="/">
             <img className="App-logo" src={logo} alt="logo" />
           </a>
+        </div>
 
-          <div className="bg-white clearfix" style={{ padding: '.5rem' }}>
-            <nav className="navbar navbar-expand-lg navbar-white bg-white">
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className= "bignavbar">
+          <nav className="navbar navbar-expand-lg navbar-white bg-white">
+            <ul className="navbar-nav mr-auto">
 
-                <div className="float-left">
+                <li className="nav-item">
                   <form className="form-inline my-0 my-sm-0">
                     <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     <input className="form-control mr-sm-2" type="search" placeholder="Search for the fresh!" aria-label="Search" />
                   </form>
-                </div>
+                </li>
 
-                <ul className="navbar-nav mr-auto">
-                  <li className="nav-item active">
-                    <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="/shop">Shop</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="/contact">Contact</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="/about-us">About Us</a>
-                  </li>
-                </ul>
+                <li className="nav-item active">
+                  <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
+                </li>
 
-                <div className="float-right">
+                <li className="nav-item">
+                  <a className="nav-link" href="/shop">Shop</a>
+                </li>
+
+                <li className="nav-item">
+                  <a className="nav-link" href="/contact">Contact</a>
+                </li>
+
+                <li className="nav-item">
+                  <a className="nav-link" href="/about-us">About Us</a>
+                </li>
+
+                <li className="nav-item">
                   <img width={35} height={35} src={user} alt={user}/>
                   <a href="/login">Log In</a>
                   <EmptyCart />
-                </div>
+                </li>
 
-              </div>
-            </nav>
-          </div>
-=======
-          <div>
-          <a href="/">
-            <img className="App-logo" src={logo} alt="logo" />
-          </a>
-          </div>
-            
-            <div className= "bignavbar">
-            <nav className="navbar navbar-expand-lg navbar-white bg-white">    
-                
-                <ul className="navbar-nav mr-auto">
-                  <li className="nav-item">
-                    <form className="form-inline my-0 my-sm-0">
-                      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                      <input className="form-control mr-sm-2" type="search" placeholder="Search for the fresh!" aria-label="Search" />
-                    </form>
-                  </li>
-               
-                  <li className="nav-item active">
-                    <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a className="nav-link" href="/shop">Shop</a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a className="nav-link" href="/contact">Contact</a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a className="nav-link" href="/about-us">About Us</a>
-                  </li>
-             
-
-                  <li className="nav-item">
-                    <img width={35} height={35} src={user} alt={user}/>
-                    <a href="/login">Log In</a>
-                    <EmptyCart />
-                  </li>
- 
-                </ul>
-         
-            </nav>
+            </ul>
+          </nav>
         </div>
->>>>>>> 968ee6503656a71a65ddb8496faa98e103c5c4fa
-        </div>
+
+      </div>
     );
   }
 }
