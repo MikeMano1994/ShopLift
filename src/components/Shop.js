@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import FilterTable from './FilterTable';
+import Products from "./Products";
 
 export default class Shop extends Component{
 	constructor(props){
@@ -10,7 +11,8 @@ export default class Shop extends Component{
     render(){
         return(
           <div>
-            <FilterTable/>
+              <shopSideBar/>
+              <Products/>
           </div>
         );
     }

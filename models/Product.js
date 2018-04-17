@@ -16,14 +16,6 @@ const ProductSchema = new mongoose.Schema({
     description:{
         type:String,
         default: ''
-    },
-    quantity: {
-        type: String,
-        default: ''
-    },
-    expiration: {
-        type: String,
-        default: ''
     }
 });
 
