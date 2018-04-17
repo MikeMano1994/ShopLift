@@ -43,12 +43,6 @@ export class Navbar extends Component {
                   <a className="nav-link" href="/about-us">About Us</a>
                 </li>
 
-                {/*<li className="nav-item">
-                  <img width={35} height={35} src={user} alt={user}/>
-                  <a href="/login">Log In</a>
-                  <EmptyCart />
-                </li>*/}
-
                 <ul className="nav navbar-right">
                   <li>
                     <a href="/login">
