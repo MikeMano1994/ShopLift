@@ -1,0 +1,51 @@
+{
+  "001":{
+    "name":"Banana",
+    "ID":"001",
+    "price":"0.25",
+    "description":"A yellow banana",
+    "image": "https://i.pinimg.com/originals/a8/53/37/a8533743474bf2ec7092c391d2efb505.jpg"
+  },
+  "002":{
+    "name":"Apple (Pink Lady)",
+    "ID":"002",
+    "price":"0.50",
+    "description":"Not a yellow banana",
+    "image": "https://i.ebayimg.com/images/g/L-gAAOSwB4BaKUmC/s-l300.jpg"
+  },
+  "003":{
+    "name":"Orange",
+    "ID":"003",
+    "price":"0.25",
+    "description":"An orange, bruh",
+    "image": "https://onegreenworld.com/wp-content/uploads/2015/07/2633-1.jpg"
+  },
+  "004":{
+    "name":"Blood Orange",
+    "ID":"004",
+    "price":"0.50",
+    "description":"An orange but with blood, blood",
+    "image": "http://pull01.thefruitcompany.netdna-cdn.com/wp/wp-content/uploads/2014/10/blood-orange-300x300.jpg"
+  },
+  "005":{
+    "name":"White Sausage (cuz Tuan)",
+    "ID":"005",
+    "price":"0.50",
+    "description":"Tuan swears these are good",
+    "image": "https://traiteurepiceriefine.weebly.com/uploads/1/4/9/2/14921238/2613633_orig.jpg"
+  },
+  "006":{
+    "name":"T-Pain",
+    "ID":"006",
+    "price":"0.50",
+    "description":"A very hyphy boy",
+    "image": "https://vignette.wikia.nocookie.net/adultswim/images/3/34/T-pain-300x300.jpg/revision/latest?cb=20161016015145"
+  },
+  "007":{
+    "name":"Trap Card",
+    "ID":"007",
+    "price":"0.50",
+    "description":"Don't activate it",
+    "image": "https://i.ebayimg.com/images/g/JyEAAOSwCtJZ9Tvr/s-l300.jpg"
+  }
+}

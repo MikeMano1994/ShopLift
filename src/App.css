@@ -219,6 +219,36 @@ a {
     font-size: 30px;
     width: 40px;
 }
+
+
+/*Products*/
+.products {
+  display: grid;
+  text-align: center;
+  align-content: center;
+}
+
+/*Card*/
+.card {
+  text-align: center;
+  margin: 1em;
+  width: 18em;
+}
+.card-title {
+  font-weight: bold;
+}
+.card-text {
+
+}
+
+/*Bootstrap Slider (Qty)*/
+.input-group {
+  text-align: center;
+  margin-bottom: 1em;
+  margin-left: 3em;
+  width: 10em;
+}
+
 /*Drawer*/
 .emptycart{
   z-index: 50;
@@ -241,6 +271,7 @@ a {
     text-align: center;
 }
 
+
 .cart{
   color: #945d60;
   font-family: "Montserrat", sans-serif;
@@ -248,3 +279,4 @@ a {
   font-size: 20px;
   margin-right: 50%;
 }
+
