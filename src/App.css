@@ -211,11 +211,26 @@ a {
   margin-right: 40%;
 }
 
-/*Shop1*/
+/*ShopSideBar*/
 .shop{
     color: #945D60;
     padding-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     width: 40px;
+}
+/*Drawer*/
+.emptycart{
+  z-index: 50;
+
+}
+/*Shopping Cart*/
+.shoppingcartstyle{
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    background-color: #3C3C3C;
+    text-align: center;
 }

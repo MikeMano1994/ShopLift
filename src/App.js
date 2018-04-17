@@ -9,6 +9,7 @@ import AboutUs from  './components/AboutUs.js';
 import Shop from './components/shopSideBar';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
+import Cart from './components/Cart';
 
 import './App.css';
 import '../node_modules/react-image-slider/lib/image-slider.css';
@@ -33,10 +34,12 @@ class App extends Component {
                 <Route exact path='/shop' component={Shop}/>
                 <Route exact path='/login' component={LogIn}/>
                 <Route exact path='/signup' component={SignUp}/>
+                <Route exact path='/cart' component={Cart}/>
               </div>
             </div>
           </BrowserRouter>
         </div>
+
 
         <div className='App-footer'>
           <Footer />

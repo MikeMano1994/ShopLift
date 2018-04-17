@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { EmptyCart} from '../EmptyCart';
+import EmptyCart from '../EmptyCart';
 
 import logo from '../../picture/logo.jpg';
 import user from '../../picture/user.png';
-import shoppingcart from '../../picture/shopping-cart.png';
+//import shoppingcart from '../../picture/shopping-cart.png';
 import '../../App.css';
 
 export class Navbar extends Component {
@@ -50,10 +50,10 @@ export class Navbar extends Component {
                       LOG IN
                     </a>
                   </li>
-                  <li>
-                    <a href="/">
-                      <img width={35} height={35} src={shoppingcart} />
-                    </a>
+                  <li className = "emptycart">
+                   <a>
+                      <EmptyCart/>
+                   </a>
                   </li>
                 </ul>
 
