@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import Footer from './components/layout/Footer';
-import Header from './components/layout/Header';
-import Home from './components/Home';
-import Contact from './components/Contact';
-import AboutUs from  './components/AboutUs.js';
-import Shop from './components/Shop';
-import LogIn from './components/LogIn';
-import SignUp from './components/SignUp';
-import Cart from './components/Cart';
+import AboutUs  from  './components/AboutUs.js';
+import Cart     from './components/Cart';
 import CheckOut from './components/CheckOut';
+import Contact  from './components/Contact';
+import Footer   from './components/layout/Footer';
+import Header   from './components/layout/Header';
+import Home     from './components/Home';
+import LogIn    from './components/LogIn';
+import Shop     from './components/Shop';
+import SignUp   from './components/SignUp';
 
 import './App.css';
 import '../node_modules/react-image-slider/lib/image-slider.css';
