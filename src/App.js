@@ -5,7 +5,7 @@ import Header from './components/layout/Header';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import AboutUs from  './components/AboutUs.js';
-import Shop from './components/Shop1';
+import Shop from './components/shopSideBar';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 
