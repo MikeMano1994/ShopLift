@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { EmptyCart} from '../EmptyCart';
+import EmptyCart from '../EmptyCart';
 
 import logo from '../../picture/logo.jpg';
 import user from '../../picture/user.png';
+//import shoppingcart from '../../picture/shopping-cart.png';
 import '../../App.css';
 
 export class Navbar extends Component {
@@ -42,11 +43,19 @@ export class Navbar extends Component {
                   <a className="nav-link" href="/about-us">About Us</a>
                 </li>
 
-                <li className="nav-item">
-                  <img width={35} height={35} src={user} alt={user}/>
-                  <a href="/login">Log In</a>
-                  <EmptyCart />
-                </li>
+                <ul className="nav navbar-right">
+                  <li>
+                    <a href="/login">
+                      <img width={35} height={35} src={user} alt={user}/>
+                      LOG IN
+                    </a>
+                  </li>
+                  <li className = "emptycart">
+                   <a>
+                      <EmptyCart/>
+                   </a>
+                  </li>
+                </ul>
 
             </ul>
           </nav>

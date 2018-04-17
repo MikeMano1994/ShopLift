@@ -54,6 +54,12 @@ export default class Content extends Component{
                       <GooglePlusIcon size={32} rect/>
                       </GooglePlusShareButton>
                     </div>
+
+                    <div className="Demo__some-network">
+                    <TwitterShareButton url={shareUrl} title={title} className="Demo__some-network__share-button">
+                    <TwitterIcon size={32} rect />
+                    </TwitterShareButton>
+                    </div>
                   </div>
                  </Col>
 
