@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
+
         <div className='App-header'>
           <Header />
           <h1 className="App-title">“Deals so great - It’s a steal.”</h1>
@@ -28,18 +28,17 @@ class App extends Component {
           <BrowserRouter>
             <div>
               <div id='routes'>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/contact' component={Contact}/>
-                <Route exact path='/about-us' component={AboutUs}/>
-                <Route exact path='/shop' component={Shop}/>
-                <Route exact path='/login' component={LogIn}/>
-                <Route exact path='/signup' component={SignUp}/>
-                <Route exact path='/cart' component={Cart}/>
+                <Route exact path='/'         component={Home} />
+                <Route exact path='/contact'  component={Contact} />
+                <Route exact path='/about-us' component={AboutUs} />
+                <Route exact path='/shop'     component={Shop} />
+                <Route exact path='/login'    component={LogIn} />
+                <Route exact path='/signup'   component={SignUp} />
+                <Route exact path='/cart'     component={Cart} />
               </div>
             </div>
           </BrowserRouter>
         </div>
-
 
         <div className='App-footer'>
           <Footer />
