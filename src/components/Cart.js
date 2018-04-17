@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import emptycart from '../picture/empty-cart.png';
 import '../App.css';
 
 export default class Cart extends Component{
@@ -13,13 +13,18 @@ export default class Cart extends Component{
 	            	</a>
             		<h1> MY CART </h1>
             	</div>
+                <img src={emptycart} alt="emptycart" />
 
 
-            <h1> THIS IS EMPTY CART </h1>
-            <h1> THIS IS EMPTY CART </h1>
-            <h1> THIS IS EMPTY CART </h1>
-            <h1> THIS IS EMPTY CART </h1>
-            <h1> THIS IS EMPTY CART </h1>
+            	<div>
+				<a href="/check-out" > 
+	            	<button type="button" class="btn btn-dark"
+                    style = {{marginBottom: '50px',marginTop: '50px' }}>
+                    <p>CHECK OUT</p>
+                    </button>
+	            </a>
+				</div>
+
             </div>
         );
     }

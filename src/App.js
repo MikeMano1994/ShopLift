@@ -10,6 +10,7 @@ import Shop from './components/Shop';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 import Cart from './components/Cart';
+import CheckOut from './components/CheckOut';
 
 import './App.css';
 import '../node_modules/react-image-slider/lib/image-slider.css';
@@ -35,6 +36,8 @@ class App extends Component {
                 <Route exact path='/login' component={LogIn}/>
                 <Route exact path='/signup' component={SignUp}/>
                 <Route exact path='/cart' component={Cart}/>
+                <Route exact path='/check-out' component={CheckOut}/>
+
               </div>
             </div>
           </BrowserRouter>

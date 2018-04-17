@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ReactDrawer from 'react-drawer';
 import shoppingcart from '../picture/shopping-cart.png';
+import emptycart from '../picture/empty-cart.png';
 
  
 /* if you using webpack, should not apply identity to this css */
@@ -52,13 +53,13 @@ export default class DrawerCart extends Component{
           <i onClick={this.closeDrawer} className="icono-cross"></i>
           
           <h2 className = "shoppingcartstyle">Shopping Cart</h2>
-          <h3> Your Cart Is Empty </h3>
-           <h3> Your Cart Is Empty </h3>
-           <h3> Your Cart Is Empty </h3>
-           <h3> Your Cart Is Empty </h3>
-           <h3> Your Cart Is Empty </h3>
-          
-          <a href="/cart"><h2 className = "shoppingcartstyle">View Cart</h2></a>
+	      <img style={{width:'250px', height:'150px'}} src={emptycart} alt="emptycart" />
+          <div>
+       		<a href="/cart">
+          	<button type="button" class="btn btn-dark"><p>VIEW CART</p></button></a>
+          </div>
+
+        
         </ReactDrawer>
       </div>
     );
