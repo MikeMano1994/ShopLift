@@ -108,9 +108,20 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 .navbar .navbar-nav {
   display: inline-block;
 
+=======
+.bignavbar{
+  display: inline-block;
+  text-align: center;
+
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  text-align: center;
+>>>>>>> 968ee6503656a71a65ddb8496faa98e103c5c4fa
   vertical-align: top;
 }
 

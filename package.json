@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "@appbaseio/reactivesearch": "^2.5.1",
+>>>>>>> 968ee6503656a71a65ddb8496faa98e103c5c4fa
     "@trendmicro/react-dropdown": "^1.2.2",
     "ajv": "*",
     "bcryptjs": "*",
