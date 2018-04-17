@@ -3,6 +3,7 @@ import { EmptyCart} from '../EmptyCart';
 
 import logo from '../../picture/logo.jpg';
 import user from '../../picture/user.png';
+import shoppingcart from '../../picture/shopping-cart.png';
 import '../../App.css';
 
 export class Navbar extends Component {
@@ -42,11 +43,25 @@ export class Navbar extends Component {
                   <a className="nav-link" href="/about-us">About Us</a>
                 </li>
 
-                <li className="nav-item">
+                {/*<li className="nav-item">
                   <img width={35} height={35} src={user} alt={user}/>
                   <a href="/login">Log In</a>
                   <EmptyCart />
-                </li>
+                </li>*/}
+
+                <ul className="nav navbar-right">
+                  <li>
+                    <a href="/login">
+                      <img width={35} height={35} src={user} alt={user}/>
+                      LOG IN
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/">
+                      <img width={35} height={35} src={shoppingcart} />
+                    </a>
+                  </li>
+                </ul>
 
             </ul>
           </nav>
