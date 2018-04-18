@@ -87,6 +87,22 @@
   width: 200px;
 }
 
+/*SearchBar*/
+.btn-outline-success {
+  background-color: #7b9178;
+  border-color: #7b9178;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:active {
+  background-color: #945d60;
+  border-color: #945d60;
+}
+
+.my-sm-0 {
+  color: white;
+}
+
 /*Shop */
 .categoryButton {
   position: absolute;
@@ -109,7 +125,6 @@
 .bignavbar {
   display: inline-block;
   text-align: center;
-
 }
 
 .navbar .navbar-nav {
@@ -212,14 +227,13 @@ a {
 }
 
 /*ShopSideBar*/
-.shop{
-    color: #945D60;
-    padding-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    width: 40px;
+.shop {
+  color: #945d60;
+  padding-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  width: 40px;
 }
-
 
 /*Products*/
 .products {
@@ -238,7 +252,6 @@ a {
   font-weight: bold;
 }
 .card-text {
-
 }
 
 /*Bootstrap Slider (Qty)*/
@@ -250,33 +263,29 @@ a {
 }
 
 /*Drawer*/
-.emptycart{
+.emptycart {
   z-index: 50;
-
 }
 
 .css-sourceMap-modules-importLoaders-1-localIdentName-ReactDrawer__drawer___2r5VH-sass {
-
   background-color: white;
 }
 
 /*Shopping Cart*/
-.shoppingcartstyle{
-    color: white;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    background-color: #3C3C3C;
-    text-align: center;
+.shoppingcartstyle {
+  color: white;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  background-color: #3c3c3c;
+  text-align: center;
 }
 
-
-.cart{
+.cart {
   color: #945d60;
   font-family: "Montserrat", sans-serif;
   padding-bottom: 40px;
   font-size: 20px;
   margin-right: 50%;
 }
-
