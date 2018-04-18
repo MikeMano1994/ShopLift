@@ -226,6 +226,33 @@ a {
   margin-right: 40%;
 }
 
+.contactName input,
+.contactEmail input,
+.contactsubject input {
+  width: 30%;
+  height: 30px;
+  border: 1.5px solid lightblue;
+}
+
+.contactName,
+.contactEmail,
+.contactsubject {
+  padding: 5px;
+}
+
+.contactMessage textArea {
+  border: 1.5px solid lightblue;
+  width: 30%;
+  height: 150px;
+}
+
+.ContactSendButton {
+  color: white;
+  background-color: lightblue;
+  border: 1.5px solid lightblue;
+  margin: 10px;
+}
+
 /*ShopSideBar*/
 .shop {
   color: #945d60;
