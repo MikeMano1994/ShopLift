@@ -243,12 +243,14 @@ a {
 .contactEmail,
 .contactsubject {
   padding: 5px;
+  position: sticky;
 }
 
 .contactMessage textArea {
   border: 1.5px solid lightblue;
   width: 30%;
   height: 150px;
+  position: sticky;
 }
 
 .ContactSendButton {
