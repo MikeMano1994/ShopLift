@@ -302,7 +302,7 @@ a {
 }
 
 .css-sourceMap-modules-importLoaders-1-localIdentName-ReactDrawer__drawer___2r5VH-sass {
-  background-color: white;
+  background-color: white !important;
 }
 
 /*Shopping Cart*/
@@ -322,4 +322,14 @@ a {
   padding-bottom: 40px;
   font-size: 20px;
   margin-right: 50%;
+}
+
+.modal {
+  position: center;
+}
+.modal-card-content {
+  display: inline-flex;
+}
+.modal-card-text {
+  margin-left: 1em;
 }

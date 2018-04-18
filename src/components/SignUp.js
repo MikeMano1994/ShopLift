@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from 'react-router-dom'
 import {
   HelpBlock,
   FormGroup,
@@ -10,8 +11,8 @@ import LoaderButton from "../components/LoaderButton";
 import "../App.css";
 
 export default class Signup extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       isLoading: false,
@@ -19,8 +20,12 @@ export default class Signup extends Component {
       password: "",
       confirmPassword: "",
       confirmationCode: "",
-      newUser: null
-    };
+      newUser: null,
+      redirectTo: null
+    }
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   validateForm() {
@@ -66,7 +71,7 @@ export default class Signup extends Component {
           />
           <HelpBlock>Please check your email for the code.</HelpBlock>
         </FormGroup>
-        
+
         <LoaderButton
           block
           bsSize="large"
@@ -125,6 +130,10 @@ export default class Signup extends Component {
   }
 
   render() {
+    if (this.state.redirectTo) {
+      return <Redirect to={{ pathname: this.state.redirectTo }} />
+    }
+
     return (
       <div className="signuppage">
         <h1>Sign Up </h1>
