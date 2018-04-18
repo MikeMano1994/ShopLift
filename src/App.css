@@ -300,7 +300,7 @@ a {
 }
 
 .css-sourceMap-modules-importLoaders-1-localIdentName-ReactDrawer__drawer___2r5VH-sass {
-  background-color: white;
+  background-color: white !important;
 }
 
 /*Shopping Cart*/
