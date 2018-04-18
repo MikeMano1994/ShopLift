@@ -19,6 +19,7 @@ export default class AboutUs extends Component {
               <img src="http://placehold.it/100x100" />
             </div>
             Juan Marcias
+            <div className="teamRole">Product Manager</div>
           </div>
 
           <div class="item-wrapper">
@@ -26,6 +27,7 @@ export default class AboutUs extends Component {
               <img src="http://placehold.it/100x100" />
             </div>
             Bruce Lin
+            <div className="teamRole">Technical Lead</div>
           </div>
 
           <div class="item-wrapper">
@@ -33,6 +35,7 @@ export default class AboutUs extends Component {
               <img src="http://placehold.it/100x100" />
             </div>
             Nhat Trinh
+            <div className="teamRole">Tester</div>
           </div>
 
           <div class="item-wrapper">
@@ -40,6 +43,7 @@ export default class AboutUs extends Component {
               <img src="http://placehold.it/100x100" />
             </div>
             Jennifer Nguyen
+            <div className="teamRole">Documentation</div>
           </div>
         </div>
 
@@ -49,6 +53,7 @@ export default class AboutUs extends Component {
               <img src="http://placehold.it/100x100" />
             </div>
             Truc Vo
+            <div className="teamRole">Marketing</div>
           </div>
 
           <div class="item-wrapper">
@@ -56,6 +61,7 @@ export default class AboutUs extends Component {
               <img src="http://placehold.it/100x100" />
             </div>
             Alejandro Lopez
+            <div className="teamRole">Documentation</div>
           </div>
 
           <div class="item-wrapper">
@@ -63,6 +69,7 @@ export default class AboutUs extends Component {
               <img src="http://placehold.it/100x100" />
             </div>
             Tuan Anh Le
+            <div className="teamRole">Marketing</div>
           </div>
         </div>
       </div>
