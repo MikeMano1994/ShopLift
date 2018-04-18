@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from 'axios';
 import { Redirect } from 'react-router-dom'
 import {
   HelpBlock,
@@ -19,25 +20,12 @@ export default class Signup extends Component {
       email: "",
       password: "",
       confirmPassword: "",
-      confirmationCode: "",
       newUser: null,
       redirectTo: null
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-  }
-
-  validateForm() {
-    return (
-      this.state.email.length > 0 &&
-      this.state.password.length > 0 &&
-      this.state.password === this.state.confirmPassword
-    );
-  }
-
-  validateConfirmationForm() {
-    return this.state.confirmationCode.length > 0;
   }
 
   handleChange = event => {
@@ -51,38 +39,42 @@ export default class Signup extends Component {
     this.setState({ isLoading: true });
     this.setState({ newUser: "test" });
     this.setState({ isLoading: false });
+
+    axios
+      .post("/auth/SignUp", {
+        email: this.state.email,
+        password: this.state.password
+      })
+      .then(response => {
+        console.log(response)
+
+        if (!response.data.errmsg) {
+          console.log("Coffee is awesome");
+          this.setState({
+            redirectTo: '/LogIn'
+          })
+        }
+        else {
+          console.log('duplicate');
+        }
+      })
+  }
+
+  validateConfirmationForm() {
+    return this.state.confirmationCode.length > 0;
+  }
+
+  validateForm() {
+    return (
+      this.state.email.length > 0 &&
+      this.state.password.length > 0 &&
+      this.state.password === this.state.confirmPassword
+    );
   }
 
   handleConfirmationSubmit = async event => {
     event.preventDefault();
     this.setState({ isLoading: true });
-  }
-
-  renderConfirmationForm() {
-    return (
-      <form onSubmit={this.handleConfirmationSubmit}>
-        <FormGroup controlId="confirmationCode" bsSize="large">
-          <ControlLabel>Confirmation Code</ControlLabel>
-          <FormControl
-            autoFocus
-            type="tel"
-            value={this.state.confirmationCode}
-            onChange={this.handleChange}
-          />
-          <HelpBlock>Please check your email for the code.</HelpBlock>
-        </FormGroup>
-
-        <LoaderButton
-          block
-          bsSize="large"
-          disabled={!this.validateConfirmationForm()}
-          type="submit"
-          isLoading={this.state.isLoading}
-          text="Verify"
-          loadingText="Verifying…"
-        />
-      </form>
-    );
   }
 
   renderForm() {
@@ -137,7 +129,7 @@ export default class Signup extends Component {
     return (
       <div className="signuppage">
         <h1>Sign Up </h1>
-        {this.state.newUser === null ? this.renderForm(): this.renderConfirmationForm()}
+        {this.state.newUser === null ? this.renderForm(): console.log("Jenn is a good Jenn.")}
       </div>
     );
   }
