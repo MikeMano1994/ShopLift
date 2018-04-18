@@ -60,7 +60,7 @@ export default class Contact extends Component {
           <h4> Email: info@shop_liftteam.com </h4>
         </div>
 
-        <h1 className="App-title">
+        <h1 className="contactheader">
           "We're always here for you. Let me know what you want"
         </h1>
 

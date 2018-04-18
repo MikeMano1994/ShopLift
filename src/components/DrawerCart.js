@@ -48,7 +48,8 @@ export default class DrawerCart extends Component{
           open={this.state.open}
           position={this.state.position}
           onClose={this.onDrawerClose}
-          noOverlay={this.state.noOverlay}>
+          noOverlay={this.state.noOverlay}
+          >
           
           <i onClick={this.closeDrawer} className="icono-cross"></i>
           

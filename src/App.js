@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import AboutUs  from  './components/AboutUs.js';
 import Cart     from './components/Cart';
-import CheckOut from './components/CheckOut';
+import CheckOut from './components/checkout/CheckOut';
 import Contact  from './components/Contact';
 import Footer   from './components/layout/Footer';
 import Header   from './components/layout/Header';
@@ -16,6 +16,7 @@ import './App.css';
 import '../node_modules/react-image-slider/lib/image-slider.css';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
@@ -36,6 +37,7 @@ class App extends Component {
                 <Route exact path='/login'    component={LogIn} />
                 <Route exact path='/signup'   component={SignUp} />
                 <Route exact path='/cart'     component={Cart} />
+                <Route exact path='/check-out'     component={CheckOut} />
               </div>
             </div>
           </BrowserRouter>

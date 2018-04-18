@@ -1,16 +1,32 @@
 //Spinner Docs: http://indigojs.github.io/bootstrap-spinner/
 
 import React, { Component } from 'react';
+import {Button, Modal } from 'react-bootstrap';
 
 export default class Item extends Component {
+    constructor(props, context) {
+        super(props, context);
 
-    constructor(props){
-        super(props);
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+
+        this.state = {
+            show: false
+        };
     }
-  render() {
+
+    handleClose() {
+        this.setState({ show: false });
+    }
+
+    handleShow() {
+        this.setState({ show: true });
+    }
+
+    render() {
     return (
         <div className="card">
-            <img className="card-img-top" src={this.props.a.image} alt="Card image cap"/>
+            <img className="card-img-top" src={this.props.a.image} alt="Card image cap" onClick={this.handleShow}/>
                 <div className="card-body">
                     <h5 className="card-title">{this.props.a.name}</h5>
                     <p className="card-price">${this.props.a.price}/ea.</p>
@@ -30,6 +46,27 @@ export default class Item extends Component {
                     </div>
                     <a href="#" className="btn btn-primary">Add To Cart</a>
                 </div>
+            <div>
+                <Modal show={this.state.show} onHide={this.handleClose}>
+                    <Modal.Header closeButton>
+                        {/*<Modal.Title>{this.props.a.name}</Modal.Title>*/}
+                    </Modal.Header>
+                    <Modal.Body>
+                        <div className="modal-card-content">
+                            <img className="modal-card-image" src={this.props.a.image}/>
+                            <div className="modal-card-text">
+                                <h4 className="modal-card-title">{this.props.a.name}</h4>
+                                <p className="modal-card-description">
+                                    {this.props.a.description}
+                                </p>
+                            </div>
+                        </div>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button onClick={this.handleClose}>Close</Button>
+                    </Modal.Footer>
+                </Modal>
+            </div>
         </div>
     )
   }
