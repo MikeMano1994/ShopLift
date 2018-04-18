@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from 'react-router-dom'
 import {
   HelpBlock,
   FormGroup,
@@ -66,7 +67,7 @@ export default class Signup extends Component {
           />
           <HelpBlock>Please check your email for the code.</HelpBlock>
         </FormGroup>
-        
+
         <LoaderButton
           block
           bsSize="large"
