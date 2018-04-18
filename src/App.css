@@ -321,3 +321,13 @@ a {
   font-size: 20px;
   margin-right: 50%;
 }
+
+.modal {
+  position: center;
+}
+.modal-card-content {
+  display: inline-flex;
+}
+.modal-card-text {
+  margin-left: 1em;
+}

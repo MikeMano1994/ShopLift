@@ -16,6 +16,7 @@ import './App.css';
 import '../node_modules/react-image-slider/lib/image-slider.css';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
