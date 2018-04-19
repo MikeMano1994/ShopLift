@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import { Container, Row, Col } from 'reactstrap';
 
 export default class AboutUs extends Component {
   render() {
     return (
-      <div>
+      <div >
         <h1 className="aboutUsTitle">About Us</h1>
         <p className="aboutusdescription">
           Who are we? ShopLift is a family owned business that later on expanded

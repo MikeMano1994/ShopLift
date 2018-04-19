@@ -52,13 +52,17 @@ export default class Step3 extends Component{
     e.preventDefault();
   };
 
+  componentDidMount() {}
+
+  componentWillUnmount() {}
+
     render(){
         return(
           <div>
               <div className = "cart">
                 <a href="/shop"> 
-                  <p><span class="glyphicon glyphicon-chevron-left"></span> 
-                  Continue Shopping</p>
+                  <span class="glyphicon glyphicon-chevron-left"></span> 
+                  Continue Shopping
                 </a>
                 <h1> CHECK OUT </h1>
               </div>

@@ -8,8 +8,8 @@ export default class Step6 extends Component{
         	<div className = 'confirmation'>
 			    <h1> THANK YOU!</h1>
 			    <h3> 
-			    We love what you steal, it's a great deal!
-			    We received your order and will let you know 
+			    We love what you steal, it's a great deal!</h3>
+			    <h3>We received your order and will let you know 
 			    when it ship. 
 			    </h3>
 			    <img

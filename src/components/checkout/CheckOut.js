@@ -34,19 +34,17 @@ export default class CheckOut extends Component {
           <StepZilla         
           steps={steps} 
 
-          showSteps={true}
-          showNavigation={true}
-          stepsNavigation={true}
+          preventEnterSubmission={true}
           prevBtnOnLastStep={false}
-          dontValidate={true}
-          preventEnterSubmission={false}
-          startAtStep={[1]}
+          startAtStep= {window.sessionStorage.getItem('step') ? parseFloat(window.sessionStorage.getItem('step')) : 0}
+          onStepChange={(step) => window.sessionStorage.setItem('step', step)}
           nextButtonText={' '}
           backButtonText={' '}
           nextButtonCls={'btn btn-prev btn-outline-success my-2 my-sm-0 ml-10 glyphicon glyphicon-chevron-right'}
           backButtonCls={'btn btn-next btn-outline-success my-2 my-sm-0 ml-10 glyphicon glyphicon-chevron-left'}
           nextTextOnFinalActionStep={' '}
-          hocValidationAppliedTo = {[3]}
+          hocValidationAppliedTo = {[]}
+         
            />
       </div>
     </div>

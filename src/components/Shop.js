@@ -11,7 +11,6 @@ export default class Shop extends Component{
     render(){
         return(
           <div>
-              <shopSideBar/>
               <Products/>
           </div>
         );

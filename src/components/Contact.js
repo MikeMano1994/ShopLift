@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Map from "./Map";
+import { Container, Row, Col } from 'reactstrap';
+
 
 import "../App.css";
 import raccoon from "../picture/cuteraccoon.jpg";
@@ -47,6 +49,8 @@ export default class Contact extends Component {
 
   render() {
     return (
+      <Row>
+      <Col>
       <div>
         <Map />
         <div className="contact">
@@ -109,6 +113,8 @@ export default class Contact extends Component {
           alt="raccoon"
         /> */}
       </div>
+      </Col>
+      </Row>
     );
   }
 }

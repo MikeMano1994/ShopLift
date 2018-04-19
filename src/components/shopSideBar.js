@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Shop       from './Shop';
+
 
 // Each logical "route" has two components, one for
 // the sidebar and one for the main area. We want to
@@ -9,7 +11,7 @@ const routes = [
   {
     path: "/shop/all",
     exact: true,
-    main: () => <h2>All</h2>
+    main: () => <Shop/>
   },
   {
     path: "/shop/vegetables",
@@ -51,34 +53,33 @@ const Sidebar = () => (
           
             <h2 className = "shop">Shop</h2>
     
+              <li>
+                <Link to="/shop/all">All</Link>
+              </li>
+             
+              <li>
+                <Link to="/shop/beverage">Beverage</Link>
+              </li>
+              
+              <li>
+                <Link to="/shop/dairy">Dairy</Link>
+              </li>
+              
+              <li>
+                <Link to="/shop/frozen">Frozen</Link>
+              </li>
 
-          <li>
-            <Link to="/shop/all">All</Link>
-          </li>
-         
-          <li>
-            <Link to="/shop/beverage">Beverage</Link>
-          </li>
+              <li>
+                <Link to="/shop/fruit">Fruit</Link>
+              </li>
+              
+              <li>
+                <Link to="/shop/meat">Meat</Link>
+              </li>
           
-          <li>
-            <Link to="/shop/dairy">Dairy</Link>
-          </li>
-          
-          <li>
-            <Link to="/shop/frozen">Frozen</Link>
-          </li>
-
-          <li>
-            <Link to="/shop/fruit">Fruit</Link>
-          </li>
-          
-          <li>
-            <Link to="/shop/meat">Meat</Link>
-          </li>
-      
-          <li>
-            <Link to="/shop/vegetables">Vegetables</Link>
-          </li>
+              <li>
+                <Link to="/shop/vegetables">Vegetables</Link>
+              </li>
         </ul>
 
         {routes.map((route, index) => (
@@ -97,8 +98,9 @@ const Sidebar = () => (
           />
         ))}
       </div>
+    
 
-      <div style={{ flex: 1, padding: "0px" }}>
+      <div style={{ flex: 1, padding: "0px"}}>
         {routes.map((route, index) => (
           // Render more <Route>s with the same paths as
           // above, but different components this time.
