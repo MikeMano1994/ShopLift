@@ -9,14 +9,17 @@ import Step4 from './Step4';
 import Step5 from './Step5';
 import Step6 from './Step6';
 
+
 import './checkout.css';
+import '../../App.css'
+
 export default class CheckOut extends Component {
 
 
   render() {
     const steps =
     [
-      {name: 'Info', component: <Step1/>},
+      {name: 'Cart', component: <Step1/>},
       {name: 'My Profile', component: <Step2/>},
       {name: 'Delivery', component: <Step3/>},
       {name: 'Payment', component: <Step4/>},
@@ -26,24 +29,26 @@ export default class CheckOut extends Component {
     ]
 
     return (
-      <div className='step-progress'>
-        <StepZilla style={{fontsize:"100px"}}         
-        steps={steps} 
+      <div className = 'checkout'>
+        <div className='step-progress'>
+          <StepZilla         
+          steps={steps} 
 
-        showSteps='true'
-        showNavigation='true'
-        stepsNavigation='true'
-        prevBtnOnLastStep='true'
-        dontValidate='false'
-        preventEnterSubmission='false'
-        startAtStep='0'
-        nextButtonText='Next'
-        backButtonText='Back'
-        nextButtonCls='btn btn-prev btn-outline-success my-2 my-sm-0 ml-10 '
-        backButtonCls='btn btn-next btn-outline-success my-2 my-sm-0 ml-10'
-        nextTextOnFinalActionStep='[default value of nextButtonText]'
-        hocValidationAppliedTo = '0'
-         />
+          showSteps={true}
+          showNavigation={true}
+          stepsNavigation={true}
+          prevBtnOnLastStep={false}
+          dontValidate={true}
+          preventEnterSubmission={false}
+          startAtStep={[1]}
+          nextButtonText={' '}
+          backButtonText={' '}
+          nextButtonCls={'btn btn-prev btn-outline-success my-2 my-sm-0 ml-10 glyphicon glyphicon-chevron-right'}
+          backButtonCls={'btn btn-next btn-outline-success my-2 my-sm-0 ml-10 glyphicon glyphicon-chevron-left'}
+          nextTextOnFinalActionStep={' '}
+          hocValidationAppliedTo = {[3]}
+           />
+      </div>
     </div>
     )
   }

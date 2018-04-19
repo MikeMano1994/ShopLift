@@ -4,7 +4,7 @@ export default class Step5 extends Component{
     render(){
         return(
 
-    <h1> THIS IS Step5 </h1>
+    	<h3> Review the information here</h3>
         );    
     }
 }

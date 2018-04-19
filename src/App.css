@@ -343,3 +343,59 @@ a {
 .modal-card-text {
   margin-left: 1em;
 }
+
+/*Check Out*/
+.checkout{
+  color: #945d60;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 40px;
+
+}
+.step1{
+  color: #945d60;
+  padding-bottom: 20px;
+  font-size: 30px;
+  
+}
+.checkoutinformation{
+  color: #945d60;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 40px;
+  font-size: 20px;
+  margin-right: 10%;  
+  text-align: left;
+  display: inline-block;
+}
+
+.info{
+  color: #945d60;
+  text-align: left;
+  
+  margin-left: 35%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  padding-bottom: 50px;
+
+}
+.firstname input,
+.lastname input,
+.address input,
+.city input,
+.state input,
+.zipcode input {
+  width: 50%;
+  height: 40px;
+  border: 1.5px solid #3c3c3c;
+  margin-right: 50%;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 10px;
+
+
+}
+
+.confirmation{
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  text-align: center;
+}

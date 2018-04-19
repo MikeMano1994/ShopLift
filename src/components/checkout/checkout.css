@@ -38,12 +38,12 @@ ol.progtrckr li.progtrckr-todo {
 
 ol.progtrckr li.progtrckr-doing {
   color: black;
-  border-bottom: 4px solid #CCCCCC;
+  border-bottom: 4px solid #945d60;
 }
 
 ol.progtrckr li.progtrckr-done {
   color: black;
-  border-bottom: 4px solid #5cb85c;
+  border-bottom: 4px solid #626e60;
 }
 
 ol.progtrckr li:after {
@@ -72,7 +72,7 @@ ol.progtrckr li.progtrckr-todo:hover:before {
 ol.progtrckr li.progtrckr-doing:before {
   content: "\2022";
   color: white;
-  background-color: #CCCCCC;
+  background-color: #af473c;
   width: 1.2em;
   line-height: 1.2em;
   border-radius: 1.2em;
@@ -85,7 +85,7 @@ ol.progtrckr li.progtrckr-doing:hover:before {
 ol.progtrckr li.progtrckr-done:before {
   content: "\2713";
   color: white;
-  background-color: #5cb85c;
+  background-color: #626e60;
   width: 1.2em;
   line-height: 1.2em;
   border-radius: 1.2em;
