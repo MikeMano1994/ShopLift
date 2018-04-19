@@ -21,11 +21,14 @@ export default class Signup extends Component {
       password: "",
       confirmPassword: "",
       newUser: null,
-      redirectTo: null
+      redirectTo: null,
+      checked: "",
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleCheckedChanged = this.handleCheckedChanged.bind(this);
+
   }
 
   handleChange = event => {
@@ -69,12 +72,17 @@ export default class Signup extends Component {
       this.state.email.length > 0 &&
       this.state.password.length > 0 &&
       this.state.password === this.state.confirmPassword
+     
+
     );
   }
 
   handleConfirmationSubmit = async event => {
     event.preventDefault();
     this.setState({ isLoading: true });
+  }
+  handleCheckedChanged (event) {
+    this.setState({checked: event.target.checked})
   }
 
   renderForm() {
@@ -107,6 +115,32 @@ export default class Signup extends Component {
             type="password"
           />
         </FormGroup>
+
+
+        <div className='row'>
+          <div className='ten columns terms'>
+            <span>By clicking "Accept" I agree that:</span>
+              <ul className='docs-terms'>
+                <li>
+                  I have read and accepted the <a href='/useragreement' style={{ color:'#626e60'}}>User Agreement</a>
+                </li>
+                <li>
+                  I have read and accepted the <a href='/userprivacy' style={{ color:'#626e60'}}>Privacy Policy</a>
+                </li>
+                <li>I am at least 18 years old</li>
+              </ul>
+            <label>
+              <input
+                type='checkbox'
+                defaultChecked={this.state.checked}
+                checked={this.state.checked}
+                onChange={this.handleCheckedChanged}
+                autoFocus
+              />
+              <span> Accept </span>{' '}
+            </label>
+          </div>
+        </div>
 
         <LoaderButton
           block
