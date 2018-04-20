@@ -14,6 +14,7 @@ export default class Shop extends Component{
           <div>
             <Products/>
             <ShopSideBar/>
+
           </div>
         );
     }

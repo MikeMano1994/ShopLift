@@ -8,6 +8,38 @@ import Shop       from './Shop';
 // render both of them in different places when the
 // path matches the current URL.
 
+const routes = [
+  {
+    path: "/shop/all",
+    exact: true,
+    main: () => <Shop/>
+  },
+  {
+    path: "/shop/vegetables",
+    main: () => <h2>Vegetables</h2>
+  },
+  {
+    path: "/shop/beverage",
+    main: () => <h2>Beverage</h2>
+  },
+    {
+    path: "/shop/dairy",
+    main: () => <h2>Dairy</h2>
+  },
+   {
+    path: "/shop/fruit",
+    main: () => <h2>Fruit</h2>
+  },
+   {
+    path: "/shop/meat",
+    main: () => <h2>Meat</h2>
+  },
+   {
+    path: "/shop/frozen",
+    main: () => <h2>Frozen</h2>
+  },
+];
+
 export default class ShopSideBar extends Component{
   constructor(props){
         super(props);
@@ -95,34 +127,3 @@ export default class ShopSideBar extends Component{
         );
     }
 }
- const routes = [
-  {
-    path: "/shop/all",
-    exact: true,
-    main: () => <h2>All</h2>
-  },
-  {
-    path: "/shop/vegetables",
-    main: () => <h2>Vegetables</h2>
-  },
-  {
-    path: "/shop/beverage",
-    main: () => <h2>Beverage</h2>
-  },
-    {
-    path: "/shop/dairy",
-    main: () => <h2>Dairy</h2>
-  },
-   {
-    path: "/shop/fruit",
-    main: () => <h2>Fruit</h2>
-  },
-   {
-    path: "/shop/meat",
-    main: () => <h2>Meat</h2>
-  },
-   {
-    path: "/shop/frozen",
-    main: () => <h2>Frozen</h2>
-  },
-];
