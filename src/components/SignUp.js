@@ -22,7 +22,7 @@ export default class Signup extends Component {
       confirmPassword: "",
       newUser: null,
       redirectTo: null,
-      checked: null
+      checked: false
     }
 
     this.handleCheckedChanged = this.handleCheckedChanged.bind(this);
@@ -42,7 +42,7 @@ export default class Signup extends Component {
   }
 
   handleCheckedChanged = event => {
-    this.setState({checked: event.target.checked})
+    this.setState({ checked: true });
   }
 
   handleSubmit = async event => {
@@ -77,7 +77,7 @@ export default class Signup extends Component {
       this.state.email.length > 0 &&
       this.state.password.length > 0 &&
       this.state.password === this.state.confirmPassword &&
-      this.state.checked
+      this.state.checked == true
     );
   }
 
@@ -130,8 +130,7 @@ export default class Signup extends Component {
             <label>
               <input
                 type='checkbox'
-                defaultChecked={this.state.checked}
-                checked={this.state.checked}
+                value={this.state.checked}
                 onChange={this.handleCheckedChanged}
                 autoFocus
               />

@@ -30,16 +30,16 @@ class App extends Component {
           <BrowserRouter>
             <div>
               <div id='routes'>
-                <Route exact path='/'             component={Home} />
-                <Route exact path='/contact'      component={Contact} />
-                <Route exact path='/about-us'     component={AboutUs} />
-                <Route exact path='/shop'         component={Shop} />
-                <Route exact path='/login'        component={LogIn} />
-                <Route exact path='/signup'       component={SignUp} />
-                <Route exact path='/cart'         component={Cart} />
-                <Route exact path='/check-out'    component={CheckOut} />
-                <Route exact path='/useragreement'    component={UserAgreement} />
-                <Route exact path='/userprivacy'    component={UserPrivacy} />
+                <Route exact path='/' component={Home} />
+                <Route exact path='/contact' component={Contact} />
+                <Route exact path='/about-us' component={AboutUs} />
+                <Route exact path='/shop' component={Shop} />
+                <Route exact path='/login' component={LogIn} />
+                <Route exact path='/signup' component={SignUp} />
+                <Route exact path='/cart' component={Cart} />
+                <Route exact path='/check-out' component={CheckOut} />
+                <Route exact path='/useragreement' component={UserAgreement} />
+                <Route exact path='/userprivacy' component={UserPrivacy} />
               </div>
             </div>
           </BrowserRouter>
