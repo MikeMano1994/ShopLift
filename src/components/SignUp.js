@@ -22,13 +22,12 @@ export default class Signup extends Component {
       confirmPassword: "",
       newUser: null,
       redirectTo: null,
-      checked: "",
+      checked: null
     }
 
+    this.handleCheckedChanged = this.handleCheckedChanged.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.handleCheckedChanged = this.handleCheckedChanged.bind(this);
-
   }
 
   handleChange = event => {
@@ -37,10 +36,19 @@ export default class Signup extends Component {
     });
   }
 
+  handleConfirmationSubmit = async event => {
+    event.preventDefault();
+    this.setState({ isLoading: true });
+  }
+
+  handleCheckedChanged = event => {
+    this.setState({checked: event.target.checked})
+  }
+
   handleSubmit = async event => {
     event.preventDefault();
     this.setState({ isLoading: true });
-    this.setState({ newUser: "test" });
+    this.setState({ newUser: "TEST-USER" });
     this.setState({ isLoading: false });
 
     axios
@@ -52,7 +60,8 @@ export default class Signup extends Component {
         console.log(response)
 
         if (!response.data.errmsg) {
-          console.log("Coffee is awesome");
+          console.log("You are good to go");
+
           this.setState({
             redirectTo: '/LogIn'
           })
@@ -71,18 +80,9 @@ export default class Signup extends Component {
     return (
       this.state.email.length > 0 &&
       this.state.password.length > 0 &&
-      this.state.password === this.state.confirmPassword
-     
-
+      this.state.password === this.state.confirmPassword &&
+      this.state.checked
     );
-  }
-
-  handleConfirmationSubmit = async event => {
-    event.preventDefault();
-    this.setState({ isLoading: true });
-  }
-  handleCheckedChanged (event) {
-    this.setState({checked: event.target.checked})
   }
 
   renderForm() {
@@ -116,7 +116,6 @@ export default class Signup extends Component {
           />
         </FormGroup>
 
-
         <div className='row'>
           <div className='ten columns terms'>
             <span>By clicking "Accept" I agree that:</span>
@@ -127,8 +126,11 @@ export default class Signup extends Component {
                 <li>
                   I have read and accepted the <a href='/userprivacy' style={{ color:'#626e60'}}>Privacy Policy</a>
                 </li>
-                <li>I am at least 18 years old</li>
+                <li>
+                  I am at least 18 years old
+                </li>
               </ul>
+
             <label>
               <input
                 type='checkbox'
@@ -148,8 +150,9 @@ export default class Signup extends Component {
           disabled={!this.validateForm()}
           type="submit"
           isLoading={this.state.isLoading}
-          text="Signup"
+          text="Sign Up"
           loadingText="Signing up…"
+          onClick={this.handleSubmit}
         />
       </form>
     );
@@ -157,14 +160,15 @@ export default class Signup extends Component {
 
   render() {
     if (this.state.redirectTo) {
-      return <Redirect to={{ pathname: this.state.redirectTo }} />
+      return <Redirect to={{pathname: this.state.redirectTo}} />
     }
-
-    return (
-      <div className="signuppage">
-        <h1>Sign Up </h1>
-        {this.state.newUser === null ? this.renderForm(): console.log("Jenn is a good Jenn.")}
-      </div>
-    );
+    else {
+      return (
+        <div className="signuppage">
+          <h1>Sign Up </h1>
+          {this.state.newUser === null ? this.renderForm(): console.log("Jenn is a good Jenn.")}
+        </div>
+      );
+    }
   }
 }

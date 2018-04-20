@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import DrawerCart from "../DrawerCart";
+import UserDropDown from "../UserDropDown";
 
 import logo from "../../picture/logo.jpg";
 import user from "../../picture/user.png";
@@ -62,15 +63,10 @@ export class Navbar extends Component {
 
               <ul className="nav navbar-right">
                 <li>
-                  <a href="/login">
-                    <img width={35} height={35} src={user} alt={user} />
-                    LOG IN
-                  </a>
+                  <UserDropDown />
                 </li>
                 <li className="emptycart">
-                  <a>
-                    <DrawerCart />
-                  </a>
+                  <a><DrawerCart /></a>
                 </li>
               </ul>
             </ul>
