@@ -36,7 +36,7 @@ export default class CheckOut extends Component {
 
           preventEnterSubmission={true}
           prevBtnOnLastStep={false}
-          startAtStep= {window.sessionStorage.getItem('step') ? parseFloat(window.sessionStorage.getItem('step')) : 0}
+          startAtStep= {window.sessionStorage.getItem('step') ? 0 : parseFloat(window.sessionStorage.getItem('step'))}
           onStepChange={(step) => window.sessionStorage.setItem('step', step)}
           nextButtonText={' '}
           backButtonText={' '}

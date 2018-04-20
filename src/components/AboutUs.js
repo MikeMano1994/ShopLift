@@ -4,7 +4,8 @@ import { Container, Row, Col } from 'reactstrap';
 export default class AboutUs extends Component {
   render() {
     return (
-      <div >
+      <Container>
+        <Row>
         <h1 className="aboutUsTitle">About Us</h1>
         <p className="aboutusdescription">
           Who are we? ShopLift is a family owned business that later on expanded
@@ -12,9 +13,11 @@ export default class AboutUs extends Component {
           locally; therefore, we can guarantee the quality and freshness of each
           good.
         </p>
-        <h1 className="meetTeam col-md-6 col-sm-6 col-lg-4 col-xs-12 col-xl-3" >Meet The Team</h1>
-
-        <div className="team1">
+        <h1 className="meetTeam " >Meet The Team</h1>
+        </Row>
+        <Row className="team1">
+        <Col>
+        
           <div class="item-wrapper">
             <div class="item-content">
               <img src="http://placehold.it/100x100" />
@@ -22,6 +25,9 @@ export default class AboutUs extends Component {
             Juan Marcias
             <div className="teamRole">Product Manager</div>
           </div>
+        </Col>
+
+        <Col>
 
           <div class="item-wrapper">
             <div class="item-content">
@@ -30,7 +36,9 @@ export default class AboutUs extends Component {
             Bruce Lin
             <div className="teamRole">Technical Lead</div>
           </div>
+        </Col>
 
+        <Col>
           <div class="item-wrapper">
             <div class="item-content">
               <img src="http://placehold.it/100x100" />
@@ -38,7 +46,9 @@ export default class AboutUs extends Component {
             Nhat Trinh
             <div className="teamRole">Tester</div>
           </div>
+        </Col>
 
+        <Col>
           <div class="item-wrapper">
             <div class="item-content">
               <img src="http://placehold.it/100x100" />
@@ -46,9 +56,11 @@ export default class AboutUs extends Component {
             Jennifer Nguyen
             <div className="teamRole">Documentation</div>
           </div>
-        </div>
+        </Col>
+      </Row>
 
-        <div className="team2">
+      <Row className="team2">
+        <Col sm="3" >
           <div class="item-wrapper">
             <div class="item-content">
               <img src="http://placehold.it/100x100" />
@@ -56,7 +68,9 @@ export default class AboutUs extends Component {
             Truc Vo
             <div className="teamRole">Marketing</div>
           </div>
+        </Col>
 
+        <Col sm="3">
           <div class="item-wrapper">
             <div class="item-content">
               <img src="http://placehold.it/100x100" />
@@ -64,7 +78,9 @@ export default class AboutUs extends Component {
             Alejandro Lopez
             <div className="teamRole">Documentation</div>
           </div>
+        </Col>
 
+        <Col sm="3">
           <div class="item-wrapper">
             <div class="item-content">
               <img src="http://placehold.it/100x100" />
@@ -72,8 +88,11 @@ export default class AboutUs extends Component {
             Tuan Anh Le
             <div className="teamRole">Marketing</div>
           </div>
-        </div>
-      </div>
-    );
+        </Col>
+      </Row>
+
+      </Container>
+   
+         );
   }
 }
