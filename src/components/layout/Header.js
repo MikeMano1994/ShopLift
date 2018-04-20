@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Navbar } from './Navbar';
+import { NavBar } from './NavBar';
 
 export default class Header extends Component {
   render() {
     return (
       <header>
-        <Navbar />
+        <NavBar />
       </header>
   )}
 }
