@@ -56,8 +56,8 @@ export default class DrawerCart extends Component{
           <h2 className = "shoppingcartstyle">Shopping Cart</h2>
 	      <img style={{width:'250px', height:'150px'}} src={emptycart} alt="emptycart" />
           <div>
-       		<a href="/cart">
-          	<button type="button" class="btn btn-dark"><p>VIEW CART</p></button></a>
+       		<a href="/check-out">
+          	<button type="button" class="btn btn-dark"><p>CHECK OUT</p></button></a>
           </div>
 
         

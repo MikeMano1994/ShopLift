@@ -16,14 +16,14 @@ export default class Cart extends Component{
                 <img src={emptycart} alt="emptycart" />
 
 
-            	<div>
+            	{/*<div>
 				<a href="/check-out" > 
 	            	<button type="button" class="btn btn-dark"
                     style = {{marginBottom: '50px',marginTop: '50px' }}>
                     <p>CHECK OUT</p>
                     </button>
 	            </a>
-				</div>
+				</div>*/}
 
             </div>
         );
