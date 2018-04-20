@@ -1,16 +1,16 @@
-const express = require('express')
-const router = express.Router()
-const User = require('../db/models/user')
-const passport = require('../passport')
+const express = require('express');
+const router = express.Router();
+const User = require('../db/models/user');
+const passport = require('../passport');
 
-router.get('/google', passport.authenticate('google', { scope: ['profile'] }))
-router.get(
-	'/google/callback',
-	passport.authenticate('google', {
-		successRedirect: '/',
-		failureRedirect: '/login'
-	})
-)
+// router.get('/google', passport.authenticate('google', { scope: ['profile'] }))
+// router.get(
+// 	'/google/callback',
+// 	passport.authenticate('google', {
+// 		successRedirect: '/',
+// 		failureRedirect: '/login'
+// 	})
+// )
 
 // this route is just used to get the user basic info
 router.get('/user', (req, res, next) => {
@@ -39,6 +39,7 @@ router.post(
 			console.log(`Deleting ${cleanUser.local.password}`)
 			delete cleanUser.local.password
 		}
+
 		res.json({ user: cleanUser })
 	}
 )
@@ -56,21 +57,25 @@ router.post('/logout', (req, res) => {
 router.post('/signup', (req, res) => {
 	const { username, password } = req.body
 	// ADD VALIDATION
-	User.findOne({ 'local.username': username }, (err, userMatch) => {
+	User.findOne({ 'local.email': email }, (err, userMatch) => {
 		if (userMatch) {
 			return res.json({
-				error: `Sorry, already a user with the username: ${username}`
+				error: `Sorry, already a user with the email: ${email}`
 			})
 		}
+
 		const newUser = new User({
-			'local.username': username,
+			'local.email': email,
 			'local.password': password
 		})
+
 		newUser.save((err, savedUser) => {
-			if (err) return res.json(err)
+			if (err)
+				return res.json(err)
+
 			return res.json(savedUser)
 		})
 	})
 })
 
-module.exports = router
+module.exports = router;
