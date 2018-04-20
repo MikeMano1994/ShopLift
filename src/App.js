@@ -1,24 +1,22 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-
-import AboutUs    from  './components/AboutUs.js';
-import Cart       from './components/Cart';
-import CheckOut   from './components/checkout/CheckOut';
-import Contact    from './components/Contact';
-import Footer     from './components/layout/Footer';
-import Header     from './components/layout/Header';
-import Home       from './components/Home';
-import LogIn      from './components/LogIn';
-import Shop       from './components/ShopSideBar';
-import SignUp     from './components/SignUp';
-import UserAgreement     from './components/UserAgreement';
-import UserPrivacy     from './components/UserPrivacy';
+import AboutUs from  './components/AboutUs.js';
+import Cart from './components/Cart';
+import CheckOut from './components/checkout/CheckOut';
+import Contact from './components/Contact';
+import Footer from './components/layout/Footer';
+import Header from './components/layout/Header';
+import Home from './components/Home';
+import LogIn from './components/LogIn';
+import Shop from './components/ShopSideBar';
+import SignUp from './components/SignUp';
+import UserAgreement from './components/UserAgreement';
+import UserPrivacy from './components/UserPrivacy';
 
 import './App.css';
 import '../node_modules/react-image-slider/lib/image-slider.css';
 
 class App extends Component {
-
   render() {
     return (
       <div className="App">

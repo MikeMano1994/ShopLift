@@ -72,10 +72,6 @@ export default class Signup extends Component {
       })
   }
 
-  validateConfirmationForm() {
-    return this.state.confirmationCode.length > 0;
-  }
-
   validateForm() {
     return (
       this.state.email.length > 0 &&
@@ -166,7 +162,7 @@ export default class Signup extends Component {
       return (
         <div className="signuppage">
           <h1>Sign Up </h1>
-          {this.state.newUser === null ? this.renderForm(): console.log("Jenn is a good Jenn.")}
+          {this.state.newUser === null ? this.renderForm(): console.log("Eror")}
         </div>
       );
     }

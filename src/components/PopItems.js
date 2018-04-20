@@ -8,25 +8,21 @@ import {render} from 'react-dom';
 import Gallery from 'react-grid-gallery';
 
 export default class PopItems extends Component {
-
-    render() {
-        return (
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <p>The gallery doesn't show unless there is text here. IDK why.
-                        <Gallery images={IMAGES} margin={5} maxRows={2} enableLightbox={false}
-                                 enableImageSelection={false}/>
-                        {/*, document.getElementById('example-0')*/}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-
+  render() {
+    return (
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p>The gallery doesn't show unless there is text here. IDK why.
+            <Gallery images={IMAGES} margin={5} maxRows={2} enableLightbox={false}
+                    enableImageSelection={false}/>
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
-
 
 const IMAGES =
     [{
@@ -75,4 +71,3 @@ const IMAGES =
             thumbnailWidth: 400,
             thumbnailHeight: 270
         }]
-

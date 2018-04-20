@@ -12,7 +12,7 @@ export default class AboutUs extends Component {
           locally; therefore, we can guarantee the quality and freshness of each
           good.
         </p>
-        <h2 className="meetTeam">Meet The Team (in progress)</h2>
+        <h1 className="meetTeam col-md-6 col-sm-6 col-lg-4 col-xs-12 col-xl-3" >Meet The Team</h1>
 
         <div className="team1">
           <div class="item-wrapper">
