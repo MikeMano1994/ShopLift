@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Shop       from './Shop';
+import Shop from './Shop';
 
 
 // Each logical "route" has two components, one for
@@ -15,8 +15,8 @@ const routes = [
     main: () => <Shop/>
   },
   {
-    path: "/shop/vegetables",
-    main: () => <h2>Vegetables</h2>
+    path: "/shop/produce",
+    main: () => <h2>Produce</h2>
   },
   {
     path: "/shop/beverage",
@@ -27,16 +27,16 @@ const routes = [
     main: () => <h2>Dairy</h2>
   },
    {
-    path: "/shop/fruit",
-    main: () => <h2>Fruit</h2>
+    path: "/shop/snacks",
+    main: () => <h2>Snacks</h2>
   },
    {
     path: "/shop/meat",
     main: () => <h2>Meat</h2>
   },
    {
-    path: "/shop/frozen",
-    main: () => <h2>Frozen</h2>
+    path: "/shop/frozen food",
+    main: () => <h2>Frozen Food</h2>
   },
 ];
 
@@ -75,11 +75,11 @@ export default class ShopSideBar extends Component{
               </li>
               
               <li>
-                <Link to="/shop/frozen">Frozen</Link>
+                <Link to="/shop/frozen food">Frozen Food</Link>
               </li>
 
               <li>
-                <Link to="/shop/fruit">Fruit</Link>
+                <Link to="/shop/snacks">Snacks</Link>
               </li>
               
               <li>
@@ -87,7 +87,7 @@ export default class ShopSideBar extends Component{
               </li>
           
               <li>
-                <Link to="/shop/vegetables">Vegetables</Link>
+                <Link to="/shop/produce">Produce</Link>
               </li>
         </ul>
 
