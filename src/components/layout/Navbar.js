@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import DrawerCart from "../DrawerCart";
-import DropDown from "../DropDown";
+import UserDropDown from "../UserDropDown";
 
 import logo from "../../picture/logo.jpg";
 import user from "../../picture/user.png";
@@ -63,14 +63,10 @@ export class Navbar extends Component {
 
               <ul className="nav navbar-right">
                 <li>
-                
-                  <DropDown/>
-
+                  <UserDropDown />
                 </li>
                 <li className="emptycart">
-                  <a>
-                    <DrawerCart />
-                  </a>
+                  <a><DrawerCart /></a>
                 </li>
               </ul>
             </ul>
