@@ -9,7 +9,7 @@ import Footer     from './components/layout/Footer';
 import Header     from './components/layout/Header';
 import Home       from './components/Home';
 import LogIn      from './components/LogIn';
-import Shop       from './components/Shop';
+import Shop       from './components/ShopSideBar';
 import SignUp     from './components/SignUp';
 import UserAgreement     from './components/UserAgreement';
 import UserPrivacy     from './components/UserPrivacy';

@@ -54,7 +54,7 @@ export default class ShopSideBar extends Component{
       <div
         style={{
           padding: "0px",
-          width: "0%",
+          width: "100px",
           background: "#white"
         }}
       >
