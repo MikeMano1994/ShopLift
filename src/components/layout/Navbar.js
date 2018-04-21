@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import DrawerCart from "../DrawerCart";
 import UserDropDown from "../UserDropDown";
 
@@ -19,7 +19,7 @@ import user from "../../picture/user.png";
 
 import "../../App.css";
 
-export default class TrucNavbar extends React.Component {
+export default class NavBar extends Component {
   constructor(props) {
     super(props);
 
@@ -44,19 +44,24 @@ export default class TrucNavbar extends React.Component {
           </a>
         </div>
 
-          <Navbar color="white" light expand="md">
+          <Navbar color="white"  expand="md">
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse isOpen={!this.state.collapsed} navbar>
 
-            <Nav>
-              <Form>
-                <Input type="text" placeholder="Search for the fresh!" />
-              </Form> {' '}
-
-              <Button type="submit" size="sm" outline color="success" >
-                <span class="glyphicon glyphicon-search my-sm-0"/>
-              </Button>
+            <Nav navbar>
+              <NavItem>
+                <Form>
+                  <Input type="text" placeholder="Search for the fresh!" />
+                </Form>
+              </NavItem>
+              <NavItem>
+                <Button type="submit" size="md" outline color="success" >
+                  <span class="glyphicon glyphicon-search my-sm-0"/>
+                </Button>
+              </NavItem>
             </Nav>
+
+            
 
 
             <Nav navbar >
