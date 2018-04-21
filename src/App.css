@@ -141,6 +141,9 @@
   margin-right: 65px;
   float: right;
 }
+.dropdown{
+  background-color: white;
+}
 
 /* Content */
 .content {

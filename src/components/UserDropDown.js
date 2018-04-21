@@ -21,8 +21,8 @@ export default class UserDropDown extends Component {
   render() {
     return (
       <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle color={'white'}>
-          <img width={40} height={40} src={user} alt={user} />
+        <DropdownToggle className = 'dropdown'>
+          <img width={40} height={40} src={user} alt={user}/>
         </DropdownToggle>
 
         <DropdownMenu>
