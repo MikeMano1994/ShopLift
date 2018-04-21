@@ -5,7 +5,8 @@ import Cart from './components/Cart';
 import CheckOut from './components/checkout/CheckOut';
 import Contact from './components/Contact';
 import Footer from './components/layout/Footer';
-import Header from './components/layout/Header';
+
+import NavBar from './components/layout/Navbar';
 import Home from './components/Home';
 import LogIn from './components/LogIn';
 import Shop from './components/ShopSideBar';
@@ -22,7 +23,7 @@ class App extends Component {
       <div className="App">
 
         <div className='App-header'>
-          <Header />
+          <NavBar />
           <h1 className="App-title">“Deals so great - It’s a steal.”</h1>
         </div>
 

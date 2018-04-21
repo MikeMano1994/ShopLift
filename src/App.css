@@ -66,8 +66,7 @@
   padding-bottom: 10px;
 }
 
-.team1,
-.team2 {
+.team1, .team2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -92,8 +91,8 @@
   font-weight: bold;
 }
 
-/*SearchBar*/
-.btn-outline-success {
+/* SearchBar */
+/* .btn-outline-success {
   background-color: #7b9178;
   border-color: #7b9178;
 }
@@ -102,7 +101,7 @@
 .btn-outline-success:active {
   background-color: #945d60;
   border-color: #945d60;
-}
+} */
 
 .my-sm-0 {
   color: white;
@@ -112,23 +111,24 @@
 .nav-link {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5em;
-  margin-left: 50px;
-  margin-right: 50px;
   text-align: center;
 }
 
-.bignavbar {
+/* .bignavbar {
   display: inline-block;
   text-align: center;
-}
+} */
 
 .navbar .navbar-nav {
+  margin-left: 15px;
+  margin-right: 15px;
   vertical-align: top;
+  display: inline-block;
 }
 
-.navbar .navbar-collapse {
+/* .navbar .navbar-collapse {
   text-align: center;
-}
+} */
 
 .icon {
   color: #7b9178;
@@ -215,6 +215,7 @@ a {
     transform: scale(1) rotate(360deg);
   }
 }
+
 /*Contact*/
 .contact {
   color: #945d60;
@@ -285,10 +286,9 @@ a {
   margin: 1em;
   width: 18em;
 }
+
 .card-title {
   font-weight: bold;
-}
-.card-text {
 }
 
 /*Bootstrap Slider (Qty)*/
@@ -330,9 +330,11 @@ a {
 .modal {
   position: center;
 }
+
 .modal-card-content {
   display: inline-flex;
 }
+
 .modal-card-text {
   margin-left: 1em;
 }
@@ -348,28 +350,29 @@ a {
   color: #945d60;
   padding-bottom: 20px;
   font-size: 30px;
-  
+
 }
-.checkoutinformation{
+.checkoutinformation {
   color: #945d60;
   font-family: "Montserrat", sans-serif;
   padding-bottom: 40px;
   font-size: 20px;
-  margin-right: 10%;  
+  margin-right: 10%;
   text-align: left;
   display: inline-block;
 }
 
-.info{
+.info {
   color: #945d60;
   text-align: left;
-  
+
   margin-left: 35%;
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   padding-bottom: 50px;
 
 }
+
 .firstname input,
 .lastname input,
 .address input,
@@ -383,11 +386,9 @@ a {
   display: inline-block;
   text-align: left;
   margin-bottom: 10px;
-
-
 }
 
-.confirmation{
+.confirmation {
   font-family: "Montserrat", sans-serif;
   display: inline-block;
   text-align: center;
