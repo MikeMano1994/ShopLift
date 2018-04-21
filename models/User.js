@@ -2,93 +2,45 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
 const UserSchema = new mongoose.Schema({
-  // ID: {
-  //     type: String,
-  //     default: ''
-  // },
-
-  // name: {
-  //     type: String,
-  //     default: ''
-  // },
-
   email: {
       type: String,
-      default: ''
+      index: { unique: true }
   },
-
-  password: {
-      type: String,
-      default: ''
-  },
-
-  // cart: {
-  //     type: Array,
-  //     default: []
-  // },
-  //
-  // cartHistory: {
-  //     type: Array,
-  //     default: []
-  // },
-  //
-  // address: {
-  //     type: String,
-  //     default: ''
-  // },
-  //
-  // city: {
-  //     type: String,
-  //     default: ''
-  // },
-  //
-  // state: {
-  //     type: String,
-  //     default: ''
-  // },
-  //
-  // postal: {
-  //     type: String,
-  //     default: ''
-  // }
+  password: String
+  name: String
 });
 
-UserSchema.methods.generateHash = function(password) {
-  return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+/**
+ * Compare the passed password with the value in the database. A model method.
+ *
+ * @param {string} password
+ * @returns {object} callback
+ */
+UserSchema.methods.comparePassword = function comparePassword(password, callback) {
+  bcrypt.compare(password, this.password, callback);
 };
 
-UserSchema.methods.validPassword = function(password) {
-  return bcrypt.compareSync(password, this.password);
-};
+/**
+ * The pre-save hook method.
+ */
+UserSchema.pre('save', function saveHook(next) {
+  const user = this;
 
-// call this function from outside, use mongoose's find
-UserSchema.methods.getUserById = function(id){
-  User.findById(id, callback);
-}
+  // proceed further only if the password is modified or the user is new
+  if (!user.isModified('password')) return next();
 
-// find user by username
-// UserSchema.methods.getUserByUsername = function(username, callback){
-//   const query = {username: username};
-//   User.findOne(query, callback);
-// }
+  return bcrypt.genSalt((saltError, salt) => {
+    if (saltError) { return next(saltError); }
 
-// keep everything encapsulated, don't do this outside routes
-UserSchema.methods.addUser = function(newUser, callback){
-  // generate the salt
-  bcrypt.genSalt(10, (err, salt)=>{
-    bcrypt.hash(newUser.password, salt, (err, hash)=>{
-      if (err) throw err;
-      newUser.password = hash;
-      newUser.save(callback);
+    return bcrypt.hash(user.password, salt, (hashError, hash) => {
+      if (hashError) { return next(hashError); }
+
+      // replace a password string with hash value
+      user.password = hash;
+
+      return next();
     });
   });
-};
-
-UserSchema.methods.comparePassword = function(candidatePassword, hash, callback){
-  bcrypt.compare(candidatePassword, hash, (err, isMatch)=>{
-    if (err) throw err;
-    callback(null, isMatch);
-  });
-};
+});
 
 module.exports = mongoose.model('User', UserSchema);
