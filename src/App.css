@@ -92,7 +92,7 @@
 }
 
 /* SearchBar */
-/* .btn-outline-success {
+.btn-outline-success {
   background-color: #7b9178;
   border-color: #7b9178;
 }
@@ -101,7 +101,7 @@
 .btn-outline-success:active {
   background-color: #945d60;
   border-color: #945d60;
-} */
+}
 
 .my-sm-0 {
   color: white;
@@ -112,6 +112,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 1.5em;
   text-align: center;
+  color: #945d60;
 }
 
 /* .bignavbar {
