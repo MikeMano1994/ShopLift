@@ -13,10 +13,10 @@ import SignUp from './components/SignUp';
 import UserAgreement from './components/UserAgreement';
 import UserPrivacy from './components/UserPrivacy';
 
-import Auth from './Auth';
-
 import './App.css';
 import '../node_modules/react-image-slider/lib/image-slider.css';
+
+{/*import Auth from './Auth';*/}
 
 class App extends Component {
   render() {
