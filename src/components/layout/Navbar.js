@@ -7,6 +7,7 @@ import { Navbar,
          FormControl,
          Button,
          NavItem,
+         NavDropdown,
          MenuItem
         } from 'react-bootstrap';
 
@@ -42,15 +43,17 @@ export default class NavBar extends Component {
           </Navbar.Form>
 
           <Nav>
-           <NavItem className="nav-link" href="/">Home</NavItem>
-           <NavItem className="nav-link" href="/shop">Shop</NavItem>
-           <NavItem className="nav-link" href="/contact">Contact</NavItem>
-           <NavItem className="nav-link" href="/about-us">About Us</NavItem>
+             <NavItem className="nav-link" href="/">Home</NavItem>
+             <NavItem className="nav-link" href="/shop">Shop</NavItem>
+             <NavItem className="nav-link" href="/contact">Contact</NavItem>
+             <NavItem className="nav-link" href="/about-us">About Us</NavItem>
           </Nav>
 
           <Nav pullRight>
-            <MenuItem><UserDropDown /></MenuItem>
-            <MenuItem className="emptycart"><DrawerCart /></MenuItem>
+            <ul className="nav">
+              <li><UserDropDown /></li>
+              <li className="emptycart"><DrawerCart /></li>
+            </ul>
           </Nav>
 
             {/*</ul>
