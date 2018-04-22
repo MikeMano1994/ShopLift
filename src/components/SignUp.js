@@ -58,6 +58,16 @@ export default class Signup extends Component {
         console.log("Error! " + errorCode + " " + errorMessage);
       })
       .then(()=>{
+        const uid = fire.auth().currentUser.uid;
+        fire.database().ref('users').set({
+          uid:{
+            email: this.state.email,
+            orderHistory:{
+              items: {},
+              totalPrice: ''
+            }
+          }
+        });
         this.setState({redirectTo:'/'});
         } 
       );

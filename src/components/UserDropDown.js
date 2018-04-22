@@ -60,11 +60,11 @@ export default class UserDropDown extends Component {
           </DropdownToggle>
   
           <DropdownMenu>
+            <DropdownItem><a href="/profile">PROFILE</a></DropdownItem>
+            <DropdownItem divider />
             <DropdownItem><a href="/" 
               onClick={this.logout.bind(this)}>LOG OUT</a>
             </DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem><a href="/signup">SIGN UP</a></DropdownItem>
           </DropdownMenu>
         </Dropdown>
       );

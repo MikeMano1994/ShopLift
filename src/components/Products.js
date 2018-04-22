@@ -7,12 +7,13 @@ export default class Products extends Component {
     super(props);
 
     this.state = {
-      products: {}
+      products: {},
+      category: ''
     };
   }
 
   componentWillMount() {
-    this.setState({products: product});
+    this.setState({products: product, category: this.props.category});
   }
 
   render() {
@@ -24,11 +25,23 @@ export default class Products extends Component {
           <div className="row">
             { this.props.children }
             { productKeys.map((element,index) => {
-              return (
-                <div className="col-md-6 col-sm-6 col-lg-4 col-xs-12 col-xl-3 control-label">
-                  <Item a={this.state.products[element]} />
-                </div>
-              );
+              if (this.props.category === 'all'){
+                return (
+                  <div className="col-md-6 col-sm-6 col-lg-4 col-xs-12 col-xl-3 control-label">
+                    <Item a={this.state.products[element]} />
+                  </div>
+              
+                );
+              }
+              else{
+                if (element.category === this.props.category){
+                  return (
+                    <div className="col-md-6 col-sm-6 col-lg-4 col-xs-12 col-xl-3 control-label">
+                      <Item a={this.state.products[element]} />
+                    </div>
+                  );
+                }
+              }
               })
             }
           </div>

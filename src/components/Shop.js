@@ -8,22 +8,25 @@ export default class Shop extends Component{
     this.state={
       category: 'all'
     };
+    this.setCategory = this.setCategory.bind(this);
   }
 
   setCategory(c){
-    if (c !== null || c !== undefined)
+    if (c !== null && c !== undefined){
       this.setState({category: c});
+    }
   }
 
   render(){
       return(
         <div className='container'>
           <div className='row'>
-            <div className='col-s-12 col-md-6'>
-              <Products/>
-            </div>
-            <div className='col-s-12 col-md-6'>
+            <div className='col-xs-12'>
               <Sidebar setCategory={this.setCategory}/>
+            </div>
+            <br/>
+            <div className='col-xs-12'>
+              <Products category={this.state.category}/>
             </div>
           </div>
         </div>

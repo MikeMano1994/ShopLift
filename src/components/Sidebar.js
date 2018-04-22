@@ -16,12 +16,27 @@ export default class Sidebar extends Component{
     render(){
         // Beverage, Drinks, Frozen Food, Snacks, Meats, Produce
         return(
-        <ul className = "sidebar">
-            <h2 className = "shop">Categories</h2>
-            <Button onClick={()=>{
-                this.props.setCategory({currentCategory:"Beverage"});
-            }}/>
-        </ul>
+            <div className='text-left'>
+                <h2 className = "shop">Shop by Aisle</h2>
+                <Button bsStyle="primary large" style={{backgroundColor: '#6d8c73', margin: '10px'}} onClick={()=>{
+                    this.props.setCategory("all");
+                }}> All </Button>
+                <Button bsStyle="primary large" style={{backgroundColor: '#6d8c73', margin: '10px'}} onClick={()=>{
+                    this.props.setCategory("beverage");
+                }}> Beverages </Button>
+                <Button bsStyle="primary large" style={{backgroundColor: '#6d8c73', margin: '10px'}} onClick={()=>{
+                    this.props.setCategory("dairy");
+                }}> Dairy </Button>
+                <Button bsStyle="primary large" style={{backgroundColor: '#6d8c73', margin: '10px'}} onClick={()=>{
+                    this.props.setCategory("frozen");
+                }}> Frozen </Button>
+                <Button bsStyle="primary large" style={{backgroundColor: '#6d8c73', margin: '10px'}} onClick={()=>{
+                    this.props.setCategory("meat");
+                }}> Meat </Button>
+                <Button bsStyle="primary large" style={{backgroundColor: '#6d8c73', margin: '10px'}} onClick={()=>{
+                    this.props.setCategory("produce");
+                }}> Produce </Button>
+            </div>
         );
     }   
 }
