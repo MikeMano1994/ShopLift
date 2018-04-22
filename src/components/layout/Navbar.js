@@ -50,7 +50,7 @@ export default class NavBar extends Component {
           </a>
         </div>
 
-          <Navbar color="white" light expand="md">
+          <Navbar color="white" light expand="sm" >
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse isOpen={!this.state.collapsed} navbar>
 
@@ -75,24 +75,20 @@ export default class NavBar extends Component {
               <NavItem>
                 <NavLink href="/">Home</NavLink>
               </NavItem>
-            </Nav>
-            <Nav navbar>
               <NavItem>
                 <NavLink href="/shop">Shop</NavLink>
               </NavItem>
-            </Nav>
-            <Nav navbar>
+
               <NavItem>
                 <NavLink href="/contact">Contact</NavLink>
               </NavItem>
-            </Nav>
-            <Nav navbar>
+
               <NavItem>
                 <NavLink href="/about-us">About Us</NavLink>
               </NavItem>
             </Nav>
 
-            <Nav>
+            <Nav >
               <NavItem>
                 <UserDropDown authed={this.props.authed} logout={this.props.loggedIn}/>
               </NavItem>
