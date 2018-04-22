@@ -113,6 +113,8 @@
   font-size: 1.5em;
   text-align: center;
   color: #945d60;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 /* .bignavbar {
@@ -121,15 +123,11 @@
 } */
 
 .navbar .navbar-nav {
-  margin-left: 50px;
+  margin-left: 40px;
   margin-right: 50px;
   vertical-align: top;
   display: inline-block;
 }
-
-/* .navbar .navbar-collapse {
-  text-align: center;
-} */
 
 .icon {
   color: #7b9178;
