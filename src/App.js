@@ -8,10 +8,12 @@ import Footer from './components/layout/Footer';
 import Navbar from './components/layout/Navbar';
 import Home from './components/Home';
 import LogIn from './components/LogIn';
-import Shop from './components/ShopSideBar';
+import Shop from './components/Shop';
 import SignUp from './components/SignUp';
 import UserAgreement from './components/UserAgreement';
 import UserPrivacy from './components/UserPrivacy';
+
+import fire from './fire';
 
 import './App.css';
 import '../node_modules/react-image-slider/lib/image-slider.css';
@@ -19,11 +21,30 @@ import '../node_modules/react-image-slider/lib/image-slider.css';
 {/*import Auth from './Auth';*/}
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      authed:false
+    };
+    this.loggedIn = this.loggedIn.bind(this);
+  }
+  
+  componentWillMount(){
+    if (fire.auth().currentUser !== null || fire.auth().currentUser !== undefined)
+      this.setState({authed:true});
+  }
+
+  loggedIn(e){
+    if (e !== null && e !== undefined)
+      this.setState({authed:e});
+    console.log(e);
+  }
+  
   render() {
     return (
       <div className="App">
         <div className='App-header'>
-          <Navbar />
+          <Navbar authed={this.state.authed} loggedIn={this.loggedIn}/>
           <h1 className="App-title">“Deals so great - It’s a steal.”</h1>
         </div>
         <div className='App-landing'>
@@ -33,7 +54,7 @@ class App extends Component {
               <Route exact path='/contact' component={Contact} />
               <Route exact path='/about-us' component={AboutUs} />
               <Route exact path='/shop' component={Shop} />
-              <Route exact path='/login' component={LogIn} />
+              <Route exact path='/login' render={()=>{return(<LogIn loggedIn={this.loggedIn}/>);}}/>
               <Route exact path='/signup' component={SignUp} />
               <Route exact path='/cart' component={Cart} />
               <Route exact path='/check-out' component={CheckOut} />

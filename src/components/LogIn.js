@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import {Redirect} from 'react-router-dom';
+
+import fire from '../fire';
 
 import "../App.css";
 
@@ -10,7 +13,8 @@ export default class LogIn extends Component {
 
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      redirectTo: null
     };
   }
 
@@ -26,9 +30,20 @@ export default class LogIn extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
+    .catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+    }).then(()=>{
+      this.props.loggedIn(true);
+      this.setState({email:"",password:"",redirectTo:"/"});
+    });
   };
 
   render() {
+    if (this.state.redirectTo) {
+      return <Redirect to={{pathname: this.state.redirectTo}} />
+    }
     return (
       <div className="loginpage">
         <h1>Log In</h1>

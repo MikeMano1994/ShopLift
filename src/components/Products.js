@@ -8,7 +8,7 @@ export default class Products extends Component {
 
     this.state = {
       products: {}
-    }
+    };
   }
 
   componentWillMount() {
@@ -28,7 +28,7 @@ export default class Products extends Component {
                 <div className="col-md-6 col-sm-6 col-lg-4 col-xs-12 col-xl-3 control-label">
                   <Item a={this.state.products[element]} />
                 </div>
-              )
+              );
               })
             }
           </div>

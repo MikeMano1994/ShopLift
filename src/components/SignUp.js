@@ -9,6 +9,8 @@ import {
 } from "react-bootstrap";
 import LoaderButton from "../components/LoaderButton";
 
+import fire from '../fire';
+
 import "../App.css";
 
 export default class Signup extends Component {
@@ -45,31 +47,20 @@ export default class Signup extends Component {
     this.setState({ checked: true });
   }
 
-  handleSubmit = async event => {
+  handleSubmit(event){
     event.preventDefault();
     this.setState({ isLoading: true });
-    this.setState({ newUser: "TEST-USER" });
     this.setState({ isLoading: false });
-
-    axios
-      .post("/auth/SignUp", {
-        email: this.state.email,
-        password: this.state.password
+    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
+      .catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log("Error! " + errorCode + " " + errorMessage);
       })
-      .then(response => {
-        console.log(response)
-
-        if (!response.data.errmsg) {
-          console.log("You are good to go");
-
-          this.setState({
-            redirectTo: '/LogIn'
-          })
-        }
-        else {
-          console.log('duplicate');
-        }
-      })
+      .then(()=>{
+        this.setState({redirectTo:'/'});
+        } 
+      );
   }
 
   validateForm() {
@@ -90,7 +81,7 @@ export default class Signup extends Component {
             autoFocus
             type="email"
             value={this.state.email}
-            onChange={this.handleChange}
+            onChange={this.handleChange.bind(this)}
           />
         </FormGroup>
 
@@ -98,7 +89,7 @@ export default class Signup extends Component {
           <ControlLabel>Password</ControlLabel>
           <FormControl
             value={this.state.password}
-            onChange={this.handleChange}
+            onChange={this.handleChange.bind(this)}
             type="password"
           />
         </FormGroup>
@@ -107,7 +98,7 @@ export default class Signup extends Component {
           <ControlLabel>Confirm Password</ControlLabel>
           <FormControl
             value={this.state.confirmPassword}
-            onChange={this.handleChange}
+            onChange={this.handleChange.bind(this)}
             type="password"
           />
         </FormGroup>
@@ -115,7 +106,7 @@ export default class Signup extends Component {
         <div className='row'>
           <div className='ten columns terms'>
             <span>By clicking "Accept" I agree that:</span>
-              <ul className='docs-terms'>
+              <ul className='docs-terms text-left'>
                 <li>
                   I have read and accepted the <a href='/useragreement' style={{ color:'#626e60'}}>User Agreement</a>
                 </li>
@@ -126,7 +117,6 @@ export default class Signup extends Component {
                   I am at least 18 years old
                 </li>
               </ul>
-
             <label>
               <input
                 type='checkbox'
@@ -147,7 +137,7 @@ export default class Signup extends Component {
           isLoading={this.state.isLoading}
           text="Sign Up"
           loadingText="Signing up…"
-          onClick={this.handleSubmit}
+          onClick={this.handleSubmit.bind(this)}
         />
       </form>
     );
@@ -161,7 +151,7 @@ export default class Signup extends Component {
       return (
         <div className="signuppage">
           <h1>Sign Up </h1>
-          {this.state.newUser === null ? this.renderForm(): console.log("Eror")}
+          {this.state.newUser === null ? this.renderForm(): console.log("Error")}
         </div>
       );
     }
