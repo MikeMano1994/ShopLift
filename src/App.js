@@ -56,7 +56,8 @@ class App extends Component {
               <Route exact path='/about-us' component={AboutUs} />
               <Route exact path='/shop' component={Shop} />
               <Route exact path='/login' render={()=>{return(<LogIn loggedIn={this.loggedIn}/>);}}/>
-              <Route exact path='/signup' component={SignUp} /><Route exact path='/profile' component={UserProfile} />
+              <Route exact path='/signup' component={SignUp} />
+              <Route exact path='/profile' component={UserProfile} />
               <Route exact path='/cart' component={Cart} />
               <Route exact path='/check-out' component={CheckOut} />
               <Route exact path='/useragreement' component={UserAgreement} />
