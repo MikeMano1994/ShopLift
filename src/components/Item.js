@@ -52,15 +52,10 @@ export default class Item extends Component {
                         <Modal.Title>{this.props.a.name}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <div className="modal-card-content">
-                            <img className="modal-card-image" src={this.props.a.image}/>
-                            <div className="modal-card-text">
-                                {/*<h4 className="modal-card-title">{this.props.a.name}</h4>*/}
-                                <p className="modal-card-description">
-                                    {this.props.a.description}
-                                </p>
+                        <img className="modal-card-image" src={this.props.a.image}/>
+                            <div className="modal-card-description">
+                                <p>{this.props.a.description}</p>
                             </div>
-                        </div>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button onClick={this.handleClose}>Close</Button>
