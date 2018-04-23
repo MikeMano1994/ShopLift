@@ -25,7 +25,7 @@ import '../node_modules/react-image-slider/lib/image-slider.css';
 class App extends Component {
   constructor(){
     super();
-    
+
     this.state={
       authed:false,
       products: {},
@@ -45,7 +45,7 @@ class App extends Component {
 
   handleSearch(event){
     let filteredProducts = this.state.unfilteredProducts;
-    filteredProducts = filteredProducts.filter(i => i.name.toLowerCase().search(event.target.value.toLowerCase()) !== -1)
+    filteredProducts = filteredProducts.filter(i => i.name.toLowerCase().search(event.target.value.toLowerCase()) !== -1 || i.category.toLowerCase().search(event.target.value.toLowerCase()) !== -1)
     this.setState({products: filteredProducts});
   }
 
