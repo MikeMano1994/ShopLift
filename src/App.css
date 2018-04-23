@@ -338,6 +338,10 @@ a {
   margin-left: 1em;
 }
 
+.modal-card-image {
+  width: 25em;
+  height: 25em;
+}
 /*Check Out*/
 .checkout{
   color: #945d60;
