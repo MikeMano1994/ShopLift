@@ -482,3 +482,9 @@ a {
 .btn-pref .btn {
   -webkit-border-radius:0 !important;
 }
+/*User Profile*/
+.usercard{
+  text-align: center;
+  display: inline-block;
+
+}

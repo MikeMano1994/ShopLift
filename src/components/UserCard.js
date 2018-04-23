@@ -18,7 +18,7 @@ export default class UserCard extends Component {
               </div>
               <div className="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
                   <div className="btn-group" role="group">
-                      <button type="button" id="stars" className="btn btn-primary" href="#tab1" data-toggle="tab"><span
+                      <button type="button" id="stars" className="btn btn-outline-success my-2 my-sm-0" href="#tab1" data-toggle="tab"><span
                           className="glyphicon glyphicon-star" aria-hidden="true"></span>
                           <div className="hidden-xs">Stars</div>
                       </button>
