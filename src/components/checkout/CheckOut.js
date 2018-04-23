@@ -21,7 +21,7 @@ export default class CheckOut extends Component {
     [
       {name: 'Cart', component: <Step1/>},
       {name: 'My Profile', component: <Step2/>},
-      {name: 'Delivery', component: <Step3/>},
+      {name: 'Shipping', component: <Step3/>},
       {name: 'Payment', component: <Step4/>},
       {name: 'Review', component: <Step5/>},
       {name: 'Confirmation', component: <Step6/>},

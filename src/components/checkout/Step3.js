@@ -64,7 +64,7 @@ export default class Step3 extends Component{
                   <span class="glyphicon glyphicon-chevron-left"></span> 
                   Continue Shopping
                 </a>
-                <h1> CHECK OUT </h1>
+                <h1> Shipping Information </h1>
               </div>
                 
               <div className="info">
