@@ -337,13 +337,6 @@ a {
   margin-right: auto;
 }
 
-/*.modal-card-content {
-  display: inline-flex;
-}*/
-/*.modal-card-text {
-  margin-left: 1em;
-}*/
-
 
 /*Check Out*/
 .checkout{
@@ -402,8 +395,8 @@ a {
 
 /* USER PROFILE PAGE */
 .card {
-  margin-top: 20px;
-  padding: 30px;
+  margin-top: 1em;
+  padding: 2em;
   background-color: rgba(214, 224, 226, 0.2);
   -webkit-border-top-left-radius:5px;
   -moz-border-top-left-radius:5px;
@@ -414,6 +407,7 @@ a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  display: inline-flex;
 }
 .card.hovercard {
   position: relative;
@@ -422,18 +416,19 @@ a {
   text-align: center;
   background-color: #fff;
   background-color: rgba(255, 255, 255, 1);
+  display: inline-flex;
 }
 .card.hovercard .card-background {
-  height: 130px;
+  height: 10em;
 }
 .card-background img {
-  -webkit-filter: blur(25px);
-  -moz-filter: blur(25px);
-  -o-filter: blur(25px);
-  -ms-filter: blur(25px);
-  filter: blur(25px);
-  margin-left: -100px;
-  margin-top: -200px;
+  -webkit-filter: blur(25em);
+  -moz-filter: blur(25em);
+  -o-filter: blur(25em);
+  -ms-filter: blur(25em);
+  filter: blur(25em);
+  margin-left: -1em;
+  margin-top: -2em;
   min-width: 130%;
 }
 .card.hovercard .useravatar {
@@ -458,12 +453,13 @@ a {
   left: 0;
   right: 0;
 }
+    /*USER NAME*/
 .card.hovercard .card-info .card-title {
   padding:0 5px;
   font-size: 20px;
   line-height: 1;
   color: #262626;
-  background-color: rgba(255, 255, 255, 0.1);
+  /*background-color: rgba(255, 255, 255, 0.1);*/
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -483,8 +479,12 @@ a {
   -webkit-border-radius:0 !important;
 }
 /*User Profile*/
-.usercard{
-  text-align: center;
-  display: inline-block;
+.user-profile {
+  align-content: center;
+  display: inline-flex;
+}
 
+.user-card{
+  display: inline-flex;
+  justify-content: center;
 }

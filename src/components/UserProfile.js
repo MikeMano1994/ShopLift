@@ -6,7 +6,9 @@ import "../App.css";
 export default class UserProfile extends Component {
   render() {
     return (
-        <div><UserCard/></div>
+        <div className='user-profile'>
+            <UserCard/>
+        </div>
     )
   }
 }
