@@ -25,28 +25,29 @@ import '../node_modules/react-image-slider/lib/image-slider.css';
 class App extends Component {
   constructor(){
     super();
+    
     this.state={
       authed:false,
       products: {},
       unfilteredProducts:{}
     };
+
     this.loggedIn = this.loggedIn.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentWillMount(){
     this.setState({products: product});
-  this.setState({unfilteredProducts: product})
+    this.setState({unfilteredProducts: product});
     if (fire.auth().currentUser !== null || fire.auth().currentUser !== undefined)
       this.setState({authed:true});
   }
 
-
   handleSearch(event){
-  let filteredProducts = this.state.unfilteredProducts;
-  filteredProducts = filteredProducts.filter(i => i.name.toLowerCase().search(event.target.value.toLowerCase()) !== -1)
-  this.setState({products: filteredProducts});
-}
+    let filteredProducts = this.state.unfilteredProducts;
+    filteredProducts = filteredProducts.filter(i => i.name.toLowerCase().search(event.target.value.toLowerCase()) !== -1)
+    this.setState({products: filteredProducts});
+  }
 
   loggedIn(e){
     if (e !== null && e !== undefined)
@@ -75,7 +76,6 @@ class App extends Component {
               <Route exact path='/check-out' component={CheckOut} />
               <Route exact path='/useragreement' component={UserAgreement} />
               <Route exact path='/userprivacy' component={UserPrivacy} />
-
             </div>
           </BrowserRouter>
         </div>
