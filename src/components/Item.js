@@ -49,13 +49,13 @@ export default class Item extends Component {
             <div>
                 <Modal show={this.state.show} onHide={this.handleClose}>
                     <Modal.Header closeButton>
-                        {/*<Modal.Title>{this.props.a.name}</Modal.Title>*/}
+                        <Modal.Title>{this.props.a.name}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <div className="modal-card-content">
                             <img className="modal-card-image" src={this.props.a.image}/>
                             <div className="modal-card-text">
-                                <h4 className="modal-card-title">{this.props.a.name}</h4>
+                                {/*<h4 className="modal-card-title">{this.props.a.name}</h4>*/}
                                 <p className="modal-card-description">
                                     {this.props.a.description}
                                 </p>
