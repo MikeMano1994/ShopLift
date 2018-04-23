@@ -50,7 +50,9 @@ export default class NavBar extends Component {
           </a>
         </div>
 
-          <Navbar color="white" light expand="sm" >
+        <div className = "navbar">
+
+          <Navbar color="white" light expand="lg" >
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse isOpen={!this.state.collapsed} navbar>
 
@@ -100,6 +102,7 @@ export default class NavBar extends Component {
 
              </Collapse>
         </Navbar>
+        </div>
       </div>
     );
   }
