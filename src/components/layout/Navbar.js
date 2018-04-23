@@ -70,9 +70,6 @@ export default class NavBar extends Component {
               </NavItem>
             </Nav>
 
-
-
-
             <Nav navbar >
               <NavItem>
                 <NavLink href="/">Home</NavLink>
@@ -90,7 +87,7 @@ export default class NavBar extends Component {
               </NavItem>
             </Nav>
 
-            <Nav >
+            <Nav>
               <NavItem>
                 <UserDropDown authed={this.props.authed} logout={this.props.loggedIn}/>
               </NavItem>
@@ -100,7 +97,7 @@ export default class NavBar extends Component {
               </NavItem>
             </Nav>
 
-             </Collapse>
+          </Collapse>
         </Navbar>
         </div>
       </div>
