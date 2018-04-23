@@ -11,7 +11,7 @@ export default class Step5 extends Component{
         return(
         <div>
     	<h1> Review and submit your order</h1>
-    	<div className = "shipping">
+    	<div className = "review">
     		<Panel>
     		<Panel.Heading>Shipping Information</Panel.Heading>
     		<Panel.Body>
@@ -24,7 +24,7 @@ export default class Step5 extends Component{
     		</Panel.Body>
     		</Panel>
     	</div>
-    	<div className = "paymentInfo">
+    	<div className = "review">
     		<Panel>
     		<Panel.Heading>Payment Information</Panel.Heading>
     			<Panel.Body>
