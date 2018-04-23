@@ -11,7 +11,8 @@ export default class Item extends Component {
         this.handleClose = this.handleClose.bind(this);
 
         this.state = {
-            show: false
+            show: false,
+            isAdded: false
         };
     }
 
@@ -22,6 +23,19 @@ export default class Item extends Component {
     handleShow() {
         this.setState({ show: true });
     }
+
+    addToCart(){
+      this.setState({
+          isAdded: true
+      }, function(){
+          setTimeout(() => {
+              this.setState({
+                  isAdded: false
+              });
+          }, 1700);
+      });
+  }
+
 
     render() {
     return (
@@ -44,7 +58,7 @@ export default class Item extends Component {
                                 </button>
                             </span>
                     </div>
-                    <a href="#" className="btn btn-outline-success my-2 my-sm-0">Add To Cart</a>
+                    <a href="#" className="btn btn-outline-success my-2 my-sm-0"   onClick={this.addToCart.bind(this)}>{!this.state.isAdded ? "Add To Cart" : "✔ Added"}</a>
                 </div>
             <div>
                 <Modal show={this.state.show} onHide={this.handleClose}>
@@ -66,5 +80,3 @@ export default class Item extends Component {
     )
   }
 }
-
-
