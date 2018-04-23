@@ -41,7 +41,7 @@ export default class NavBar extends Component {
   }
 
   render() {
-    
+
     return (
       <div>
         <div>
@@ -59,10 +59,10 @@ export default class NavBar extends Component {
             <Nav navbar>
               <NavItem>
                 <Form>
-                  <Input type="text" placeholder="Search for the fresh!" />
+                  <Input type="text" placeholder="Search for the fresh!" onChange={this.props.handleSearch} />
                 </Form>
               </NavItem>
-              
+
               <NavItem>
               <Button type="submit" size="md" outline color="success" >
                 <span class="glyphicon glyphicon-search my-sm-0"/>
@@ -70,7 +70,7 @@ export default class NavBar extends Component {
               </NavItem>
             </Nav>
 
-            
+
 
 
             <Nav navbar >

@@ -13,6 +13,7 @@ import SignUp from './components/SignUp';
 import UserAgreement from './components/UserAgreement';
 import UserPrivacy from './components/UserPrivacy';
 import UserProfile from './components/UserProfile';
+import product from './components/product.json';
 
 import fire from './fire';
 
@@ -25,27 +26,39 @@ class App extends Component {
   constructor(){
     super();
     this.state={
-      authed:false
+      authed:false,
+      products: {},
+      unfilteredProducts:{}
     };
     this.loggedIn = this.loggedIn.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
-  
+
   componentWillMount(){
+    this.setState({products: product});
+  this.setState({unfilteredProducts: product})
     if (fire.auth().currentUser !== null || fire.auth().currentUser !== undefined)
       this.setState({authed:true});
   }
+
+
+  handleSearch(event){
+  let filteredProducts = this.state.unfilteredProducts;
+  filteredProducts = filteredProducts.filter(i => i.name.toLowerCase().search(event.target.value.toLowerCase()) !== -1)
+  this.setState({products: filteredProducts});
+}
 
   loggedIn(e){
     if (e !== null && e !== undefined)
       this.setState({authed:e});
     console.log(e);
   }
-  
+
   render() {
     return (
       <div className="App">
         <div className='App-header'>
-          <Navbar authed={this.state.authed} loggedIn={this.loggedIn}/>
+          <Navbar authed={this.state.authed} loggedIn={this.loggedIn} handleSearch={this.handleSearch} productList={this.state.products}/>
           <h1 className="App-title">“Deals so great - It’s a steal.”</h1>
         </div>
         <div className='App-landing'>
@@ -54,7 +67,7 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route exact path='/contact' component={Contact} />
               <Route exact path='/about-us' component={AboutUs} />
-              <Route exact path='/shop' component={Shop} />
+              <Route exact path='/shop'  render={()=><Shop productsList={this.state.products}/>}  />
               <Route exact path='/login' render={()=>{return(<LogIn loggedIn={this.loggedIn}/>);}}/>
               <Route exact path='/signup' component={SignUp} />
               <Route exact path='/profile' component={UserProfile} />

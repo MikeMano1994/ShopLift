@@ -26,7 +26,7 @@ export default class Shop extends Component{
             </div>
             <br/>
             <div className='col-xs-12'>
-              <Products category={this.state.category}/>
+              <Products category={this.state.category}  productsList={this.props.productsList}/>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ export default class Products extends Component {
   }
 
   render() {
-    let productKeys = Object.keys(this.state.products);
+    let productKeys = Object.keys(this.props.productsList);
 
     return (
       <div className="products">
@@ -28,9 +28,9 @@ export default class Products extends Component {
               if (this.props.category === 'all'){
                 return (
                   <div className="col-md-6 col-sm-6 col-lg-4 col-xs-12 col-xl-3 control-label">
-                    <Item a={this.state.products[element]} />
+                    <Item a={this.props.productsList[element]} />
                   </div>
-              
+
                 );
               }
               else{
