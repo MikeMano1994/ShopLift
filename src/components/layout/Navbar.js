@@ -65,7 +65,7 @@ export default class NavBar extends Component {
 
               <NavItem>
               <Button type="submit" size="md" outline color="success" >
-                <span class="glyphicon glyphicon-search my-sm-0"/>
+                <span className="glyphicon glyphicon-search my-sm-0"/>
               </Button>
               </NavItem>
             </Nav>

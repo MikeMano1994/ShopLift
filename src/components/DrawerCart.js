@@ -58,7 +58,7 @@ export default class DrawerCart extends Component{
 	        <img style={{width:'250px', height:'150px'}} src={emptycart} alt="emptycart" />
           <div>
        		   <a href="/check-out">
-          	 <button href="/check-out" type="button" class="btn btn-dark"><p>CHECK OUT</p></button></a>
+          	 <button type="button" className="btn btn-dark"><p>CHECK OUT</p></button></a>
           </div>
         </ReactDrawer>
       </div>

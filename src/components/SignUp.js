@@ -57,16 +57,18 @@ export default class Signup extends Component {
         console.log("Error! " + errorCode + " " + errorMessage);
       })
       .then(()=>{
-        const uid = fire.auth().currentUser.uid;
-        fire.database().ref('users').set({
-          uid:{
-            email: this.state.email,
-            orderHistory:{
-              items: {},
-              totalPrice: ''
-            }
+        var userObject = {};
+        if (fire.auth().currentUser.uid === null || fire.auth().currentUser.uid === undefined){
+          fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password);
+        }
+        userObject[String(fire.auth().currentUser.uid)] = {
+          email: this.state.email,
+          orderHistory:{
+            items: [],
+            totalPrice: ''
           }
-        });
+        }
+        fire.database().ref('/users/').push(userObject);
         this.setState({redirectTo:'/'});
         } 
       );
@@ -75,7 +77,7 @@ export default class Signup extends Component {
   validateForm() {
     return (
       this.state.email.length > 0 &&
-      this.state.password.length > 0 &&
+      this.state.password.length > 5 &&
       this.state.password === this.state.confirmPassword &&
       this.state.checked == true
     );
@@ -112,6 +114,8 @@ export default class Signup extends Component {
           />
         </FormGroup>
 
+        <span className='text-left' style={{color:'grey',fontSize:'11px'}}>Note: Password length must be 6 or more characters</span>
+        <br/><br/>
         <div className='row'>
           <div className='ten columns terms'>
             <span>By clicking "Accept" I agree that:</span>
