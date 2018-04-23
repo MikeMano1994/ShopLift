@@ -239,5 +239,53 @@
         "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/walnuts.jpg",
         "category": "nuts",
 		"sale": false
+    },
+    {
+        "id": 31,
+        "name": "Milk - 1 L",
+        "price": 2.50,
+        "image": "https://cdn.shopify.com/s/files/1/0206/9470/products/southcoast-milk-1l_grande.jpg?v=1494139427",
+        "category": "dairy",
+		"sale": false
+    },
+    {
+        "id": 32,
+        "name": "Yogurt - 907 g",
+        "price": 3.25,
+        "image": "https://i5.walmartimages.com/asr/3046d86a-3218-4538-9c97-d369854df5af_1.f78855adc871b9a277d6324263a20676.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+        "category": "dairy",
+		"sale": false
+    },
+    {
+        "id": 33,
+        "name": "Coke - 590 mL",
+        "price": 1.99,
+        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRbNwB-dsHfEjPSI_ntAm6nO20h6S44BQjJnO6RMgbXnF0DKLyI8lBy1q1PH3ZPvs5ftFROnwU&usqp=CAY",
+        "category": "beverage",
+		"sale": false
+    },
+    {
+        "id": 34,
+        "name": "Apple Juice - 1 L",
+        "price": 1.75,
+        "image": "https://i5.walmartimages.com/asr/e7b95432-e117-42a1-8d4f-f6bee0879f9b_1.4e44ca372fb93fa2abee0dce4259abac.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+        "category": "beverage", 
+		"sale": true
+    },
+    {
+        "id": 35,
+        "name": "New York Steak - 2 lb",
+        "price": 23.76,
+        "image": "https://parade.com/wp-content/uploads/2017/08/raw-meat-black-eye-advice-ask-marilyn-ftr.jpg",
+        "category": "meat", 
+		"sale": false
+    },
+    {
+        "id": 36,
+        "name": "Vanilla Ice Cream - 1.66 L",
+        "price": 4.25,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71KhMJeRybL._SY550_.jpg",
+        "category": "frozen", 
+		"sale": true
     }
 ]
