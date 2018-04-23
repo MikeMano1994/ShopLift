@@ -48,7 +48,7 @@ export default class Item extends Component {
                 </div>
             <div>
                 <Modal show={this.state.show} onHide={this.handleClose}>
-                    <Modal.Header closeButton>
+                    <Modal.Header >
                         <Modal.Title>{this.props.a.name}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
