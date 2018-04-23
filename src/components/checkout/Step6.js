@@ -3,6 +3,12 @@ import raccoon from "../../picture/cuteraccoon.jpg";
 import '../../App.css';
 
 export default class Step6 extends Component{
+	 constructor(props) {
+    super(props);
+
+    this.state = {};
+  	}
+  	
     render(){
         return(
         	<div className = 'confirmation'>

@@ -3,7 +3,13 @@ import { Container, Row, Col } from 'reactstrap';
 
 import '../../App.css'
 
-export default class Step1 extends Component{
+export default class Step2 extends Component{
+    constructor(props) {
+    super(props);
+
+    this.state = {};
+    }
+
     render(){
         return(
         <Container>
@@ -21,7 +27,7 @@ export default class Step1 extends Component{
                             </button>
                         </a>
 
-                        <a href="/login" > 
+                        <a onClick={() => this.props.jumpToStep(2)}> 
                             <button type="button" class="btn btn-dark ml-10"
                                 style = {{marginBottom: '20px',marginTop: '20px' }}>
                                  <p>GUEST SHOPPING</p>
