@@ -23,7 +23,7 @@ import '../node_modules/react-image-slider/lib/image-slider.css';
 {/*import Auth from './Auth';*/}
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
 
     this.state={
