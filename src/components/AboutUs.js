@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from 'reactstrap';
 import { Button, Grid, Thumbnail } from 'react-bootstrap';
+import raccoon from '../picture/raccoon.jpg';
 
 export default class AboutUs extends Component {
   render() {
@@ -66,6 +67,13 @@ export default class AboutUs extends Component {
                   <h3>Tuan Anh Le</h3>
                   <p>Marketing</p>
                   <p>I am the Tuan.</p>
+                </Thumbnail>
+              </Col>
+              <Col xs={12} md={4} lg={3}>
+                <Thumbnail src={raccoon} alt="150x150">
+                  <h3>Jack</h3>
+                  <p>FullStack Developer</p>
+                  <p>I pull. I commit. I push.</p>
                 </Thumbnail>
               </Col>
             </Row>

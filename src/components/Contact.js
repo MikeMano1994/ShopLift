@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Map from "./Map";
 import { Container, Row, Col } from 'reactstrap';
 
-
 import "../App.css";
 import raccoon from "../picture/cuteraccoon.jpg";
 
@@ -106,12 +105,6 @@ export default class Contact extends Component {
         <button className="ContactSendButton" onSubmit={this.handleSubmit}>
           Send
         </button>
-
-        {/* <img
-          style={{ width: "250px", height: "250px" }}
-          src={raccoon}
-          alt="raccoon"
-        /> */}
       </div>
       </Col>
       </Row>
