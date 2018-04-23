@@ -13,7 +13,17 @@ export default class Step5 extends Component{
     	<h1> Review and submit your order</h1>
     	<div className = "review">
     		<Panel>
-    		<Panel.Heading>Shipping Information</Panel.Heading>
+    		<Panel.Heading>
+    			Shipping Information
+
+    			<a onClick={() => this.props.jumpToStep(2)}> 
+                	<button type="button" class="btn btn-dark ml-10"
+                		style = {{marginBottom: '10px',marginTop: '10px' }}>
+                    		<p>Edit</p>
+              	  </button>
+           	 	</a>
+
+    		</Panel.Heading>
     		<Panel.Body>
     			<p>Firstname:</p>
       			<p>Lastname:</p>
@@ -26,7 +36,17 @@ export default class Step5 extends Component{
     	</div>
     	<div className = "review">
     		<Panel>
-    		<Panel.Heading>Payment Information</Panel.Heading>
+    		<Panel.Heading>
+    			Payment Information
+
+    			<a onClick={() => this.props.jumpToStep(3)}> 
+                	<button type="button" class="btn btn-dark ml-10"
+                		style = {{marginBottom: '10px',marginTop: '10px' }}>
+                    		<p>Edit</p>
+              	  </button>
+           	 	</a>
+           	 	
+    		</Panel.Heading>
     			<Panel.Body>
     			<p>Cardname:</p>
       			<p>Cardnumber:</p>
