@@ -12,6 +12,7 @@ import Shop from './components/Shop';
 import SignUp from './components/SignUp';
 import UserAgreement from './components/UserAgreement';
 import UserPrivacy from './components/UserPrivacy';
+import UserProfile from './components/UserProfile';
 
 import fire from './fire';
 
@@ -55,11 +56,12 @@ class App extends Component {
               <Route exact path='/about-us' component={AboutUs} />
               <Route exact path='/shop' component={Shop} />
               <Route exact path='/login' render={()=>{return(<LogIn loggedIn={this.loggedIn}/>);}}/>
-              <Route exact path='/signup' component={SignUp} />
+              <Route exact path='/signup' component={SignUp} /><Route exact path='/profile' component={UserProfile} />
               <Route exact path='/cart' component={Cart} />
               <Route exact path='/check-out' component={CheckOut} />
               <Route exact path='/useragreement' component={UserAgreement} />
               <Route exact path='/userprivacy' component={UserPrivacy} />
+
             </div>
           </BrowserRouter>
         </div>
