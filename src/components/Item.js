@@ -44,7 +44,7 @@ export default class Item extends Component {
                                 </button>
                             </span>
                     </div>
-                    <a href="#" className="btn btn-primary">Add To Cart</a>
+                    <a href="#" className="btn btn-outline-success my-2 my-sm-0">Add To Cart</a>
                 </div>
             <div>
                 <Modal show={this.state.show} onHide={this.handleClose}>

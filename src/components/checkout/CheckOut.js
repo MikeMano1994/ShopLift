@@ -36,8 +36,7 @@ export default class CheckOut extends Component {
 
           preventEnterSubmission={true}
           prevBtnOnLastStep={false}
-          startAtStep= {window.sessionStorage.getItem('step') ? 0 : parseFloat(window.sessionStorage.getItem('step'))}
-          onStepChange={(step) => window.sessionStorage.setItem('step', step)}
+          startAtStep= {0} 
           nextButtonText={' '}
           backButtonText={' '}
           nextButtonCls={'btn btn-prev btn-outline-success my-2 my-sm-0 ml-10 glyphicon glyphicon-chevron-right'}
