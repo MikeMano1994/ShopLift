@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import '../../App.css';
 
 export default class Step4 extends Component{
-    constructor(props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -11,15 +11,13 @@ export default class Step4 extends Component{
       cardnumber: props.getStore().cardnumber,
       expmonth: props.getStore().expmonth,
       expyear: props.getStore().expyear,
-      cvv: props.getStore().cvv,
+      cvv: props.getStore().cvv
     };
 
     this.validationCheck = this.validationCheck.bind(this);
     this.isValidated = this.isValidated.bind(this);
     this._validateOnDemand = true; // this flag enables onBlur validation as user fills forms
-
   }
-
 
   isValidated() {
     const userInput = this._grabUserInput(); // grab user entered vals
@@ -28,19 +26,19 @@ export default class Step4 extends Component{
 
     // if full validation passes then save to store and pass as valid
     if (Object.keys(validateNewInput).every((k) => { return validateNewInput[k] === true })) {
-        if (this.props.getStore().cardname != userInput.cardname || 
-            this.props.getStore().cardnumber != userInput.cardnumber ||
-            this.props.getStore().expmonth != userInput.expmonth || 
-            this.props.getStore().expyear != userInput.expyear ||
-            this.props.getStore().cvv != userInput.cvv) 
-            { // only update store of something changed
-            this.props.updateStore({
-            ...userInput,
-            // use this to notify step4 that some changes took place and prompt the user to save again
-          });  // Update store here (this is just an example, in reality you will do it via redux or flux)
-        }
+      if (this.props.getStore().cardname != userInput.cardname ||
+          this.props.getStore().cardnumber != userInput.cardnumber ||
+          this.props.getStore().expmonth != userInput.expmonth ||
+          this.props.getStore().expyear != userInput.expyear ||
+          this.props.getStore().cvv != userInput.cvv)
+          { // only update store of something changed
+          this.props.updateStore({
+          ...userInput,
+          // use this to notify step4 that some changes took place and prompt the user to save again
+        });  // Update store here (this is just an example, in reality you will do it via redux or flux)
+      }
 
-        isDataValid = true;
+      isDataValid = true;
     }
     else {
         // if anything fails then update the UI validation state but NOT the UI Data State
@@ -77,7 +75,6 @@ export default class Step4 extends Component{
       expmonthValMsg: val.expmonthVal ? '' : 'An expiration month is required',
       expyearValMsg: val.expyearVal ? '' : 'An expiration year is required',
       cvvValMsg: val.cvvVal ? '' : 'A cvv is required',
-
     }
     return errMsgs;
   }
@@ -92,138 +89,135 @@ export default class Step4 extends Component{
     };
   }
 
-  componentDidMount() {}
-
-  componentWillUnmount() {}
-
-    render(){
-
-      let notValidClasses = {};
+  // componentDidMount() {}
+  // componentWillUnmount() {}
+  render(){
+    let notValidClasses = {};
 
     if (typeof this.state.cardnameVal == 'undefined' || this.state.cardnameVal) {
       notValidClasses.cardnameCls = 'no-error col-md-8';
     }
     else {
-       notValidClasses.cardnameCls = 'has-error col-md-8';
-       notValidClasses.cardnameValGrpCls = 'val-err-tooltip';
+      notValidClasses.cardnameCls = 'has-error col-md-8';
+      notValidClasses.cardnameValGrpCls = 'val-err-tooltip';
     }
 
     if (typeof this.state.cardnumberVal == 'undefined' || this.state.cardnumberVal) {
-        notValidClasses.cardnumberCls = 'no-error col-md-8';
+      notValidClasses.cardnumberCls = 'no-error col-md-8';
     }
     else {
-       notValidClasses.cardnumberCls = 'has-error col-md-8';
-       notValidClasses.cardnumberValGrpCls = 'val-err-tooltip';
+      notValidClasses.cardnumberCls = 'has-error col-md-8';
+      notValidClasses.cardnumberValGrpCls = 'val-err-tooltip';
     }
 
     if (typeof this.state.expmonthVal == 'undefined' || this.state.expmonthVal) {
-        notValidClasses.expmonthCls = 'no-error col-md-8';
+      notValidClasses.expmonthCls = 'no-error col-md-8';
     }
     else {
-       notValidClasses.expmonthCls = 'has-error col-md-8';
-       notValidClasses.expmonthValGrpCls = 'val-err-tooltip';
+      notValidClasses.expmonthCls = 'has-error col-md-8';
+      notValidClasses.expmonthValGrpCls = 'val-err-tooltip';
     }
 
     if (typeof this.state.expyearVal == 'undefined' || this.state.expyearVal) {
-        notValidClasses.expyearCls = 'no-error col-md-8';
+      notValidClasses.expyearCls = 'no-error col-md-8';
     }
     else {
-       notValidClasses.expyearCls = 'has-error col-md-8';
-       notValidClasses.expyearValGrpCls = 'val-err-tooltip';
+      notValidClasses.expyearCls = 'has-error col-md-8';
+      notValidClasses.expyearValGrpCls = 'val-err-tooltip';
     }
 
     if (typeof this.state.cvvVal == 'undefined' || this.state.cvvVal) {
-        notValidClasses.cvvCls = 'no-error col-md-8';
+      notValidClasses.cvvCls = 'no-error col-md-8';
     }
     else {
-       notValidClasses.cvvCls = 'has-error col-md-8';
-       notValidClasses.cvvValGrpCls = 'val-err-tooltip';
+      notValidClasses.cvvCls = 'has-error col-md-8';
+      notValidClasses.cvvValGrpCls = 'val-err-tooltip';
     }
 
-        return(
-          <div>
-              <div className = "cart">
-                <a href="/shop"> 
-                  <span class="glyphicon glyphicon-chevron-left"></span> 
-                  Continue Shopping
-                </a>
-                <h1> Payment Information </h1>
-              </div>
-                
-              <div className="info">
-              <form>
-                <div class="cardname">
-                 <label> CARD HOLDER NAME: </label>
-                  <input 
-                  className={notValidClasses.cardnameCls}
-                  ref="cardname"
-                  type="text"
-                  required
-                  defaultValue={this.state.cardname}
-                  onBlur={this.validationCheck}
-                  placeholder="Card Name"/>
-                </div>
-                <div className={notValidClasses.cardnameValGrpCls}>{this.state.cardnameValMsg}</div>
-
-                <div class="cardnumber">
-                 <label> CREDIT CARD NUMBER: </label>
-                  <input
-                  className={notValidClasses.cardnumberCls}
-                  ref="cardnumber"
-                  type="text"
-                  required
-                  defaultValue={this.state.cardnumber}
-                  onBlur={this.validationCheck}
-                  placeholder="Card Number"/>
-                </div>
-                <div className={notValidClasses.cardnumberValGrpCls}>{this.state.cardnumberValMsg}</div>
-
-                <div class = "expmonth">
-                  <label> EXPIRATION MONTH: </label>
-                  <input
-                    className={notValidClasses.expmonthCls}
-                    ref="expmonth"
-                    type="text"
-                    required
-                    defaultValue={this.state.expmonth}
-                    onBlur={this.validationCheck}
-                    placeholder="Expiration Month"
-                    />
-                </div>
-                <div className={notValidClasses.expmonthValGrpCls}>{this.state.expmonthValMsg}</div>
-
-                <div class = "expyear" >
-                  <label> EXPIRATION YEAR: </label>
-                  <input
-                  className={notValidClasses.expyearCls}
-                  ref="expyear"
-                  type="text"
-                  required
-                  defaultValue={this.state.expyear}
-                  onBlur={this.validationCheck}
-                  placeholder="Expiration Year"
-                  />
-                </div>
-                <div className={notValidClasses.expyearValGrpCls}>{this.state.expyearValMsg}</div>
-
-
-                <div class = "cvv">
-                  <label> CVV: </label>
-                  <input
-                  className={notValidClasses.cvvCls}
-                  ref="cvv"
-                  type="text"
-                  required
-                  defaultValue={this.state.cvv}
-                  onBlur={this.validationCheck}
-                  placeholder="CVV"
-                  />
-                </div>
-                <div className={notValidClasses.cvvValGrpCls}>{this.state.cvvValMsg}</div>
-
-              </form>
-              </div>
+    return(
+      <div>
+        <div className = "cart">
+          <a href="/shop">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            Continue Shopping
+          </a>
+          <h1> Payment Information </h1>
         </div>
+
+          <div className="info">
+          <form>
+            <div class="cardname">
+             <label> CARD HOLDER NAME: </label>
+              <input
+              className={notValidClasses.cardnameCls}
+              ref="cardname"
+              type="text"
+              required
+              defaultValue={this.state.cardname}
+              onBlur={this.validationCheck}
+              placeholder="Card Name"/>
+            </div>
+            <div className={notValidClasses.cardnameValGrpCls}>{this.state.cardnameValMsg}</div>
+
+            <div class="cardnumber">
+             <label> CREDIT CARD NUMBER: </label>
+              <input
+              className={notValidClasses.cardnumberCls}
+              ref="cardnumber"
+              type="text"
+              required
+              defaultValue={this.state.cardnumber}
+              onBlur={this.validationCheck}
+              placeholder="Card Number"/>
+            </div>
+            <div className={notValidClasses.cardnumberValGrpCls}>{this.state.cardnumberValMsg}</div>
+
+            <div class = "expmonth">
+              <label> EXPIRATION MONTH: </label>
+              <input
+                className={notValidClasses.expmonthCls}
+                ref="expmonth"
+                type="text"
+                required
+                defaultValue={this.state.expmonth}
+                onBlur={this.validationCheck}
+                placeholder="Expiration Month"
+                />
+            </div>
+            <div className={notValidClasses.expmonthValGrpCls}>{this.state.expmonthValMsg}</div>
+
+            <div class = "expyear" >
+              <label> EXPIRATION YEAR: </label>
+              <input
+              className={notValidClasses.expyearCls}
+              ref="expyear"
+              type="text"
+              required
+              defaultValue={this.state.expyear}
+              onBlur={this.validationCheck}
+              placeholder="Expiration Year"
+              />
+            </div>
+            <div className={notValidClasses.expyearValGrpCls}>{this.state.expyearValMsg}</div>
+
+
+            <div class = "cvv">
+              <label> CVV: </label>
+              <input
+              className={notValidClasses.cvvCls}
+              ref="cvv"
+              type="text"
+              required
+              defaultValue={this.state.cvv}
+              onBlur={this.validationCheck}
+              placeholder="CVV"
+              />
+            </div>
+            <div className={notValidClasses.cvvValGrpCls}>{this.state.cvvValMsg}</div>
+
+          </form>
+          </div>
+    </div>
         );
     }
 }
