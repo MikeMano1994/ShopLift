@@ -28,12 +28,8 @@ export class MapContainer extends Component {
 
   render() {
     const style = {
-    width: '500px',
-    height: '380px',
-    marginLeft: '45%',
-    marginTop: '1%',
-	marginBottom: '30%',
-	marginRight: '500px'
+      width: '500px',
+      height: '380px'
   }
 
   return (
