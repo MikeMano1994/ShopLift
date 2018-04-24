@@ -69,7 +69,7 @@ constructor(props) {
 
           preventEnterSubmission={true}
           prevBtnOnLastStep={false}
-          startAtStep= {0} 
+          startAtStep= {4} 
           nextButtonText={' '}
           backButtonText={' '}
           nextButtonCls={'btn btn-prev btn-outline-success my-2 my-sm-0 ml-10 glyphicon glyphicon-chevron-right'}
