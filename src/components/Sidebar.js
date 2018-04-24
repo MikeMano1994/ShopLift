@@ -16,7 +16,7 @@ export default class Sidebar extends Component{
     render(){
         // Beverage, Drinks, Frozen Food, Snacks, Meats, Produce
         return(
-            <div className='text-left'>
+            <div>
                 <h2 className = "sidebar">Shop by Aisle</h2>
                 <Button bsStyle="primary large" style={{backgroundColor: '#6d8c73', borderColor: '#6d8c73', margin: '10px'}} onClick={()=>{
                     this.props.setCategory("all");
