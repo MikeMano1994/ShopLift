@@ -21,7 +21,7 @@ export default class Step5 extends Component{
     				<a onClick={() => this.props.jumpToStep(2)}> 
                 		<button type="button" class="btn btn-dark ml-10"
                 			style = {{marginBottom: '10px',marginTop: '10px' }}>
-                    			<p>Edit</p>
+                    			<p className="btn-work">Edit</p>
               		  </button>
            	 		</a>
 
@@ -48,7 +48,7 @@ export default class Step5 extends Component{
       				<a onClick={() => this.props.jumpToStep(5)}> 
                	 		<button type="button" class="btn btn-dark btn-lg btn-block"
                 			style = {{marginBottom: '10px',marginTop: '10px'}}>
-                    			<p>Submit Order</p>
+                    			<p className="btn-work">Submit Order</p>
               		  	</button>
            	 		</a>
     				</Panel.Body>
@@ -65,7 +65,7 @@ export default class Step5 extends Component{
     				<a onClick={() => this.props.jumpToStep(3)}> 
                 		<button type="button" class="btn btn-dark ml-10"
                 			style = {{marginBottom: '10px',marginTop: '10px' }}>
-                   	 			<p>Edit</p>
+                   	 			<p className="btn-work">Edit</p>
               	 	 </button>
            	 		</a>
 

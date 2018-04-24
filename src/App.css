@@ -388,6 +388,10 @@ a {
   font-size: 20px;
   padding-top: 20px;
 }
+.btn-work{
+  text-align: center;
+  padding-top: 6px;
+}
 
 /* USER PROFILE PAGE */
 .card {
