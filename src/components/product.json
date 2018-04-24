@@ -325,9 +325,9 @@
     },
     {
       "id": 37,
-      "name": "Breyers Cookies & Creme Ice Cream - 1.66 L",
+      "name": "Breyers Cookies & Creme Ice Cream",
       "price": 5.25,
-      "image": "http://guideimg.alibaba.com/images/shop/67/08/01/6/breyers-smooth-and-dreamy-cookies-and-cream-ice-cream-1-5-qt_1535956.jpeg",
+      "image": "https://i5.walmartimages.com/asr/e9a0c95c-ad51-42c9-a297-e23bf900e8c9_1.87a9f657e264fdbf37e3f98d1c2d7b7e.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
       "category": "frozen",
       "sale": false,
       "discountprice": 0.50
@@ -342,30 +342,120 @@
       "discountprice": 0.50
     },
     {
-      "id": 39,
-      "name": "Beef Ribeye Sliced - 1 lb ",
-      "price": 11.00,
-      "image": "https://s3.amazonaws.com/frozenmeatsupplier/wp-content/uploads/frozenmeat-shabushabu-beef_ribeye-002.jpg",
-      "category": "meat",
-      "sale": false,
-      "discountprice": 0.50
+        "id": 39,
+        "name": "Beef Ribeye Sliced - 1 lb ",
+        "price": 11.00,
+        "image": "https://s3.amazonaws.com/frozenmeatsupplier/wp-content/uploads/frozenmeat-shabushabu-beef_ribeye-002.jpg",
+        "category": "meat",
+        "sale": false,
+        "discountprice": 0.50
     },
     {
-      "id": 40,
-      "name": "Pork Belly - 1 lb ",
-      "price": 9.50,
-      "image": "http://mmmm.com.sg/166-tm_thickbox_default/frozen-sliced-pork-belly-half-inch.jpg",
-      "category": "meat",
-      "sale": false,
-      "discountprice": 0.50
+        "id": 40,
+        "name": "Pork Belly - 1 lb ",
+        "price": 9.50,
+        "image": "http://mmmm.com.sg/166-tm_thickbox_default/frozen-sliced-pork-belly-half-inch.jpg",
+        "category": "meat",
+        "sale": false,
+        "discountprice": 0.50
     },
     {
-      "id": 41,
-      "name": "Swiss Cheese ",
-      "price": 3.00,
-      "image": "https://dairygood.org/~/media/shared/content/2016/swiss.jpg?la=en&hash=74AD4AFE07B2BE2CC16A891A0FC7DB54180CBDB7",
-      "category": "dairy",
-      "sale": false,
-      "discountprice": 0.50
+        "id": 41,
+        "name": "Swiss Cheese ",
+        "price": 3.00,
+        "image": "https://dairygood.org/~/media/shared/content/2016/swiss.jpg?la=en&hash=74AD4AFE07B2BE2CC16A891A0FC7DB54180CBDB7",
+        "category": "dairy",
+        "sale": false,
+        "discountprice": 0.50
+    },
+    {
+        "id": 42,
+        "name": "Digiorno Pepperoni Pizza",
+        "price": 7.25,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71CDSWpP%2BTL._SY355_.jpg",
+        "category": "frozen",
+        "sale": false,
+        "discountprice": 0.50
+    },
+    {
+        "id": 43,
+        "name": "Lean Cuisine Cafe Cuisine Sesame Chicken",
+        "price": 3.25,
+        "image": "https://target.scene7.com/is/image/Target/13291616?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "frozen",
+        "sale": true,
+        "discountprice": 2.50
+    },
+    {
+        "id": 43,
+        "name": "Pepsi Cola - 12 Pack",
+        "price": 4.99,
+        "image": "https://target.scene7.com/is/image/Target/13044177?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": false,
+        "discountprice": 2.50
+    },
+    {
+        "id": 44,
+        "name": "Minute Maid Pink Lemonade",
+        "price": 1.49,
+        "image": "https://target.scene7.com/is/image/Target/47102364?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": false,
+        "discountprice": 2.50
+    },
+    {
+        "id": 45,
+        "name": "Coca-Cola - 12 Pack",
+        "price": 4.99,
+        "image": "https://target.scene7.com/is/image/Target/12953464?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": false,
+        "discountprice": 2.50
+    },
+    {
+        "id": 46,
+        "name": "Delaware Punch Caffeine Free - 12 Pack",
+        "price": 5.29,
+        "image": "https://target.scene7.com/is/image/Target/47866360?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": false,
+        "discountprice": 2.50
+    },
+    {
+        "id": 47,
+        "name": "Coca-Cola Origins Georgia Peach - 4 Pack",
+        "price": 4.99,
+        "image": "https://target.scene7.com/is/image/Target/53037016?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": true,
+        "discountprice": 3.49
+    },
+    {
+        "id": 48,
+        "name": "Red Bull® Energy Drink - 12 oz",
+        "price": 2.69,
+        "image": "https://target.scene7.com/is/image/Target/13426758?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": true,
+        "discountprice": 1.99
+    },
+    {
+        "id": 49,
+        "name": "Monster Energy, Original - 16 fl oz",
+        "price": 1.99,
+        "image": "https://target.scene7.com/is/image/Target/12953443?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": false,
+        "discountprice": 2.50
+    },
+    {
+        "id": 50,
+        "name": "Simply Orange Pulp Free Orange Juice - 52 oz",
+        "price": 3.99,
+        "image": "https://target.scene7.com/is/image/Target/13183052?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": false,
+        "discountprice": 2.50
     }
 ]

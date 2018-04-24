@@ -55,20 +55,6 @@ export default class NavBar extends Component {
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse isOpen={!this.state.collapsed} navbar>
 
-            <Nav navbar>
-              <NavItem>
-                <Form>
-                  <Input type="text" placeholder="Search for the fresh!" onChange={this.props.handleSearch} />
-                </Form>
-              </NavItem>
-
-              <NavItem>
-              <Button type="submit" size="md" outline color="success" >
-                <span className="glyphicon glyphicon-search my-sm-0"/>
-              </Button>
-              </NavItem>
-            </Nav>
-
             <Nav navbar >
               <NavItem>
                 <NavLink href="/">Home</NavLink>

@@ -94,7 +94,7 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route exact path='/contact' component={Contact} />
               <Route exact path='/about-us' component={AboutUs} />
-              <Route exact path='/shop'  render={()=><Shop productsList={this.state.products} addToCart={this.addToCart}/>}  />
+              <Route exact path='/shop'  render={()=><Shop addToCart={this.addToCart}/>}  />
               <Route exact path='/login' render={()=><LogIn loggedIn={this.loggedIn}/>}/>
               <Route exact path='/signup' component={SignUp} />
               <Route exact path='/profile' component={UserProfile} />

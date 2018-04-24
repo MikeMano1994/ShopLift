@@ -95,11 +95,11 @@
 /*Navbar */
 .nav-link {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.8em;
   text-align: center;
   color: #945d60;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 /* .bignavbar {
@@ -108,7 +108,6 @@
 } */
 
 .navbar .navbar-nav {
-  margin-left: 40px;
   margin-right: 50px;
   display: inline-block;
   vertical-align: center;
@@ -254,7 +253,7 @@ a {
   padding-bottom: 20px;
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
-  width: 40px;
+
 }
 
 /*Products*/
@@ -339,7 +338,16 @@ a {
   margin-right: auto;
 }
 
+/*Shop*/
+.searchbar{
+  width: 600px;
+  height: 3.4em;
+}
 
+.movetotheright{
+  margin-left: 250px;
+
+}
 /*Check Out*/
 .checkout{
   color: #945d60;
@@ -382,8 +390,9 @@ a {
 .zipcode input,
 .cardname input,
 .cardnumber input,
-.expmonth input,
-.expyear input,
+.expmonth select,
+.expyear select,
+.expmonth option,
 .cvv input {
   width: 50%;
   height: 40px;
@@ -392,6 +401,7 @@ a {
   display: inline-block;
   text-align: left;
   margin-bottom: 10px;
+  background-color: white;
 }
 
 .confirmation {
