@@ -27,20 +27,19 @@ export default class Step4 extends Component{
     // if full validation passes then save to store and pass as valid
     if (Object.keys(validateNewInput).every((k) => { return validateNewInput[k] === true })) {
       if (this.props.getStore().cardname != userInput.cardname ||
-          this.props.getStore().cardnumber != userInput.cardnumber ||
-          this.props.getStore().expmonth != userInput.expmonth ||
-          this.props.getStore().expyear != userInput.expyear ||
-          this.props.getStore().cvv != userInput.cvv)
-          { // only update store of something changed
+        this.props.getStore().cardnumber != userInput.cardnumber ||
+        this.props.getStore().expmonth != userInput.expmonth ||
+        this.props.getStore().expyear != userInput.expyear ||
+        this.props.getStore().cvv != userInput.cvv)
+        { // only update store of something changed
           this.props.updateStore({
           ...userInput,
           // use this to notify step4 that some changes took place and prompt the user to save again
-        });  // Update store here (this is just an example, in reality you will do it via redux or flux)
-      }
+          });  // Update store here (this is just an example, in reality you will do it via redux or flux)
+        }
 
       isDataValid = true;
-    }
-    else {
+    } else {
         // if anything fails then update the UI validation state but NOT the UI Data State
         this.setState(Object.assign(userInput, validateNewInput, this._validationErrors(validateNewInput)));
     }
@@ -59,14 +58,14 @@ export default class Step4 extends Component{
   }
 
    _validateData(data) {
-    return  {
-      cardnameVal: (data.cardname != 0), // required: anything besides N/A
-      cardnumberVal: (data.cardnumber != 0),
-      expmonthVal: (data.expmonth != 0),
-      expyearVal: (data.expyear != 0),
-      cvvVal: (data.cvv != 0),
-    }
-  }
+     return  {
+       cardnameVal: (data.cardname != 0), // required: anything besides N/A
+       cardnumberVal: (data.cardnumber != 0),
+       expmonthVal: (data.expmonth != 0),
+       expyearVal: (data.expyear != 0),
+       cvvVal: (data.cvv != 0),
+     }
+   }
 
   _validationErrors(val) {
     const errMsgs = {
@@ -76,6 +75,7 @@ export default class Step4 extends Component{
       expyearValMsg: val.expyearVal ? '' : 'An expiration year is required',
       cvvValMsg: val.cvvVal ? '' : 'A cvv is required',
     }
+
     return errMsgs;
   }
 
@@ -89,8 +89,6 @@ export default class Step4 extends Component{
     };
   }
 
-  // componentDidMount() {}
-  // componentWillUnmount() {}
   render(){
     let notValidClasses = {};
 
@@ -144,7 +142,7 @@ export default class Step4 extends Component{
           <h1> Payment Information </h1>
         </div>
 
-          <div className="info">
+        <div className="info">
           <form>
             <div class="cardname">
              <label> CARD HOLDER NAME: </label>
@@ -200,7 +198,6 @@ export default class Step4 extends Component{
             </div>
             <div className={notValidClasses.expyearValGrpCls}>{this.state.expyearValMsg}</div>
 
-
             <div class = "cvv">
               <label> CVV: </label>
               <input
@@ -213,11 +210,12 @@ export default class Step4 extends Component{
               placeholder="CVV"
               />
             </div>
+
             <div className={notValidClasses.cvvValGrpCls}>{this.state.cvvValMsg}</div>
 
           </form>
-          </div>
-    </div>
-        );
+        </div>
+      </div>
+      );
     }
 }
