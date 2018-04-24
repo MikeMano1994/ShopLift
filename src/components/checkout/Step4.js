@@ -178,7 +178,6 @@ export default class Step4 extends Component{
                 </div>
                 <div className={notValidClasses.cardnumberValGrpCls}>{this.state.cardnumberValMsg}</div>
 
-
                 <div class = "expmonth">
                   <label> EXPIRATION MONTH: </label>
                   <input
