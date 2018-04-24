@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import fire from '../../fire';
 
 import '../../App.css'
 
@@ -7,6 +8,13 @@ export default class Step2 extends Component{
     constructor(props) {
     super(props);
     this.state = {};
+    }
+
+    componentWillMount(){
+        if(fire.auth().currentUser){
+            this.props.jumpToStep(4)
+        }
+
     }
 
     render(){
