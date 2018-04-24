@@ -77,13 +77,11 @@ export default class Step3 extends Component{
   _validationErrors(val) {
     const errMsgs = {
       firstnameValMsg: val.firstnameVal ? '' : 'A first name is required',
-      lastnameValMsg: val.lastnameVal ? '' : 'A last name email is required',
+      lastnameValMsg: val.lastnameVal ? '' : 'A last name is required',
       addressValMsg: val.addressVal ? '' : 'An address is required',
-      cityValMsg: val.cityVal ? '' : 'A city  is required',
+      cityValMsg: val.cityVal ? '' : 'A city is required',
       stateValMsg: val.stateVal ? '' : 'A state is required',
       zipcodeValMsg: val.zipcodeVal ? '' : 'A zipcode is required',
-
-
 
     }
     return errMsgs;
@@ -170,6 +168,7 @@ export default class Step3 extends Component{
                 <div class="firstname">
                  <label> FIRST NAME: </label>
                   <input 
+                  className={notValidClasses.firstnameCls}
                   ref="firstname"
                   type="text"
                   required
@@ -177,10 +176,12 @@ export default class Step3 extends Component{
                   onBlur={this.validationCheck}
                   placeholder="First Name"/>
                 </div>
+                <div className={notValidClasses.firstnameValGrpCls}>{this.state.firstnameValMsg}</div>
 
                 <div class="lastname">
                  <label> LAST NAME: </label>
                   <input
+                  className={notValidClasses.lastnameCls}
                   ref="lastname"
                   type="text"
                   required
@@ -188,10 +189,13 @@ export default class Step3 extends Component{
                   onBlur={this.validationCheck}
                   placeholder="Last Name"/>
                 </div>
+                <div className={notValidClasses.lastnameValGrpCls}>{this.state.lastnameValMsg}</div>
+
 
                 <div class = "address">
                   <label> ADDRESS: </label>
                   <input
+                    className={notValidClasses.addressCls}
                     ref="address"
                     type="text"
                     required
@@ -200,10 +204,13 @@ export default class Step3 extends Component{
                     placeholder="Address"
                     />
                 </div>
+                <div className={notValidClasses.addressValGrpCls}>{this.state.addressValMsg}</div>
+
 
                 <div class = "city" >
                   <label> CITY: </label>
                   <input
+                  className={notValidClasses.cityCls}
                   ref="city"
                   type="text"
                   required
@@ -212,10 +219,13 @@ export default class Step3 extends Component{
                   placeholder="City"
                   />
                 </div>
+                <div className={notValidClasses.cityValGrpCls}>{this.state.cityValMsg}</div>
+
 
                 <div class = "state">
                   <label> STATE: </label>
                   <input
+                  className={notValidClasses.stateCls}
                   ref="state"
                   type="text"
                   required
@@ -224,10 +234,13 @@ export default class Step3 extends Component{
                   placeholder="State"
                   />
                 </div>
+                <div className={notValidClasses.stateValGrpCls}>{this.state.stateValMsg}</div>
+
 
                 <div class = "zipcode">
                   <label> ZIP CODE: </label>
                   <input
+                  className={notValidClasses.zipcodeCls}
                   ref="zipcode"
                   type="text"
                   required
@@ -236,6 +249,8 @@ export default class Step3 extends Component{
                   placeholder="Zip Code"
                   />
                 </div>
+                 <div className={notValidClasses.zipcodeValGrpCls}>{this.state.zipcodeValMsg}</div>
+
               </form>
               </div>
               

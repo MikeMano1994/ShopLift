@@ -29,8 +29,8 @@ export default class Step5 extends Component{
 
     			<Panel.Body>
     				<p>Firstname:{this.props.getStore().firstname}</p>
-      				<p>Lastname:{this.props.getStore().lastname}</p>
-              <p>Address:{this.props.getStore().address}</p>
+      				<p>Lastname:{this.props.getStore().lastname}</p> 
+        	      	<p>Address:{this.props.getStore().address}</p>
       				<p>City:{this.props.getStore().city}</p>
       				<p>State:{this.props.getStore().state}</p>
       				<p>Zipcode:{this.props.getStore().zipcode}</p>
@@ -71,11 +71,11 @@ export default class Step5 extends Component{
 
     			</Panel.Heading>
     				<Panel.Body>
-    				<p>Cardname:</p>
-      				<p>Cardnumber:</p>
-     				<p>Expmonth:</p>
-      				<p>Expyear:</p>
-      				<p>cvv:</p>
+    				  <p>Cardname:{this.props.getStore().cardname}</p>
+      				<p>Cardnumber:{this.props.getStore().cardnumber}</p>
+     				  <p>ExpMonth:{this.props.getStore().expmonth}</p>
+              <p>ExpYear:{this.props.getStore().expyear}</p>
+      				<p>cvv:{this.props.getStore().cvv}</p>
     				</Panel.Body>
     			</Panel>
     		</div>

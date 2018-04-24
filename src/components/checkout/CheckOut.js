@@ -24,8 +24,12 @@ constructor(props) {
       address: '',
       city: '',
       state: '',
-      zipcode: ''
-      
+      zipcode: '',
+      cardname: '',
+      cardnum: '',
+      expmonth: '',
+      expyear: '',
+      cvv: ''
     };
   }
 
