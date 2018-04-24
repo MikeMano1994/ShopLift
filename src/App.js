@@ -52,7 +52,6 @@ class App extends Component {
   loggedIn(e){
     if (e !== null && e !== undefined)
       this.setState({authed:e});
-    console.log(e);
   }
 
   render() {
@@ -69,7 +68,7 @@ class App extends Component {
               <Route exact path='/contact' component={Contact} />
               <Route exact path='/about-us' component={AboutUs} />
               <Route exact path='/shop'  render={()=><Shop productsList={this.state.products}/>}  />
-              <Route exact path='/login' render={()=>{return(<LogIn loggedIn={this.loggedIn}/>);}}/>
+              <Route exact path='/login' render={()=><LogIn loggedIn={this.loggedIn}/>}/>
               <Route exact path='/signup' component={SignUp} />
               <Route exact path='/profile' component={UserProfile} />
               <Route exact path='/cart' component={Cart} />

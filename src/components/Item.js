@@ -58,7 +58,7 @@ export default class Item extends Component {
                                 </button>
                             </span>
                     </div>
-                    <a href="#" className="btn btn-outline-success my-2 my-sm-0"   onClick={this.addToCart.bind(this)}>{!this.state.isAdded ? "Add To Cart" : "✔ Added"}</a>
+                    <a href="#" className="btn btn-outline-success my-2 my-sm-0" onClick={this.addToCart.bind(this)}>{!this.state.isAdded ? "Add To Cart" : "✔ Added"}</a>
                 </div>
             <div>
                 <Modal show={this.state.show} onHide={this.handleClose}>
