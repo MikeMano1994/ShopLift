@@ -33,6 +33,14 @@ export default class Products extends Component {
 
                 );
               }
+              else if(this.props.productsList[element].sale === true){
+                return(
+                  <div className="col-md-6 col-sm-6 col-lg-4 col-xs-12 col-xl-3 control-label">
+                    <Item a={this.props.productsList[element]} />
+                  </div>
+                );
+
+              }
               else{
                 if (this.props.productsList[element].category === this.props.category){
                   return (
