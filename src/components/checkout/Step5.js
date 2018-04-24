@@ -13,7 +13,7 @@ export default class Step5 extends Component{
     	<h1> Review and submit your order</h1>
     	<div class="container">
     		<div class="row">
-    			<div class="col-sm-6">
+    			<div class="col-lg-6 col-md-6 col-xs-12">
     			<Panel>
     			<Panel.Heading>
     				Shipping Information
@@ -36,7 +36,7 @@ export default class Step5 extends Component{
     			</Panel>
     			</div>
 
-    			<div class="col-sm-6">
+    			<div class="col-lg-6 col-md-6 col-xs-12">
     			<Panel>
     				<Panel.Body>
     				<p>Item Total:</p>
@@ -55,7 +55,7 @@ export default class Step5 extends Component{
     		</div>
 
     		<div class="row">
-    		<div class="col-sm-6">
+    		<div class="col-lg-6 col-md-6 col-xs-12">
     			<Panel>
     			<Panel.Heading>
     				Payment Information
