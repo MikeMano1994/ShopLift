@@ -1,200 +1,199 @@
 [
   {
-        "id": 1,
-        "name": "Brocolli - 1 Kg",
-        "price": 0.50,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/broccoli.jpg",
-        "category": "produce",
-		     "sale": false,
-         "discountprice": 0.50
-
-    },
-    {
-        "id": 2,
-        "name": "Cauliflower - 1 Kg",
-        "price": 1.50,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cauliflower.jpg",
-        "category": "produce",
-		      "sale": false,
-          "discountprice": 0.50
-    },
-    {
-        "id": 3,
-        "name": "Cucumber - 1 Kg",
-        "price": 0.50,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cucumber.jpg",
-        "category": "produce",
-		    "sale": true,
-        "discountprice": 0.10
-    },
-    {
-        "id": 4,
-        "name": "Beetroot - 1 Kg",
-        "price": 1.00,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beetroot.jpg",
-        "category": "produce",
-		     "sale": false,
-         "discountprice": 0.50
-    },
-    {
-        "id": 5,
-        "name": "Carrot - 1 Kg",
-        "price": 3.00,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/carrots.jpg",
-        "category": "produce",
-		      "sale": true,
-          "discountprice": 2.00
-    },
-    {
-        "id": 6,
-        "name": "Tomato - 1 Kg",
-        "price": 1.00,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/tomato.jpg",
-        "category": "produce",
+    "id": 1,
+    "name": "Brocolli - 1 Kg",
+    "price": 0.50,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/broccoli.jpg",
+    "category": "produce",
+    "sale": false,
+    "discountprice": 0.50
+  },
+  {
+    "id": 2,
+    "name": "Cauliflower - 1 Kg",
+    "price": 1.50,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cauliflower.jpg",
+    "category": "produce",
+    "sale": false,
+    "discountprice": 0.50
+  },
+  {
+    "id": 3,
+    "name": "Cucumber - 1 Kg",
+    "price": 0.50,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cucumber.jpg",
+    "category": "produce",
+    "sale": true,
+    "discountprice": 0.10
+  },
+  {
+    "id": 4,
+    "name": "Beetroot - 1 Kg",
+    "price": 1.00,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beetroot.jpg",
+    "category": "produce",
+    "sale": false,
+    "discountprice": 0.50
+  },
+  {
+    "id": 5,
+    "name": "Carrot - 1 Kg",
+    "price": 3.00,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/carrots.jpg",
+    "category": "produce",
+    "sale": true,
+    "discountprice": 2.00
+  },
+  {
+    "id": 6,
+    "name": "Tomato - 1 Kg",
+    "price": 1.00,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/tomato.jpg",
+    "category": "produce",
 		"sale": false,
     "discountprice": 0.50
-    },
-    {
-        "id": 7,
-        "name": "Beans - 1 Kg",
-        "price": 1.50,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beans.jpg",
-        "category": "produce",
+  },
+  {
+    "id": 7,
+    "name": "Beans - 1 Kg",
+    "price": 1.50,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beans.jpg",
+    "category": "produce",
 		"sale": true,
     "discountprice": 1.00
-    },
-    {
-        "id": 8,
-        "name": "Brinjal - 1 Kg",
-        "price": 2.50,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/brinjal.jpg",
-        "category": "produce",
+  },
+  {
+    "id": 8,
+    "name": "Brinjal - 1 Kg",
+    "price": 2.50,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/brinjal.jpg",
+    "category": "produce",
 		"sale": false,
     "discountprice": 0.50
-    },
-    {
-        "id": 9,
-        "name": "Capsicum",
-        "price": 1.00,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/capsicum.jpg",
-        "category": "produce",
+  },
+  {
+    "id": 9,
+    "name": "Capsicum",
+    "price": 1.00,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/capsicum.jpg",
+    "category": "produce",
 		"sale": false,
     "discountprice": 0.50
-    },
-    {
-        "id": 10,
-        "name": "Mushroom - 1 Kg",
-        "price": 2.50,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/button-mushroom.jpg",
-        "category": "produce",
+  },
+  {
+    "id": 10,
+    "name": "Mushroom - 1 Kg",
+    "price": 2.50,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/button-mushroom.jpg",
+    "category": "produce",
 		"sale": false,
     "discountprice": 0.50
-    },
-    {
-        "id": 11,
-        "name": "Potato - 3 Kg",
-        "price": 4.00,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/potato.jpg",
-        "category": "produce",
+  },
+  {
+    "id": 11,
+    "name": "Potato - 3 Kg",
+    "price": 4.00,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/potato.jpg",
+    "category": "produce",
 		"sale": false,
     "discountprice": 0.50
-    },
-    {
-        "id": 12,
-        "name": "Pumpkin - 5 Kg",
-        "price": 7.00,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pumpkin.jpg",
-        "category": "produce",
+  },
+  {
+    "id": 12,
+    "name": "Pumpkin - 5 Kg",
+    "price": 7.00,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pumpkin.jpg",
+    "category": "produce",
 		"sale": false,
     "discountprice": 0.50
-    },
-    {
-        "id": 13,
-        "name": "Corn - 3 Kg",
-        "price": 0.50,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/corn.jpg",
-        "category": "produce",
+  },
+  {
+    "id": 13,
+    "name": "Corn - 3 Kg",
+    "price": 0.50,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/corn.jpg",
+    "category": "produce",
 		"sale": true,
     "discountprice": 0.25
-    },
-    {
-        "id": 14,
-        "name": "Onion - 1 Kg",
-        "price": 1.00,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/onion.jpg",
-        "category": "produce",
+  },
+  {
+    "id": 14,
+    "name": "Onion - 1 Kg",
+    "price": 1.00,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/onion.jpg",
+    "category": "produce",
 		"sale": false,
     "discountprice": 0.50
-    },
-    {
-        "id": 15,
-        "name": "Apple - 1 Kg",
-        "price": 1.99,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/apple.jpg",
-        "category": "fruits",
+  },
+  {
+    "id": 15,
+    "name": "Apple - 1 Kg",
+    "price": 1.99,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/apple.jpg",
+    "category": "fruits",
 		"sale": false,
     "discountprice": 0.50
-    },
-    {
-        "id": 16,
-        "name": "Banana - 1 Kg",
-        "price": 0.76,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/banana.jpg",
-        "category": "fruits",
+  },
+  {
+    "id": 16,
+    "name": "Banana - 1 Kg",
+    "price": 0.76,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/banana.jpg",
+    "category": "fruits",
 		"sale": false,
     "discountprice": 0.50
-    },
-    {
-        "id": 17,
-        "name": "Grapes - 1 Kg",
-        "price": 1.99,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/grapes.jpg",
-        "category": "fruits",
+  },
+  {
+    "id": 17,
+    "name": "Grapes - 1 Kg",
+    "price": 1.99,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/grapes.jpg",
+    "category": "fruits",
 		"sale": false,
     "discountprice": 0.50
-    },
-    {
-        "id": 18,
-        "name": "Mango - 1 Kg",
-        "price": 1.50,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/mango.jpg",
-        "category": "fruits",
+  },
+  {
+    "id": 18,
+    "name": "Mango - 1 Kg",
+    "price": 1.50,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/mango.jpg",
+    "category": "fruits",
 		"sale": false,
     "discountprice": 0.50
-    },
-    {
-        "id": 19,
-        "name": "Musk Melon - 1 Kg",
-        "price": 1.20,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/musk-melon.jpg",
-        "category": "fruits",
+  },
+  {
+    "id": 19,
+    "name": "Musk Melon - 1 Kg",
+    "price": 1.20,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/musk-melon.jpg",
+    "category": "fruits",
 		"sale": false,
     "discountprice": 0.50
-    },
-    {
-        "id": 20,
-        "name": "Orange - 1 Kg",
-        "price": 1.00,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/orange.jpg",
-        "category": "fruits",
+  },
+  {
+    "id": 20,
+    "name": "Orange - 1 Kg",
+    "price": 1.00,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/orange.jpg",
+    "category": "fruits",
 		"sale": false,
     "discountprice": 0.50
-    },
-    {
-        "id": 21,
-        "name": "Pears - 1 Kg",
-        "price": 1.50,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pears.jpg",
-        "category": "fruits",
+  },
+  {
+    "id": 21,
+    "name": "Pears - 1 Kg",
+    "price": 1.50,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pears.jpg",
+    "category": "fruits",
 		"sale": false,
     "discountprice": 0.50
-    },
-    {
-        "id": 22,
-        "name": "Pomegranate - 1 Kg",
-        "price": 3.00,
-        "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pomegranate.jpg",
-        "category": "fruits",
+  },
+  {
+    "id": 22,
+    "name": "Pomegranate - 1 Kg",
+    "price": 3.00,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pomegranate.jpg",
+    "category": "fruits",
 		"sale": false,
     "discountprice": 0.50
     },
@@ -323,8 +322,8 @@
         "category": "frozen",
 		"sale": true,
     "discountprice": 4.00
-  },
-  {
+    },
+    {
       "id": 37,
       "name": "Breyers Cookies & Creme Ice Cream",
       "price": 5.25,
@@ -332,8 +331,8 @@
       "category": "frozen",
       "sale": false,
       "discountprice": 0.50
-  },
-  {
+    },
+    {
       "id": 38,
       "name": "Aquafina - 16 Oz ",
       "price": 0.99,
@@ -341,122 +340,122 @@
       "category": "beverage",
       "sale": false,
       "discountprice": 0.50
-},
-{
-    "id": 39,
-    "name": "Beef Ribeye Sliced - 1 lb ",
-    "price": 11.00,
-    "image": "https://s3.amazonaws.com/frozenmeatsupplier/wp-content/uploads/frozenmeat-shabushabu-beef_ribeye-002.jpg",
-    "category": "meat",
-    "sale": false,
-    "discountprice": 0.50
-},
-{
-    "id": 40,
-    "name": "Pork Belly - 1 lb ",
-    "price": 9.50,
-    "image": "http://mmmm.com.sg/166-tm_thickbox_default/frozen-sliced-pork-belly-half-inch.jpg",
-    "category": "meat",
-    "sale": false,
-    "discountprice": 0.50
-},
-{
-    "id": 41,
-    "name": "Swiss Cheese ",
-    "price": 3.00,
-    "image": "https://dairygood.org/~/media/shared/content/2016/swiss.jpg?la=en&hash=74AD4AFE07B2BE2CC16A891A0FC7DB54180CBDB7",
-    "category": "dairy",
-    "sale": false,
-    "discountprice": 0.50
-},
-{
-    "id": 42,
-    "name": "Digiorno Pepperoni Pizza",
-    "price": 7.25,
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71CDSWpP%2BTL._SY355_.jpg",
-    "category": "frozen",
-    "sale": false,
-    "discountprice": 0.50
-},
-{
-    "id": 43,
-    "name": "Lean Cuisine Cafe Cuisine Sesame Chicken",
-    "price": 3.25,
-    "image": "https://target.scene7.com/is/image/Target/13291616?wid=325&hei=325&qlt=80&fmt=pjpeg",
-    "category": "frozen",
-    "sale": true,
-    "discountprice": 2.50
-},
-{
-    "id": 43,
-    "name": "Pepsi Cola - 12 Pack",
-    "price": 4.99,
-    "image": "https://target.scene7.com/is/image/Target/13044177?wid=325&hei=325&qlt=80&fmt=pjpeg",
-    "category": "beverage",
-    "sale": false,
-    "discountprice": 2.50
-},
-{
-    "id": 44,
-    "name": "Minute Maid Pink Lemonade",
-    "price": 1.49,
-    "image": "https://target.scene7.com/is/image/Target/47102364?wid=325&hei=325&qlt=80&fmt=pjpeg",
-    "category": "beverage",
-    "sale": false,
-    "discountprice": 2.50
-},
-{
-    "id": 45,
-    "name": "Coca-Cola - 12 Pack",
-    "price": 4.99,
-    "image": "https://target.scene7.com/is/image/Target/12953464?wid=325&hei=325&qlt=80&fmt=pjpeg",
-    "category": "beverage",
-    "sale": false,
-    "discountprice": 2.50
-},
-{
-    "id": 46,
-    "name": "Delaware Punch Caffeine Free - 12 Pack",
-    "price": 5.29,
-    "image": "https://target.scene7.com/is/image/Target/47866360?wid=325&hei=325&qlt=80&fmt=pjpeg",
-    "category": "beverage",
-    "sale": false,
-    "discountprice": 2.50
-},
-{
-    "id": 47,
-    "name": "Coca-Cola Origins Georgia Peach - 4 Pack",
-    "price": 4.99,
-    "image": "https://target.scene7.com/is/image/Target/53037016?wid=325&hei=325&qlt=80&fmt=pjpeg",
-    "category": "beverage",
-    "sale": true,
-    "discountprice": 3.49
-},
-{
-    "id": 48,
-    "name": "Red Bull® Energy Drink - 12 oz",
-    "price": 2.69,
-    "image": "https://target.scene7.com/is/image/Target/13426758?wid=325&hei=325&qlt=80&fmt=pjpeg",
-    "category": "beverage",
-    "sale": true,
-    "discountprice": 1.99
-},
-{
-    "id": 49,
-    "name": "Monster Energy, Original - 16 fl oz",
-    "price": 1.99,
-    "image": "https://target.scene7.com/is/image/Target/12953443?wid=325&hei=325&qlt=80&fmt=pjpeg",
-    "category": "beverage",
-    "sale": false,
-    "discountprice": 2.50
-},
-{
-    "id": 50,
-    "name": "Simply Orange Pulp Free Orange Juice - 52 oz",
-    "price": 3.99,
-    "image": "https://target.scene7.com/is/image/Target/13183052?wid=325&hei=325&qlt=80&fmt=pjpeg",
-    "category": "beverage",
-    "sale": false,
-    "discountprice": 2.50
-}
+    },
+    {
+        "id": 39,
+        "name": "Beef Ribeye Sliced - 1 lb ",
+        "price": 11.00,
+        "image": "https://s3.amazonaws.com/frozenmeatsupplier/wp-content/uploads/frozenmeat-shabushabu-beef_ribeye-002.jpg",
+        "category": "meat",
+        "sale": false,
+        "discountprice": 0.50
+    },
+    {
+        "id": 40,
+        "name": "Pork Belly - 1 lb ",
+        "price": 9.50,
+        "image": "http://mmmm.com.sg/166-tm_thickbox_default/frozen-sliced-pork-belly-half-inch.jpg",
+        "category": "meat",
+        "sale": false,
+        "discountprice": 0.50
+    },
+    {
+        "id": 41,
+        "name": "Swiss Cheese ",
+        "price": 3.00,
+        "image": "https://dairygood.org/~/media/shared/content/2016/swiss.jpg?la=en&hash=74AD4AFE07B2BE2CC16A891A0FC7DB54180CBDB7",
+        "category": "dairy",
+        "sale": false,
+        "discountprice": 0.50
+    },
+    {
+        "id": 42,
+        "name": "Digiorno Pepperoni Pizza",
+        "price": 7.25,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71CDSWpP%2BTL._SY355_.jpg",
+        "category": "frozen",
+        "sale": false,
+        "discountprice": 0.50
+    },
+    {
+        "id": 43,
+        "name": "Lean Cuisine Cafe Cuisine Sesame Chicken",
+        "price": 3.25,
+        "image": "https://target.scene7.com/is/image/Target/13291616?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "frozen",
+        "sale": true,
+        "discountprice": 2.50
+    },
+    {
+        "id": 43,
+        "name": "Pepsi Cola - 12 Pack",
+        "price": 4.99,
+        "image": "https://target.scene7.com/is/image/Target/13044177?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": false,
+        "discountprice": 2.50
+    },
+    {
+        "id": 44,
+        "name": "Minute Maid Pink Lemonade",
+        "price": 1.49,
+        "image": "https://target.scene7.com/is/image/Target/47102364?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": false,
+        "discountprice": 2.50
+    },
+    {
+        "id": 45,
+        "name": "Coca-Cola - 12 Pack",
+        "price": 4.99,
+        "image": "https://target.scene7.com/is/image/Target/12953464?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": false,
+        "discountprice": 2.50
+    },
+    {
+        "id": 46,
+        "name": "Delaware Punch Caffeine Free - 12 Pack",
+        "price": 5.29,
+        "image": "https://target.scene7.com/is/image/Target/47866360?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": false,
+        "discountprice": 2.50
+    },
+    {
+        "id": 47,
+        "name": "Coca-Cola Origins Georgia Peach - 4 Pack",
+        "price": 4.99,
+        "image": "https://target.scene7.com/is/image/Target/53037016?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": true,
+        "discountprice": 3.49
+    },
+    {
+        "id": 48,
+        "name": "Red Bull® Energy Drink - 12 oz",
+        "price": 2.69,
+        "image": "https://target.scene7.com/is/image/Target/13426758?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": true,
+        "discountprice": 1.99
+    },
+    {
+        "id": 49,
+        "name": "Monster Energy, Original - 16 fl oz",
+        "price": 1.99,
+        "image": "https://target.scene7.com/is/image/Target/12953443?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": false,
+        "discountprice": 2.50
+    },
+    {
+        "id": 50,
+        "name": "Simply Orange Pulp Free Orange Juice - 52 oz",
+        "price": 3.99,
+        "image": "https://target.scene7.com/is/image/Target/13183052?wid=325&hei=325&qlt=80&fmt=pjpeg",
+        "category": "beverage",
+        "sale": false,
+        "discountprice": 2.50
+    }
 ]
