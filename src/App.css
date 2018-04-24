@@ -273,6 +273,10 @@ a {
   font-weight: bold;
 }
 
+.addspace{
+  padding: 15px;
+}
+
 /*Card*/
 .card {
   text-align: center;

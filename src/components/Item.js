@@ -43,7 +43,7 @@ export default class Item extends Component {
             <img className="card-img-top" src={this.props.a.image} alt="Card image cap" onClick={this.handleShow}/>
                 <div className="card-body">
                     <h5 className="card-title">{this.props.a.name}</h5>
-                    <p className={this.props.a.sale ? "crossoutprice": ""}>${ this.props.a.price.toFixed(2)}/ea.</p>
+                    <p className={this.props.a.sale ? "crossoutprice": "addspace"}>${ this.props.a.price.toFixed(2)}/ea.</p>
                     <p className={this.props.a.sale ? "colorprice": ""}>{this.props.a.sale ? "$"+ this.props.a.discountprice.toFixed(2)+ "/ea": ""}</p>
                     <p className="card-text">{this.props.a.description}</p>
                     {/*<div className="input-group">

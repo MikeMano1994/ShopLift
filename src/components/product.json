@@ -310,16 +310,16 @@
         "id": 35,
         "name": "New York Steak - 2 lb",
         "price": 23.76,
-        "image": "https://parade.com/wp-content/uploads/2017/08/raw-meat-black-eye-advice-ask-marilyn-ftr.jpg",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71ZXtjWLiiL._SY355_.jpg",
         "category": "meat",
 		"sale": false,
     "discountprice": 0.50
     },
     {
         "id": 36,
-        "name": "Vanilla Ice Cream - 1.66 L",
+        "name": "Dreyer's Vanilla Bean Ice Cream - 1.66 L",
         "price": 4.25,
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71KhMJeRybL._SY550_.jpg",
+        "image": "https://www.dreyers.com/cms/sites/default/files/2016-06/2943_2.png",
         "category": "frozen",
 		"sale": true,
     "discountprice": 4.00
