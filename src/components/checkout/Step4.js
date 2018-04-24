@@ -174,29 +174,49 @@ export default class Step4 extends Component{
 
             <div class = "expmonth">
               <label> EXPIRATION MONTH: </label>
-              <input
+              <select
                 className={notValidClasses.expmonthCls}
                 ref="expmonth"
                 type="text"
                 required
                 defaultValue={this.state.expmonth}
-                onBlur={this.validationCheck}
-                placeholder="Expiration Month"
-                />
+                onBlur={this.validationCheck}>
+                <option value="">Please select</option>
+                      <option value="January">January</option>
+                      <option value="February">February</option>
+                      <option value="March">March</option>
+                      <option value="April">April</option>
+                      <option value="May">May</option>
+                      <option value="June">June</option>
+                      <option value="July">July</option>
+                      <option value="August">August</option>
+                      <option value="September">September</option>
+                      <option value="October">October</option>
+                      <option value="November">November</option>
+                      <option value="December">December</option>
+                </select>
             </div>
             <div className={notValidClasses.expmonthValGrpCls}>{this.state.expmonthValMsg}</div>
 
             <div class = "expyear" >
               <label> EXPIRATION YEAR: </label>
-              <input
+              <select
               className={notValidClasses.expyearCls}
               ref="expyear"
               type="text"
               required
               defaultValue={this.state.expyear}
-              onBlur={this.validationCheck}
-              placeholder="Expiration Year"
-              />
+              onBlur={this.validationCheck}>
+              <option value="">Please select</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                      <option value="2025">2025</option>
+              </select>
             </div>
             <div className={notValidClasses.expyearValGrpCls}>{this.state.expyearValMsg}</div>
 

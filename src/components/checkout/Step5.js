@@ -26,10 +26,12 @@ export default class Step5 extends Component{
                 </Panel.Heading>
 
                 <Panel.Body>
+                  
                   <p>{this.props.getStore().firstname}, {this.props.getStore().lastname}</p>
                   <p>{this.props.getStore().address}</p>
                   <p>{this.props.getStore().city}, {this.props.getStore().state}</p>
                   <p>{this.props.getStore().zipcode}</p>
+
                 </Panel.Body>
               </Panel>
   					</Col>
@@ -65,12 +67,18 @@ export default class Step5 extends Component{
 	            	 	</Button>
 	         	 		</a>
 		  				</Panel.Heading>
+
 		  				<Panel.Body>
-		  				  <p>Card Name:{this.props.getStore().cardname}</p>
-		    				<p>Cardnumber:{this.props.getStore().cardnumber}</p>
-		   				  <p>ExpMonth:{this.props.getStore().expmonth}</p>
-		            <p>ExpYear:{this.props.getStore().expyear}</p>
-		    				<p>cvv:{this.props.getStore().cvv}</p>
+		  				  <p>Card Name:</p> 
+                <p style ={{color: '#3c3c3c'}}>{this.props.getStore().cardname}</p>
+		    				<p>Card Number:</p>
+                <p style ={{color: '#3c3c3c'}}>{this.props.getStore().cardnumber}</p>
+		   				  <p>Exp Month</p>
+                <p style ={{color: '#3c3c3c'}}>{this.props.getStore().expmonth}</p>
+		            <p>Exp Year:</p>
+                <p style ={{color: '#3c3c3c'}}>{this.props.getStore().expyear}</p>
+		    				<p>cvv:</p>
+                <p style ={{color: '#3c3c3c'}}>{this.props.getStore().cvv}</p>
 	  					</Panel.Body>
   					</Panel>
   				</Col>
