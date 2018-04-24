@@ -25,7 +25,7 @@
         "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cucumber.jpg",
         "category": "produce",
 		    "sale": true,
-        "discountprice": 0.50
+        "discountprice": 0.10
     },
     {
         "id": 4,
@@ -43,7 +43,7 @@
         "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/carrots.jpg",
         "category": "produce",
 		      "sale": true,
-          "discountprice": 0.50
+          "discountprice": 2.00
     },
     {
         "id": 6,
@@ -61,7 +61,7 @@
         "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beans.jpg",
         "category": "produce",
 		"sale": true,
-    "discountprice": 0.50
+    "discountprice": 1.00
     },
     {
         "id": 8,
@@ -115,7 +115,7 @@
         "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/corn.jpg",
         "category": "produce",
 		"sale": true,
-    "discountprice": 0.50
+    "discountprice": 0.25
     },
     {
         "id": 14,
@@ -210,11 +210,11 @@
     {
         "id": 24,
         "name": "Strawberry - 1/4 Kg",
-        "price": 2.00,
+        "price": 4.00,
         "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/strawberry.jpg",
         "category": "fruits",
 		"sale": true,
-    "discountprice": 0.50
+    "discountprice": 2.00
     },
     {
         "id": 25,
@@ -304,7 +304,7 @@
         "image": "https://i5.walmartimages.com/asr/e7b95432-e117-42a1-8d4f-f6bee0879f9b_1.4e44ca372fb93fa2abee0dce4259abac.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
         "category": "beverage",
 		"sale": true,
-    "discountprice": 0.50
+    "discountprice": 1.00
     },
     {
         "id": 35,
@@ -322,7 +322,7 @@
         "image": "https://images-na.ssl-images-amazon.com/images/I/71KhMJeRybL._SY550_.jpg",
         "category": "frozen",
 		"sale": true,
-    "discountprice": 0.50
+    "discountprice": 4.00
   },
   {
       "id": 37,
