@@ -366,7 +366,12 @@ a {
 .address input,
 .city input,
 .state input,
-.zipcode input {
+.zipcode input,
+.cardname input,
+.cardnumber input,
+.expmonth input,
+.expyear input,
+.cvv input {
   width: 50%;
   height: 40px;
   border: 1.5px solid #3c3c3c;

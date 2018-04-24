@@ -83,8 +83,6 @@ export default class Step3 extends Component{
       stateValMsg: val.stateVal ? '' : 'A state is required',
       zipcodeValMsg: val.zipcodeVal ? '' : 'A zipcode is required',
 
-
-
     }
     return errMsgs;
   }
