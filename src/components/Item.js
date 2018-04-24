@@ -45,7 +45,7 @@ export default class Item extends Component {
                     <h5 className="card-title">{this.props.a.name}</h5>
                     <p className="card-price">${this.props.a.price.toFixed(2)}/ea.</p>
                     <p className="card-text">{this.props.a.description}</p>
-                    <div className="input-group">
+                    {/*<div className="input-group">
                         <span className="input-group-btn">
                             <button type="button" className="btn btn-default" data-value="decrease" data-target="#spinner" data-toggle="spinner">
                                 <span className="glyphicon glyphicon-minus"></span>
@@ -57,7 +57,7 @@ export default class Item extends Component {
                                     <span className="glyphicon glyphicon-plus"></span>
                                 </button>
                             </span>
-                    </div>
+                    </div>*/}
                     <a href="#" className="btn btn-outline-success my-2 my-sm-0"   onClick={this.addToCart.bind(this)}>{!this.state.isAdded ? "Add To Cart" : "✔ Added"}</a>
                 </div>
             <div>
