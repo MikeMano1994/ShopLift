@@ -14,17 +14,46 @@ import './checkout.css';
 import '../../App.css'
 
 export default class CheckOut extends Component {
+constructor(props) {
+    super(props);
+    this.state = {};
+
+    this.sampleStore = {
+      firstname: '',
+      lastname: '',
+      address: '',
+      city: '',
+      state: '',
+      zipcode: ''
+      
+    };
+  }
+
+  componentDidMount() {}
+
+  componentWillUnmount() {}
+
+  getStore() {
+    return this.sampleStore;
+  }
+
+  updateStore(update) {
+    this.sampleStore = {
+      ...this.sampleStore,
+      ...update,
+    }
+  }
 
 
   render() {
     const steps =
     [
-      {name: 'Cart', component: <Step1/>},
-      {name: 'My Profile', component: <Step2/>},
-      {name: 'Shipping', component: <Step3/>},
-      {name: 'Payment', component: <Step4/>},
-      {name: 'Review', component: <Step5/>},
-      {name: 'Confirmation', component: <Step6/>},
+      {name: 'Cart', component: <Step1 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
+      {name: 'My Profile', component: <Step2 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
+      {name: 'Shipping', component: <Step3 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
+      {name: 'Payment', component: <Step4 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
+      {name: 'Review', component: <Step5 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
+      {name: 'Confirmation', component: <Step6 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
       
     ]
 

@@ -28,12 +28,12 @@ export default class Step5 extends Component{
     			</Panel.Heading>
 
     			<Panel.Body>
-    				<p>Firstname:</p>
-      				<p>Lastname:</p>
-     				<p>Address:</p>
-      				<p>City:</p>
-      				<p>State:</p>
-      				<p>Zipcode:</p>
+    				<p>Firstname:{this.props.getStore().firstname}</p>
+      				<p>Lastname:{this.props.getStore().lastname}</p>
+              <p>Address:{this.props.getStore().address}</p>
+      				<p>City:{this.props.getStore().city}</p>
+      				<p>State:{this.props.getStore().state}</p>
+      				<p>Zipcode:{this.props.getStore().zipcode}</p>
     			</Panel.Body>
     			</Panel>
     			</div>
