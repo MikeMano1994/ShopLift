@@ -45,7 +45,6 @@ export default class Item extends Component {
                     <h5 className="card-title">{this.props.a.name}</h5>
                     <p className={this.props.a.sale ? "crossoutprice": "addspace"}>${ this.props.a.price.toFixed(2)}/ea.</p>
                     <p className={this.props.a.sale ? "colorprice": ""}>{this.props.a.sale ? "$"+ this.props.a.discountprice.toFixed(2)+ "/ea": ""}</p>
-                    <p className="card-text">{this.props.a.description}</p>
                     {/*<div className="input-group">
                         <span className="input-group-btn">
                             <button type="button" className="btn btn-default" data-value="decrease" data-target="#spinner" data-toggle="spinner">
@@ -68,9 +67,9 @@ export default class Item extends Component {
                     </Modal.Header>
                     <Modal.Body>
                         <img className="modal-card-image" src={this.props.a.image}/>
-                            <div className="modal-card-description">
-                                <p>{this.props.a.description}</p>
-                            </div>
+                        <div>
+                            <h4>{this.props.a.description}</h4>
+                        </div>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button onClick={this.handleClose}>Close</Button>

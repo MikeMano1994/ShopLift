@@ -65,7 +65,7 @@ export default class Shop extends Component{
               <FormGroup>
               <Form className="movetotheright" >
                 <Input className = "searchbar"
-                  type="text" placeholder="Search for the fresh!" onChange = {this.handleSearch}/>
+                  type="text" placeholder="Search for an item..." onChange = {this.handleSearch}/>
               </Form>
               </FormGroup>
 
