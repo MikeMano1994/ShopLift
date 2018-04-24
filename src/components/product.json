@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Brocolli - 1 Kg",
+    "name": "Brocolli (1kg)",
     "price": 0.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/broccoli.jpg",
     "category": "produce",
@@ -11,7 +11,7 @@
   },
   {
     "id": 2,
-    "name": "Cauliflower - 1 Kg",
+    "name": "Cauliflower (1kg)",
     "price": 1.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cauliflower.jpg",
     "category": "produce",
@@ -21,7 +21,7 @@
   },
   {
     "id": 3,
-    "name": "Cucumber - 1 Kg",
+    "name": "Cucumber (1kg)",
     "price": 0.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cucumber.jpg",
     "category": "produce",
@@ -31,7 +31,7 @@
   },
   {
     "id": 4,
-    "name": "Beetroot - 1 Kg",
+    "name": "Beetroot (1kg)",
     "price": 1.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beetroot.jpg",
     "category": "produce",
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "name": "Carrot - 1 Kg",
+    "name": "Carrot (1kg)",
     "price": 3.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/carrots.jpg",
     "category": "produce",
@@ -51,7 +51,7 @@
   },
   {
     "id": 6,
-    "name": "Tomato - 1 Kg",
+    "name": "Tomato (1kg)",
     "price": 1.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/tomato.jpg",
     "category": "produce",
@@ -61,7 +61,7 @@
   },
   {
     "id": 7,
-    "name": "Beans - 1 Kg",
+    "name": "Beans (1kg)",
     "price": 1.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beans.jpg",
     "category": "produce",
@@ -71,7 +71,7 @@
   },
   {
     "id": 8,
-    "name": "Eggplant - 1 Kg",
+    "name": "Eggplant (1kg)",
     "price": 2.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/brinjal.jpg",
     "category": "produce",
@@ -81,7 +81,7 @@
   },
   {
     "id": 9,
-    "name": "Green Pepper",
+    "name": "Green Pepper (1kg)",
     "price": 1.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/capsicum.jpg",
     "category": "produce",
@@ -91,7 +91,7 @@
   },
   {
     "id": 10,
-    "name": "Mushroom - 1 Kg",
+    "name": "Mushroom (1kg)",
     "price": 2.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/button-mushroom.jpg",
     "category": "produce",
@@ -101,7 +101,7 @@
   },
   {
     "id": 11,
-    "name": "Potato - 3 Kg",
+    "name": "Potato (3kg)",
     "price": 4.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/potato.jpg",
     "category": "produce",
@@ -111,7 +111,7 @@
   },
   {
     "id": 12,
-    "name": "Pumpkin - 5 Kg",
+    "name": "Pumpkin (5kg)",
     "price": 7.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pumpkin.jpg",
     "category": "produce",
@@ -121,7 +121,7 @@
   },
   {
     "id": 13,
-    "name": "Corn - 3 Kg",
+    "name": "Corn (5kg)",
     "price": 0.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/corn.jpg",
     "category": "produce",
@@ -131,7 +131,7 @@
   },
   {
     "id": 14,
-    "name": "Onion - 1 Kg",
+    "name": "Onion (1kg)",
     "price": 1.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/onion.jpg",
     "category": "produce",
@@ -141,7 +141,7 @@
   },
   {
     "id": 15,
-    "name": "Washington Red Apple - 1 Kg",
+    "name": "Red Apple (1kg)",
     "price": 1.99,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/apple.jpg",
     "category": "fruits",
@@ -151,7 +151,7 @@
   },
   {
     "id": 16,
-    "name": "Banana - 1 Kg",
+    "name": "Banana (1kg)",
     "price": 0.76,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/banana.jpg",
     "category": "fruits",
@@ -161,7 +161,7 @@
   },
   {
     "id": 17,
-    "name": "Concord Grapes - 1 Kg",
+    "name": "Concord Grapes (1kg)",
     "price": 1.99,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/grapes.jpg",
     "category": "fruits",
@@ -171,7 +171,7 @@
   },
   {
     "id": 18,
-    "name": "Mango - 1 Kg",
+    "name": "Mango (1kg)",
     "price": 1.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/mango.jpg",
     "category": "fruits",
@@ -181,7 +181,7 @@
   },
   {
     "id": 19,
-    "name": "Musk Melon - 1 Kg",
+    "name": "Musk Melon (1kg)",
     "price": 1.20,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/musk-melon.jpg",
     "category": "fruits",
@@ -191,7 +191,7 @@
   },
   {
     "id": 20,
-    "name": "Orange - 1 Kg",
+    "name": "Orange (1kg)",
     "price": 1.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/orange.jpg",
     "category": "fruits",
@@ -201,7 +201,7 @@
   },
   {
     "id": 21,
-    "name": "Pears - 1 Kg",
+    "name": "Pears (1kg)",
     "price": 1.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pears.jpg",
     "category": "fruits",
@@ -211,7 +211,7 @@
   },
   {
     "id": 22,
-    "name": "Pomegranate - 1 Kg",
+    "name": "Pomegranate (1kg)",
     "price": 3.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pomegranate.jpg",
     "category": "fruits",
@@ -221,7 +221,7 @@
   },
   {
     "id": 23,
-    "name": "Raspberry - 1/4 Kg",
+    "name": "Raspberry (0.25kg)",
     "price": 4.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/raspberry.jpg",
     "category": "fruits",
@@ -231,7 +231,7 @@
   },
   {
     "id": 24,
-    "name": "Strawberry - 1/4 Kg",
+    "name": "Strawberry (0.25kg)",
     "price": 4.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/strawberry.jpg",
     "category": "fruits",
@@ -241,7 +241,7 @@
   },
   {
     "id": 25,
-    "name": "Watermelon - 5 Kg",
+    "name": "Watermelon (5kg)",
     "price": 5.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/water-melon.jpg",
     "category": "fruits",
@@ -251,7 +251,7 @@
   },
   {
     "id": 26,
-    "name": "Almonds - 1/4 Kg",
+    "name": "Almonds (0.25kg)",
     "price": 2.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/almonds.jpg",
     "category": "nuts",
@@ -261,7 +261,7 @@
   },
   {
     "id": 27,
-    "name": "Pistachio - 1/4 Kg",
+    "name": "Pistachio (0.25kg)",
     "price": 5.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pista.jpg",
     "category": "nuts",
@@ -271,7 +271,7 @@
   },
   {
     "id": 28,
-    "name": "Nuts Mixture - 1 Kg",
+    "name": "Nuts Mixture (1kg)",
     "price": 3.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/nuts-mixture.jpg",
     "category": "nuts",
@@ -281,7 +281,7 @@
   },
   {
     "id": 29,
-    "name": "Cashews - 1 Kg",
+    "name": "Cashews (1kg)",
     "price": 6.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/cashews.jpg",
     "category": "nuts",
@@ -291,7 +291,7 @@
   },
   {
     "id": 30,
-    "name": "Walnuts - 1/4 Kg",
+    "name": "Walnuts (0.25kg)",
     "price": 3.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/walnuts.jpg",
     "category": "nuts",
@@ -301,7 +301,7 @@
   },
   {
     "id": 31,
-    "name": "Milk - 1 L",
+    "name": "Milk (1L)",
     "price": 2.50,
     "image": "https://cdn.shopify.com/s/files/1/0206/9470/products/southcoast-milk-1l_grande.jpg?v=1494139427",
     "category": "dairy",
@@ -311,7 +311,7 @@
   },
   {
     "id": 32,
-    "name": "Chobani Yogurt - 907 g",
+    "name": "Chobani Yogurt (907g)",
     "price": 3.25,
     "image": "https://i5.walmartimages.com/asr/3046d86a-3218-4538-9c97-d369854df5af_1.f78855adc871b9a277d6324263a20676.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
     "category": "dairy",
@@ -321,7 +321,7 @@
   },
   {
     "id": 33,
-    "name": "Coke - 590 mL",
+    "name": "Coke (590mL)",
     "price": 1.99,
     "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRbNwB-dsHfEjPSI_ntAm6nO20h6S44BQjJnO6RMgbXnF0DKLyI8lBy1q1PH3ZPvs5ftFROnwU&usqp=CAY",
     "category": "beverage",
@@ -331,7 +331,7 @@
   },
   {
     "id": 34,
-    "name": "Apple Juice - 1 L",
+    "name": "Apple Juice (1L)",
     "price": 1.75,
     "image": "https://i5.walmartimages.com/asr/e7b95432-e117-42a1-8d4f-f6bee0879f9b_1.4e44ca372fb93fa2abee0dce4259abac.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
     "category": "beverage",
@@ -341,7 +341,7 @@
   },
   {
     "id": 35,
-    "name": "New York Steak - 2 lb",
+    "name": "New York Steak (2lb)",
     "price": 23.76,
     "image": "https://images-na.ssl-images-amazon.com/images/I/71ZXtjWLiiL._SY355_.jpg",
     "category": "meat",
@@ -351,7 +351,7 @@
   },
   {
     "id": 36,
-    "name": "Dreyer's Vanilla Bean Ice Cream - 1.66 L",
+    "name": "Dreyer's Vanilla Bean Ice Cream (1.6L)",
     "price": 4.25,
     "image": "https://www.dreyers.com/cms/sites/default/files/2016-06/2943_2.png",
     "category": "frozen",
@@ -361,17 +361,17 @@
   },
   {
     "id": 37,
-    "name": "Breyers Cookies & Creme Ice Cream",
+    "name": "Breyer's Ice Cream (1.6L)",
     "price": 5.25,
     "image": "https://i5.walmartimages.com/asr/e9a0c95c-ad51-42c9-a297-e23bf900e8c9_1.87a9f657e264fdbf37e3f98d1c2d7b7e.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
     "category": "frozen",
     "sale": false,
     "discountprice": 5.25,
-    "description": "Single 1.66L container of Dreyer's Ice Cream. Add fruit or chocolate syrup to make for an even more tasty treat."
+    "description": "Single 1.66L container of Breyer's Ice Cream. Add fruit or chocolate syrup to make for an even more tasty treat."
   },
   {
     "id": 38,
-    "name": "Aquafina - 16 Oz ",
+    "name": "Aquafina (16oz)",
     "price": 0.99,
     "image": "https://www.dollargeneral.com/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/0/0/00012000001598_0.jpg",
     "category": "beverage",
@@ -381,7 +381,7 @@
   },
   {
     "id": 39,
-    "name": "Beef Ribeye Sliced - 1 lb ",
+    "name": "Beef Ribeye Sliced (1lb)",
     "price": 11.00,
     "image": "https://s3.amazonaws.com/frozenmeatsupplier/wp-content/uploads/frozenmeat-shabushabu-beef_ribeye-002.jpg",
     "category": "meat",
@@ -391,7 +391,7 @@
   },
   {
     "id": 40,
-    "name": "Pork Belly - 1 lb ",
+    "name": "Pork Belly (1lb)",
     "price": 9.50,
     "image": "http://mmmm.com.sg/166-tm_thickbox_default/frozen-sliced-pork-belly-half-inch.jpg",
     "category": "meat",
@@ -401,7 +401,7 @@
   },
   {
     "id": 41,
-    "name": "Swiss Cheese ",
+    "name": "Swiss Cheese",
     "price": 3.00,
     "image": "https://dairygood.org/~/media/shared/content/2016/swiss.jpg?la=en&hash=74AD4AFE07B2BE2CC16A891A0FC7DB54180CBDB7",
     "category": "dairy",
@@ -421,7 +421,7 @@
   },
   {
     "id": 43,
-    "name": "Lean Cuisine Cafe Cuisine Sesame Chicken",
+    "name": "Lean Cuisine - Chicken",
     "price": 3.25,
     "image": "https://target.scene7.com/is/image/Target/13291616?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "frozen",
@@ -431,7 +431,7 @@
   },
   {
     "id": 43,
-    "name": "Pepsi Cola - 12 Pack",
+    "name": "Pepsi Cola (12pk)",
     "price": 4.99,
     "image": "https://target.scene7.com/is/image/Target/13044177?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "beverage",
@@ -451,7 +451,7 @@
   },
   {
     "id": 45,
-    "name": "Coca-Cola - 12 Pack",
+    "name": "Coca-Cola (12pk)",
     "price": 4.99,
     "image": "https://target.scene7.com/is/image/Target/12953464?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "beverage",
@@ -461,7 +461,7 @@
   },
   {
     "id": 46,
-    "name": "Delaware Punch Caffeine Free - 12 Pack",
+    "name": "Delaware Punch (12pk)",
     "price": 5.29,
     "image": "https://target.scene7.com/is/image/Target/47866360?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "beverage",
@@ -471,7 +471,7 @@
   },
   {
     "id": 47,
-    "name": "Coca-Cola Origins Georgia Peach - 4 Pack",
+    "name": "Coca-Cola Origins (4pk)",
     "price": 4.99,
     "image": "https://target.scene7.com/is/image/Target/53037016?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "beverage",
@@ -481,7 +481,7 @@
   },
   {
     "id": 48,
-    "name": "Red Bull® Energy Drink - 12 oz",
+    "name": "Red Bull® Energy Drink (12oz)",
     "price": 2.69,
     "image": "https://target.scene7.com/is/image/Target/13426758?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "beverage",
@@ -491,7 +491,7 @@
   },
   {
     "id": 49,
-    "name": "Monster Energy, Original - 16 fl oz",
+    "name": "Monster Energy, Original (16oz)",
     "price": 1.99,
     "image": "https://target.scene7.com/is/image/Target/12953443?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "beverage",
@@ -501,7 +501,7 @@
   },
   {
     "id": 50,
-    "name": "Simply Orange Pulp Free Orange Juice - 52 oz",
+    "name": "Simply Orange Pulp-Free Orange Juice (52oz)",
     "price": 3.99,
     "image": "https://target.scene7.com/is/image/Target/13183052?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "beverage",
