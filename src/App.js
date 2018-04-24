@@ -20,8 +20,6 @@ import fire from './fire';
 import './App.css';
 import '../node_modules/react-image-slider/lib/image-slider.css';
 
-{/*import Auth from './Auth';*/}
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -82,9 +80,9 @@ class App extends Component {
       <div className="App">
         <div className='App-header'>
           <Navbar
-            authed={this.state.authed} 
-            loggedIn={this.loggedIn} 
-            handleSearch={this.handleSearch} 
+            authed={this.state.authed}
+            loggedIn={this.loggedIn}
+            handleSearch={this.handleSearch}
             productList={this.state.products}
             items={this.state.items}
           />
