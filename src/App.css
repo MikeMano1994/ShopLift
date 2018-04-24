@@ -264,6 +264,15 @@ a {
   align-content: center;
 }
 
+.crossoutprice{
+  text-decoration: line-through;
+}
+
+.colorprice{
+  color: #af473c;
+  font-weight: bold;
+}
+
 /*Card*/
 .card {
   text-align: center;
