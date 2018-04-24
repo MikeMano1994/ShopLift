@@ -23,15 +23,17 @@ import '../node_modules/react-image-slider/lib/image-slider.css';
 {/*import Auth from './Auth';*/}
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state={
       authed:false,
       products: {},
-      unfilteredProducts:{}
+      unfilteredProducts:{},
+      items:{}
     };
 
+    this.addToCart = this.addToCart.bind(this);
     this.loggedIn = this.loggedIn.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
   }
@@ -42,6 +44,27 @@ class App extends Component {
     if (fire.auth().currentUser !== null || fire.auth().currentUser !== undefined)
       this.setState({authed:true});
   }
+
+  // pass this into Products.js for it to add to cart
+	addToCart(itemName){
+		var itemsObj = {};
+		if (itemName !== null && itemName !== undefined){
+			itemsObj[String(itemName)] = 1;
+		}
+		//this.setState({items:itemsObj});
+	}
+
+	// use this function locally for when user increment or decrement quantity in cart
+	updateCart(itemName, step){
+		var items = this.state.items;
+    if (step < 0 && !!items[itemName]){
+      items[itemName] -= step;
+      if (items[itemName] === 0){
+        delete items[itemName];
+      }
+    }
+
+	}
 
   handleSearch(event){
     let filteredProducts = this.state.unfilteredProducts;
@@ -58,7 +81,13 @@ class App extends Component {
     return (
       <div className="App">
         <div className='App-header'>
-          <Navbar authed={this.state.authed} loggedIn={this.loggedIn} handleSearch={this.handleSearch} productList={this.state.products}/>
+          <Navbar
+            authed={this.state.authed} 
+            loggedIn={this.loggedIn} 
+            handleSearch={this.handleSearch} 
+            productList={this.state.products}
+            items={this.state.items}
+          />
           <h1 className="App-title">“Deals so great - It’s a steal.”</h1>
         </div>
         <div className='App-landing'>
@@ -67,7 +96,7 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route exact path='/contact' component={Contact} />
               <Route exact path='/about-us' component={AboutUs} />
-              <Route exact path='/shop'  render={()=><Shop productsList={this.state.products}/>}  />
+              <Route exact path='/shop'  render={()=><Shop productsList={this.state.products} addToCart={this.addToCart}/>}  />
               <Route exact path='/login' render={()=><LogIn loggedIn={this.loggedIn}/>}/>
               <Route exact path='/signup' component={SignUp} />
               <Route exact path='/profile' component={UserProfile} />
