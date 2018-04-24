@@ -248,7 +248,7 @@ a {
   position: sticky;
 }
 
-/*ShopSideBar*/
+/*sideBar*/
 .sidebar {
   color: #945d60;
   padding-bottom: 20px;
@@ -269,6 +269,10 @@ a {
   text-align: center;
   margin: 1em;
   width: 18em;
+}
+
+.card-img-top {
+  cursor: pointer;
 }
 
 .card-title {
@@ -376,6 +380,21 @@ a {
   font-family: "Montserrat", sans-serif;
   display: inline-block;
   text-align: center;
+}
+
+.review{
+  color: #945d60;
+  text-align: left;
+
+  margin-right: 50%;
+  margin-left: 10%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  padding-top: 20px;
+}
+.btn-work{
+  text-align: center;
+  padding-top: 6px;
 }
 
 /* USER PROFILE PAGE */

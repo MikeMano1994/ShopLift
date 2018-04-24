@@ -57,7 +57,7 @@ export default class Step4 extends Component{
                   <p><span class="glyphicon glyphicon-chevron-left"></span> 
                   Continue Shopping</p>
                 </a>
-                <h1> CHECK OUT </h1>
+                <h1 className = "step"> Payment Information </h1>
               </div>
                 
               <div className="info">
