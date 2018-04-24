@@ -253,7 +253,7 @@ a {
   padding-bottom: 20px;
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
-  width: 40px;
+
 }
 
 /*Products*/
@@ -340,12 +340,12 @@ a {
 
 /*Shop*/
 .searchbar{
-  width: 100%;
+  width: 600px;
   height: 3.4em;
 }
 
 .movetotheright{
-  margin-left: 910px;
+  margin-left: 250px;
 
 }
 /*Check Out*/
