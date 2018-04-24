@@ -6,7 +6,7 @@
         "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/broccoli.jpg",
         "category": "produce",
 		"sale": false
-		
+
     },
     {
         "id": 2,
@@ -269,7 +269,7 @@
         "name": "Apple Juice - 1 L",
         "price": 1.75,
         "image": "https://i5.walmartimages.com/asr/e7b95432-e117-42a1-8d4f-f6bee0879f9b_1.4e44ca372fb93fa2abee0dce4259abac.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
-        "category": "beverage", 
+        "category": "beverage",
 		"sale": true
     },
     {
@@ -277,7 +277,7 @@
         "name": "New York Steak - 2 lb",
         "price": 23.76,
         "image": "https://parade.com/wp-content/uploads/2017/08/raw-meat-black-eye-advice-ask-marilyn-ftr.jpg",
-        "category": "meat", 
+        "category": "meat",
 		"sale": false
     },
     {
@@ -285,7 +285,47 @@
         "name": "Vanilla Ice Cream - 1.66 L",
         "price": 4.25,
         "image": "https://images-na.ssl-images-amazon.com/images/I/71KhMJeRybL._SY550_.jpg",
-        "category": "frozen", 
+        "category": "frozen",
 		"sale": true
-    }
+  },
+  {
+      "id": 37,
+      "name": "Breyers Cookies & Creme Ice Cream - 1.66 L",
+      "price": 5.25,
+      "image": "http://guideimg.alibaba.com/images/shop/67/08/01/6/breyers-smooth-and-dreamy-cookies-and-cream-ice-cream-1-5-qt_1535956.jpeg",
+      "category": "frozen",
+  "sale": false
+  },
+  {
+      "id": 38,
+      "name": "Aquafina - 16 Oz ",
+      "price": 0.99,
+      "image": "https://www.dollargeneral.com/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/0/0/00012000001598_0.jpg",
+      "category": "beverage",
+  "sale": false
+},
+{
+    "id": 39,
+    "name": "Beef Ribeye Sliced - 1 lb ",
+    "price": 11.00,
+    "image": "https://s3.amazonaws.com/frozenmeatsupplier/wp-content/uploads/frozenmeat-shabushabu-beef_ribeye-002.jpg",
+    "category": "meat",
+"sale": false
+},
+{
+    "id": 40,
+    "name": "Pork Belly - 1 lb ",
+    "price": 9.50,
+    "image": "http://mmmm.com.sg/166-tm_thickbox_default/frozen-sliced-pork-belly-half-inch.jpg",
+    "category": "meat",
+"sale": false
+},
+{
+    "id": 41,
+    "name": "Swiss Cheese ",
+    "price": 3.00,
+    "image": "https://dairygood.org/~/media/shared/content/2016/swiss.jpg?la=en&hash=74AD4AFE07B2BE2CC16A891A0FC7DB54180CBDB7",
+    "category": "dairy",
+"sale": false
+}
 ]
