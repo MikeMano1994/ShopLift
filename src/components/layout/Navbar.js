@@ -92,8 +92,8 @@ export default class NavBar extends Component {
                 <UserDropDown authed={this.props.authed} logout={this.props.loggedIn}/>
               </NavItem>
 
-              <NavItem className="emptycart" >
-                <a><DrawerCart/></a>
+              <NavItem className="emptycart">
+                <a><DrawerCart items={this.props.items}/></a>
               </NavItem>
             </Nav>
 

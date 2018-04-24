@@ -3,6 +3,38 @@ import emptycart from '../picture/empty-cart.png';
 import '../App.css';
 
 export default class Cart extends Component{
+	constructor(props){
+		super(props);
+		this.state={
+			items:{
+			}
+		};
+		this.addToCart = this.addToCart.bind(this);
+	}
+
+	// pass this into Products.js for it to add to cart
+	addToCart(itemName){
+		var items = this.state.items;
+		if (itemName !== null && itemName !== undefined){
+			items[itemName] = 1;
+		}
+		this.setState({items:this.items});
+	}
+
+	// use this function locally for when user increment or decrement quantity in cart
+	updateCart(itemName, step){
+		var items = this.state.items;
+		if (itemName !== null && itemName !== undefined && !items[itemName]){
+			items[itemName] = 1;
+		}
+		else{
+			items[itemName] += step;
+			if (items[itemName] === 0){
+				delete items[itemName];
+			}
+		}
+	}
+
     render(){
         return(
         	<div>
@@ -27,5 +59,6 @@ export default class Cart extends Component{
 
             </div>
         );
-    }
+	}
+	
 }
