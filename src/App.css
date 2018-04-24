@@ -327,6 +327,7 @@ a {
   margin-right: 50%;
 }
 
+/* MODAL CARD (Item.js) */
 .modal {
   position: center;
 }
@@ -334,6 +335,12 @@ a {
   width: 25em;
   height: 25em;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-card-description {
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
 }
