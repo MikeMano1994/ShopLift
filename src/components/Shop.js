@@ -8,6 +8,7 @@ import {Form, FormGroup,
 import product from './product.json';
 
 import fire from '../fire';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 export default class Shop extends Component{
 	constructor(props){
@@ -15,11 +16,15 @@ export default class Shop extends Component{
     this.state={
       category: 'all',
       products: {},
-      unfilteredProducts:{}
+      unfilteredProducts:{},
+      sortOption: '',
+      dropdownOpen: false
 
     };
     this.setCategory = this.setCategory.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.setSort = this.setSort.bind(this);
+    this.toggleDropdown = this.toggleDropdown.bind(this);
 
   }
 
@@ -28,6 +33,14 @@ export default class Shop extends Component{
       this.setState({category: c});
     }
   }
+  setSort(e){
+		this.setState({sortOption: e})
+	}
+  toggleDropdown() {
+  this.setState(prevState => ({
+    dropdownOpen: !prevState.dropdownOpen
+  }));
+}
   handleSearch(event){
     let filteredProducts = this.state.unfilteredProducts;
     filteredProducts = filteredProducts.filter(i => i.name.toLowerCase().search(event.target.value.toLowerCase()) !== -1 || i.category.toLowerCase().search(event.target.value.toLowerCase()) !== -1)
@@ -41,19 +54,19 @@ export default class Shop extends Component{
 
   render(){
       return(
-        <div >     
+        <div >
           <div className='container'>
             <div className='row'>
-            
+
               <div className='col-xs-12'>
                 <Sidebar setCategory={this.setCategory}/>
               </div>
-              
+
               <FormGroup>
               <Form className="movetotheright" >
                 <Input className = "searchbar"
                   type="text" placeholder="Search for the fresh!" onChange = {this.handleSearch}/>
-              </Form>     
+              </Form>
               </FormGroup>
 
               <FormGroup>
@@ -62,10 +75,23 @@ export default class Shop extends Component{
               </Button>
               </FormGroup>
 
+              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown}>
+              <DropdownToggle style={{backgroundColor: "white", borderColor: "grey" , color: "black"}} caret>
+                  Sort By:
+              </DropdownToggle>
+                <DropdownMenu>
+                <DropdownItem onClick={()=>{
+                    this.setSort("low");}}>Price: Low to High</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem onClick={()=>{
+                    this.setSort("high");}} >Price: High to Low</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
+
 
               <br/>
               <div className='col-xs-12'>
-                <Products addToCart={this.props.addToCart} category={this.state.category} productsList={this.state.products}/>
+                <Products addToCart={this.props.addToCart} category={this.state.category} productsList={this.state.products}  sortOption={this.state.sortOption}/>
               </div>
             </div>
           </div>

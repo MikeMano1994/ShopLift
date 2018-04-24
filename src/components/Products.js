@@ -8,15 +8,26 @@ export default class Products extends Component {
 
     this.state = {
       products: {},
-      category: ''
+      category: '',
+      sortOption: ''
     };
   }
 
   componentWillMount() {
-    this.setState({products: product, category: this.props.category});
+    this.setState({products: product, category: this.props.category, sortOption: this.props.sortOption});
   }
 
   render() {
+
+
+    if(this.props.sortOption === "low"){
+      this.props.productsList.sort((a,b) => ((a.discountprice) - (b.discountprice)))
+    }
+    else{
+      if(this.props.sortOption === "high"){
+      this.props.productsList.sort((a,b) => ((b.discountprice) - (a.discountprice)))
+     }
+    }
     let productKeys = Object.keys(this.props.productsList);
 
     return (
