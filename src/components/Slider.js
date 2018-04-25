@@ -18,19 +18,27 @@ export default class Slider extends Component {
         <div className='carouselWrapper container' style={{width:'800', height:'400'}}>
           <Carousel>
             <Carousel.Item>
-              <img className='centered' width={1200} height={500} alt="900x500" src={Bread} />
+              <a href="javascript:window.open('https://chocolatechocolateandmore.com/chocolate-filled-pastry/');">
+                <img className='centered' width={1200} height={500} alt="900x500" src={Bread} />
+              </a>
             </Carousel.Item>
 
             <Carousel.Item>
-              <img width={1200} height={500} alt="900x500" src={Pizza} />
+              <a href="javascript:window.open('https://www.tasteofhome.com/recipes/homemade-pizza');">
+                <img width={1200} height={500} alt="900x500" src={Pizza} />
+              </a>
             </Carousel.Item>
 
             <Carousel.Item>
-              <img width={1200} height={500}  alt="900x500" src={Steak} />
+             <a href="javascript:window.open('https://www.bonappetit.com/recipe/black-pepper-crusted-wagyu-new-york-steaks-with-black-truffle-vinaigrette');">
+                <img width={1200} height={500}  alt="900x500" src={Steak} />
+             </a>
             </Carousel.Item>
 
             <Carousel.Item>
-              <img width={1200} height={300}  alt="900x500" src={Pasta} />
+              <a href="javascript:window.open('http://www.myrecipes.com/recipe/seafood-fettuccine');">
+                <img width={1200} height={300}  alt="900x500" src={Pasta} />
+              </a>
             </Carousel.Item>
           </Carousel>
        </div>
