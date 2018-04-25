@@ -77,14 +77,18 @@ export default class Shop extends Component{
               </Button>
               </FormGroup>
 
-              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown}>
-              <DropdownToggle style={{backgroundColor: "white", borderColor: "grey" , color: "black"}} caret>
-                  Sort By:
-              </DropdownToggle>
+              <Dropdown className = 'sortbutton' size="lg" isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown}>
+                <DropdownToggle style={{backgroundColor: "white", borderColor: "grey" , color: "black"}} caret>
+                    Sort By:
+                </DropdownToggle>
+
                 <DropdownMenu>
                 <DropdownItem onClick={()=>{
-                    this.setSort("low");}}>Price: Low to High</DropdownItem>
+                    this.setSort("low");}}>Price: Low to High
+                </DropdownItem>
+
                 <DropdownItem divider />
+
                 <DropdownItem onClick={()=>{
                     this.setSort("high");}} >Price: High to Low</DropdownItem>
                 </DropdownMenu>

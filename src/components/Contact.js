@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import Map from "./Map";
 // import { Container, Row, Col } from 'reactstrap';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row, Col, FormGroup,
+         ControlLabel, FormControl,
+         HelpBlock, Button } from 'react-bootstrap';
 
 import "../App.css";
 import raccoon from "../picture/cuteraccoon.jpg";
@@ -67,6 +69,30 @@ export default class Contact extends Component {
               <Map />
             </Col>
           </Row>
+          <form>
+            <FormGroup
+              id="formControlsText"
+              type="text"
+              label="Text"
+              placeholder="Your Name"
+            >
+
+          </FormGroup>
+          <FormGroup
+              id="formControlsEmail"
+              type="email"
+              label="Email address"
+              placeholder="Your email"
+          >
+          </FormGroup>
+
+          <FormGroup controlId="formControlsTextarea">
+            <ControlLabel>Textarea</ControlLabel>
+            <FormControl componentClass="textarea" placeholder="textarea" />
+          </FormGroup>
+
+            <Button type="submit">Submit</Button>
+          </form>
         </Grid>
       </div>
     );
