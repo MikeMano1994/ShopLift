@@ -18,7 +18,8 @@ export default class Shop extends Component{
       products: {},
       unfilteredProducts:{},
       sortOption: '',
-      dropdownOpen: false
+      dropdownOpen: false,
+      term: ''
 
     };
     this.setCategory = this.setCategory.bind(this);
@@ -42,6 +43,7 @@ export default class Shop extends Component{
   }));
 }
   handleSearch(event){
+    this.setState({term: event.target.value});
     let filteredProducts = this.state.unfilteredProducts;
     filteredProducts = filteredProducts.filter(i => i.name.toLowerCase().search(event.target.value.toLowerCase()) !== -1 || i.category.toLowerCase().search(event.target.value.toLowerCase()) !== -1)
     this.setState({products: filteredProducts});
@@ -91,7 +93,7 @@ export default class Shop extends Component{
 
               <br/>
               <div className='col-xs-12'>
-                <Products addToCart={this.props.addToCart} category={this.state.category} productsList={this.state.products}  sortOption={this.state.sortOption}/>
+                <Products addToCart={this.props.addToCart} category={this.state.category} productsList={this.state.products}  sortOption={this.state.sortOption} term={this.state.term}/>
               </div>
             </div>
           </div>

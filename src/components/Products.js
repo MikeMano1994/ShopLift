@@ -14,7 +14,7 @@ export default class Products extends Component {
   }
 
   componentWillMount() {
-    this.setState({products: product, category: this.props.category, sortOption: this.props.sortOption});
+    this.setState({products: this.props.productsList, category: this.props.category, sortOption: this.props.sortOption});
   }
 
   render() {
@@ -35,7 +35,8 @@ export default class Products extends Component {
         <div className="container">
           <div className="row">
             { this.props.children }
-            { productKeys.map((element,index) => {
+            {
+              productKeys.map((element,index) => {
               if (this.props.category === 'all'){
                 return (
                   <div className="col-md-6 col-sm-6 col-lg-4 col-xs-12 col-xl-3 control-label">
@@ -50,7 +51,6 @@ export default class Products extends Component {
                     <Item a={this.props.productsList[element]} addToCart={this.props.addToCart}/>
                   </div>
                 );
-
               }
               else{
                 if (this.props.productsList[element].category === this.props.category){
@@ -63,6 +63,7 @@ export default class Products extends Component {
               }
               })
             }
+            {this.props.term && this.props.productsList.length === 0 ? "no items here" : ""}
           </div>
         </div>
       </div>
