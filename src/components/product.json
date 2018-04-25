@@ -1,327 +1,327 @@
 [
   {
     "id": 1,
-    "name": "Brocolli (1kg)",
+    "name": "Brocolli",
     "price": 0.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/broccoli.jpg",
     "category": "produce",
     "sale": false,
     "discountprice": 0.50,
-    "description": "Fresh broccoli, California grown, great in a salad, also try it steamed."
+    "description": "(1kg) Fresh broccoli, California grown, great in a salad, also try it steamed."
   },
   {
     "id": 2,
-    "name": "Cauliflower (1kg)",
+    "name": "Cauliflower",
     "price": 1.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cauliflower.jpg",
     "category": "produce",
     "sale": false,
     "discountprice": 1.50,
-    "description": "Fresh cauliflower, California grown, get adventurous with Cheesy Cauliflower Breadsticks."
+    "description": "(1kg) Fresh cauliflower, California grown, get adventurous with Cheesy Cauliflower Breadsticks."
   },
   {
     "id": 3,
-    "name": "Cucumber (1kg)",
+    "name": "Cucumber",
     "price": 0.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cucumber.jpg",
     "category": "produce",
     "sale": true,
     "discountprice": 0.10,
-    "description": "Fresh cucumber, California grown, great in a salad, try with Tajin and Lemon juice!"
+    "description": "(1kg) Fresh cucumber, California grown, great in a salad, try with Tajin and Lemon juice!"
   },
   {
     "id": 4,
-    "name": "Beetroot (1kg)",
+    "name": "Beetroot",
     "price": 1.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beetroot.jpg",
     "category": "produce",
     "sale": false,
     "discountprice": 1.00,
-    "description": "Fresh beetroot, California grown, great for juicing."
+    "description": "(1kg) Fresh beetroot, California grown, great for juicing."
   },
   {
     "id": 5,
-    "name": "Carrot (1kg)",
+    "name": "Carrot",
     "price": 3.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/carrots.jpg",
     "category": "produce",
     "sale": true,
     "discountprice": 2.00,
-    "description": "Fresh carrot, California grown, great in a salad, also try it steamed."
+    "description": "(1kg) Fresh carrot, California grown, great in a salad, also try it steamed."
   },
   {
     "id": 6,
-    "name": "Tomato (1kg)",
+    "name": "Tomato",
     "price": 1.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/tomato.jpg",
     "category": "produce",
     "sale": false,
     "discountprice": 1.00,
-    "description": "Fresh tomato, California grown, great in a salad, also try it sauteed."
+    "description": "(1kg) Fresh tomato, California grown, great in a salad, also try it sauteed."
   },
   {
     "id": 7,
-    "name": "Beans (1kg)",
+    "name": "Beans",
     "price": 1.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beans.jpg",
     "category": "produce",
     "sale": true,
     "discountprice": 1.00,
-    "description": "Fresh beans, California grown, great source of protein."
+    "description": "(1kg) Fresh beans, California grown, great source of protein."
   },
   {
     "id": 8,
-    "name": "Eggplant (1kg)",
+    "name": "Eggplant",
     "price": 2.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/brinjal.jpg",
     "category": "produce",
     "sale": false,
     "discountprice": 2.50,
-    "description": "Fresh eggplant, California grown, great vegetarian alternative."
+    "description": "(1kg) Fresh eggplant, California grown, great vegetarian alternative."
   },
   {
     "id": 9,
-    "name": "Green Pepper (1kg)",
+    "name": "Green Pepper",
     "price": 1.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/capsicum.jpg",
     "category": "produce",
     "sale": false,
     "discountprice": 1.00,
-    "description": "Fresh green pepper (capsicum), California grown, great in a salad, also try it sauteed."
+    "description": "(1kg) Fresh green pepper (capsicum), California grown, great in a salad, also try it sauteed."
   },
   {
     "id": 10,
-    "name": "Mushroom (1kg)",
+    "name": "Mushroom",
     "price": 2.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/button-mushroom.jpg",
     "category": "produce",
     "sale": false,
     "discountprice": 2.50,
-    "description": "Fresh mushroom, California grown, great in a salad, also try it on a pizza."
+    "description": "(1kg) Fresh mushroom, California grown, great in a salad, also try it on a pizza."
   },
   {
     "id": 11,
-    "name": "Potato (3kg)",
+    "name": "Potato",
     "price": 4.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/potato.jpg",
     "category": "produce",
     "sale": false,
     "discountprice": 4.00,
-    "description": "Fresh potato, California grown, great for making hash browns or oven fries."
+    "description": "(3kg) Fresh potato, California grown, great for making hash browns or oven fries."
   },
   {
     "id": 12,
-    "name": "Pumpkin (5kg)",
+    "name": "Pumpkin",
     "price": 7.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pumpkin.jpg",
     "category": "produce",
     "sale": false,
     "discountprice": 7.00,
-    "description": "Fresh pumpkin, California grown, great for making pumpkin pie or carving in October!"
+    "description": "(5kg) Fresh pumpkin, California grown, great for making pumpkin pie or carving in October!"
   },
   {
     "id": 13,
-    "name": "Corn (5kg)",
+    "name": "Corn",
     "price": 0.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/corn.jpg",
     "category": "produce",
     "sale": true,
     "discountprice": 0.25,
-    "description": "Fresh corn, California grown, great for summer BBQs!"
+    "description": "(5kg) Fresh corn, California grown, great for summer BBQs!"
   },
   {
     "id": 14,
-    "name": "Onion (1kg)",
+    "name": "Onion",
     "price": 1.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/onion.jpg",
     "category": "produce",
     "sale": false,
     "discountprice": 1.00,
-    "description": "Fresh onion, California grown, great in a salad, adds great flavor to any dish."
+    "description": "(1kg) Fresh onion, California grown, great in a salad, adds great flavor to any dish."
   },
   {
     "id": 15,
-    "name": "Red Apple (1kg)",
+    "name": "Red Apple",
     "price": 1.99,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/apple.jpg",
     "category": "fruits",
     "sale": false,
     "discountprice": 1.99,
-    "description": "Washington Red Apple, great in a salad or adventurous sandwich!"
+    "description": "(1kg) Washington Red Apple, great in a salad or adventurous sandwich!"
   },
   {
     "id": 16,
-    "name": "Banana (1kg)",
+    "name": "Banana",
     "price": 0.76,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/banana.jpg",
     "category": "fruits",
     "sale": false,
     "discountprice": 0.76,
-    "description": "Fresh banana, great for a quick snack and even better with pancakes."
+    "description": "(1kg) Fresh banana, great for a quick snack and even better with pancakes."
   },
   {
     "id": 17,
-    "name": "Concord Grapes (1kg)",
+    "name": "Concord Grapes",
     "price": 1.99,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/grapes.jpg",
     "category": "fruits",
     "sale": false,
     "discountprice": 1.99,
-    "description": "Fresh Concord Grapes, packed with nutrients and antioxidants."
+    "description": "(1kg) Fresh Concord Grapes, packed with nutrients and antioxidants."
   },
   {
     "id": 18,
-    "name": "Mango (1kg)",
+    "name": "Mango",
     "price": 1.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/mango.jpg",
     "category": "fruits",
     "sale": false,
     "discountprice": 1.50,
-    "description": "Juicy mango, grown in the Philippines. Slice and eat by itself or use as a topping."
+    "description": "(1kg) Juicy mango, grown in the Philippines. Slice and eat by itself or use as a topping."
   },
   {
     "id": 19,
-    "name": "Musk Melon (1kg)",
+    "name": "Musk Melon",
     "price": 1.20,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/musk-melon.jpg",
     "category": "fruits",
     "sale": false,
     "discountprice": 1.20,
-    "description": "Musk melon (cantaloupe). Slice and eat by itself or use as a topping."
+    "description": "(1kg) Musk melon (cantaloupe). Slice and eat by itself or use as a topping."
   },
   {
     "id": 20,
-    "name": "Orange (1kg)",
+    "name": "Orange",
     "price": 1.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/orange.jpg",
     "category": "fruits",
     "sale": false,
     "discountprice": 1.00,
-    "description": "Florida Orange, excellent summer treat, packed with Vitamin C."
+    "description": "(1kg) Florida Orange, excellent summer treat, packed with Vitamin C."
   },
   {
     "id": 21,
-    "name": "Pears (1kg)",
+    "name": "Pears",
     "price": 1.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pears.jpg",
     "category": "fruits",
     "sale": false,
     "discountprice": 1.50,
-    "description": "Fresh pear, California grown."
+    "description": "(1kg) Fresh pear, California grown."
   },
   {
     "id": 22,
-    "name": "Pomegranate (1kg)",
+    "name": "Pomegranate",
     "price": 3.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pomegranate.jpg",
     "category": "fruits",
     "sale": false,
     "discountprice": 3.00,
-    "description": "Fresh pomegranate. Many studies have shown that they have incredible benefits for your body, and may lower the risk of all sorts of diseases."
+    "description": "(1kg) Fresh pomegranate. Many studies have shown that they have incredible benefits for your body, and may lower the risk of all sorts of diseases."
   },
   {
     "id": 23,
-    "name": "Raspberry (0.25kg)",
+    "name": "Raspberry",
     "price": 4.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/raspberry.jpg",
     "category": "fruits",
     "sale": false,
     "discountprice": 4.00,
-    "description": "Fresh raspberry, California grown, make into a jam or use as a topping."
+    "description": "(0.25kg) Fresh raspberry, California grown, make into a jam or use as a topping."
   },
   {
     "id": 24,
-    "name": "Strawberry (0.25kg)",
+    "name": "Strawberry",
     "price": 4.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/strawberry.jpg",
     "category": "fruits",
     "sale": true,
     "discountprice": 2.00,
-    "description": "Fresh strawberry, California grown, eat by itself or use as a topping!"
+    "description": "(0.25kg)Fresh strawberry, California grown, eat by itself or use as a topping!"
   },
   {
     "id": 25,
-    "name": "Watermelon (5kg)",
+    "name": "Watermelon",
     "price": 5.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/water-melon.jpg",
     "category": "fruits",
     "sale": false,
     "discountprice": 5.00,
-    "description": "Fresh watermelon, California grown, classic summer treat, aids with digestion."
+    "description": "(5kg)Fresh watermelon, California grown, classic summer treat, aids with digestion."
   },
   {
     "id": 26,
-    "name": "Almonds (0.25kg)",
+    "name": "Almonds",
     "price": 2.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/almonds.jpg",
     "category": "nuts",
     "sale": false,
     "discountprice": 2.00,
-    "description": "Fresh almonds, California grown, great on a salad, also carry with you for an all-day snack."
+    "description": "(0.25kg)Fresh almonds, California grown, great on a salad, also carry with you for an all-day snack."
   },
   {
     "id": 27,
-    "name": "Pistachio (0.25kg)",
+    "name": "Pistachio",
     "price": 5.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pista.jpg",
     "category": "nuts",
     "sale": false,
     "discountprice": 5.00,
-    "description": "Fresh pistachio, California grown, add as a topping to your ice cream!"
+    "description": "(0.25kg)Fresh pistachio, California grown, add as a topping to your ice cream!"
   },
   {
     "id": 28,
-    "name": "Nuts Mixture (1kg)",
+    "name": "Nuts Mixture",
     "price": 3.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/nuts-mixture.jpg",
     "category": "nuts",
     "sale": false,
     "discountprice": 3.50,
-    "description": "Fresh mixed nuts, California grown, carry with you for an all-day snack."
+    "description": "(1kg)Fresh mixed nuts, California grown, carry with you for an all-day snack."
   },
   {
     "id": 29,
-    "name": "Cashews (1kg)",
+    "name": "Cashews",
     "price": 6.50,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/cashews.jpg",
     "category": "nuts",
     "sale": false,
     "discountprice": 6.50,
-    "description": "Fresh cashews, California grown, great in a salad, also try it in a trail mix."
+    "description": "(1kg)Fresh cashews, California grown, great in a salad, also try it in a trail mix."
   },
   {
     "id": 30,
-    "name": "Walnuts (0.25kg)",
+    "name": "Walnuts",
     "price": 3.00,
     "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/walnuts.jpg",
     "category": "nuts",
     "sale": false,
     "discountprice": 3.00,
-    "description": "Fresh walnuts, California grown, great in a salad, also try it in a trail mix."
+    "description": "(0.25kg)Fresh walnuts, California grown, great in a salad, also try it in a trail mix."
   },
   {
     "id": 31,
-    "name": "Milk (1L)",
+    "name": "Milk",
     "price": 2.50,
     "image": "https://cdn.shopify.com/s/files/1/0206/9470/products/southcoast-milk-1l_grande.jpg?v=1494139427",
     "category": "dairy",
     "sale": false,
     "discountprice": 2.50,
-    "description": "Milk, from California cows. Helps to build strong bones."
+    "description": "(1L)Milk, from California cows. Helps to build strong bones."
   },
   {
     "id": 32,
-    "name": "Chobani Yogurt (907g)",
+    "name": "Chobani Yogurt",
     "price": 3.25,
     "image": "https://i5.walmartimages.com/asr/3046d86a-3218-4538-9c97-d369854df5af_1.f78855adc871b9a277d6324263a20676.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
     "category": "dairy",
     "sale": false,
     "discountprice": 3.25,
-    "description": "Chobani Yogurt, Original Plan, Non-Fat."
+    "description": "(907g)Chobani Yogurt, Original Plan, Non-Fat."
   },
   {
     "id": 33,
-    "name": "Coke (590mL)",
+    "name": "Coke",
     "price": 1.99,
     "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRbNwB-dsHfEjPSI_ntAm6nO20h6S44BQjJnO6RMgbXnF0DKLyI8lBy1q1PH3ZPvs5ftFROnwU&usqp=CAY",
     "category": "beverage",
@@ -331,17 +331,17 @@
   },
   {
     "id": 34,
-    "name": "Apple Juice (1L)",
+    "name": "Apple Juice",
     "price": 1.75,
     "image": "https://i5.walmartimages.com/asr/e7b95432-e117-42a1-8d4f-f6bee0879f9b_1.4e44ca372fb93fa2abee0dce4259abac.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
     "category": "beverage",
     "sale": true,
     "discountprice": 1.00,
-    "description": "Mott's 100% Apple Juice. Great source of Vitamin C."
+    "description": "(1L)Mott's 100% Apple Juice. Great source of Vitamin C."
   },
   {
     "id": 35,
-    "name": "New York Steak (2lb)",
+    "name": "New York Steak",
     "price": 23.76,
     "image": "https://images-na.ssl-images-amazon.com/images/I/71ZXtjWLiiL._SY355_.jpg",
     "category": "meat",
@@ -351,7 +351,7 @@
   },
   {
     "id": 36,
-    "name": "Dreyer's Vanilla Bean Ice Cream (1.6L)",
+    "name": "Dreyer's Vanilla Bean Ice Cream",
     "price": 4.25,
     "image": "https://www.dreyers.com/cms/sites/default/files/2016-06/2943_2.png",
     "category": "frozen",
@@ -361,7 +361,7 @@
   },
   {
     "id": 37,
-    "name": "Breyer's Ice Cream (1.6L)",
+    "name": "Breyer's Ice Cream",
     "price": 5.25,
     "image": "https://i5.walmartimages.com/asr/e9a0c95c-ad51-42c9-a297-e23bf900e8c9_1.87a9f657e264fdbf37e3f98d1c2d7b7e.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
     "category": "frozen",
@@ -371,7 +371,7 @@
   },
   {
     "id": 38,
-    "name": "Aquafina (16oz)",
+    "name": "Aquafina",
     "price": 0.99,
     "image": "https://www.dollargeneral.com/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/0/0/00012000001598_0.jpg",
     "category": "beverage",
@@ -381,23 +381,23 @@
   },
   {
     "id": 39,
-    "name": "Beef Ribeye Sliced (1lb)",
+    "name": "Beef Ribeye Sliced",
     "price": 11.00,
     "image": "https://s3.amazonaws.com/frozenmeatsupplier/wp-content/uploads/frozenmeat-shabushabu-beef_ribeye-002.jpg",
     "category": "meat",
     "sale": false,
     "discountprice": 11.00,
-    "description": "Great for summer BBQs, we only choose the best cuts!"
+    "description": "(1lb)Great for summer BBQs, we only choose the best cuts!"
   },
   {
     "id": 40,
-    "name": "Pork Belly (1lb)",
+    "name": "Pork Belly",
     "price": 9.50,
     "image": "http://mmmm.com.sg/166-tm_thickbox_default/frozen-sliced-pork-belly-half-inch.jpg",
     "category": "meat",
     "sale": false,
     "discountprice": 9.50,
-    "description": "Pork Belly sourced locally in the Bay Area."
+    "description": "(1lb)Pork Belly sourced locally in the Bay Area."
   },
   {
     "id": 41,
@@ -431,7 +431,7 @@
   },
   {
     "id": 43,
-    "name": "Pepsi Cola (12pk)",
+    "name": "Pepsi Cola",
     "price": 4.99,
     "image": "https://target.scene7.com/is/image/Target/13044177?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "beverage",
@@ -451,7 +451,7 @@
   },
   {
     "id": 45,
-    "name": "Coca-Cola (12pk)",
+    "name": "Coca-Cola",
     "price": 4.99,
     "image": "https://target.scene7.com/is/image/Target/12953464?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "beverage",
@@ -461,7 +461,7 @@
   },
   {
     "id": 46,
-    "name": "Delaware Punch (12pk)",
+    "name": "Delaware Punch",
     "price": 5.29,
     "image": "https://target.scene7.com/is/image/Target/47866360?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "beverage",
@@ -471,27 +471,27 @@
   },
   {
     "id": 47,
-    "name": "Coca-Cola Origins (4pk)",
+    "name": "Coca-Cola Origins",
     "price": 4.99,
     "image": "https://target.scene7.com/is/image/Target/53037016?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "beverage",
     "sale": true,
     "discountprice": 3.49,
-    "description": "Try the new Georgia Peach offering from Coca-Cola. 4-pack bottle, so share with friends!"
+    "description": "(4pk)Try the new Georgia Peach offering from Coca-Cola. 4-pack bottle, so share with friends!"
   },
   {
     "id": 48,
-    "name": "Red Bull® Energy Drink (12oz)",
+    "name": "Red Bull® Energy Drink",
     "price": 2.69,
     "image": "https://target.scene7.com/is/image/Target/13426758?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "beverage",
     "sale": true,
     "discountprice": 1.99,
-    "description": "Sometimes a guy's gotta ride the bull, am I right? - Creed, The Office"
+    "description": "(12oz)Sometimes a guy's gotta ride the bull, am I right? - Creed, The Office"
   },
   {
     "id": 49,
-    "name": "Monster Energy, Original (16oz)",
+    "name": "Monster Energy, Original",
     "price": 1.99,
     "image": "https://target.scene7.com/is/image/Target/12953443?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "beverage",
@@ -501,7 +501,7 @@
   },
   {
     "id": 50,
-    "name": "Simply Orange Pulp-Free Orange Juice (52oz)",
+    "name": "Simply Orange Pulp-Free Orange Juice",
     "price": 3.99,
     "image": "https://target.scene7.com/is/image/Target/13183052?wid=325&hei=325&qlt=80&fmt=pjpeg",
     "category": "beverage",
