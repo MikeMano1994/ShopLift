@@ -14,7 +14,8 @@ export default class LogIn extends Component {
     this.state = {
       email: "",
       password: "",
-      redirectTo: null
+      redirectTo: null,
+      wrongPass: false
     };
   }
 
@@ -34,11 +35,17 @@ export default class LogIn extends Component {
     .then(()=>{
       this.props.loggedIn(true);
       this.setState({email:"",password:"",redirectTo:"/"});
-    }).catch(function(error) {
+      if(this.state.wrongPass===true){
+        this.setState({wrongPass:false})
+      }
+    }).catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
-      if(error){
-        alert(error);
+      if(errorCode === 'auth/wrong-password'){
+      this.setState({wrongPass: true});
+      }
+      else{
+        alert(errorMessage);
       }
     });
   };
@@ -74,6 +81,7 @@ export default class LogIn extends Component {
               onChange={this.handleChange}
               type="password"
             />
+          {this.state.wrongPass? "Invalid Password. Please Try Again." : ""}
           </FormGroup>
 
           <Button
