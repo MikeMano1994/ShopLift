@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import raccoon from "../../picture/cuteraccoon.jpg";
+import raccoon from "../../picture/raccoon-thanku.gif";
 import '../../App.css';
 
 export default class Step6 extends Component{
