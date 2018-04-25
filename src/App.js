@@ -26,14 +26,11 @@ class App extends Component {
 
     this.state={
       authed:false,
-      products: {},
-      unfilteredProducts:{},
       items:{}
     };
 
     this.addToCart = this.addToCart.bind(this);
     this.loggedIn = this.loggedIn.bind(this);
-    this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentWillMount(){
@@ -64,12 +61,6 @@ class App extends Component {
 
 	}
 
-  handleSearch(event){
-    let filteredProducts = this.state.unfilteredProducts;
-    filteredProducts = filteredProducts.filter(i => i.name.toLowerCase().search(event.target.value.toLowerCase()) !== -1 || i.category.toLowerCase().search(event.target.value.toLowerCase()) !== -1)
-    this.setState({products: filteredProducts});
-  }
-
   loggedIn(e){
     if (e !== null && e !== undefined)
       this.setState({authed:e});
@@ -82,8 +73,6 @@ class App extends Component {
           <Navbar
             authed={this.state.authed}
             loggedIn={this.loggedIn}
-            handleSearch={this.handleSearch}
-            productList={this.state.products}
             items={this.state.items}
           />
           <h1 className="App-title">“Deals so great - It’s a steal.”</h1>
