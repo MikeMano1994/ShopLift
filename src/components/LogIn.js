@@ -34,9 +34,13 @@ export default class LogIn extends Component {
     .catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
-    }).then(()=>{
-      this.props.loggedIn(true);
-      this.setState({email:"",password:"",redirectTo:"/"});
+      if (error){
+        alert(error);
+      }
+      else{
+        this.props.loggedIn(true);
+        this.setState({email:"",password:"",redirectTo:"/login"});
+      }
     });
   };
 
