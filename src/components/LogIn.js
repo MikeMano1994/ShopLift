@@ -31,15 +31,14 @@ export default class LogIn extends Component {
   handleSubmit = event => {
     event.preventDefault();
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
-    .catch(function(error) {
+    .then(()=>{
+      this.props.loggedIn(true);
+      this.setState({email:"",password:"",redirectTo:"/"});
+    }).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
-      if (error){
+      if(error){
         alert(error);
-      }
-      else{
-        this.props.loggedIn(true);
-        this.setState({email:"",password:"",redirectTo:"/login"});
       }
     });
   };
