@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import product from './product.json';
 import Item from './Item';
 
-
 export default class Products extends Component {
   constructor(props){
     super(props);
@@ -20,12 +19,10 @@ export default class Products extends Component {
 
   render() {
     if (this.props.sortOption === "low") {
-      this.props.productsList.sort((a,b) => ((a.discountprice) - (b.discountprice)))
+      this.props.productsList.sort((a,b) => ((a.discountprice) - (b.discountprice)));
     }
-    else{
-      if (this.props.sortOption === "high") {
-        this.props.productsList.sort((a,b) => ((b.discountprice) - (a.discountprice)))
-     }
+    else {
+      this.props.productsList.sort((a,b) => ((b.discountprice) - (a.discountprice)));
     }
 
     let productKeys = Object.keys(this.props.productsList);
@@ -37,26 +34,25 @@ export default class Products extends Component {
             { this.props.children }
             {
               productKeys.map((element,index) => {
-              if (this.props.category === 'all'){
+              if (this.props.category === 'all') {
                 return (
                   <div className="col-md-6 col-sm-6 col-lg-4 col-xs-12 col-xl-3 control-label">
-                    <Item a={this.props.productsList[element]} addToCart={this.props.addToCart}/>
+                    <Item a={this.props.productsList[element]} addToCart={this.props.addToCart} />
                   </div>
-
                 );
               }
-              else if(this.props.productsList[element].sale === true && this.props.category=== "sale"){
+              else if (this.props.productsList[element].sale === true && this.props.category === "sale") {
                 return(
                   <div className="col-md-6 col-sm-6 col-lg-4 col-xs-12 col-xl-3 control-label">
-                    <Item a={this.props.productsList[element]} addToCart={this.props.addToCart}/>
+                    <Item a={this.props.productsList[element]} addToCart={this.props.addToCart} />
                   </div>
                 );
               }
-              else{
-                if (this.props.productsList[element].category === this.props.category){
+              else {
+                if (this.props.productsList[element].category === this.props.category) {
                   return (
                     <div className="col-md-6 col-sm-6 col-lg-4 col-xs-12 col-xl-3 control-label">
-                      <Item a={this.props.productsList[element]} addToCart={this.props.addToCart}/>
+                      <Item a={this.props.productsList[element]} addToCart={this.props.addToCart} />
                     </div>
                   );
                 }
@@ -67,7 +63,7 @@ export default class Products extends Component {
 
           <div style={{paddingTop: 50}}>{this.props.term && this.props.productsList.length === 0 ?<img src="https://files.slack.com/files-pri/T919AJJ3W-FACJL72SW/cry-raccoon.gif"/> : ""}</div>
         </div>
-        <div  style={{fontSize: 45, fontFamily: "Gamja Flower", color: "#666666", paddingBottom: 200}}>{this.props.term && this.props.productsList.length === 0 ?<h>Sorry. No Products Matched Your Search</h> : ""}</div>
+        <div style={{fontSize: 45, fontFamily: "Gamja Flower", color: "#666666", paddingBottom: 200}}>{this.props.term && this.props.productsList.length === 0 ?<h>Sorry. No Products Matched Your Search</h> : ""}</div>
       </div>
     )
   }
