@@ -1,12 +1,76 @@
 import React, {Component} from 'react';
-import {Grid, Button, Panel, Row, Col} from 'react-bootstrap';
+import {Grid, Button, Panel, Row, Col, Well} from 'react-bootstrap';
+import fire from '../../fire';
 
 export default class Step5 extends Component{
   constructor(props) {
 		super(props);
-
-  	this.state = {};
+	  this.state = {
+    cart: {},
+    prices: {},
+		shipping: 7.75,
+		tax: 8.75,
+    itemsPrice: 0,
+    totalPrice: 0
+	  };
 	}
+	
+	componentWillMount(){
+    this.initializePrices();
+	}
+	
+	renderItems(){
+	  if (!this.state.cart)
+		return(<div>No items added yet! :(</div>);
+	  else{  
+	  var cartKeys = Object.keys(this.props.cart);
+	  return(
+			<div>{
+        cartKeys.map((e)=> <Well key={e}>{this.props.cart[e]} of {e}</Well>)
+      }</div>
+	  );
+	  }
+	}
+
+	initializePrices(){
+    if (this.props.cart && this.props.prices){
+      var price = this.state.itemsPrice;
+      var total = this.state.totalPrice;
+      var cartKeys = Object.keys(this.props.cart);
+      var pricesKeys = Object.keys(this.props.prices);
+
+      if (cartKeys && pricesKeys){
+        cartKeys.forEach((v,i)=>{
+          if (this.props.cart[v] && this.props.prices[v])
+            price += this.props.cart[v] * this.props.prices[v];
+        });
+
+        total = (price + (this.state.tax / 100) * price) + this.state.shipping;
+        this.setState({itemsPrice: price.toFixed(2)});
+        this.setState({totalPrice: total.toFixed(2)});
+      }
+    }
+  }
+
+  handleSubmit(){
+    fire.database().ref('/users/').child(fire.auth().currentUser.uid).update({
+      orderHistory:{
+        items: JSON.stringify(this.props.cart),
+        prices: JSON.stringify(this.props.prices),
+        tax: this.state.tax,
+        shipping: this.state.shipping,
+        totalPrice: this.state.totalPrice
+      },
+      address: this.props.getStore().address,
+      city: this.props.getStore().city,
+      state: this.props.getStore().state,
+      zip: this.props.getStore().zipcode,
+      cardName: this.props.getStore().cardname,
+      cardNumber: this.props.getStore().cardnum,
+      cardExpDate: String(this.props.getStore().expmonth + '/' + this.props.getStore().expyear),
+      cardCVV: this.props.getStore().cvv
+    });
+  }
 
   render(){
     return(
@@ -14,15 +78,29 @@ export default class Step5 extends Component{
   			<h1> Review and submit your order</h1>
   			<Grid>
   				<Row className="show-grid">
+
+          <Col md={12}>
+            <Panel>
+              <Panel.Body>
+                {this.renderItems()}
+              </Panel.Body>
+            </Panel>
+          </Col>
   					<Col md={6} >
               <Panel md={12}>
                 <Panel.Heading >
-                  Shipping Information
-                  <a onClick={() => this.props.jumpToStep(2)}>
-                    <Button bsStyle="dark" bsSize="large">
-                      Edit
-                    </Button>
-                  </a>
+                  <div className='float-left'>
+                    Shipping Information
+                  </div>
+                  <div className='float-right'>
+                    <a onClick={() => this.props.jumpToStep(2)}>
+                      <Button bsStyle="dark" bsSize="large">
+                        Edit
+                      </Button>
+                    </a>
+                  </div>
+                  <br/>
+                  <br/>
                 </Panel.Heading>
 
                 <Panel.Body>
@@ -39,15 +117,25 @@ export default class Step5 extends Component{
   				<Col md={6} >
   					  <Panel>
               <Panel.Body>
-                <p>Item Total:</p>
-                <p>Shiping:</p>
+                <div className='float-left'>
+                <p>Item Subtotal:</p>
+                <p>Shipping:</p>
                 <p>Sales Tax:</p>
+                <br/>
                 <p>Order Total:</p>
+                </div>
+                <div className='float-right'>
+                <p>${this.state.itemsPrice}</p>
+                <p>${this.state.shipping}</p>
+                <p>${this.state.tax}</p>
+                <br/>
+                <p>${this.state.totalPrice}</p>
+                </div>
               </Panel.Body>
              
               <Panel.Footer>
                 <a onClick={() => this.props.jumpToStep(5)}>
-                  <Button bsStyle="dark" bsSize="large">
+                  <Button onClick={()=>this.handleSubmit()}bsStyle="dark" bsSize="large">
                     Submit Order
                   </Button>
                 </a>
@@ -60,12 +148,18 @@ export default class Step5 extends Component{
   				<Col md={6}>
   					<Panel md={6}>
 	  					<Panel.Heading>
-	  						Payment Information
-	  						<a onClick={() => this.props.jumpToStep(3)}>
-	              	<Button bsStyle="dark" bsSize="large">
-	                	Edit
-	            	 	</Button>
-	         	 		</a>
+                <div className='float-left'>
+	  						  Payment Information
+                </div>
+                <div className='float-right'>
+	  						  <a onClick={() => this.props.jumpToStep(3)}>
+	              	  <Button bsStyle="dark" bsSize="large">
+	                  	Edit
+	            	 	  </Button>
+	         	 		  </a>
+                </div>
+                <br/>
+                <br/>
 		  				</Panel.Heading>
 
 		  				<Panel.Body>
@@ -77,7 +171,7 @@ export default class Step5 extends Component{
                 <p style ={{color: '#3c3c3c'}}>{this.props.getStore().expmonth}</p>
 		            <p>Exp Year:</p>
                 <p style ={{color: '#3c3c3c'}}>{this.props.getStore().expyear}</p>
-		    				<p>cvv:</p>
+		    				<p>CVV:</p>
                 <p style ={{color: '#3c3c3c'}}>{this.props.getStore().cvv}</p>
 	  					</Panel.Body>
   					</Panel>
