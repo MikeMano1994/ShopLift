@@ -26,7 +26,8 @@ class App extends Component {
 
     this.state={
       authed:false,
-      items:{}
+      items: {},
+      prices: {}
     };
 
     this.addToCart = this.addToCart.bind(this);
@@ -36,30 +37,85 @@ class App extends Component {
   componentWillMount(){
     this.setState({products: product});
     this.setState({unfilteredProducts: product});
+
     if (fire.auth().currentUser !== null || fire.auth().currentUser !== undefined)
       this.setState({authed:true});
+
+    var cart = localStorage.getItem('cart');
+    if (cart)
+      this.setState({items:JSON.parse(cart)});
+
+    var prices = localStorage.getItem('prices');
+    if (prices){
+      this.setState({prices: JSON.parse(prices)});
+    }
   }
 
   // pass this into Products.js for it to add to cart
-	addToCart(itemName){
-		var itemsObj = {};
+	addToCart(itemName,itemPrice){
+    var itemName = String(itemName);
+    var itemsObj = this.state.items;
+    var pricesObj = this.state.prices;
+
 		if (itemName !== null && itemName !== undefined){
-			itemsObj[String(itemName)] = 1;
-		}
-		//this.setState({items:itemsObj});
+      itemsObj[itemName] = itemsObj[itemName] + 1;
+      pricesObj[itemName] = itemPrice;
+
+      this.setState({items: itemsObj});
+      this.setState({prices: pricesObj});
+
+      console.log(this.state.prices);
+      console.log(this.state.items);
+
+      localStorage.setItem('cart', JSON.stringify(this.state.items));
+      localStorage.setItem('prices', JSON.stringify(this.state.prices));
+
+      return 1;
+    }
+    return 0;
 	}
 
-	// use this function locally for when user increment or decrement quantity in cart
-	updateCart(itemName, step){
-		var items = this.state.items;
-    if (step < 0 && !!items[itemName]){
-      items[itemName] -= step;
-      if (items[itemName] === 0){
-        delete items[itemName];
+	decrementFromCart(itemName){
+    var itemName = String(itemName);
+    var itemsObj = this.state.items;
+    var pricesObj = this.state.prices;
+
+    if (itemName !== null && itemName !== undefined){
+      if (itemsObj[itemName]){
+        itemsObj[itemName] = itemsObj[itemName] - 1;
+
+        if (itemsObj[itemName] === 0)
+          this.deleteFromCart(itemName);
+        else{
+          this.setState({items:itemsObj});
+          localStorage.setItem('cart', JSON.stringify(this.state.items));
+        }
+
+        return 1;
       }
     }
+    return 0;
+  }
 
-	}
+  deleteFromCart(itemName){
+    var itemName = String(itemName);
+    var itemsObj = this.state.items;
+    var pricesObj = this.state.prices;
+
+    if (itemName !== null && itemName !== undefined){
+      if (itemsObj[itemName]){
+        delete itemsObj[itemName];
+        this.setState({items:itemsObj});
+        localStorage.setItem('cart', JSON.stringify(itemsObj));
+        if (pricesObj[itemName]){
+          delete pricesObj[itemName];
+          this.setState({prices: pricesObj});
+          
+          localStorage.setItem('prices', JSON.stringify(pricesObj));
+        }
+      }
+    }
+  }
 
   loggedIn(e){
     if (e !== null && e !== undefined)
@@ -88,7 +144,7 @@ class App extends Component {
               <Route exact path='/signup' component={SignUp} />
               <Route exact path='/profile' component={UserProfile} />
               <Route exact path='/cart' component={Cart} />
-              <Route exact path='/check-out' component={CheckOut} />
+              <Route exact path='/check-out' render={()=><CheckOut cart={this.state.items} prices={this.state.prices}/>} />
               <Route exact path='/useragreement' component={UserAgreement} />
               <Route exact path='/userprivacy' component={UserPrivacy} />
             </div>

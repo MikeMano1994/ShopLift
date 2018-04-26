@@ -51,26 +51,39 @@ export default class Signup extends Component {
     this.setState({ isLoading: true });
     this.setState({ isLoading: false });
     fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
-      .catch(function(error) {
+      .catch(error => {
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log("Error! " + errorCode + " " + errorMessage);
       })
-      .then(()=>{
+      .then(() => { 
         var userObject = {};
-        if (fire.auth().currentUser.uid === null || fire.auth().currentUser.uid === undefined){
+        if (!fire.auth().currentUser.uid){
           fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password);
         }
-        userObject[String(fire.auth().currentUser.uid)] = {
-          email: this.state.email,
-          orderHistory:{
-            items: [],
-            totalPrice: ''
-          }
-        }
-        fire.database().ref('/users/').push(userObject);
+        else
+        {
+          fire.database().ref('/users/').child(fire.auth().currentUser.uid).set({
+            email: this.state.email,
+            orderHistory:{
+              items: {},
+              prices: {},
+              tax: '',
+              shipping: '',
+              totalPrice: ''
+            },
+            address: '',
+            city: '',
+            state: '',
+            zip: '',
+            cardName: '',
+            cardNumber: '',
+            cardExpDate: '',
+            cardCVV: ''
+          });
         this.setState({redirectTo:'/'});
         } 
+      }
       );
   }
 
