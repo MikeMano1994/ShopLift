@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Map from "./Map";
 // import { Container, Row, Col } from 'reactstrap';
-import { Grid, Row, Col, FormGroup,
-         ControlLabel, FormControl,
+import { Grid, Row, Col, Form, FormGroup,
+         ControlLabel, FormControl, Checkbox,
          HelpBlock, Button } from 'react-bootstrap';
 
 import "../App.css";
@@ -37,9 +37,7 @@ export default class Contact extends Component {
     this.setState({ email: e.target.value });
   };
 
-  subjectInput(e) {
-    this.setState({ subject: e.target.value });
-  };
+
 
   messageInput(e) {
     this.setState({ message: e.target.value });
@@ -69,30 +67,34 @@ export default class Contact extends Component {
               <Map />
             </Col>
           </Row>
-          <form>
-            <FormGroup
-              id="formControlsText"
-              type="text"
-              label="Text"
-              placeholder="Your Name"
-            >
+          <br></br><br></br>
+          <h3>Feedback</h3>
 
-          </FormGroup>
-          <FormGroup
-              id="formControlsEmail"
-              type="email"
-              label="Email address"
-              placeholder="Your email"
-          >
-          </FormGroup>
-
-          <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>Textarea</ControlLabel>
-            <FormControl componentClass="textarea" placeholder="textarea" />
-          </FormGroup>
-
-            <Button type="submit">Submit</Button>
-          </form>
+          <Form horizontal>
+            <FormGroup controlId="formHorizontalText">
+              <Col componentClass={ControlLabel} sm={2}>Name</Col>
+              <Col sm={10}>
+                <FormControl type="text" placeholder="e.q. Stephanie" />
+              </Col>
+            </FormGroup>
+            <FormGroup controlId="formHorizontalEmail">
+              <Col componentClass={ControlLabel} sm={2}>Email</Col>
+              <Col sm={10}>
+                <FormControl type="password" placeholder="abc@example.com" />
+              </Col>
+            </FormGroup>
+            <FormGroup controlId="formHorizontalPassword">
+              <Col componentClass={ControlLabel} sm={2}>Feedback</Col>
+              <Col sm={10}>
+                <FormControl type="textarea" placeholder="133 is a good class." />
+              </Col>
+            </FormGroup>
+            <FormGroup>
+              <Col xs={12} sm={12} md={12} lg={12}>
+                <Button type="submit">Submit</Button>
+              </Col>
+            </FormGroup>
+          </Form>
         </Grid>
       </div>
     );
@@ -160,3 +162,7 @@ export default class Contact extends Component {
 // </div>
 // </Col>
 // </Row>
+
+// subjectInput(e) {
+//   this.setState({ subject: e.target.value });
+// };

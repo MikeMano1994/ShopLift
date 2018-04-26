@@ -19,16 +19,15 @@ export default class Products extends Component {
   }
 
   render() {
-
-
-    if(this.props.sortOption === "low"){
+    if (this.props.sortOption === "low") {
       this.props.productsList.sort((a,b) => ((a.discountprice) - (b.discountprice)))
     }
     else{
-      if(this.props.sortOption === "high"){
-      this.props.productsList.sort((a,b) => ((b.discountprice) - (a.discountprice)))
+      if (this.props.sortOption === "high") {
+        this.props.productsList.sort((a,b) => ((b.discountprice) - (a.discountprice)))
      }
     }
+
     let productKeys = Object.keys(this.props.productsList);
 
     return (
