@@ -13,7 +13,8 @@ export default class UserDropDown extends Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
+      user: null
     };
   }
 
@@ -27,15 +28,14 @@ export default class UserDropDown extends Component {
     fire.auth()
     .signOut()
     .then(() => {
-      this.props.loggedIn(false);
-    }, function(error) {
+      this.props.setUser(null,null);
+    }, error => {
       console.log("Error!" + error);
     });
   }
 
   render() {
-    var currentUser = fire.auth().currentUser;
-    if (!currentUser){
+    if (!this.props.getUser()){
       return (
         <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
   

@@ -19,7 +19,7 @@ export default class UserProfile extends Component {
                     TACOTUESDAY
                 </Fade>
           <div className='user-profile'>
-            <UserCard/>
+            <UserCard addToCart={this.props.addToCart} authed={this.props.authed} user={this.props.user}/>
         </div>
         </div>
         );

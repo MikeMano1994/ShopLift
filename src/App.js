@@ -15,6 +15,7 @@ import UserPrivacy from './components/UserPrivacy';
 import UserProfile from './components/UserProfile';
 import product from './components/product.json';
 
+// this is firebase, imported as fire to induce less typing
 import fire from './fire';
 
 import './App.css';
@@ -25,21 +26,25 @@ class App extends Component {
     super(props);
 
     this.state={
-      authed:false,
       items: {},
-      prices: {}
+      prices: {},
+      user:{
+        email: '',
+        uid: '',
+      }
     };
 
     this.addToCart = this.addToCart.bind(this);
-    this.loggedIn = this.loggedIn.bind(this);
+    this.setUser = this.setUser.bind(this);
+    this.getUser = this.getUser.bind(this);
   }
 
   componentWillMount(){
     this.setState({products: product});
     this.setState({unfilteredProducts: product});
 
-    if (fire.auth().currentUser !== null || fire.auth().currentUser !== undefined)
-      this.setState({authed:true});
+    // if (fire.auth().currentUser !== null || fire.auth().currentUser !== undefined)
+    //   this.setState({authed:true});
 
     var cart = localStorage.getItem('cart');
     if (cart)
@@ -49,6 +54,23 @@ class App extends Component {
     if (prices){
       this.setState({prices: JSON.parse(prices)});
     }
+
+    var user = localStorage.getItem('user');
+    if (user){
+      this.setState({user: JSON.parse(user)});
+    }
+
+    // set up listener for authentication of user
+    fire.auth().onAuthStateChanged(u => {
+      if (u) {
+        this.setState({
+          user:{
+            email: u.email,
+            uid: u.uid
+          }
+        });
+      }
+    });
   }
 
   // pass this into Products.js for it to add to cart
@@ -61,11 +83,10 @@ class App extends Component {
       itemsObj[itemName] = itemsObj[itemName] + 1;
       pricesObj[itemName] = itemPrice;
 
-      this.setState({items: itemsObj});
-      this.setState({prices: pricesObj});
-
-      console.log(this.state.prices);
-      console.log(this.state.items);
+      this.setState({
+        items: itemsObj,
+        prices: pricesObj
+      });
 
       localStorage.setItem('cart', JSON.stringify(this.state.items));
       localStorage.setItem('prices', JSON.stringify(this.state.prices));
@@ -116,10 +137,28 @@ class App extends Component {
       }
     }
   }
+  
+  // set the user, can take null arguments
+  setUser(e, id){
+    if (e && id){
+      var obj = {
+        email: e,
+        uid: id
+      }
+      this.setState({user: obj});
+      localStorage.setItem('user',JSON.stringify(obj));
+    }
+    else{
+      this.setState({user: null});
+      localStorage.setItem('user', null);
+    }
+  }
 
-  loggedIn(e){
-    if (e !== null && e !== undefined)
-      this.setState({authed:e});
+  getUser(){
+    var user = localStorage.getItem('user');
+    if (user)
+      return JSON.parse(user);
+    return null;
   }
 
   render() {
@@ -128,8 +167,9 @@ class App extends Component {
         <div className='App-header'>
           <Navbar
             authed={this.state.authed}
-            loggedIn={this.loggedIn}
             items={this.state.items}
+            setUser={this.setUser}
+            getUser={this.getUser}
           />
           <h1 className="App-title">“Deals so great - It’s a steal.”</h1>
         </div>
@@ -140,9 +180,9 @@ class App extends Component {
               <Route exact path='/contact' component={Contact} />
               <Route exact path='/about-us' component={AboutUs} />
               <Route exact path='/shop'  render={()=><Shop addToCart={this.addToCart}/>}  />
-              <Route exact path='/login' render={()=><LogIn loggedIn={this.loggedIn}/>}/>
-              <Route exact path='/signup' component={SignUp} />
-              <Route exact path='/profile' component={UserProfile} />
+              <Route exact path='/login' render={()=><LogIn setUser={this.setUser}/>}/>
+              <Route exact path='/signup' render={()=><SignUp setUser={this.setUser}/>} />
+              <Route exact path='/profile' render={()=><UserProfile addToCart={this.props.addToCart} getUser={this.getUser}/>} />
               <Route exact path='/cart' component={Cart} />
               <Route exact path='/check-out' render={()=><CheckOut cart={this.state.items} prices={this.state.prices}/>} />
               <Route exact path='/useragreement' component={UserAgreement} />

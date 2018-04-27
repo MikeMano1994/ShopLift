@@ -74,7 +74,7 @@ export default class NavBar extends Component {
 
             <Nav>
               <NavItem>
-                <UserDropDown authed={this.props.authed} logout={this.props.loggedIn}/>
+                <UserDropDown setUser={this.props.setUser} getUser={this.props.getUser}/>
               </NavItem>
 
               <NavItem className="emptycart">

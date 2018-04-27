@@ -33,7 +33,8 @@ export default class LogIn extends Component {
     event.preventDefault();
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
     .then(()=>{
-      this.props.loggedIn(true);
+      //this.props.loggedIn(true);
+      this.props.setUser(this.state.email, fire.auth().curre)
       this.setState({email:"",password:"",redirectTo:"/"});
       if(this.state.wrongPass===true){
         this.setState({wrongPass:false})
@@ -48,6 +49,7 @@ export default class LogIn extends Component {
         alert(errorMessage);
       }
     });
+    fire.auth().setPersistence(fire.auth.Auth.Persistence.LOCAL);
   };
 
   render() {
