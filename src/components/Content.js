@@ -11,8 +11,8 @@ import order from '../picture/orderonline.png';
 import visitus from '../picture/comevisitus.png';
 import likeandfollow from '../picture/likeandfollow.png';
 import img1 from '../picture/img1.png';
-import img2 from '../picture/img2.png';
-import img3 from '../picture/img3.png';
+import img2 from '../picture/img2.jpg';
+import img3 from '../picture/img3.jpg';
 
 import '../App.css';
 

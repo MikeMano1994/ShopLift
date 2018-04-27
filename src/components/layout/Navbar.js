@@ -45,16 +45,16 @@ export default class NavBar extends Component {
             <Collapse isOpen={!this.state.collapsed} navbar>
               <Nav navbar >
                 <NavItem>
-                  <NavLink href="/">Home</NavLink>
+                  <NavLink href="/">HOME</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/shop">Shop</NavLink>
+                  <NavLink href="/shop">SHOP</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/contact">Contact</NavLink>
+                  <NavLink href="/contact">CONTACT</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/about-us">About Us</NavLink>
+                  <NavLink href="/about-us">ABOUT US</NavLink>
                 </NavItem>
               </Nav>
 
