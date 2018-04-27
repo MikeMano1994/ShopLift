@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
 import {
-  HelpBlock,
   FormGroup,
   FormControl,
   ControlLabel
@@ -51,19 +50,12 @@ export default class Signup extends Component {
     this.setState({ isLoading: true });
     this.setState({ isLoading: false });
     fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
-      .catch(error => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log("Error! " + errorCode + " " + errorMessage);
-      })
-      .then(() => { 
-        var userObject = {};
+      .then(() => {
+        let userObject = {};
         if (!fire.auth().currentUser.uid){
           fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password);
         }
-        else
-        {
-          fire.database().ref('/users/').child(fire.auth().currentUser.uid).set({
+        fire.database().ref('/users/').child(fire.auth().currentUser.uid).set({
             email: this.state.email,
             orderHistory:{
               items: {},
@@ -82,9 +74,12 @@ export default class Signup extends Component {
             cardCVV: ''
           });
         this.setState({redirectTo:'/'});
-        } 
-      }
-      );
+      })
+      .catch(error => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log("Error! " + errorCode + " " + errorMessage);
+      });
   }
 
   validateForm() {
@@ -92,7 +87,7 @@ export default class Signup extends Component {
       this.state.email.length > 0 &&
       this.state.password.length > 5 &&
       this.state.password === this.state.confirmPassword &&
-      this.state.checked == true
+      this.state.checked === true
     );
   }
 

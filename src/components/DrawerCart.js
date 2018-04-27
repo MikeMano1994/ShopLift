@@ -1,11 +1,8 @@
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
 import ReactDrawer from 'react-drawer';
 import shoppingcart from '../picture/shopping-cart.png';
 import emptycart from '../picture/empty-cart.png';
 
-
-/* if you using webpack, should not apply identity to this css */
 import 'react-drawer/lib/react-drawer.css';
 
 export default class DrawerCart extends Component{
@@ -31,9 +28,11 @@ export default class DrawerCart extends Component{
   toggleDrawer() {
     this.setState({open: !this.state.open});
   }
+
   closeDrawer() {
     this.setState({open: false});
   }
+
   onDrawerClose() {
     this.setState({open: false});
   }
@@ -41,20 +40,21 @@ export default class DrawerCart extends Component{
   render() {
     return (
       <div>
-        <div>
-	     	   <img width={35} height={35} src={shoppingcart} onClick={this.toggleDrawer}
-	              disabled={this.state.open }/>
-        </div>
-
+   	    <img width={35}
+             height={35}
+             src={shoppingcart}
+             onClick={this.toggleDrawer}
+             disabled={this.state.open}
+             alt="Shopping Cart"
+        />
         <ReactDrawer className="drawer"
-          open={this.state.open}
-          position={this.state.position}
-          onClose={this.onDrawerClose}
-          noOverlay={this.state.noOverlay}
-          >
+                     open={this.state.open}
+                     position={this.state.position}
+                     onClose={this.onDrawerClose}
+                     noOverlay={this.state.noOverlay}
+        >
           <i onClick={this.closeDrawer} className="icono-cross"></i>
-
-          <h2 className = "shoppingcartstyle">Shopping Cart</h2>
+          <h2 className="shoppingcartstyle">Shopping Cart</h2>
 	        <img style={{width:'250px', height:'150px'}} src={emptycart} alt="emptycart" />
           <div>
        		   <a href="/check-out">

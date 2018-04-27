@@ -1,26 +1,28 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import {Redirect} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+import { Button,
+         FormGroup,
+         FormControl,
+         ControlLabel } from "react-bootstrap";
 
 import fire from '../fire';
-
 import "../App.css";
 
 export default class LogIn extends Component {
   constructor(props) {
     super(props);
-    this.handleChange = this.handleChange.bind(this);
-
     this.state = {
       email: "",
       password: "",
       redirectTo: null,
       wrongPass: false
     };
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
   validateForm() {
-    return this.state.email.length > 0 && this.state.password.length > 0;
+    return (this.state.email.length > 0 && this.state.password.length > 0);
   }
 
   handleChange = event => {
@@ -34,18 +36,18 @@ export default class LogIn extends Component {
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
     .then(()=>{
       //this.props.loggedIn(true);
-      this.props.setUser(this.state.email, fire.auth().curre)
+      this.props.setUser(this.state.email, fire.auth().currentUser.uid);
       this.setState({email:"",password:"",redirectTo:"/"});
       if(this.state.wrongPass===true){
         this.setState({wrongPass:false})
       }
     }).catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      if(errorCode === 'auth/wrong-password'){
-      this.setState({wrongPass: true});
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      if (errorCode === 'auth/wrong-password') {
+        this.setState({wrongPass: true});
       }
-      else{
+      else {
         alert(errorMessage);
       }
     });
@@ -56,13 +58,11 @@ export default class LogIn extends Component {
     if (this.state.redirectTo) {
       return <Redirect to={{pathname: this.state.redirectTo}} />
     }
+
     return (
       <div className="loginpage">
         <h1>Log In</h1>
-        <h5>
-          Not a member? <a href="/signup">Sign Up</a>
-        </h5>
-
+        <h5>Not a member?<strong><a href="/signup"> Sign Up</a></strong></h5>
         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="email" bsSize="large">
             <ControlLabel>Email</ControlLabel>
@@ -78,12 +78,12 @@ export default class LogIn extends Component {
           <FormGroup controlId="password" bsSize="large">
             <ControlLabel>Password</ControlLabel>
             <FormControl
-              placeholder="Password goes here"
+              placeholder="Password"
               value={this.state.password}
               onChange={this.handleChange}
               type="password"
             />
-          {this.state.wrongPass? "Invalid Password. Please Try Again." : ""}
+            {this.state.wrongPass? "Invalid Password. Please Try Again." : ""}
           </FormGroup>
 
           <Button

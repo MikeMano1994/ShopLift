@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import {Well, Button} from 'react-bootstrap';
 import 'bootstrap';
+import {LinkContainer} from 'react-router-bootstrap';
+
+import raccoon from '../picture/user.png';
 import fire from '../fire';
 
 export default class UserCard extends Component {
@@ -19,49 +22,48 @@ export default class UserCard extends Component {
                 cardNumber: '',
                 cardExpDate: '',
                 CVV: ''
-            }
+            },
+            activeTab: 0,
+            tabClasses: ['btn btn-default','btn btn-default','btn btn-default']
         };
+
     }
 
     componentWillMount(){
-        this.setState({authed: this.props.authed});
         // get all the user stuff from firebase
-        fire.database().ref('/users/').child(this.props.user.uid).on('value', snapshot => {
-            var v = snapshot.val();
-            this.setState({
-                user:{
-                    items: v.items,
-                    prices: v.prices,
-                    address: v.address,
-                    city: v.city,
-                    state: v.state,
-                    zip: v.zip,
-                    cardName: v.cardName,
-                    cardNumber: v.cardNumber,
-                    cardExpDate: v.cardExpDate,
-                    CVV: v.CVV
-            }});
+        fire.database().ref('/users/').child(this.props.getUser().uid).on('value', snapshot => {
+            this.setState({user:snapshot.val()});
         });
     }
 
     renderOrderHistory(){
-        return(
-            <Well>
-                {Object.keys(this.state.user.prices).map((e)=>{
-                    return(
-                        <div className='row'>
-                            <div className='col-md-6 text-left'>
-                                {this.state.user.items[e]} of  {e} <br/>
-                                {this.state.user.prices[e]}
+        if (this.state.user.prices){
+            return(
+                <Well>
+                    {Object.keys(this.state.user.prices).map((e)=>{
+                        return(
+                            <div className='row'>
+                                <div className='col-md-6 text-left'>
+                                    {this.state.user.items[e]} of  {e} <br/>
+                                    {this.state.user.prices[e]}
+                                </div>
+                                <div className='col-md-6 text-right'>
+                                    <Button onClick={()=>this.props.addToCart(e)}>Add to Cart</Button>
+                                </div>
                             </div>
-                            <div className='col-md-6 text-right'>
-                                <Button onClick={()=>this.props.addToCart(e)}>Add to Cart</Button>
-                            </div>
-                        </div>
-                    );
-                })}
-            </Well>
-        );
+                        );
+                    })}
+                </Well>
+            );
+        }
+        else{
+            return(
+                <div className='text-center'>
+                    Hmmmmm, looks like you haven't bought(shoplifted) anything yet! <br/>
+                    <a href='/shop'>Go Buy!</a>
+                </div>
+            );
+        }
     }
 
     renderAddressInfo(){
@@ -85,8 +87,42 @@ export default class UserCard extends Component {
         )
     }
 
+    setActiveTab(oldIndex, newIndex){
+        var inactiveClass='btn btn-default';
+        var activeClass='btn btn-outline-success my-2 my-sm-0';
+
+        if (oldIndex && newIndex){
+            var arr = this.state.tabClasses;
+            arr[oldIndex] = inactiveClass;
+            arr[newIndex] = activeClass;
+            this.setState({tabClasses:arr});
+        }
+    }
+
+    renderTabContent(index){
+        if (index){
+            switch (index){
+                case 0:
+                    return(
+                        <div>{this.renderOrderHistory()}</div>
+                    );
+                case 1:
+                    return(
+                        <div>{this.renderAddressInfo()}</div>
+                    );
+                case 2:
+                    return(
+                        <div>{this.renderCardInfo()}</div>
+                    );
+                default:
+                    console.log('Invalid index rendered!');
+            }
+        }
+    }
+
     render() {
-        if (this.state.authed){
+        var user = this.props.getUser();
+        if (user){
             return (
                 <div className="user-card">
                     <div className="col-xl-6 col-lg-6 col-sm-6">
@@ -95,10 +131,10 @@ export default class UserCard extends Component {
                                 <img className="card-bkimg" alt="" src="https://www.chicagomag.com/images/2015/0115/C201501-C-Gina-Rodriguez-Primetime-Players-Hannibal-Buress.jpg"/>
                             </div>
                             <div className="useravatar">
-                                <img alt="" src="https://www.chicagomag.com/images/2015/0115/C201501-C-Gina-Rodriguez-Primetime-Players-Hannibal-Buress.jpg"/>
+                                <img alt="" src={raccoon}/>
                             </div>
                             <div className="card-info">
-                                <span className="card-title">{this.props.user.email}</span>
+                                <span className="card-title">{String(user.email)}</span>
                             </div>
                         </div>
                         <div className="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
