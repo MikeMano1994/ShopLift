@@ -76,7 +76,10 @@ class App extends Component {
     var pricesObj = this.state.prices;
 
 		if (itemName !== null && itemName !== undefined){
-      itemsObj[itemName] = itemsObj[itemName] + 1;
+      if (!itemsObj[itemName])
+        itemsObj[itemName] = 1;
+      else
+        itemsObj[itemName] = itemsObj[itemName] + 1;
       pricesObj[itemName] = itemPrice;
 
       this.setState({

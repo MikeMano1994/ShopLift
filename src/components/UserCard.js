@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Well, Button} from 'react-bootstrap';
+import {Well, Button, Tabs, Tab} from 'react-bootstrap';
 import 'bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
 
@@ -22,9 +22,7 @@ export default class UserCard extends Component {
                 cardNumber: '',
                 cardExpDate: '',
                 CVV: ''
-            },
-            activeTab: 0,
-            tabClasses: ['btn btn-default','btn btn-default','btn btn-default']
+            }
         };
 
     }
@@ -58,7 +56,7 @@ export default class UserCard extends Component {
         }
         else{
             return(
-                <div className='text-center'>
+                <div className='text-center' style={{padding:'20px', height:'20vh'}}>
                     Hmmmmm, looks like you haven't bought(shoplifted) anything yet! <br/>
                     <a href='/shop'>Go Buy!</a>
                 </div>
@@ -68,64 +66,32 @@ export default class UserCard extends Component {
 
     renderAddressInfo(){
         return(
-            <div>
-                <p>Address: {this.state.user.address}</p>
-                <p>City: {this.state.user.city}</p>
-                <p>State: {this.state.user.state}</p>
-                <p>Zip Code: {this.state.user.zip}</p>
+            <div className='text-center' style={{padding:'20px', height:'20vh'}}>
+                <p><b>Address</b><br/> {this.state.user.address}</p>
+                <p><b>City</b><br/> {this.state.user.city}</p>
+                <p><b>State</b><br/> {this.state.user.state}</p>
+                <p><b>Zip Code</b><br/> {this.state.user.zip}</p>
             </div>
         )
     }
 
     renderCardInfo(){
         return(
-            <div>
-                <p>Card Name: {this.state.user.cardName}</p>
-                <p>Card Number: {this.state.user.cardNumber}</p>
-                <p>Expiration Date: {this.state.user.CVV}</p>
+            <div className='text-center' style={{padding:'20px', height: '20vh'}}>
+                <p><b>Card Name</b><br/> {this.state.user.cardName}</p>
+                <p><b>Card Number</b><br/> {this.state.user.cardNumber}</p>
+                <p><b>Expiration Date</b><br/> {this.state.user.CVV}</p>
             </div>
         )
-    }
-
-    setActiveTab(oldIndex, newIndex){
-        var inactiveClass='btn btn-default';
-        var activeClass='btn btn-outline-success my-2 my-sm-0';
-
-        if (oldIndex && newIndex){
-            var arr = this.state.tabClasses;
-            arr[oldIndex] = inactiveClass;
-            arr[newIndex] = activeClass;
-            this.setState({tabClasses:arr});
-        }
-    }
-
-    renderTabContent(index){
-        if (index){
-            switch (index){
-                case 0:
-                    return(
-                        <div>{this.renderOrderHistory()}</div>
-                    );
-                case 1:
-                    return(
-                        <div>{this.renderAddressInfo()}</div>
-                    );
-                case 2:
-                    return(
-                        <div>{this.renderCardInfo()}</div>
-                    );
-                default:
-                    console.log('Invalid index rendered!');
-            }
-        }
     }
 
     render() {
         var user = this.props.getUser();
         if (user){
             return (
-                <div className="user-card">
-                    <div className="col-xl-6 col-lg-6 col-sm-6">
+                <div className='container'>
+                <div className='row'>
+                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 offset-md-3">
                         <div className="card hovercard">
                             <div className="card-background">
                                 <img className="card-bkimg" alt="" src="https://www.chicagomag.com/images/2015/0115/C201501-C-Gina-Rodriguez-Primetime-Players-Hannibal-Buress.jpg"/>
@@ -137,42 +103,25 @@ export default class UserCard extends Component {
                                 <span className="card-title">{String(user.email)}</span>
                             </div>
                         </div>
-                        <div className="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
-                            <div className="btn-group" role="group">
-                                <button type="button" id="stars" className="btn btn-outline-success my-2 my-sm-0" href="#tab1" data-toggle="tab">
-                                    <span className="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-                                    <div className="hidden-xs">Recent Orders</div>
-                                </button>
-                            </div>
-                            <div className="btn-group" role="group">
-                                <button type="button" id="favorites" className="btn btn-default" href="#tab2" data-toggle="tab">
-                                    <span className="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                                    <div className="hidden-xs">Address Information</div>
-                                </button>
-                            </div>
-                            <div className="btn-group" role="group">
-                                <button type="button" id="following" className="btn btn-default" href="#tab3" data-toggle="tab">
-                                    <span className="glyphicon glyphicon-th-list" aria-hidden="true"></span>
-                                    <div className="hidden-xs">Payment Information</div>
-                                </button>
-                            </div>
-                        </div>
-          
-                        <div className="well">
-                            <div className="tab-content">
-                                <div className="tab-pane fade in active" id="tab1">
-                                    {this.renderOrderHistory()}
-                                </div>
-                                <div className="tab-pane fade in" id="tab2">
-                                    {this.renderAddressInfo()}
-                                </div>
-                                <div className="tab-pane fade in" id="tab3">
-                                    {this.renderCardInfo()}
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                </div>
+                <div className='row'>
+                    <div className='col-sm-12 col-xl-12 col-lg-12 col-md-12'>
+                        <Tabs className='text-center' defaultActiveKey={1}>
+                            <Tab eventKey={1} title='Recent Orders'>
+                                {this.renderOrderHistory()}
+                            </Tab>
+                            <Tab eventKey={2} title='Address Information'>
+                                {this.renderAddressInfo()}
+                            </Tab>
+                            <Tab eventKey={3} title='Payment Information'>
+                                {this.renderCardInfo()}
+                            </Tab>
+                        </Tabs>
+                    </div>
+                    
                   </div>
+                </div>
               )
         }
         else return(<div>OOPS YOU MUST BE LOGGED IN</div>);

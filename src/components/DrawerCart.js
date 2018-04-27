@@ -56,10 +56,9 @@ export default class DrawerCart extends Component{
           <i onClick={this.closeDrawer} className="icono-cross"></i>
           <h2 className="shoppingcartstyle">Shopping Cart</h2>
 	        <img style={{width:'250px', height:'150px'}} src={emptycart} alt="emptycart" />
-          <div>
-       		   <a href="/check-out">
-          	 <button type="button" className="btn btn-dark"><p>CHECK OUT</p></button></a>
-          </div>
+          <a href="/check-out">
+          	 <button type="button" className="btn btn-dark">CHECKOUT</button></a>
+          
         </ReactDrawer>
       </div>
     );

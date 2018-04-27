@@ -20,14 +20,14 @@ export default class Step2 extends Component{
                    
                 
                         <a href="/login" > 
-                            <button type="button" class="btn btn-dark ml-10"
+                            <button type="button" className="btn btn-dark ml-10"
                                 style = {{marginBottom: '20px',marginTop: '20px' }}>
                                  <p>LOG IN</p>
                             </button>
                         </a>
 
                         <a onClick={() => this.props.jumpToStep(2)}> 
-                            <button type="button" class="btn btn-dark ml-10"
+                            <button type="button" className="btn btn-dark ml-10"
                                 style = {{marginBottom: '20px',marginTop: '20px' }}>
                                  <p>GUEST SHOPPING</p>
                             </button>
@@ -44,7 +44,7 @@ export default class Step2 extends Component{
             
             
                 <a href="/signup" > 
-                    <button type="button" class="btn btn-dark"
+                    <button type="button" className="btn btn-dark"
                         style = {{marginBottom: '20px',marginTop: '20px' }}>
                         <p>SIGN UP</p>
                     </button>

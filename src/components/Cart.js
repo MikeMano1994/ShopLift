@@ -41,7 +41,7 @@ export default class Cart extends Component{
       	<div className = "cart">
       		<a href="/shop">
         		<p>
-							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span className="glyphicon glyphicon-chevron-left"></span>
             	Continue Shopping
 						</p>
           </a>
