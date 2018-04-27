@@ -53,20 +53,26 @@ export default class Step5 extends Component{
   }
 
   handleSubmit(){
+    var date = new Date(Date.now());
+    console.log(date.toLocaleString());
+    var orderHistoryObj = this.getStore().orderHistory;
+    orderHistoryObj[date.toLocaleString()]={
+      items: this.props.cart,
+      prices: this.props.prices,
+      tax: this.state.tax,
+      shipping: this.state.shipping,
+      totalPrice: this.state.totalPrice
+    };
     fire.database().ref('/users/').child(fire.auth().currentUser.uid).update({
-      orderHistory:{
-        items: JSON.stringify(this.props.cart),
-        prices: JSON.stringify(this.props.prices),
-        tax: this.state.tax,
-        shipping: this.state.shipping,
-        totalPrice: this.state.totalPrice
-      },
+      orderHistory:orderHistoryObj,
+      firstName: this.props.getStore().firstname,
+      lastName: this.props.getStore().lastname,
       address: this.props.getStore().address,
       city: this.props.getStore().city,
       state: this.props.getStore().state,
       zip: this.props.getStore().zipcode,
       cardName: this.props.getStore().cardname,
-      cardNumber: this.props.getStore().cardnum,
+      cardNumber: this.props.getStore().cardnumber,
       cardExpDate: String(this.props.getStore().expmonth + '/' + this.props.getStore().expyear),
       cardCVV: this.props.getStore().cvv
     });
@@ -127,7 +133,7 @@ export default class Step5 extends Component{
                 <div className='float-right'>
                 <p>${this.state.itemsPrice}</p>
                 <p>${this.state.shipping}</p>
-                <p>${this.state.tax}</p>
+                <p>{this.state.tax}%</p>
                 <br/>
                 <p>${this.state.totalPrice}</p>
                 </div>

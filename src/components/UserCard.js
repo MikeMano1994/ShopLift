@@ -12,8 +12,13 @@ export default class UserCard extends Component {
         this.state={
             authed:false,
             user:{
-                items: {},
-                prices: {},
+                orderHistory:{
+                    items:{},
+                    prices:{},
+                    shipping:'',
+                    tax:'',
+                    totalPrice:''
+                },
                 address: '',
                 city: '',
                 state: '',
@@ -22,7 +27,8 @@ export default class UserCard extends Component {
                 cardNumber: '',
                 cardExpDate: '',
                 CVV: ''
-            }
+            },
+            redirectTo: null
         };
 
     }
@@ -35,18 +41,19 @@ export default class UserCard extends Component {
     }
 
     renderOrderHistory(){
-        if (this.state.user.prices){
+        if (this.state.user.orderHistory.prices){
+            let items = this.state.user.orderHistory.items;
+            let prices = this.state.user.orderHistory.prices;
             return(
                 <Well>
-                    {Object.keys(this.state.user.prices).map((e)=>{
+                    {Object.keys(prices).map((e,i)=>{
                         return(
-                            <div className='row'>
+                            <div key={i} className='row'>
                                 <div className='col-md-6 text-left'>
-                                    {this.state.user.items[e]} of  {e} <br/>
-                                    {this.state.user.prices[e]}
+                                    <b>{items[e]} of {e}</b> at ${prices[e].toFixed(2)} each
                                 </div>
                                 <div className='col-md-6 text-right'>
-                                    <Button onClick={()=>this.props.addToCart(e)}>Add to Cart</Button>
+                                    <Button onClick={()=>this.props.addToCart(e,prices[e])}>Add to Cart</Button>
                                 </div>
                             </div>
                         );
@@ -56,7 +63,7 @@ export default class UserCard extends Component {
         }
         else{
             return(
-                <div className='text-center' style={{padding:'20px', height:'20vh'}}>
+                <div className='text-center' style={{padding:'20px', height:'30vh'}}>
                     Hmmmmm, looks like you haven't bought(shoplifted) anything yet! <br/>
                     <a href='/shop'>Go Buy!</a>
                 </div>
@@ -66,7 +73,7 @@ export default class UserCard extends Component {
 
     renderAddressInfo(){
         return(
-            <div className='text-center' style={{padding:'20px', height:'20vh'}}>
+            <div className='text-center' style={{padding:'20px', height:'30vh'}}>
                 <p><b>Address</b><br/> {this.state.user.address}</p>
                 <p><b>City</b><br/> {this.state.user.city}</p>
                 <p><b>State</b><br/> {this.state.user.state}</p>
@@ -77,10 +84,10 @@ export default class UserCard extends Component {
 
     renderCardInfo(){
         return(
-            <div className='text-center' style={{padding:'20px', height: '20vh'}}>
+            <div className='text-center' style={{padding:'20px', height: '30vh'}}>
                 <p><b>Card Name</b><br/> {this.state.user.cardName}</p>
                 <p><b>Card Number</b><br/> {this.state.user.cardNumber}</p>
-                <p><b>Expiration Date</b><br/> {this.state.user.CVV}</p>
+                <p><b>Expiration Date</b><br/> {this.state.user.cardExpDate}</p>
             </div>
         )
     }
@@ -124,6 +131,6 @@ export default class UserCard extends Component {
                 </div>
               )
         }
-        else return(<div>OOPS YOU MUST BE LOGGED IN</div>);
+        else return(<div>OOPS YOU MUST BE LOGGED IN! <br/> <a href='/login'>Log in here</a></div>);
   }
 }

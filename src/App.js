@@ -40,8 +40,12 @@ class App extends Component {
   }
 
   componentWillMount(){
-    this.setState({products: product});
-    this.setState({unfilteredProducts: product});
+    this.setState({
+      products: product,
+      unfilteredProducts: product,
+      items: {},
+      prices: {}
+    });
 
     // if (fire.auth().currentUser !== null || fire.auth().currentUser !== undefined)
     //   this.setState({authed:true});
@@ -71,15 +75,21 @@ class App extends Component {
 
   // pass this into Products.js for it to add to cart
 	addToCart(itemName, itemPrice){
-    var itemName = String(itemName);
-    var itemsObj = this.state.items;
-    var pricesObj = this.state.prices;
-
-		if (itemName !== null && itemName !== undefined){
-      if (!itemsObj[itemName])
+		if (itemName && itemPrice){
+      var itemName = String(itemName);
+      var itemsObj = this.state.items;
+      var pricesObj = this.state.prices;
+      console.log(this.state.prices);
+      console.log(this.state.items);
+      if (!itemsObj)
+        itemsObj = {};
+      if (!itemsObj[itemName]){
         itemsObj[itemName] = 1;
+      }
       else
         itemsObj[itemName] = itemsObj[itemName] + 1;
+      if (!pricesObj)
+        pricesObj = {};
       pricesObj[itemName] = itemPrice;
 
       this.setState({
@@ -89,7 +99,6 @@ class App extends Component {
 
       localStorage.setItem('cart', JSON.stringify(this.state.items));
       localStorage.setItem('prices', JSON.stringify(this.state.prices));
-
       return 1;
     }
     return 0;
@@ -148,8 +157,10 @@ class App extends Component {
       localStorage.setItem('user',JSON.stringify(obj));
     }
     else{
-      this.setState({user: null});
+      this.setState({items:null, prices: null, user: null});
       localStorage.setItem('user', null);
+      localStorage.setItem('cart', null);
+      localStorage.setItem('prices', null);
     }
   }
 
@@ -183,7 +194,7 @@ class App extends Component {
               <Route exact path='/signup' render={()=><SignUp setUser={this.setUser}/>} />
               <Route exact path='/profile' render={()=><UserProfile addToCart={this.props.addToCart} getUser={this.getUser}/>} />
               <Route exact path='/cart' component={Cart} />
-              <Route exact path='/check-out' render={()=><CheckOut cart={this.state.items} prices={this.state.prices}/>} />
+              <Route exact path='/check-out' render={()=><CheckOut cart={this.state.items} prices={this.state.prices} getUser={this.getUser}/>} />
               <Route exact path='/useragreement' component={UserAgreement} />
               <Route exact path='/userprivacy' component={UserPrivacy} />
             </div>

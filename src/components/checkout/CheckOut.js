@@ -9,6 +9,7 @@ import Step4 from './Step4';
 import Step5 from './Step5';
 import Step6 from './Step6';
 
+import fire from '../../fire';
 
 import './checkout.css';
 import '../../App.css'
@@ -29,8 +30,24 @@ constructor(props) {
       cardnum: '',
       expmonth: '',
       expyear: '',
-      cvv: ''
+      cvv: '',
+      orderHistory: {}
     };
+  }
+
+  componentWillMount(){
+    fire.database().ref('/users/').child(this.props.getUser().uid).on('value', snapshot=>{
+      var v = snapshot.val();
+      this.setState({
+        firstname: v.firstName,
+        lastname: v.lastName,
+        address: v.address,
+        city: v.city,
+        state: v.state,
+        zipcode: v.zip,
+        orderhistory: v.orderHistory
+      });
+    }).bind(this);
   }
 
   componentDidMount() {}
