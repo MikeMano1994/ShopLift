@@ -1,24 +1,28 @@
 import React, {Component} from 'react';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import { Map,
+         InfoWindow,
+         Marker,
+         GoogleApiWrapper } from 'google-maps-react';
 
 export class MapContainer extends Component {
   state = {
     showingInfoWindow: false,
     activeMarker: {},
-    selectedPlace: {},
+    selectedPlace: {}
   };
 
-  onMarkerClick = (props, marker, e) =>
+  onMarkerClick = (props, marker, e) => {
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
       showingInfoWindow: true
-  });
+    })
+  };
 
   onMapClicked = (props) => {
-      if (this.state.showingInfoWindow) {
-        this.setState({
-        showingInfoWindow: false,
+    if (this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: true,
         activeMarker: null
       })
     }
@@ -34,20 +38,13 @@ export class MapContainer extends Component {
           onClick={this.onMapClicked}
           responsive
         >
-          <Marker onClick={this.onMarkerClick}
-            name={'ShopLift'} />
-
-          <InfoWindow
-            marker={this.state.activeMarker}
-            visible={this.state.showingInfoWindow}>
-
-          <div>
+          <Marker onClick={this.onMarkerClick} name={'ShopLift'} />
+          <InfoWindow marker={this.state.activeMarker} visible={this.state.showingInfoWindow}>
             <h1>{this.state.selectedPlace.name}</h1>
-          </div>
           </InfoWindow>
         </Map>
       </div>
-      );
+    );
   }
 }
 

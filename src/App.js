@@ -41,18 +41,18 @@ class App extends Component {
     if (fire.auth().currentUser !== null || fire.auth().currentUser !== undefined)
       this.setState({authed:true});
 
-    var cart = localStorage.getItem('cart');
+    let cart = localStorage.getItem('cart');
     if (cart)
       this.setState({items:JSON.parse(cart)});
 
-    var prices = localStorage.getItem('prices');
+    let prices = localStorage.getItem('prices');
     if (prices){
       this.setState({prices: JSON.parse(prices)});
     }
   }
 
   // pass this into Products.js for it to add to cart
-	addToCart(itemName,itemPrice){
+	addToCart(itemName, itemPrice){
     var itemName = String(itemName);
     var itemsObj = this.state.items;
     var pricesObj = this.state.prices;
@@ -110,7 +110,7 @@ class App extends Component {
         if (pricesObj[itemName]){
           delete pricesObj[itemName];
           this.setState({prices: pricesObj});
-          
+
           localStorage.setItem('prices', JSON.stringify(pricesObj));
         }
       }

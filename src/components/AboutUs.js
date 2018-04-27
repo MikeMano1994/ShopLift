@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from 'reactstrap';
-import { Button, Grid, Thumbnail, Well } from 'react-bootstrap';
+import { Grid, Thumbnail } from 'react-bootstrap';
 import raccoon from '../picture/raccoon.jpg';
-import products from './product.json';
 
 export default class AboutUs extends Component {
-  render() {    
+  render() {
     return (
       <Container>
         <Row>

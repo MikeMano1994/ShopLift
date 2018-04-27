@@ -34,7 +34,7 @@ export default class Item extends Component {
   render() {
     return (
       <div className="card">
-        <img className="card-img-top" src={this.props.a.image} alt="Card image cap" onClick={this.handleShow}/>
+        <img className="card-img-top" src={this.props.a.image} alt="" onClick={this.handleShow}/>
           <div className="card-body">
             <h5 className="card-title">{this.props.a.name}</h5>
             <p className={this.props.a.sale ? "crossoutprice": "addspace"}>${ this.props.a.price.toFixed(2)}/ea.</p>
@@ -52,10 +52,11 @@ export default class Item extends Component {
                           </button>
                       </span>
               </div>*/}
-              <a className="btn btn-outline-success my-2 my-sm-0" onClick={()=>{
+              <a className="btn btn-outline-success my-2 my-sm-0" onClick={() => {
                 this.addToCart();
                 this.props.a.sale ? this.props.addToCart(this.props.a.name, this.props.a.discountprice) : this.props.addToCart(this.props.a.name, this.props.a.price)}}>
-                {!this.state.isAdded ? "Add To Cart" : "✔ Added"}</a>
+                {!this.state.isAdded ? "Add To Cart" : "✔ Added"}
+              </a>
           </div>
           <div>
             <Modal show={this.state.show} onHide={this.handleClose}>
@@ -70,7 +71,7 @@ export default class Item extends Component {
                 <Button onClick={this.handleClose}>Close</Button>
               </Modal.Footer>
             </Modal>
-          </div>
+         </div>
       </div>
     )
   }

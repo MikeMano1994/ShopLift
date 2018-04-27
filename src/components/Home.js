@@ -12,8 +12,7 @@ export default class Home extends Component{
     return(
       <div>
         <Slider />
-          <br></br>
-          <br></br>
+        <br></br>
         <Content/>
       </div>
     );

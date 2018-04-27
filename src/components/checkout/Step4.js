@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import '../../App.css';
 
@@ -26,11 +26,11 @@ export default class Step4 extends Component{
 
     // if full validation passes then save to store and pass as valid
     if (Object.keys(validateNewInput).every((k) => { return validateNewInput[k] === true })) {
-      if (this.props.getStore().cardname != userInput.cardname ||
-        this.props.getStore().cardnumber != userInput.cardnumber ||
-        this.props.getStore().expmonth != userInput.expmonth ||
-        this.props.getStore().expyear != userInput.expyear ||
-        this.props.getStore().cvv != userInput.cvv)
+      if (this.props.getStore().cardname !== userInput.cardname ||
+        this.props.getStore().cardnumber !== userInput.cardnumber ||
+        this.props.getStore().expmonth !== userInput.expmonth ||
+        this.props.getStore().expyear !== userInput.expyear ||
+        this.props.getStore().cvv !== userInput.cvv)
         { // only update store of something changed
           this.props.updateStore({
           ...userInput,
@@ -59,11 +59,11 @@ export default class Step4 extends Component{
 
    _validateData(data) {
      return  {
-       cardnameVal: (data.cardname != 0), // required: anything besides N/A
-       cardnumberVal: (data.cardnumber != 0),
-       expmonthVal: (data.expmonth != 0),
-       expyearVal: (data.expyear != 0),
-       cvvVal: (data.cvv != 0),
+       cardnameVal: (data.cardname !== 0), // required: anything besides N/A
+       cardnumberVal: (data.cardnumber !== 0),
+       expmonthVal: (data.expmonth !== 0),
+       expyearVal: (data.expyear !== 0),
+       cvvVal: (data.cvv !== 0),
      }
    }
 
@@ -89,10 +89,10 @@ export default class Step4 extends Component{
     };
   }
 
-  render(){
+  render() {
     let notValidClasses = {};
 
-    if (typeof this.state.cardnameVal == 'undefined' || this.state.cardnameVal) {
+    if (typeof this.state.cardnameVal === 'undefined' || this.state.cardnameVal) {
       notValidClasses.cardnameCls = 'no-error col-md-8';
     }
     else {
@@ -100,7 +100,7 @@ export default class Step4 extends Component{
       notValidClasses.cardnameValGrpCls = 'val-err-tooltip';
     }
 
-    if (typeof this.state.cardnumberVal == 'undefined' || this.state.cardnumberVal) {
+    if (typeof this.state.cardnumberVal === 'undefined' || this.state.cardnumberVal) {
       notValidClasses.cardnumberCls = 'no-error col-md-8';
     }
     else {
@@ -108,7 +108,7 @@ export default class Step4 extends Component{
       notValidClasses.cardnumberValGrpCls = 'val-err-tooltip';
     }
 
-    if (typeof this.state.expmonthVal == 'undefined' || this.state.expmonthVal) {
+    if (typeof this.state.expmonthVal === 'undefined' || this.state.expmonthVal) {
       notValidClasses.expmonthCls = 'no-error col-md-8';
     }
     else {
@@ -116,7 +116,7 @@ export default class Step4 extends Component{
       notValidClasses.expmonthValGrpCls = 'val-err-tooltip';
     }
 
-    if (typeof this.state.expyearVal == 'undefined' || this.state.expyearVal) {
+    if (typeof this.state.expyearVal === 'undefined' || this.state.expyearVal) {
       notValidClasses.expyearCls = 'no-error col-md-8';
     }
     else {
@@ -124,7 +124,7 @@ export default class Step4 extends Component{
       notValidClasses.expyearValGrpCls = 'val-err-tooltip';
     }
 
-    if (typeof this.state.cvvVal == 'undefined' || this.state.cvvVal) {
+    if (typeof this.state.cvvVal === 'undefined' || this.state.cvvVal) {
       notValidClasses.cvvCls = 'no-error col-md-8';
     }
     else {
@@ -178,56 +178,60 @@ export default class Step4 extends Component{
                 type="text"
                 required
                 defaultValue={this.state.expmonth}
-                onBlur={this.validationCheck}>
+                onBlur={this.validationCheck}
+              >
                 <option value="">Please select</option>
-                      <option value="January">January</option>
-                      <option value="February">February</option>
-                      <option value="March">March</option>
-                      <option value="April">April</option>
-                      <option value="May">May</option>
-                      <option value="June">June</option>
-                      <option value="July">July</option>
-                      <option value="August">August</option>
-                      <option value="September">September</option>
-                      <option value="October">October</option>
-                      <option value="November">November</option>
-                      <option value="December">December</option>
-                </select>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+              </select>
             </div>
+
             <div className={notValidClasses.expmonthValGrpCls}>{this.state.expmonthValMsg}</div>
 
             <div class = "expyear" >
               <label> EXPIRATION YEAR: </label>
               <select
-              className={notValidClasses.expyearCls}
-              ref="expyear"
-              type="text"
-              required
-              defaultValue={this.state.expyear}
-              onBlur={this.validationCheck}>
-              <option value="">Please select</option>
-                      <option value="2018">2018</option>
-                      <option value="2019">2019</option>
-                      <option value="2020">2020</option>
-                      <option value="2021">2021</option>
-                      <option value="2022">2022</option>
-                      <option value="2023">2023</option>
-                      <option value="2024">2024</option>
-                      <option value="2025">2025</option>
+                className={notValidClasses.expyearCls}
+                ref="expyear"
+                type="text"
+                required
+                defaultValue={this.state.expyear}
+                onBlur={this.validationCheck}
+              >
+                <option value="">Please select</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
               </select>
             </div>
+
             <div className={notValidClasses.expyearValGrpCls}>{this.state.expyearValMsg}</div>
 
             <div class = "cvv">
               <label> CVV: </label>
               <input
-              className={notValidClasses.cvvCls}
-              ref="cvv"
-              type="text"
-              required
-              defaultValue={this.state.cvv}
-              onBlur={this.validationCheck}
-              placeholder="CVV"
+                className={notValidClasses.cvvCls}
+                ref="cvv"
+                type="text"
+                required
+                defaultValue={this.state.cvv}
+                onBlur={this.validationCheck}
+                placeholder="CVV"
               />
             </div>
 
@@ -236,6 +240,6 @@ export default class Step4 extends Component{
           </form>
         </div>
       </div>
-      );
-    }
+    );
+  }
 }

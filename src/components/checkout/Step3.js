@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import '../../App.css';
 
 export default class Step3 extends Component{
-    constructor(props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -18,9 +18,7 @@ export default class Step3 extends Component{
     this.validationCheck = this.validationCheck.bind(this);
     this.isValidated = this.isValidated.bind(this);
     this._validateOnDemand = true; // this flag enables onBlur validation as user fills forms
-
   }
-
 
   isValidated() {
     const userInput = this._grabUserInput(); // grab user entered vals
@@ -29,24 +27,24 @@ export default class Step3 extends Component{
 
     // if full validation passes then save to store and pass as valid
     if (Object.keys(validateNewInput).every((k) => { return validateNewInput[k] === true })) {
-        if (this.props.getStore().firstname != userInput.firstname || 
-            this.props.getStore().lastname != userInput.lastname ||
-            this.props.getStore().address != userInput.address || 
-            this.props.getStore().city != userInput.city ||
-            this.props.getStore().state != userInput.state ||
-            this.props.getStore().zipcode != userInput.zipcode) 
-            { // only update store of something changed
+      if (this.props.getStore().firstname !== userInput.firstname ||
+          this.props.getStore().lastname !== userInput.lastname ||
+          this.props.getStore().address !== userInput.address ||
+          this.props.getStore().city !== userInput.city ||
+          this.props.getStore().state !== userInput.state ||
+          this.props.getStore().zipcode !== userInput.zipcode)
+          { // only update store of something changed
             this.props.updateStore({
             ...userInput,
             // use this to notify step4 that some changes took place and prompt the user to save again
-          });  // Update store here (this is just an example, in reality you will do it via redux or flux)
-        }
+            });  // Update store here (this is just an example, in reality you will do it via redux or flux)
+          }
 
-        isDataValid = true;
+      isDataValid = true;
     }
     else {
-        // if anything fails then update the UI validation state but NOT the UI Data State
-        this.setState(Object.assign(userInput, validateNewInput, this._validationErrors(validateNewInput)));
+      // if anything fails then update the UI validation state but NOT the UI Data State
+      this.setState(Object.assign(userInput, validateNewInput, this._validationErrors(validateNewInput)));
     }
 
     return isDataValid;
@@ -63,15 +61,14 @@ export default class Step3 extends Component{
   }
 
    _validateData(data) {
-    return  {
-      firstnameVal: (data.firstname != 0), // required: anything besides N/A
-      lastnameVal: (data.lastname != 0),
-      addressVal: (data.address != 0),
-      cityVal: (data.city != 0),
-      stateVal: (data.state != 0),
-      zipcodeVal: (data.zipcode != 0)
-
-    }
+     return  {
+       firstnameVal: (data.firstname !== 0), // required: anything besides N/A
+       lastnameVal: (data.lastname !== 0),
+       addressVal: (data.address !== 0),
+       cityVal: (data.city !== 0),
+       stateVal: (data.state !== 0),
+       zipcodeVal: (data.zipcode !== 0)
+     }
   }
 
   _validationErrors(val) {
@@ -82,8 +79,8 @@ export default class Step3 extends Component{
       cityValMsg: val.cityVal ? '' : 'A city is required',
       stateValMsg: val.stateVal ? '' : 'A state is required',
       zipcodeValMsg: val.zipcodeVal ? '' : 'A zipcode is required',
-
     }
+
     return errMsgs;
   }
 
@@ -102,11 +99,10 @@ export default class Step3 extends Component{
 
   componentWillUnmount() {}
 
-    render(){
+  render(){
+    let notValidClasses = {};
 
-      let notValidClasses = {};
-
-    if (typeof this.state.firstnameVal == 'undefined' || this.state.firstnameVal) {
+    if (typeof this.state.firstnameVal === 'undefined' || this.state.firstnameVal) {
       notValidClasses.firstnameCls = 'no-error col-md-8';
     }
     else {
@@ -114,7 +110,7 @@ export default class Step3 extends Component{
        notValidClasses.firstnameValGrpCls = 'val-err-tooltip';
     }
 
-    if (typeof this.state.lastnameVal == 'undefined' || this.state.lastnameVal) {
+    if (typeof this.state.lastnameVal === 'undefined' || this.state.lastnameVal) {
         notValidClasses.lastnameCls = 'no-error col-md-8';
     }
     else {
@@ -122,7 +118,7 @@ export default class Step3 extends Component{
        notValidClasses.lastnameValGrpCls = 'val-err-tooltip';
     }
 
-    if (typeof this.state.addressVal == 'undefined' || this.state.addressVal) {
+    if (typeof this.state.addressVal === 'undefined' || this.state.addressVal) {
         notValidClasses.addressCls = 'no-error col-md-8';
     }
     else {
@@ -130,7 +126,7 @@ export default class Step3 extends Component{
        notValidClasses.addressValGrpCls = 'val-err-tooltip';
     }
 
-    if (typeof this.state.cityVal == 'undefined' || this.state.cityVal) {
+    if (typeof this.state.cityVal === 'undefined' || this.state.cityVal) {
         notValidClasses.cityCls = 'no-error col-md-8';
     }
     else {
@@ -138,7 +134,7 @@ export default class Step3 extends Component{
        notValidClasses.cityValGrpCls = 'val-err-tooltip';
     }
 
-    if (typeof this.state.stateVal == 'undefined' || this.state.stateVal) {
+    if (typeof this.state.stateVal === 'undefined' || this.state.stateVal) {
         notValidClasses.stateCls = 'no-error col-md-8';
     }
     else {
@@ -146,119 +142,118 @@ export default class Step3 extends Component{
        notValidClasses.stateValGrpCls = 'val-err-tooltip';
     }
 
-    if (typeof this.state.zipcodeVal == 'undefined' || this.state.zipcodeVal) {
+    if (typeof this.state.zipcodeVal === 'undefined' || this.state.zipcodeVal) {
         notValidClasses.zipcodeCls = 'no-error col-md-8';
     }
     else {
        notValidClasses.zipcodeCls = 'has-error col-md-8';
        notValidClasses.zipcodeValGrpCls = 'val-err-tooltip';
     }
-        return(
-          <div>
-              <div className = "cart">
-                <a href="/shop"> 
-                  <span class="glyphicon glyphicon-chevron-left"></span> 
-                  Continue Shopping
-                </a>
-                <h1> Shipping Information </h1>
-              </div>
-                
-              <div className="info">
-              <form>
-                <div class="firstname">
-                 <label> FIRST NAME: </label>
-                  <input 
-                  className={notValidClasses.firstnameCls}
-                  ref="firstname"
-                  type="text"
-                  required
-                  defaultValue={this.state.firstname}
-                  onBlur={this.validationCheck}
-                  placeholder="First Name"/>
-                </div>
-                <div className={notValidClasses.firstnameValGrpCls}>{this.state.firstnameValMsg}</div>
 
-                <div class="lastname">
-                 <label> LAST NAME: </label>
-                  <input
-                  className={notValidClasses.lastnameCls}
-                  ref="lastname"
-                  type="text"
-                  required
-                  defaultValue={this.state.lastname}
-                  onBlur={this.validationCheck}
-                  placeholder="Last Name"/>
-                </div>
-                <div className={notValidClasses.lastnameValGrpCls}>{this.state.lastnameValMsg}</div>
-
-
-                <div class = "address">
-                  <label> ADDRESS: </label>
-                  <input
-                    className={notValidClasses.addressCls}
-                    ref="address"
-                    type="text"
-                    required
-                    defaultValue={this.state.address}
-                    onBlur={this.validationCheck}
-                    placeholder="Address"
-                    />
-                </div>
-                <div className={notValidClasses.addressValGrpCls}>{this.state.addressValMsg}</div>
-
-
-                <div class = "city" >
-                  <label> CITY: </label>
-                  <input
-                  className={notValidClasses.cityCls}
-                  ref="city"
-                  type="text"
-                  required
-                  defaultValue={this.state.city}
-                  onBlur={this.validationCheck}
-                  placeholder="City"
-                  />
-                </div>
-                <div className={notValidClasses.cityValGrpCls}>{this.state.cityValMsg}</div>
-
-
-                <div class = "state">
-                  <label> STATE: </label>
-                  <input
-                  className={notValidClasses.stateCls}
-                  ref="state"
-                  type="text"
-                  required
-                  defaultValue={this.state.state}
-                  onBlur={this.validationCheck}
-                  placeholder="State"
-                  />
-                </div>
-                <div className={notValidClasses.stateValGrpCls}>{this.state.stateValMsg}</div>
-
-
-                <div class = "zipcode">
-                  <label> ZIP CODE: </label>
-                  <input
-                  className={notValidClasses.zipcodeCls}
-                  ref="zipcode"
-                  type="text"
-                  required
-                  defaultValue={this.state.zipcode}
-                  onBlur={this.validationCheck}
-                  placeholder="Zip Code"
-                  />
-                </div>
-                 <div className={notValidClasses.zipcodeValGrpCls}>{this.state.zipcodeValMsg}</div>
-
-              </form>
-              </div>
-              
-             
-
-
-
+    return(
+      <div>
+        <div className = "cart">
+          <a href="/shop">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            Continue Shopping
+          </a>
+          <h1> Shipping Information </h1>
         </div>
-        );
-    }
+        <div className="info">
+          <form>
+            <div class="firstname">
+              <label> FIRST NAME: </label>
+              <input
+                className={notValidClasses.firstnameCls}
+                ref="firstname"
+                type="text"
+                required
+                defaultValue={this.state.firstname}
+                onBlur={this.validationCheck}
+                placeholder="First Name"
+              />
+            </div>
+            <div className={notValidClasses.firstnameValGrpCls}>
+              {this.state.firstnameValMsg}
+            </div>
+            <div class="lastname">
+              <label> LAST NAME: </label>
+              <input
+                className={notValidClasses.lastnameCls}
+                ref="lastname"
+                type="text"
+                required
+                defaultValue={this.state.lastname}
+                onBlur={this.validationCheck}
+                placeholder="Last Name"
+              />
+            </div>
+            <div className={notValidClasses.lastnameValGrpCls}>
+              {this.state.lastnameValMsg}
+            </div>
+            <div class="address">
+              <label>ADDRESS: </label>
+              <input
+                className={notValidClasses.addressCls}
+                ref="address"
+                type="text"
+                required
+                defaultValue={this.state.address}
+                onBlur={this.validationCheck}
+                placeholder="Address"
+              />
+            </div>
+            <div className={notValidClasses.addressValGrpCls}>
+              {this.state.addressValMsg}
+            </div>
+            <div class="city">
+              <label> CITY: </label>
+              <input
+                className={notValidClasses.cityCls}
+                ref="city"
+                type="text"
+                required
+                defaultValue={this.state.city}
+                onBlur={this.validationCheck}
+                placeholder="City"
+              />
+            </div>
+            <div className={notValidClasses.cityValGrpCls}>
+              {this.state.cityValMsg}
+            </div>
+            <div class="state">
+              <label> STATE: </label>
+              <input
+                className={notValidClasses.stateCls}
+                ref="state"
+                type="text"
+                required
+                defaultValue={this.state.state}
+                onBlur={this.validationCheck}
+                placeholder="State"
+              />
+            </div>
+            <div className={notValidClasses.stateValGrpCls}>
+              {this.state.stateValMsg}
+            </div>
+            <div class = "zipcode">
+              <label> ZIP CODE: </label>
+              <input
+                className={notValidClasses.zipcodeCls}
+                ref="zipcode"
+                type="text"
+                required
+                defaultValue={this.state.zipcode}
+                onBlur={this.validationCheck}
+                placeholder="Zip Code"
+              />
+            </div>
+            <div className={notValidClasses.zipcodeValGrpCls}>
+              {this.state.zipcodeValMsg}
+            </div>
+          </form>
+        </div>
+      </div>
+    );
+  }
 }

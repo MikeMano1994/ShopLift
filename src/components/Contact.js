@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import Map from "./Map";
 // import { Container, Row, Col } from 'reactstrap';
-import { Grid, Row, Col, Form, FormGroup,
-         ControlLabel, FormControl, Checkbox,
-         HelpBlock, Button } from 'react-bootstrap';
+import { Grid,
+         Row,
+         Col,
+         Form,
+         FormGroup,
+         ControlLabel,
+         FormControl,
+         Button } from 'react-bootstrap';
 
 import "../App.css";
-import raccoon from "../picture/cuteraccoon.jpg";
 
 export default class Contact extends Component {
   constructor(props) {
@@ -15,8 +19,7 @@ export default class Contact extends Component {
     this.state = {
       name: "",
       email: "",
-      subject: "",
-      message: ""
+      feedback: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
