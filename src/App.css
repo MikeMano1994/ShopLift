@@ -42,12 +42,13 @@
 /*About Us */
 .aboutUsTitle {
   color: #945d60;
-  text-align: left;
+  justify-content: center;
   margin-left: 25%;
   /* font-family: "Montserrat", sans-serif; */
   font-family: 'Open Sans', sans-serif;
   padding-top: 50px;
   padding-bottom: 10px;
+  font-weight: bold;
 }
 
 .aboutusdescription {
@@ -64,11 +65,12 @@
 
 .meetTeam {
   color: #945d60;
-  text-align: left;
+  text-align: center;
   margin-left: 25%;
   /* font-family: "Montserrat", sans-serif; */
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   padding-bottom: 10px;
+  font-weight: bold;
 }
 
 .team1 {
@@ -553,3 +555,8 @@ a {
   display: inline-flex;
   justify-content: center;
 }
+
+.thumbnail {
+  border: 0;
+}
+
