@@ -53,10 +53,8 @@ export default class Step5 extends Component{
   }
 
   handleSubmit(){
-    var date = new Date(Date.now());
-    console.log(date.toLocaleString());
-    var orderHistoryObj = this.getStore().orderHistory;
-    orderHistoryObj[date.toLocaleString()]={
+    var orderHistoryObj = this.props.getStore().orderHistory;
+    orderHistoryObj[Date.now()]={
       items: this.props.cart,
       prices: this.props.prices,
       tax: this.state.tax,

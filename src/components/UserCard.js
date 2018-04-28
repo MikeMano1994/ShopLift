@@ -12,13 +12,7 @@ export default class UserCard extends Component {
         this.state={
             authed:false,
             user:{
-                orderHistory:{
-                    items:{},
-                    prices:{},
-                    shipping:'',
-                    tax:'',
-                    totalPrice:''
-                },
+                orderHistory:{},
                 address: '',
                 city: '',
                 state: '',
@@ -40,12 +34,29 @@ export default class UserCard extends Component {
         });
     }
 
-    renderOrderHistory(){
-        if (this.state.user.orderHistory.prices){
-            let items = this.state.user.orderHistory.items;
-            let prices = this.state.user.orderHistory.prices;
+    renderOrders(){
+        return(
+            <div>{
+                    Object.keys(this.state.user.orderHistory).map((v,i)=>{
+                        var v = parseInt(v);
+                        var d = new Date(v);
+                        return(
+                            <Well>
+                                <h3>Order on {d.toLocaleString()}</h3>
+                                {this.renderOrder(v)}
+                            </Well>
+                        ) 
+                })}
+            </div>
+        );
+    }
+
+    renderOrder(dateString){
+        if (dateString && this.state.user.orderHistory[dateString]){
+            let items = this.state.user.orderHistory[dateString].items;
+            let prices = this.state.user.orderHistory[dateString].prices;
             return(
-                <Well>
+                <div>
                     {Object.keys(prices).map((e,i)=>{
                         return(
                             <div key={i} className='row'>
@@ -58,7 +69,7 @@ export default class UserCard extends Component {
                             </div>
                         );
                     })}
-                </Well>
+                </div>
             );
         }
         else{
@@ -116,7 +127,7 @@ export default class UserCard extends Component {
                     <div className='col-sm-12 col-xl-12 col-lg-12 col-md-12'>
                         <Tabs className='text-center' defaultActiveKey={1}>
                             <Tab eventKey={1} title='Recent Orders'>
-                                {this.renderOrderHistory()}
+                                {this.renderOrders()}
                             </Tab>
                             <Tab eventKey={2} title='Address Information'>
                                 {this.renderAddressInfo()}
