@@ -13,7 +13,11 @@ export default class Products extends Component {
   }
 
   componentWillMount() {
-    this.setState({products: this.props.productsList, category: this.props.category, sortOption: this.props.sortOption});
+    this.setState(
+      {products: this.props.productsList,
+       category: this.props.category,
+       sortOption: this.props.sortOption
+      });
   }
 
   render() {

@@ -31,18 +31,18 @@ export default class Shop extends Component{
   }
 
   setCategory(c) {
-    if (c !== null && c !== undefined){
+    if (c !== null && c !== undefined) {
       this.setState({category: c});
     }
   }
 
   setSort(e) {
-		this.setState({sortOption: e})
+		this.setState({sortOption: e});
 	}
 
   toggleDropdown() {
-  this.setState(prevState => ({
-    dropdownOpen: !prevState.dropdownOpen
+    this.setState(prevState => ({
+      dropdownOpen: !prevState.dropdownOpen
     }));
   }
 

@@ -39,20 +39,7 @@ export default class Item extends Component {
             <h5 className="card-title">{this.props.a.name}</h5>
             <p className={this.props.a.sale ? "crossoutprice": "addspace"}>${ this.props.a.price.toFixed(2)}/ea.</p>
             <p className={this.props.a.sale ? "colorprice": ""}>{this.props.a.sale ? "$"+ this.props.a.discountprice.toFixed(2)+ "/ea": ""}</p>
-              {/*<div className="input-group">
-                  <span className="input-group-btn">
-                      <button type="button" className="btn btn-default" data-value="decrease" data-target="#spinner" data-toggle="spinner">
-                          <span className="glyphicon glyphicon-minus"></span>
-                      </button>
-                  </span>
-                  <input type="text" data-ride="spinner" id="spinner" className="form-control input-number" value="1" width="50%"/>
-                      <span className="input-group-btn">
-                          <button type="button" className="btn btn-default" data-value="increase" data-target="#spinner" data-toggle="spinner">
-                              <span className="glyphicon glyphicon-plus"></span>
-                          </button>
-                      </span>
-              </div>*/}
-              <a className="btn btn-outline-success my-2 my-sm-0" onClick={() => {
+              <a className="btn btn-outline-success my-2 my-sm-0" style={{color: 'white'}} onClick={() => {
                 this.addToCart();
                 this.props.a.sale ? this.props.addToCart(this.props.a.name, this.props.a.discountprice) : this.props.addToCart(this.props.a.name, this.props.a.price)}}>
                 {!this.state.isAdded ? "Add To Cart" : "✔ Added"}
