@@ -88,7 +88,7 @@ export default class Step5 extends Component{
           <Col md={12}>
             <Panel>
               <Panel.Body>
-                {this.renderItems()}
+                {this.props.renderCart()}
               </Panel.Body>
             </Panel>
           </Col>
