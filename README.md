@@ -1,15 +1,32 @@
 # ShopLift
 <img src="https://github.com/brucelin1218/ShopLift/blob/master/ShopLift%20logo.jpg" width = "300"/>
 
-ShopLift is a e-commerce Web App project built with MERN stack. It is a mini-safeway application that gives the best practice for people who want to learn MEAN.
+ShopLift is a e-commerce Web App project built with React. It is a mini-safeway
+application. We use React, React-bootstrap, Reactstrap, and Firebase.
 
-# Functions
-A e-commerce Web Application follows some primary functional requirements, such as:
+![Home](docs/home.jpg)
 
-* Creat a User Account:
+![product](docs/product.jpg)
 
-* User Authroization:
+## Features
 
-* Add/Remove items into/from the shopping cart:
+Here are the elements we implement in ShopLift:
+- [x] Responsive Slider
+- [x] Authentication with sign-in, log-in, and log-out
+- [x] Responsive Contact form
+- [x] Google Maps
+- [x] Item Filters
+- [x] Price Sorter
 
-* Payment:
+## Usage
+
+```javascript
+npm install
+
+npm start
+```
+
+## Future
+
+- [ ] Use Stripe Element in React for the payment method
+- [ ] Move the product json to mongoDB
