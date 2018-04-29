@@ -14,7 +14,7 @@ export default class Step1 extends Component{
 
     render(){
         return(
-    	<Cart/>
+    	<Cart prices={this.props.prices} items={this.props.items} />
         );    
     }
 }

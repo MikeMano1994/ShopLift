@@ -36,6 +36,7 @@ constructor(props) {
   }
 
   componentWillMount(){
+    if (this.props.getUser()){
     fire.database().ref('/users/').child(this.props.getUser().uid).on('value', snapshot=>{
       var v = snapshot.val();
       this.setState({
@@ -48,6 +49,7 @@ constructor(props) {
         orderhistory: v.orderHistory
       });
     }).bind(this);
+    }
   }
 
   componentDidMount() {}
@@ -69,7 +71,7 @@ constructor(props) {
   render() {
     const steps =
     [
-      {name: 'Cart', component: <Step1 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
+      {name: 'Cart', component: <Step1 prices={this.props.prices} items={this.props.items} getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
       {name: 'My Profile', component: <Step2 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
       {name: 'Shipping', component: <Step3 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
       {name: 'Payment', component: <Step4 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},

@@ -67,7 +67,7 @@ export default class NavBar extends Component {
               </NavItem>
 
               <NavItem className="emptycart">
-                <a><DrawerCart items={this.props.items}/></a>
+                <a><DrawerCart items={this.props.items} prices={this.props.prices}/></a>
               </NavItem>
             </Nav>
 

@@ -61,6 +61,7 @@ export default class Step5 extends Component{
       shipping: this.state.shipping,
       totalPrice: this.state.totalPrice
     };
+    if (fire.auth().currentUser.uid){
     fire.database().ref('/users/').child(fire.auth().currentUser.uid).update({
       orderHistory:orderHistoryObj,
       firstName: this.props.getStore().firstname,
@@ -74,6 +75,7 @@ export default class Step5 extends Component{
       cardExpDate: String(this.props.getStore().expmonth + '/' + this.props.getStore().expyear),
       cardCVV: this.props.getStore().cvv
     });
+    }
   }
 
   render(){

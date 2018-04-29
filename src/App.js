@@ -145,8 +145,9 @@ class App extends Component {
       }
     }
   }
-  
-  // set the user, can take null arguments
+
+  // set the user, can take null arguments 
+  // if arguments are null, user is logged out
   setUser(e, id){
     if (e && id){
       var obj = {
@@ -178,6 +179,7 @@ class App extends Component {
           <Navbar
             authed={this.state.authed}
             items={this.state.items}
+            prices={this.state.prices}
             setUser={this.setUser}
             getUser={this.getUser}
           />
@@ -194,7 +196,7 @@ class App extends Component {
               <Route exact path='/signup' render={()=><SignUp setUser={this.setUser}/>} />
               <Route exact path='/profile' render={()=><UserProfile addToCart={this.props.addToCart} getUser={this.getUser}/>} />
               <Route exact path='/cart' component={Cart} />
-              <Route exact path='/check-out' render={()=><CheckOut cart={this.state.items} prices={this.state.prices} getUser={this.getUser}/>} />
+              <Route exact path='/check-out' render={()=><CheckOut items={this.state.items} prices={this.state.prices} getUser={this.getUser}/>} />
               <Route exact path='/useragreement' component={UserAgreement} />
               <Route exact path='/userprivacy' component={UserPrivacy} />
             </div>

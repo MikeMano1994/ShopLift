@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Well} from 'react-bootstrap';
 import emptycart from '../picture/empty-cart.png';
 import '../App.css';
 
@@ -9,55 +10,37 @@ export default class Cart extends Component{
 		this.state = {
 			items:{}
 		};
-		this.addToCart = this.addToCart.bind(this);
 	}
 
-	// pass this into Products.js for it to add to cart
-	addToCart(itemName) {
-		let items = this.state.items;
-		if (itemName !== null && itemName !== undefined) {
-			items[itemName] = 1;
+	renderCart(){
+		// if items exist, then render cart, else render nothing(empty cart image)
+		if (this.props.items){
+		  let rowStyle={
+			margin: '10px'
+		  }
+		  return(
+			<Well style={{marginLeft:'5vw',marginRight:'5vw', marginTop:'2vh'}}>
+			  {Object.keys(this.props.items).map((v,i)=>{
+				return(
+				  <div className='row'>
+					  <div style={rowStyle} className='col-xs-6 offset-xs-3 text-center'>{this.props.items[v]} of {v} <br/> ${this.props.prices[v].toFixed(2)} each</div>
+					  <div style={rowStyle} className='col-xs-3 text-right'>${(this.props.prices[v] * this.props.items[v]).toFixed(2)}</div>
+				  </div>
+				)
+			  })}
+			</Well>
+		  );
 		}
-		this.setState({items:this.items});
-	}
-
-	// use this function locally for when user increment or decrement quantity in cart
-	updateCart(itemName, step) {
-		let items = this.state.items;
-		if (itemName !== null && itemName !== undefined && !items[itemName]) {
-			items[itemName] = 1;
-		}
-		else {
-			items[itemName] += step;
-			if (items[itemName] === 0) {
-				delete items[itemName];
-			}
-		}
-	}
+		return(
+		  <img style={{width:'250px', height:'150px'}} src={emptycart} alt="emptycart" />
+		);
+	  }
 
   render() {
     return (
-    	<div>
-      	<div className = "cart">
-      		<a href="/shop">
-        		<p>
-							<span className="glyphicon glyphicon-chevron-left"></span>
-            	Continue Shopping
-						</p>
-          </a>
-          <h1>MY CART</h1>
-        </div>
-        <img src={emptycart} alt="emptycart" />
-        {
-					/*<div>
-						<a href="/check-out" >
-	           <button type="button" class="btn btn-dark" style = {{marginBottom: '50px',marginTop: '50px' }}>
-             	<p>CHECK OUT</p>
-             </button>
-	          </a>
-					</div>*/
-				}
-      </div>
+		<div>
+			{this.renderCart()}
+		</div>		
     );
 	}
 }
