@@ -33,7 +33,7 @@ export default class AboutUs extends Component {
                   <Image src={juan} circle alt="150x150"/>
                   <h3>Juan Marcias</h3>
                   <p>Product Manager</p>
-                  <p>Juan is a cool manager. His tattoo speaks everything.</p>
+                  <p>Juan is an okay manager. His tattoo sucks.</p>
                 </Thumbnail>
               </Col>
               <Col xs={12} md={4} lg={3}>
@@ -49,7 +49,7 @@ export default class AboutUs extends Component {
                   <Image src={nhat} circle alt="150x150"/>
                   <h3>Nhat Trinh</h3>
                   <p>Tester</p>
-                  <p>Nhat: "oh shit."</p>
+                  <p>Nhat: "oh shit."<br/> "what the HECK?"</p>
                 </Thumbnail>
               </Col>
               <Col xs={12} md={4} lg={3}>
@@ -57,7 +57,7 @@ export default class AboutUs extends Component {
                   <Image src={jenn} circle alt="150x150"/>
                   <h3>Jennifer Nguyen</h3>
                   <p>Documentation</p>
-                  <p>There are many Jenns in the world. This is a good one.</p>
+                  <p>There are many Jen Nguyens in the world. We got a good one.</p>
                 </Thumbnail>
               </Col>
               <Col xs={12} md={4} lg={3}>
@@ -65,13 +65,13 @@ export default class AboutUs extends Component {
                   <Image src={ale} circle alt="150x150"/>
                   <h3>Alejandro Lopez</h3>
                   <p>Documentation</p>
-                  <p>Besides hiking, Alejandro is also the GQ guy in the team.</p>
+                  <p>Besides hiking, Alejandro is also the GQ guy in the team.<br/>Also a very hikey boy.</p>
                 </Thumbnail>
               </Col>
               <Col xs={12} md={4} lg={3}>
                 <Thumbnail>
                   <Image src={truc} circle alt="150x150"/>
-                  <h3>Truc Vo</h3>
+                  <h3>Truc "Taco Truck" Vo</h3>
                   <p>Marketing</p>
                   <p>Truc pretends she didn't know much, but she pushed the most code in the front-end team.</p>
                 </Thumbnail>
@@ -81,15 +81,15 @@ export default class AboutUs extends Component {
                   <Image src={tuan} circle alt="150x150"/>
                   <h3>Tuan Anh Le</h3>
                   <p>Marketing</p>
-                  <p>I am the Tuan.</p>
+                  <p>I am the Tuan and I run Windows 8.</p>
                 </Thumbnail>
               </Col>
               <Col xs={12} md={4} lg={3}>
                 <Thumbnail>
                   <Image src={raccoon} circle alt="150x150"/>
-                  <h3>Racc</h3>
+                  <h3>Tech-Bro Racc</h3>
                   <p>FullStack Developer</p>
-                  <p>DO U EVEN PUSH, BRO!? I pull. I commit. I push.</p>
+                  <p>DO U EVEN PUSH, BRO!?<br/>I pull. I commit. I push.</p>
                 </Thumbnail>
               </Col>
             </Row>

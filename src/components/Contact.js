@@ -57,7 +57,7 @@ export default class Contact extends Component {
           <Row>
             <Col xs={12} sm={6} md={6} lg={6}>
               <div className="contact">
-                <h1>Contact Us</h1><br/>
+                <h1 style={{fontWeight:"bold"}}>Contact Us</h1><br/>
                 <h3>ShopLift Inc.</h3><br/>
                 <h4>1 Washington Sq<br/><br/>
                     San Jose, CA 95192<br/><br/>
@@ -89,7 +89,8 @@ export default class Contact extends Component {
             <FormGroup controlId="formHorizontalPassword">
               <Col componentClass={ControlLabel} sm={2}>Feedback</Col>
               <Col sm={10}>
-                <FormControl type="textarea" placeholder="133 is a good class." />
+                {/*<FormControl  type="textarea" placeholder="133 is a good class." rows="3"/>*/}
+                <textarea class="form-control" rows="5" placeholder="MASTER BRUCE!"></textarea>
               </Col>
             </FormGroup>
             <FormGroup>

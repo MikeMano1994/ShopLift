@@ -15,7 +15,7 @@ export default class Slider extends Component {
   render(){
     return(
       <div>
-        <div className='carouselWrapper container' style={{width:'950', height:'550'}}>
+        <div className='carouselWrapper container' style={{width:'950', height:'500'}}>
           <Carousel>
             <Carousel.Item>
               <img width={1200} height={500} alt="900x500" src={Bread} />
@@ -27,7 +27,7 @@ export default class Slider extends Component {
               <img width={1200} height={500} alt="900x500" src={Steak} />
             </Carousel.Item>
             <Carousel.Item>
-              <img width={1200} height={500} alt="900x500" src={Pasta} />
+              <img width={1200} style={{height:"740px"}} alt="900x500" src={Pasta} />
             </Carousel.Item>
           </Carousel>
        </div>
