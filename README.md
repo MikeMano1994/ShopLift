@@ -4,6 +4,8 @@
 ShopLift is a e-commerce Web App project built with React. It is a mini-safeway
 application. We use React, React-bootstrap, Reactstrap, and Firebase.
 
+The demo is hosted on firsebase: https://shoplift-supermarket.firebaseapp.com/
+
 <img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/home.jpg" width="600"/>
 
 <img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/product.jpg" width="600"/>
