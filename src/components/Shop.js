@@ -12,7 +12,7 @@ import { Form,
 import product from './product.json';
 
 export default class Shop extends Component{
-	constructor(props){
+	constructor(props) {
     super(props);
 
     this.state = {
@@ -54,7 +54,7 @@ export default class Shop extends Component{
     this.setState({products: filteredProducts});
   }
 
-  componentWillMount(){
+  componentWillMount() {
     this.setState({products: product});
     this.setState({unfilteredProducts: product});
   }
