@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Item from './Item';
+import sadraccoon from '../picture/cry-raccoon.gif'
 
 export default class Products extends Component {
   constructor(props){
@@ -67,7 +68,7 @@ export default class Products extends Component {
 
           <div style={{paddingTop: 50}}>
             {this.props.term && this.props.productsList.length === 0 ?
-              <img src="https://files.slack.com/files-pri/T919AJJ3W-FACJL72SW/cry-raccoon.gif" alt="Item not found"/> : ""}
+              <img src={sadraccoon} alt="Item not found"/> : ""}
           </div>
         </div>
         <div style={{fontSize: 45, fontFamily: "Gamja Flower", color: "#666666", paddingBottom: 200}}>
