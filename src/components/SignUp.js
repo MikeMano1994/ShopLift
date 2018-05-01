@@ -55,6 +55,7 @@ export default class Signup extends Component {
         if (!fire.auth().currentUser.uid){
           fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password);
         }
+
         fire.database().ref('/users/').child(fire.auth().currentUser.uid).set({
             email: this.state.email,
             orderHistory:{
@@ -79,6 +80,8 @@ export default class Signup extends Component {
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log("Error! " + errorCode + " " + errorMessage);
+        if (errorCode === 'auth/email-already-in-use')
+          alert('email already in use!');
       });
   }
 
