@@ -83,7 +83,7 @@ export default class Contact extends Component {
             <FormGroup controlId="formHorizontalEmail">
               <Col componentClass={ControlLabel} sm={2}>Email</Col>
               <Col sm={10}>
-                <FormControl type="password" placeholder="abc@example.com" />
+                <FormControl type="email" placeholder="abc@example.com" />
               </Col>
             </FormGroup>
             <FormGroup controlId="formHorizontalPassword">
