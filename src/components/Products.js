@@ -60,6 +60,7 @@ export default class Products extends Component {
                     );
                   }
                 }
+                return (null);
               })
             }
           </div>

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Grid, Button, Panel, Row, Col, Well} from 'react-bootstrap';
 import fire from '../../fire';
+import {Redirect} from 'react-router-dom';
 
 export default class Step5 extends Component{
   constructor(props) {
@@ -56,7 +57,6 @@ export default class Step5 extends Component{
     var orderHistoryObj = this.props.getStore().orderhistory;
     if (!orderHistoryObj)
       orderHistoryObj = {};
-    console.log(this.props.getStore().orderhistory);
     orderHistoryObj[Date.now()]={
       items: this.props.cart,
       prices: this.props.prices,
@@ -64,9 +64,10 @@ export default class Step5 extends Component{
       shipping: this.state.shipping,
       totalPrice: this.state.totalPrice
     };
-    if (fire.auth().currentUser.uid){
-    fire.database().ref('/users/').child(fire.auth().currentUser.uid).update({
-      orderHistory:orderHistoryObj,
+    
+    if (this.props.getUser()){
+      fire.database().ref('users').child(String(this.props.getUser().uid)).update({
+      orderHistory: orderHistoryObj,
       firstName: this.props.getStore().firstname,
       lastName: this.props.getStore().lastname,
       address: this.props.getStore().address,
@@ -79,7 +80,6 @@ export default class Step5 extends Component{
       cardCVV: this.props.getStore().cvv
     });
     }
-
     this.props.dumpCache();
   }
 
@@ -93,7 +93,7 @@ export default class Step5 extends Component{
           <Col md={12}>
             <Panel>
               <Panel.Body>
-                {this.props.renderCart()}
+                {this.props.renderCart(false)}
               </Panel.Body>
             </Panel>
           </Col>
@@ -155,7 +155,7 @@ export default class Step5 extends Component{
               </Panel.Body>
              
               <Panel.Footer>
-                <a onClick={() => this.props.jumpToStep(5)}>
+                <a onClick={() => this.props.jumpToStep(4)}>
                   <Button onClick={()=>this.handleSubmit()}bsStyle="default" bsSize="large">
                     Submit Order
                   </Button>

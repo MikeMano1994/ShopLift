@@ -14,7 +14,7 @@ export default class Step1 extends Component{
 
     render(){
         return(
-    	<Cart renderCart={this.props.renderCart} />
+    	<Cart items={this.props.items} renderCart={this.props.renderCart} />
         );    
     }
 }

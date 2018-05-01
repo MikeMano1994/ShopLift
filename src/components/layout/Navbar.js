@@ -19,8 +19,7 @@ export default class NavBar extends Component {
 
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
-      collapsed: true,
-      authed: false
+      collapsed: true
     };
   }
 
@@ -28,10 +27,6 @@ export default class NavBar extends Component {
     this.setState({
       collapsed: !this.state.collapsed
     });
-  }
-
-  componentWillMount(){
-    this.setState({authed:this.props.authed});
   }
 
   render() {
@@ -63,7 +58,7 @@ export default class NavBar extends Component {
 
             <Nav>
               <NavItem>
-                <UserDropDown setUser={this.props.setUser} getUser={this.props.getUser}/>
+                <UserDropDown addToCart={this.props.addToCart} setUser={this.props.setUser} getUser={this.props.getUser}/>
               </NavItem>
 
               <NavItem className="emptycart">

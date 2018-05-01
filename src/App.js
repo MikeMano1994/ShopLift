@@ -46,8 +46,8 @@ class App extends Component {
     this.setState({
       products: product,
       unfilteredProducts: product,
-      items: new Object(),
-      prices: new Object()
+      items: {},
+      prices: {}
     });
 
     // if (fire.auth().currentUser !== null || fire.auth().currentUser !== undefined)
@@ -79,20 +79,40 @@ class App extends Component {
   // pass this into Products.js for it to add to cart
 	addToCart(itemName, itemPrice){
 		if (itemName && itemPrice){
+<<<<<<< HEAD
+      var cart = localStorage.getItem('cart');
+      if (cart)
+        this.setState({items:JSON.parse(cart)});
+  
+      var prices = localStorage.getItem('prices');
+      if (prices)
+        this.setState({prices: JSON.parse(prices)});
+
       var itemName = String(itemName);
       var itemsObj = this.state.items;
+      var pricesObj = this.state.prices;
+      if (!itemsObj){
+        itemsObj = {};
+=======
+      itemName = String(itemName);
+      let itemsObj = this.state.items;
       
       var pricesObj = this.state.prices;
       if (!itemsObj)
-        itemsObj = new Object();
+        itemsObj = {};
       if (!itemsObj[itemName]){
+>>>>>>> c52bf5aa827bf904282594f9661ff575c940b1df
         itemsObj[itemName] = 1;
       }
+
+      if (!itemsObj[itemName])
+        itemsObj[itemName] = 1;
+
       else
         itemsObj[itemName] = itemsObj[itemName] + 1;
       
       if (!pricesObj)
-        pricesObj = new Object();
+        pricesObj = {};
       pricesObj[itemName] = itemPrice;
 
       this.setState({
@@ -108,9 +128,9 @@ class App extends Component {
 	}
 
 	decrementFromCart(itemName){
-    var itemName = String(itemName);
+    itemName = String(itemName);
     var itemsObj = this.state.items;
-    var pricesObj = this.state.prices;
+    //var pricesObj = this.state.prices;
 
     if (itemName !== null && itemName !== undefined){
       if (itemsObj[itemName]){
@@ -130,7 +150,20 @@ class App extends Component {
   }
 
   deleteFromCart(itemName){
+<<<<<<< HEAD
     var itemName = String(itemName);
+
+    var cart = localStorage.getItem('cart');
+    if (cart)
+      this.setState({items:JSON.parse(cart)});
+
+    var prices = localStorage.getItem('prices');
+    if (prices)
+      this.setState({prices: JSON.parse(prices)});
+    
+=======
+    itemName = String(itemName);
+>>>>>>> c52bf5aa827bf904282594f9661ff575c940b1df
     var itemsObj = this.state.items;
     var pricesObj = this.state.prices;
 
@@ -161,9 +194,9 @@ class App extends Component {
       localStorage.setItem('user',JSON.stringify(obj));
     }
     else{
-      this.setState({items:null, prices: null, user: null});
+      this.setState({user: null});
       localStorage.setItem('user', null);
-      this.dumpCache();
+      //this.dumpCache();
     }
   }
 
@@ -202,9 +235,9 @@ class App extends Component {
               <Route exact path='/shop'  render={()=><Shop addToCart={this.addToCart}/>}  />
               <Route exact path='/login' render={()=><LogIn setUser={this.setUser}/>}/>
               <Route exact path='/signup' render={()=><SignUp setUser={this.setUser}/>} />
-              <Route exact path='/profile' render={()=><UserProfile addToCart={this.props.addToCart} getUser={this.getUser}/>} />
+              <Route exact path='/profile' render={()=><UserProfile addToCart={this.addToCart} getUser={this.getUser}/>} />
               <Route exact path='/cart' component={Cart} />
-              <Route exact path='/check-out' render={()=><CheckOut deleteFromCart={this.deleteFromCart} dumpCache={this.dumpCache} items={this.state.items} prices={this.state.prices} getUser={this.getUser}/>} />
+              <Route exact path='/check-out' render={()=><CheckOut deleteFromCart={this.deleteFromCart} dumpCache={this.dumpCache} items={this.state.items} prices={this.state.prices} getUser={this.getUser}/>}/>
               <Route exact path='/useragreement' component={UserAgreement} />
               <Route exact path='/userprivacy' component={UserPrivacy} />
             </div>
