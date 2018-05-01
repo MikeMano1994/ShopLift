@@ -10,6 +10,8 @@ import { Grid,
          FormControl,
          Button } from 'react-bootstrap';
 
+import {Redirect} from 'react-router-dom';
+
 import "../App.css";
 
 export default class Contact extends Component {
@@ -46,8 +48,11 @@ export default class Contact extends Component {
     this.setState({ message: e.target.value });
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
+  handleSubmit = () => {
+      var yourMessage = this.state.feedback;
+      return <Redirect to={"mailto:admin@shoplift.com?subject="
+        + encodeURIComponent('User Feedback from ' + this.state.email)
+        + "&body=" + encodeURIComponent(yourMessage)}/>
   };
 
   render() {
@@ -77,25 +82,25 @@ export default class Contact extends Component {
             <FormGroup controlId="formHorizontalText">
               <Col componentClass={ControlLabel} sm={2}>Name</Col>
               <Col sm={10}>
-                <FormControl type="text" placeholder="e.q. Stephanie" />
+                <FormControl onChange={e=>this.nameInput(e)} type="text" placeholder="e.q. Stephanie" />
               </Col>
             </FormGroup>
             <FormGroup controlId="formHorizontalEmail">
               <Col componentClass={ControlLabel} sm={2}>Email</Col>
               <Col sm={10}>
-                <FormControl type="email" placeholder="abc@example.com" />
+                <FormControl onChange={e=>this.emailInput(e)} type="email" placeholder="abc@example.com" />
               </Col>
             </FormGroup>
             <FormGroup controlId="formHorizontalPassword">
               <Col componentClass={ControlLabel} sm={2}>Feedback</Col>
               <Col sm={10}>
                 {/*<FormControl  type="textarea" placeholder="133 is a good class." rows="3"/>*/}
-                <textarea class="form-control" rows="5" placeholder="MASTER BRUCE!"></textarea>
+                <textarea onChange={e=>this.messageInput(e)}className="form-control" rows="5" placeholder="MASTER BRUCE!"></textarea>
               </Col>
             </FormGroup>
             <FormGroup>
               <Col xs={12} sm={12} md={12} lg={12}>
-                <Button type="submit">Submit</Button>
+                <Button onClick={()=>this.handleSubmit()}type="submit">Submit</Button>
               </Col>
             </FormGroup>
           </Form>

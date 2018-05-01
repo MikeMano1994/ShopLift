@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Grid, Button, Panel, Row, Col, Well} from 'react-bootstrap';
 import fire from '../../fire';
-import {Redirect} from 'react-router-dom';
+//import {Redirect} from 'react-router-dom';
 
 export default class Step5 extends Component{
   constructor(props) {

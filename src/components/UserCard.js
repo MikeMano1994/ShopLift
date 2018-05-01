@@ -41,7 +41,8 @@ export default class UserCard extends Component {
           let d = new Date(v);
           return (
             <Well key={i}>
-              <h3>Order on {d.toLocaleString()}</h3>
+              <h3 className='text-left'>Order on {d.toLocaleString()}</h3>
+              <hr/>
               {this.renderOrder(v)}
             </Well>
           )
@@ -52,12 +53,19 @@ export default class UserCard extends Component {
 
   renderOrder(dateString) {
     if (dateString && this.state.user.orderHistory[dateString]) {
-      let items = this.state.user.orderHistory[dateString].items;
-      let prices = this.state.user.orderHistory[dateString].prices;
+      let orderRef = this.state.user.orderHistory[dateString];
+
+      let items = orderRef.items;
+      let prices = orderRef.prices;
+      let storeRef = {
+        shipping: orderRef.shipping,
+        tax: orderRef.tax,
+        totalPrice: orderRef.totalPrice
+      };
 
       if (items && prices) {
         return(
-          <div>
+          <div style={{paddingBottom:'2vh'}}>
             {Object.keys(prices).map((e,i) => {
               return (
                 <div key={i} className='row'>
@@ -70,7 +78,17 @@ export default class UserCard extends Component {
                 </div>
               );
             })}
-          </div>
+              <hr/>
+              <div className='col-md-4 text-center'>
+                <p>Total Shipping: ${storeRef.shipping}</p>
+              </div>
+              <div className='col-md-4 text-center'>
+                <p>Tax Rate: {storeRef.tax}%</p>
+              </div>
+              <div className='col-md-4 text-center'>
+                <p>Total Price: ${storeRef.totalPrice}</p>
+              </div>
+            </div>
         );
       }
     }
@@ -127,7 +145,7 @@ export default class UserCard extends Component {
               <Tabs className='text-center' defaultActiveKey={1} id={1}>
                 <Tab eventKey={1} title='Recent Orders'>{this.renderOrders()}</Tab>
                 <Tab eventKey={2} title='Address Information'>{this.renderAddressInfo()}</Tab>
-                <Tab eventKey={3} title='Payment Information'>this.renderCardInfo()}</Tab>
+                <Tab eventKey={3} title='Payment Information'>{this.renderCardInfo()}</Tab>
               </Tabs>
             </div>
           </div>

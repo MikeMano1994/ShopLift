@@ -4,10 +4,6 @@ import UserCard from './UserCard';
 import "../App.css";
 
 export default class UserProfile extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>
@@ -15,5 +11,5 @@ export default class UserProfile extends Component {
           <UserCard addToCart={this.props.addToCart} getUser={this.props.getUser}/>
         </div>
       </div>
-  )}
+  );}
 };
