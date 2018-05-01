@@ -79,12 +79,12 @@ class App extends Component {
   // pass this into Products.js for it to add to cart
 	addToCart(itemName, itemPrice){
 		if (itemName && itemPrice){
-      var itemName = String(itemName);
-      var itemsObj = this.state.items;
+      itemName = String(itemName);
+      let itemsObj = this.state.items;
       
       var pricesObj = this.state.prices;
       if (!itemsObj)
-        itemsObj = new Object();
+        itemsObj = {};
       if (!itemsObj[itemName]){
         itemsObj[itemName] = 1;
       }
@@ -92,7 +92,7 @@ class App extends Component {
         itemsObj[itemName] = itemsObj[itemName] + 1;
       
       if (!pricesObj)
-        pricesObj = new Object();
+        pricesObj = {};
       pricesObj[itemName] = itemPrice;
 
       this.setState({
@@ -108,9 +108,9 @@ class App extends Component {
 	}
 
 	decrementFromCart(itemName){
-    var itemName = String(itemName);
+    itemName = String(itemName);
     var itemsObj = this.state.items;
-    var pricesObj = this.state.prices;
+    //var pricesObj = this.state.prices;
 
     if (itemName !== null && itemName !== undefined){
       if (itemsObj[itemName]){
@@ -130,7 +130,7 @@ class App extends Component {
   }
 
   deleteFromCart(itemName){
-    var itemName = String(itemName);
+    itemName = String(itemName);
     var itemsObj = this.state.items;
     var pricesObj = this.state.prices;
 
