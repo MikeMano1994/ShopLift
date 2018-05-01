@@ -6,9 +6,20 @@ application. We use React, React-bootstrap, Reactstrap, and Firebase.
 
 The demo is hosted on firsebase: https://shoplift-supermarket.firebaseapp.com/
 
+#### Home Page
 <img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/home.jpg" width="600"/>
 
+#### Product View
 <img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/product.jpg" width="600"/>
+
+#### Shipping Information
+<img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/shipping.jpg" width="600"/>
+
+#### Order Confirmation
+<img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/order.jpg" width="600"/>
+
+#### Success 
+<img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/success.jpg" width="600"/>
 
 ## Features
 
