@@ -5,7 +5,7 @@ export default class UserAgreement extends Component {
     return (
       <div className="aboutusdescription">
         <h1>User Agreement</h1>
-          <p >
+          <p>
           Conditions of Use<br></br>
           Last updated: May 1, 2018<br></br>
           <br></br><br></br>
@@ -99,7 +99,7 @@ export default class UserAgreement extends Component {
           https://www.ShopLift.com
           <br></br><br></br>
           ADDITIONAL ShopLift SOFTWARE TERMS<br></br>
-          The following terms (“Software Terms”) apply to any software (including any updates or upgrades to the software) and any related documentation we make available to you in connection with ShopLift Services (the "ShopLift Software"). 
+          The following terms (“Software Terms”) apply to any software (including any updates or upgrades to the software) and any related documentation we make available to you in connection with ShopLift Services (the "ShopLift Software").
           Use of the ShopLift Software. You may use ShopLift Software solely for purposes of enabling you to use the ShopLift Services as provided by ShopLift, and as permitted by these Conditions of Use and any Service Terms. You may not incorporate any portion of the ShopLift Software into other programs or compile any portion of it in combination with other programs, or otherwise copy (except to exercise rights granted in this section), modify, create derivative works of, distribute, assign any rights to, or license the ShopLift Software in whole or in part. All software used in any ShopLift Service is the property of ShopLift or its software suppliers and is protected by United States and international copyright laws.
           Use of Third Party Services. When you use the ShopLift Software, you may also be using the services of one or more third parties, such as a wireless carrier or a mobile software provider. Your use of these third party services may be subject to the separate policies, terms of use, and fees of these third parties.
           No Reverse Engineering. You may not reverse engineer, decompile or disassemble, tamper with, or bypass any security associated with the ShopLift Software, whether in whole or in part.
@@ -144,9 +144,8 @@ export default class UserAgreement extends Component {
           Seattle, WA 98121<br></br>
           USA<br></br><br></br>
           Please note that this procedure is exclusively for notifying ShopLift that your copyrighted material has been infringed.
-                  </p>
-                  </div>
-                  
-              );
-            }
-          }
+        </p>
+      </div>
+    );
+  }
+}
