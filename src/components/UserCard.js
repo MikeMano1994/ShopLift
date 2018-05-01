@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Well, Button, Tabs, Tab} from 'react-bootstrap';
 import 'bootstrap';
-import {LinkContainer} from 'react-router-bootstrap';
 
 import raccoon from '../picture/user.png';
 import fire from '../fire';
@@ -37,14 +36,14 @@ export default class UserCard extends Component {
         return(
             <div>{
                     Object.keys(this.state.user.orderHistory).map((v,i)=>{
-                        var v = parseInt(v);
+                        v = parseInt(v, 10);
                         var d = new Date(v);
                         return(
                             <Well key={i}>
                                 <h3>Order on {d.toLocaleString()}</h3>
                                 {this.renderOrder(v)}
                             </Well>
-                        ) 
+                        )
                 })}
             </div>
         );

@@ -10,7 +10,7 @@ import Step5 from './Step5';
 import Step6 from './Step6';
 
 import emptycart from '../../picture/empty-cart.png';
-import {Well, Glyphicon} from 'react-bootstrap';
+import { Well, Glyphicon } from 'react-bootstrap';
 
 import fire from '../../fire';
 
@@ -41,8 +41,8 @@ constructor(props) {
   }
 
   componentWillMount(){
-    if (this.props.getUser()){
-    fire.database().ref('/users/').child(this.props.getUser().uid).on('value', snapshot=>{
+    if (this.props.getUser()) {
+    fire.database().ref('/users/').child(this.props.getUser().uid).on('value', snapshot => {
       var v = snapshot.val();
       this.sampleStore = {
         firstname: v.firstName,
@@ -56,10 +56,6 @@ constructor(props) {
     }).bind(this);
     }
   }
-
-  componentDidMount() {}
-
-  componentWillUnmount() {}
 
   getStore() {
     return this.sampleStore;
@@ -98,15 +94,15 @@ constructor(props) {
 			</Well>
 		  );
 		}
-		return(
+
+		return (
       <div>
-		    <img style={{width:'250px', height:'150px'}} src={emptycart} alt="emptycart" /> <br/>
+		    <img style={{width:'250px', height:'150px'}} src={emptycart} alt="emptycart" /><br/>
         Baggy bag is sad because you haven't put any items in cart :(<br/>
         <a href='/shop'><b>Shop for items now!</b></a>
       </div>
 		);
-	  }
-
+	 }
 
   render() {
     const steps =
@@ -117,28 +113,25 @@ constructor(props) {
       {name: 'Payment', component: <Step4 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
       {name: 'Review', component: <Step5 getUser={this.props.getUser} dumpCache={this.props.dumpCache} renderCart={this.renderCart} cart={this.props.items} prices={this.props.prices} getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
       {name: 'Confirmation', component: <Step6 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
-      
     ]
 
     return (
       <div className = 'checkout'>
         <div className='step-progress'>
-          <StepZilla         
-          steps={steps} 
-
-          preventEnterSubmission={true}
-          prevBtnOnLastStep={false}
-          startAtStep= {0} 
-          nextButtonText={' '}
-          backButtonText={' '}
-          nextButtonCls={'btn btn-prev btn-outline-success my-2 my-sm-0 ml-10 glyphicon glyphicon-chevron-right'}
-          backButtonCls={'btn btn-next btn-outline-success my-2 my-sm-0 ml-10 glyphicon glyphicon-chevron-left'}
-          nextTextOnFinalActionStep={' '}
-          hocValidationAppliedTo = {[]}
-         
-           />
+          <StepZilla
+          steps={steps}
+            preventEnterSubmission={true}
+            prevBtnOnLastStep={false}
+            startAtStep= {0}
+            nextButtonText={' '}
+            backButtonText={' '}
+            nextButtonCls={'btn btn-prev btn-outline-success my-2 my-sm-0 ml-10 glyphicon glyphicon-chevron-right'}
+            backButtonCls={'btn btn-next btn-outline-success my-2 my-sm-0 ml-10 glyphicon glyphicon-chevron-left'}
+            nextTextOnFinalActionStep={' '}
+            hocValidationAppliedTo = {[]}
+          />
+        </div>
       </div>
-    </div>
     )
   }
 }

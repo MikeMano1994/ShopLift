@@ -24,7 +24,7 @@ export default class Products extends Component {
     if (this.props.sortOption === "low") {
       this.props.productsList.sort((a,b) => ((a.discountprice) - (b.discountprice)));
     }
-    else {
+    else if (this.props.sortOption === "high"){
       this.props.productsList.sort((a,b) => ((b.discountprice) - (a.discountprice)));
     }
 
@@ -60,6 +60,7 @@ export default class Products extends Component {
                     );
                   }
                 }
+                return (null);
               })
             }
           </div>
