@@ -79,7 +79,6 @@ class App extends Component {
   // pass this into Products.js for it to add to cart
 	addToCart(itemName, itemPrice){
 		if (itemName && itemPrice){
-<<<<<<< HEAD
       var cart = localStorage.getItem('cart');
       if (cart)
         this.setState({items:JSON.parse(cart)});
@@ -93,15 +92,6 @@ class App extends Component {
       var pricesObj = this.state.prices;
       if (!itemsObj){
         itemsObj = {};
-=======
-      itemName = String(itemName);
-      let itemsObj = this.state.items;
-      
-      var pricesObj = this.state.prices;
-      if (!itemsObj)
-        itemsObj = {};
-      if (!itemsObj[itemName]){
->>>>>>> c52bf5aa827bf904282594f9661ff575c940b1df
         itemsObj[itemName] = 1;
       }
 
@@ -150,7 +140,6 @@ class App extends Component {
   }
 
   deleteFromCart(itemName){
-<<<<<<< HEAD
     var itemName = String(itemName);
 
     var cart = localStorage.getItem('cart');
@@ -161,9 +150,6 @@ class App extends Component {
     if (prices)
       this.setState({prices: JSON.parse(prices)});
     
-=======
-    itemName = String(itemName);
->>>>>>> c52bf5aa827bf904282594f9661ff575c940b1df
     var itemsObj = this.state.items;
     var pricesObj = this.state.prices;
 
