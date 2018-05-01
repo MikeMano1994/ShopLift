@@ -69,30 +69,30 @@ export default class DrawerCart extends Component{
   }
 
   render() {
-    return (
-      <div >
-   	    <img width={35}
-             height={35}
-             src={shoppingcart}
-             onClick={this.toggleDrawer}
-             disabled={this.state.open}
-             alt="Shopping Cart"
-        />
-        <ReactDrawer className="drawer"
-                     open={this.state.open}
-                     position={this.state.position}
-                     onClose={this.onDrawerClose}
-                     noOverlay={this.state.noOverlay}
-                     
-        >
-          <div style={{overflowY:'scroll', height:'100vh'}}>
-          <i onClick={this.closeDrawer} className="icono-cross"></i>
-          <h2 className="shoppingcartstyle">Shopping Cart</h2>
-          {this.renderCart()}
-          <div style={{marginBottom:'10px'}}className='col-xs-12'><a href="/check-out"><button type="button" className="btn btn-dark">CHECKOUT</button></a></div>
-          </div>
-        </ReactDrawer>
-      </div>
-    );
+      return <div>
+          <img width={35}
+               height={35}
+               src={shoppingcart}
+               onClick={this.toggleDrawer}
+               disabled={this.state.open}
+               alt="Shopping Cart"
+          />
+          <ReactDrawer className="drawer"
+                       open={this.state.open}
+                       position={this.state.position}
+                       onClose={this.onDrawerClose}
+                       noOverlay={this.state.noOverlay}
+
+          >
+              <div style={{overflowY: 'scroll', height: '100vh'}}>
+                  <i onClick={this.closeDrawer} className="icono-cross"/>
+                  <h2 className="shoppingcartstyle">Shopping Cart</h2>
+                  {this.renderCart()}
+                  <div style={{marginBottom: '10px'}} className='col-xs-12'><a href="/check-out">
+                      <button type="button" className="btn btn-dark">CHECKOUT</button>
+                  </a></div>
+              </div>
+          </ReactDrawer>
+      </div>;
   }
 }

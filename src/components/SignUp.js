@@ -51,7 +51,7 @@ export default class Signup extends Component {
     this.setState({ isLoading: false });
     fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
       .then(() => {
-        let userObject = {};
+        //let userObject = {};
         if (!fire.auth().currentUser.uid){
           fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password);
         }
