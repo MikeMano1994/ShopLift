@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import StepZilla from 'react-stepzilla';
 import Step1 from './Step1';
-import Step2 from './Step2';
+//import Step2 from './Step2';
 import Step3 from './Step3';
 import Step4 from './Step4';
 import Step5 from './Step5';
@@ -72,7 +72,13 @@ constructor(props) {
     }
   }
 
-  renderCart(){
+  showButton(rowStyle,v,arg){
+    if (arg === true) 
+      return(<div style={rowStyle} className='col-xs-1 text-center' onClick={()=>this.props.deleteFromCart(v)}><Glyphicon glyph='trash'/></div>);
+  }
+
+  renderCart(showTrash){
+    console.log(this.props.items);
 		// if items exist, then render cart, else render nothing(empty cart image)
 		if (this.props.items){
 		  let rowStyle={
@@ -85,9 +91,9 @@ constructor(props) {
 				  <div className='row'>
 					  <div style={rowStyle} className='col-xs-6 offset-xs-2 text-center'>{this.props.items[v]} of {v} <br/> ${this.props.prices[v].toFixed(2)} each</div>
 					  <div style={rowStyle} className='col-xs-3 text-right'>${(this.props.prices[v] * this.props.items[v]).toFixed(2)}</div>
-            <div style={rowStyle} className='col-xs-1 text-center' onClick={()=>this.props.deleteFromCart(v)}><Glyphicon glyph='trash'/></div>
+            {this.showButton(rowStyle,v,showTrash)}
 				  </div>
-				)
+				);
 			  })}
 			</Well>
 		  );
@@ -105,11 +111,11 @@ constructor(props) {
   render() {
     const steps =
     [
-      {name: 'Cart', component: <Step1 renderCart={this.renderCart} getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
-      {name: 'My Profile', component: <Step2 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
+      {name: 'Cart', component: <Step1 items={this.props.items} renderCart={this.renderCart} getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
+      //{name: 'My Profile', component: <Step2 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
       {name: 'Shipping', component: <Step3 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
       {name: 'Payment', component: <Step4 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
-      {name: 'Review', component: <Step5 dumpCache={this.props.dumpCache} renderCart={this.renderCart} cart={this.props.items} prices={this.props.prices} getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
+      {name: 'Review', component: <Step5 getUser={this.props.getUser} dumpCache={this.props.dumpCache} renderCart={this.renderCart} cart={this.props.items} prices={this.props.prices} getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
       {name: 'Confirmation', component: <Step6 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
       
     ]

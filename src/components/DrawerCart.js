@@ -79,11 +79,10 @@ export default class DrawerCart extends Component{
              alt="Shopping Cart"
         />
         <ReactDrawer className="drawer"
-                     open={this.state.open}
-                     position={this.state.position}
-                     onClose={this.onDrawerClose}
-                     noOverlay={this.state.noOverlay}
-                     
+                   open={this.state.open}
+                   position={this.state.position}
+                   onClose={this.onDrawerClose}
+                   noOverlay={this.state.noOverlay}          
         >
           <div style={{overflowY:'scroll', height:'100vh'}}>
           <i onClick={this.closeDrawer} className="icono-cross"></i>

@@ -5,7 +5,7 @@ export default class Cart extends Component{
   render() {
     return (
 		<div>
-			{this.props.renderCart()}
+			{this.props.renderCart(true)}
 		</div>		
     );
 	}
