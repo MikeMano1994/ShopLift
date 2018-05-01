@@ -13,7 +13,7 @@ The demo is hosted on firsebase: https://shoplift-supermarket.firebaseapp.com/
 <img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/product.jpg" width="600"/>
 
 #### Handling Product not Found.
-<img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/not-found.png" width="600"/>
+<img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/not%20found.png" width="600"/>
 
 #### Shipping Information
 <img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/shipping.png" width="600"/>
