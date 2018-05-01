@@ -13,13 +13,13 @@ The demo is hosted on firsebase: https://shoplift-supermarket.firebaseapp.com/
 <img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/product.jpg" width="600"/>
 
 #### Shipping Information
-<img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/shipping.jpg" width="600"/>
+<img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/shipping.png" width="600"/>
 
 #### Order Confirmation
-<img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/order.jpg" width="600"/>
+<img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/order.png" width="600"/>
 
-#### Success 
-<img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/success.jpg" width="600"/>
+#### Success
+<img src="https://github.com/brucelin1218/ShopLift/blob/master/doc/success.png" width="600"/>
 
 ## Features
 
