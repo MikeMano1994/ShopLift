@@ -48,6 +48,7 @@ export default class Shop extends Component{
 
   handleSearch(event) {
     this.setState({term: event.target.value});
+    this.setState({category: "all"})
     let filteredProducts = this.state.unfilteredProducts;
     filteredProducts = filteredProducts.filter(i => i.name.toLowerCase().search(event.target.value.toLowerCase()) !== -1 || i.category.toLowerCase().search(event.target.value.toLowerCase()) !== -1)
     this.setState({products: filteredProducts});
