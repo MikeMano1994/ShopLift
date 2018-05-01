@@ -35,26 +35,29 @@ class App extends Component {
     };
 
     this.addToCart = this.addToCart.bind(this);
+    this.deleteFromCart = this.deleteFromCart.bind(this);
+
     this.setUser = this.setUser.bind(this);
     this.getUser = this.getUser.bind(this);
+    this.dumpCache = this.dumpCache.bind(this);
   }
 
   componentWillMount(){
     this.setState({
       products: product,
       unfilteredProducts: product,
-      items: {},
-      prices: {}
+      items: new Object(),
+      prices: new Object()
     });
 
     // if (fire.auth().currentUser !== null || fire.auth().currentUser !== undefined)
     //   this.setState({authed:true});
 
-    let cart = localStorage.getItem('cart');
+    var cart = localStorage.getItem('cart');
     if (cart)
       this.setState({items:JSON.parse(cart)});
 
-    let prices = localStorage.getItem('prices');
+    var prices = localStorage.getItem('prices');
     if (prices){
       this.setState({prices: JSON.parse(prices)});
     }
@@ -78,18 +81,18 @@ class App extends Component {
 		if (itemName && itemPrice){
       var itemName = String(itemName);
       var itemsObj = this.state.items;
+      
       var pricesObj = this.state.prices;
-      console.log(this.state.prices);
-      console.log(this.state.items);
       if (!itemsObj)
-        itemsObj = {};
+        itemsObj = new Object();
       if (!itemsObj[itemName]){
         itemsObj[itemName] = 1;
       }
       else
         itemsObj[itemName] = itemsObj[itemName] + 1;
+      
       if (!pricesObj)
-        pricesObj = {};
+        pricesObj = new Object();
       pricesObj[itemName] = itemPrice;
 
       this.setState({
@@ -131,7 +134,7 @@ class App extends Component {
     var itemsObj = this.state.items;
     var pricesObj = this.state.prices;
 
-    if (itemName !== null && itemName !== undefined){
+    if (itemName){
       if (itemsObj[itemName]){
         delete itemsObj[itemName];
         this.setState({items:itemsObj});
@@ -160,9 +163,13 @@ class App extends Component {
     else{
       this.setState({items:null, prices: null, user: null});
       localStorage.setItem('user', null);
-      localStorage.setItem('cart', null);
-      localStorage.setItem('prices', null);
+      this.dumpCache();
     }
+  }
+
+  dumpCache(){
+    localStorage.setItem('cart', null);
+    localStorage.setItem('prices', null);
   }
 
   getUser(){
@@ -182,6 +189,7 @@ class App extends Component {
             prices={this.state.prices}
             setUser={this.setUser}
             getUser={this.getUser}
+            deleteFromCart={this.deleteFromCart}
           />
           <h1 className="App-title">“Deals so great - It’s a steal.”</h1>
         </div>
@@ -196,7 +204,7 @@ class App extends Component {
               <Route exact path='/signup' render={()=><SignUp setUser={this.setUser}/>} />
               <Route exact path='/profile' render={()=><UserProfile addToCart={this.props.addToCart} getUser={this.getUser}/>} />
               <Route exact path='/cart' component={Cart} />
-              <Route exact path='/check-out' render={()=><CheckOut items={this.state.items} prices={this.state.prices} getUser={this.getUser}/>} />
+              <Route exact path='/check-out' render={()=><CheckOut deleteFromCart={this.deleteFromCart} dumpCache={this.dumpCache} items={this.state.items} prices={this.state.prices} getUser={this.getUser}/>} />
               <Route exact path='/useragreement' component={UserAgreement} />
               <Route exact path='/userprivacy' component={UserPrivacy} />
             </div>

@@ -154,14 +154,14 @@ export default class Step3 extends Component{
       <div>
         <div className = "cart">
           <a href="/shop">
-            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span className="glyphicon glyphicon-chevron-left"></span>
             Continue Shopping
           </a>
           <h1> Shipping Information </h1>
         </div>
         <div className="info">
           <form>
-            <div class="firstname">
+            <div className="firstname">
               <label> FIRST NAME: </label>
               <input
                 className={notValidClasses.firstnameCls}
@@ -176,7 +176,7 @@ export default class Step3 extends Component{
             <div className={notValidClasses.firstnameValGrpCls}>
               {this.state.firstnameValMsg}
             </div>
-            <div class="lastname">
+            <div className="lastname">
               <label> LAST NAME: </label>
               <input
                 className={notValidClasses.lastnameCls}
@@ -191,7 +191,7 @@ export default class Step3 extends Component{
             <div className={notValidClasses.lastnameValGrpCls}>
               {this.state.lastnameValMsg}
             </div>
-            <div class="address">
+            <div className="address">
               <label>ADDRESS: </label>
               <input
                 className={notValidClasses.addressCls}
@@ -206,7 +206,7 @@ export default class Step3 extends Component{
             <div className={notValidClasses.addressValGrpCls}>
               {this.state.addressValMsg}
             </div>
-            <div class="city">
+            <div className="city">
               <label> CITY: </label>
               <input
                 className={notValidClasses.cityCls}
@@ -221,7 +221,7 @@ export default class Step3 extends Component{
             <div className={notValidClasses.cityValGrpCls}>
               {this.state.cityValMsg}
             </div>
-            <div class="state">
+            <div className="state">
               <label> STATE: </label>
               <input
                 className={notValidClasses.stateCls}
@@ -236,7 +236,7 @@ export default class Step3 extends Component{
             <div className={notValidClasses.stateValGrpCls}>
               {this.state.stateValMsg}
             </div>
-            <div class = "zipcode">
+            <div className = "zipcode">
               <label> ZIP CODE: </label>
               <input
                 className={notValidClasses.zipcodeCls}

@@ -53,7 +53,10 @@ export default class Step5 extends Component{
   }
 
   handleSubmit(){
-    var orderHistoryObj = this.props.getStore().orderHistory;
+    var orderHistoryObj = this.props.getStore().orderhistory;
+    if (!orderHistoryObj)
+      orderHistoryObj = {};
+    console.log(this.props.getStore().orderhistory);
     orderHistoryObj[Date.now()]={
       items: this.props.cart,
       prices: this.props.prices,
@@ -76,11 +79,13 @@ export default class Step5 extends Component{
       cardCVV: this.props.getStore().cvv
     });
     }
+
+    this.props.dumpCache();
   }
 
   render(){
     return(
-    	<div class="review">
+    	<div className="review">
   			<h1> Review and submit your order</h1>
   			<Grid>
   				<Row className="show-grid">
@@ -100,7 +105,7 @@ export default class Step5 extends Component{
                   </div>
                   <div className='float-right'>
                     <a onClick={() => this.props.jumpToStep(2)}>
-                      <Button bsStyle="dark" bsSize="large">
+                      <Button bsStyle="default" bsSize="large">
                         Edit
                       </Button>
                     </a>
@@ -110,11 +115,21 @@ export default class Step5 extends Component{
                 </Panel.Heading>
 
                 <Panel.Body>
+                  <div className='float-left'>
+                  <p>Name:</p>
+                  <p>Address:</p>
+                  <p>City:</p>
+                  <p>State:</p>
+                  <p>Zipcode:</p>
+                  </div>
                   
-                  <p>{this.props.getStore().firstname}, {this.props.getStore().lastname}</p>
+                  <div className='float-right'>
+                  <p>{this.props.getStore().firstname} {this.props.getStore().lastname}</p>
                   <p>{this.props.getStore().address}</p>
-                  <p>{this.props.getStore().city}, {this.props.getStore().state}</p>
+                  <p>{this.props.getStore().city}</p>
+                  <p>{this.props.getStore().state}</p>
                   <p>{this.props.getStore().zipcode}</p>
+                  </div>
 
                 </Panel.Body>
               </Panel>
@@ -141,7 +156,7 @@ export default class Step5 extends Component{
              
               <Panel.Footer>
                 <a onClick={() => this.props.jumpToStep(5)}>
-                  <Button onClick={()=>this.handleSubmit()}bsStyle="dark" bsSize="large">
+                  <Button onClick={()=>this.handleSubmit()}bsStyle="default" bsSize="large">
                     Submit Order
                   </Button>
                 </a>
@@ -159,7 +174,7 @@ export default class Step5 extends Component{
                 </div>
                 <div className='float-right'>
 	  						  <a onClick={() => this.props.jumpToStep(3)}>
-	              	  <Button bsStyle="dark" bsSize="large">
+	              	  <Button bsStyle="default" bsSize="large">
 	                  	Edit
 	            	 	  </Button>
 	         	 		  </a>

@@ -39,7 +39,7 @@ export default class Products extends Component {
               productKeys.map((element,index) => {
                 if (this.props.category === 'all') {
                   return (
-                    <div className="col-md-6 col-sm-6 col-lg-4 col-xs-12 col-xl-3 control-label">
+                    <div key={index} className="col-md-6 col-sm-6 col-lg-4 col-xs-12 col-xl-3 control-label">
                       <Item a={this.props.productsList[element]} addToCart={this.props.addToCart} />
                     </div>
                   );

@@ -3,6 +3,8 @@ import ReactDrawer from 'react-drawer';
 import shoppingcart from '../picture/shopping-cart.png';
 import emptycart from '../picture/empty-cart.png';
 
+import {Glyphicon} from 'react-bootstrap';
+
 import 'react-drawer/lib/react-drawer.css';
 
 export default class DrawerCart extends Component{
@@ -41,15 +43,16 @@ export default class DrawerCart extends Component{
     // if items exist, then render cart, else render nothing(empty cart image)
     if (this.props.items){
       let rowStyle={
-        margin: '10px'
+        margin: '8px'
       }
       return(
         <div>
           {Object.keys(this.props.items).map((v,i)=>{
             return(
-              <div className='row'>
-                  <div style={rowStyle} className='col-xs-5 text-left'>{this.props.items[v]} of {v} <br/> ${this.props.prices[v].toFixed(2)} each</div>
-                  <div style={rowStyle} className='col-xs-5 text-right'>${(this.props.prices[v] * this.props.items[v]).toFixed(2)}</div>
+              <div className='row' key={i}>
+                  <div style={rowStyle} className='col-xs-6 text-left'>{this.props.items[v]} of {v} <br/> ${this.props.prices[v].toFixed(2)} each</div>
+                  <div style={rowStyle} className='col-xs-2 offset-xs-1 text-right'>${(this.props.prices[v] * this.props.items[v]).toFixed(2)}</div>
+                  <div style={rowStyle} className='col-xs-1 text-left'><Glyphicon glyph='trash' onClick={()=>this.props.deleteFromCart(v)}/></div>
               </div>
             )
           })}
@@ -57,7 +60,11 @@ export default class DrawerCart extends Component{
       );
     }
     return(
-      <img style={{width:'250px', height:'150px'}} src={emptycart} alt="emptycart" />
+        <div>
+          <img style={{width:'250px', height:'150px'}} src={emptycart} alt="emptycart" /><br/>
+          Baggy bag is sad because you haven't put any items in cart :(<br/>
+          <a  href='/shop'>Shop for items now!</a>
+        </div>
     );
   }
 

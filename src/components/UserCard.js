@@ -41,7 +41,7 @@ export default class UserCard extends Component {
                         var v = parseInt(v);
                         var d = new Date(v);
                         return(
-                            <Well>
+                            <Well key={i}>
                                 <h3>Order on {d.toLocaleString()}</h3>
                                 {this.renderOrder(v)}
                             </Well>
@@ -125,7 +125,7 @@ export default class UserCard extends Component {
                 </div>
                 <div className='row'>
                     <div className='col-sm-12 col-xl-12 col-lg-12 col-md-12'>
-                        <Tabs className='text-center' defaultActiveKey={1}>
+                        <Tabs className='text-center' defaultActiveKey={1} id={1}>
                             <Tab eventKey={1} title='Recent Orders'>
                                 {this.renderOrders()}
                             </Tab>

@@ -10,7 +10,7 @@ import Step5 from './Step5';
 import Step6 from './Step6';
 
 import emptycart from '../../picture/empty-cart.png';
-import {Well} from 'react-bootstrap';
+import {Well, Glyphicon} from 'react-bootstrap';
 
 import fire from '../../fire';
 
@@ -44,7 +44,7 @@ constructor(props) {
     if (this.props.getUser()){
     fire.database().ref('/users/').child(this.props.getUser().uid).on('value', snapshot=>{
       var v = snapshot.val();
-      this.setState({
+      this.sampleStore = {
         firstname: v.firstName,
         lastname: v.lastName,
         address: v.address,
@@ -52,7 +52,7 @@ constructor(props) {
         state: v.state,
         zipcode: v.zip,
         orderhistory: v.orderHistory
-      });
+      };
     }).bind(this);
     }
   }
@@ -83,8 +83,9 @@ constructor(props) {
 			  {Object.keys(this.props.items).map((v,i)=>{
 				return(
 				  <div className='row'>
-					  <div style={rowStyle} className='col-xs-6 offset-xs-3 text-center'>{this.props.items[v]} of {v} <br/> ${this.props.prices[v].toFixed(2)} each</div>
+					  <div style={rowStyle} className='col-xs-6 offset-xs-2 text-center'>{this.props.items[v]} of {v} <br/> ${this.props.prices[v].toFixed(2)} each</div>
 					  <div style={rowStyle} className='col-xs-3 text-right'>${(this.props.prices[v] * this.props.items[v]).toFixed(2)}</div>
+            <div style={rowStyle} className='col-xs-1 text-center' onClick={()=>this.props.deleteFromCart(v)}><Glyphicon glyph='trash'/></div>
 				  </div>
 				)
 			  })}
@@ -92,7 +93,11 @@ constructor(props) {
 		  );
 		}
 		return(
-		  <img style={{width:'250px', height:'150px'}} src={emptycart} alt="emptycart" />
+      <div>
+		    <img style={{width:'250px', height:'150px'}} src={emptycart} alt="emptycart" /> <br/>
+        Baggy bag is sad because you haven't put any items in cart :(<br/>
+        <a href='/shop'><b>Shop for items now!</b></a>
+      </div>
 		);
 	  }
 
@@ -104,7 +109,7 @@ constructor(props) {
       {name: 'My Profile', component: <Step2 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
       {name: 'Shipping', component: <Step3 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
       {name: 'Payment', component: <Step4 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
-      {name: 'Review', component: <Step5 renderCart={this.renderCart} cart={this.props.items} prices={this.props.prices} getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
+      {name: 'Review', component: <Step5 dumpCache={this.props.dumpCache} renderCart={this.renderCart} cart={this.props.items} prices={this.props.prices} getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
       {name: 'Confirmation', component: <Step6 getStore={() => (this.getStore())} updateStore={(u) => {this.updateStore(u)}} />},
       
     ]

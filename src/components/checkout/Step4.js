@@ -136,7 +136,7 @@ export default class Step4 extends Component{
       <div>
         <div className = "cart">
           <a href="/shop">
-            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span className="glyphicon glyphicon-chevron-left"></span>
             Continue Shopping
           </a>
           <h1> Payment Information </h1>
@@ -144,7 +144,7 @@ export default class Step4 extends Component{
 
         <div className="info">
           <form>
-            <div class="cardname">
+            <div className="cardname">
              <label> CARD HOLDER NAME: </label>
               <input
               className={notValidClasses.cardnameCls}
@@ -157,7 +157,7 @@ export default class Step4 extends Component{
             </div>
             <div className={notValidClasses.cardnameValGrpCls}>{this.state.cardnameValMsg}</div>
 
-            <div class="cardnumber">
+            <div className="cardnumber">
              <label> CREDIT CARD NUMBER: </label>
               <input
               className={notValidClasses.cardnumberCls}
@@ -170,7 +170,7 @@ export default class Step4 extends Component{
             </div>
             <div className={notValidClasses.cardnumberValGrpCls}>{this.state.cardnumberValMsg}</div>
 
-            <div class = "expmonth">
+            <div className = "expmonth">
               <label> EXPIRATION MONTH: </label>
               <select
                 className={notValidClasses.expmonthCls}
@@ -198,7 +198,7 @@ export default class Step4 extends Component{
 
             <div className={notValidClasses.expmonthValGrpCls}>{this.state.expmonthValMsg}</div>
 
-            <div class = "expyear" >
+            <div className = "expyear" >
               <label> EXPIRATION YEAR: </label>
               <select
                 className={notValidClasses.expyearCls}
@@ -222,7 +222,7 @@ export default class Step4 extends Component{
 
             <div className={notValidClasses.expyearValGrpCls}>{this.state.expyearValMsg}</div>
 
-            <div class = "cvv">
+            <div className = "cvv">
               <label> CVV: </label>
               <input
                 className={notValidClasses.cvvCls}
