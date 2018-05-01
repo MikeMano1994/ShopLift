@@ -46,8 +46,8 @@ class App extends Component {
     this.setState({
       products: product,
       unfilteredProducts: product,
-      items: new Object(),
-      prices: new Object()
+      items: {},
+      prices: {}
     });
 
     // if (fire.auth().currentUser !== null || fire.auth().currentUser !== undefined)
