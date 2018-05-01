@@ -51,7 +51,7 @@ export default class Item extends Component {
                 <Modal.Title>{this.props.a.name}</Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                <img className="modal-card-image" src={this.props.a.image}/>
+                <img className="modal-card-image" alt="300 x 300" src={this.props.a.image}/>
                 <div><h4>{this.props.a.description}</h4></div>
               </Modal.Body>
               <Modal.Footer>
