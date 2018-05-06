@@ -1,6 +1,7 @@
 # ShopLift
 <img src="https://github.com/brucelin1218/ShopLift/blob/master/ShopLift%20logo.jpg" width = "300"/>
 
+#### What is ShopLift?
 ShopLift is a e-commerce Web App project built with React. It is a mini-safeway
 application. We use React, React-bootstrap, Reactstrap, and Firebase.
 
